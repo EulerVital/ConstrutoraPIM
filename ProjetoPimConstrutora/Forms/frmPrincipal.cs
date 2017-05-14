@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoPimConstrutora.Forms.UserControls;
+using System.Threading;
 
 namespace ProjetoPimConstrutora.Forms
 {
@@ -16,6 +10,9 @@ namespace ProjetoPimConstrutora.Forms
         public frmPrincipal()
         {
             InitializeComponent();
+            this.Visible = false;
+            Thread.Sleep(2000);
+            this.Show();
             cmbTipoUsuario.SelectedIndex = 0;
         }
 
