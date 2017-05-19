@@ -53,7 +53,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pnPredios = new System.Windows.Forms.Panel();
-            this.lblTextoPredio = new System.Windows.Forms.Label();
             this.nudQtdAparta = new System.Windows.Forms.NumericUpDown();
             this.btnSalvarPredios = new System.Windows.Forms.Button();
             this.lstPredios = new System.Windows.Forms.ListBox();
@@ -104,6 +103,7 @@
             this.txtNomeBloco = new System.Windows.Forms.TextBox();
             this.lblTituloBloco = new System.Windows.Forms.Label();
             this.splitter3 = new System.Windows.Forms.Splitter();
+            this.lblTextoPredio = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdBlocos)).BeginInit();
             this.panel3.SuspendLayout();
@@ -319,12 +319,6 @@
             this.pnPredios.Controls.Add(this.txtNomePredio);
             resources.ApplyResources(this.pnPredios, "pnPredios");
             this.pnPredios.Name = "pnPredios";
-            // 
-            // lblTextoPredio
-            // 
-            resources.ApplyResources(this.lblTextoPredio, "lblTextoPredio");
-            this.lblTextoPredio.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblTextoPredio.Name = "lblTextoPredio";
             // 
             // nudQtdAparta
             // 
@@ -692,6 +686,12 @@
             this.splitter3.Name = "splitter3";
             this.splitter3.TabStop = false;
             // 
+            // lblTextoPredio
+            // 
+            resources.ApplyResources(this.lblTextoPredio, "lblTextoPredio");
+            this.lblTextoPredio.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblTextoPredio.Name = "lblTextoPredio";
+            // 
             // ucCadastrarCondominio
             // 
             resources.ApplyResources(this, "$this");
@@ -793,8 +793,8 @@
         private System.Windows.Forms.NumericUpDown nudQtdAparta;
         private System.Windows.Forms.NumericUpDown nudQtdPredios;
         private System.Windows.Forms.Label lblTextoBloco;
-        private System.Windows.Forms.Label lblTextoPredio;
         private System.Windows.Forms.NumericUpDown nudQtdVagas;
         private System.Windows.Forms.Label lblTextoEstacionamento;
+        private System.Windows.Forms.Label lblTextoPredio;
     }
 }
