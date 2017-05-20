@@ -76,10 +76,17 @@ namespace ProjetoPimConstrutora.Forms
             frm.Show();
         }
 
+        private void msAdmCondApartCons_Click(object sender, EventArgs e)
+        {
+            frmConsultarApartamentos frm = new frmConsultarApartamentos();
+            frm.Show();
+        }
+
         #endregion
 
         #region Metodos
 
         #endregion
+
     }
 }
