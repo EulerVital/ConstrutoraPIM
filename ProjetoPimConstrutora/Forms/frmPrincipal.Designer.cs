@@ -223,7 +223,7 @@
             // 
             this.msAdmCondApartCad.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondApartCad.Name = "msAdmCondApartCad";
-            this.msAdmCondApartCad.Size = new System.Drawing.Size(152, 22);
+            this.msAdmCondApartCad.Size = new System.Drawing.Size(147, 22);
             this.msAdmCondApartCad.Text = "Cadastrar";
             this.msAdmCondApartCad.Click += new System.EventHandler(this.msAdmCondApartCad_Click);
             // 
@@ -231,7 +231,7 @@
             // 
             this.msAdmCondApartCons.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondApartCons.Name = "msAdmCondApartCons";
-            this.msAdmCondApartCons.Size = new System.Drawing.Size(152, 22);
+            this.msAdmCondApartCons.Size = new System.Drawing.Size(147, 22);
             this.msAdmCondApartCons.Text = "Consultar";
             this.msAdmCondApartCons.Click += new System.EventHandler(this.msAdmCondApartCons_Click);
             // 
@@ -445,7 +445,7 @@
             this.pnTop.Controls.Add(this.lblTitulo);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.ForeColor = System.Drawing.Color.Black;
-            this.pnTop.Location = new System.Drawing.Point(0, 24);
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1174, 43);
             this.pnTop.TabIndex = 1;
@@ -483,9 +483,9 @@
             this.pnPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnPrincipal.Controls.Add(this.pnLogin);
             this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPrincipal.Location = new System.Drawing.Point(0, 67);
+            this.pnPrincipal.Location = new System.Drawing.Point(0, 43);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(1174, 436);
+            this.pnPrincipal.Size = new System.Drawing.Size(1174, 460);
             this.pnPrincipal.TabIndex = 2;
             // 
             // pnLogin
