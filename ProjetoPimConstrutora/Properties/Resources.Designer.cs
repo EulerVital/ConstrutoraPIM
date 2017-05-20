@@ -63,6 +63,16 @@ namespace ProjetoPimConstrutora.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _178 {
+            get {
+                object obj = ResourceManager.GetObject("178", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4927_32x32 {
             get {
                 object obj = ResourceManager.GetObject("4927_32x32", resourceCulture);
@@ -93,6 +103,16 @@ namespace ProjetoPimConstrutora.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap help {
+            get {
+                object obj = ResourceManager.GetObject("help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgFundo {
             get {
                 object obj = ResourceManager.GetObject("imgFundo", resourceCulture);
@@ -116,6 +136,16 @@ namespace ProjetoPimConstrutora.Properties {
         internal static System.Drawing.Bitmap Search {
             get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sem_usuario_masculino {
+            get {
+                object obj = ResourceManager.GetObject("sem-usuario-masculino", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

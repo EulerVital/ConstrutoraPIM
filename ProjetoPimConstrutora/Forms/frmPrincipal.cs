@@ -82,6 +82,12 @@ namespace ProjetoPimConstrutora.Forms
             frm.Show();
         }
 
+        private void msAdmUserSysCad_Click(object sender, EventArgs e)
+        {
+            frmEscolherTipoUsuario frm = new frmEscolherTipoUsuario();
+            frm.Show();
+        }
+
         #endregion
 
         #region Metodos

@@ -275,6 +275,7 @@
             this.msAdmUserSysCad.Name = "msAdmUserSysCad";
             this.msAdmUserSysCad.Size = new System.Drawing.Size(146, 22);
             this.msAdmUserSysCad.Text = "Cadastar";
+            this.msAdmUserSysCad.Click += new System.EventHandler(this.msAdmUserSysCad_Click);
             // 
             // msAdmUserSysCons
             // 
