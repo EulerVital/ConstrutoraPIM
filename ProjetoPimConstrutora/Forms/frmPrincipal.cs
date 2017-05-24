@@ -82,11 +82,30 @@ namespace ProjetoPimConstrutora.Forms
             frm.Show();
         }
 
+         private void msGcEstacConsultarPlaca_Click(object sender, EventArgs e)
+        {
+            frmCadastrarVagaEstacionamento frm = new frmCadastrarVagaEstacionamento();
+            frm.Show();
+        }
+
+        private void GcEstacAluguelEstacionamento_Click(object sender, EventArgs e)
+        {
+            frmAluguelEstacionamento frm = new frmAluguelEstacionamento();
+            frm.Show();
+        }
+        private void GcSeguranLocal_Click(object sender, EventArgs e)
+        {
+            frmAcessoCameras frm = new frmAcessoCameras();
+            frm.Show();
+        }
+
+
         #endregion
 
         #region Metodos
 
         #endregion
+
 
     }
 }

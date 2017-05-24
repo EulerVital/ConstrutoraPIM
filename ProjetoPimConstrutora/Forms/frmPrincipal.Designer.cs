@@ -64,10 +64,14 @@
             this.incluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verificarVistantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estacionamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.controleDeVagasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msGcEstacConsultarPlaca = new System.Windows.Forms.ToolStripMenuItem();
+            this.GcEstacAluguelEstacionamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaEstacionamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservaDeÁreasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.correspondenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.segurançaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GcSeguranLocal = new System.Windows.Forms.ToolStripMenuItem();
+            this.controleVigilanciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -82,6 +86,7 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
+            this.GcSegurAcessCamContVig = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenuPrincipal.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnPrincipal.SuspendLayout();
@@ -223,7 +228,7 @@
             // 
             this.msAdmCondApartCad.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondApartCad.Name = "msAdmCondApartCad";
-            this.msAdmCondApartCad.Size = new System.Drawing.Size(152, 22);
+            this.msAdmCondApartCad.Size = new System.Drawing.Size(147, 22);
             this.msAdmCondApartCad.Text = "Cadastrar";
             this.msAdmCondApartCad.Click += new System.EventHandler(this.msAdmCondApartCad_Click);
             // 
@@ -231,7 +236,7 @@
             // 
             this.msAdmCondApartCons.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondApartCons.Name = "msAdmCondApartCons";
-            this.msAdmCondApartCons.Size = new System.Drawing.Size(152, 22);
+            this.msAdmCondApartCons.Size = new System.Drawing.Size(147, 22);
             this.msAdmCondApartCons.Text = "Consultar";
             this.msAdmCondApartCons.Click += new System.EventHandler(this.msAdmCondApartCons_Click);
             // 
@@ -404,17 +409,32 @@
             // 
             this.estacionamentoToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.estacionamentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.controleDeVagasToolStripMenuItem});
+            this.msGcEstacConsultarPlaca,
+            this.GcEstacAluguelEstacionamento,
+            this.consultaEstacionamentoToolStripMenuItem});
             this.estacionamentoToolStripMenuItem.Name = "estacionamentoToolStripMenuItem";
             this.estacionamentoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.estacionamentoToolStripMenuItem.Text = "Estacionamento";
             // 
-            // controleDeVagasToolStripMenuItem
+            // msGcEstacConsultarPlaca
             // 
-            this.controleDeVagasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.controleDeVagasToolStripMenuItem.Name = "controleDeVagasToolStripMenuItem";
-            this.controleDeVagasToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.controleDeVagasToolStripMenuItem.Text = "Controle de Vagas";
+            this.msGcEstacConsultarPlaca.Name = "msGcEstacConsultarPlaca";
+            this.msGcEstacConsultarPlaca.Size = new System.Drawing.Size(257, 22);
+            this.msGcEstacConsultarPlaca.Text = "Cadastro Estacionamento";
+            this.msGcEstacConsultarPlaca.Click += new System.EventHandler(this.msGcEstacConsultarPlaca_Click);
+            // 
+            // GcEstacAluguelEstacionamento
+            // 
+            this.GcEstacAluguelEstacionamento.Name = "GcEstacAluguelEstacionamento";
+            this.GcEstacAluguelEstacionamento.Size = new System.Drawing.Size(257, 22);
+            this.GcEstacAluguelEstacionamento.Text = "Aluguel Estacionamento";
+            this.GcEstacAluguelEstacionamento.Click += new System.EventHandler(this.GcEstacAluguelEstacionamento_Click);
+            // 
+            // consultaEstacionamentoToolStripMenuItem
+            // 
+            this.consultaEstacionamentoToolStripMenuItem.Name = "consultaEstacionamentoToolStripMenuItem";
+            this.consultaEstacionamentoToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.consultaEstacionamentoToolStripMenuItem.Text = "Consulta Estacionamento";
             // 
             // reservaDeÁreasToolStripMenuItem
             // 
@@ -433,9 +453,27 @@
             // segurançaToolStripMenuItem
             // 
             this.segurançaToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.segurançaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GcSeguranLocal,
+            this.controleVigilanciaToolStripMenuItem});
             this.segurançaToolStripMenuItem.Name = "segurançaToolStripMenuItem";
             this.segurançaToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.segurançaToolStripMenuItem.Text = "Segurança";
+            // 
+            // GcSeguranLocal
+            // 
+            this.GcSeguranLocal.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GcSegurAcessCamContVig});
+            this.GcSeguranLocal.Name = "GcSeguranLocal";
+            this.GcSeguranLocal.Size = new System.Drawing.Size(209, 22);
+            this.GcSeguranLocal.Text = "Acesso as Câmeras";
+            this.GcSeguranLocal.Click += new System.EventHandler(this.GcSeguranLocal_Click);
+            // 
+            // controleVigilanciaToolStripMenuItem
+            // 
+            this.controleVigilanciaToolStripMenuItem.Name = "controleVigilanciaToolStripMenuItem";
+            this.controleVigilanciaToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.controleVigilanciaToolStripMenuItem.Text = "Relatórios";
             // 
             // pnTop
             // 
@@ -621,6 +659,12 @@
             this.txtLogin.Size = new System.Drawing.Size(286, 26);
             this.txtLogin.TabIndex = 11;
             // 
+            // GcSegurAcessCamContVig
+            // 
+            this.GcSegurAcessCamContVig.Name = "GcSegurAcessCamContVig";
+            this.GcSegurAcessCamContVig.Size = new System.Drawing.Size(213, 22);
+            this.GcSegurAcessCamContVig.Text = "Controle Vigilância";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -687,7 +731,6 @@
         private System.Windows.Forms.ToolStripMenuItem msAdmAreaCondCons;
         private System.Windows.Forms.ToolStripMenuItem msAdmMoradoresCad;
         private System.Windows.Forms.ToolStripMenuItem msAdmMoradoresCons;
-        private System.Windows.Forms.ToolStripMenuItem controleDeVagasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem segurançaToolStripMenuItem;
         private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Label lblTitulo;
@@ -703,5 +746,11 @@
         private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnCadUser;
+        private System.Windows.Forms.ToolStripMenuItem msGcEstacConsultarPlaca;
+        private System.Windows.Forms.ToolStripMenuItem GcEstacAluguelEstacionamento;
+        private System.Windows.Forms.ToolStripMenuItem consultaEstacionamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controleVigilanciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GcSeguranLocal;
+        private System.Windows.Forms.ToolStripMenuItem GcSegurAcessCamContVig;
     }
 }

@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace ProjetoPimConstrutora.Forms
 {
-    public partial class frmConsultarPredios : Form
+    public partial class frmAcessoCameras : Form
     {
-        public frmConsultarPredios()
+        public frmAcessoCameras()
         {
             InitializeComponent();
         }
 
-        private void pnTop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dgvCondominios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void cmbBairroCondominio_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
