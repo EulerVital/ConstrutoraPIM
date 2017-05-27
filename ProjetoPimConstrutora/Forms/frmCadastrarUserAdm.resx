@@ -117,4 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Informações sobre cadastro de Usuários
+
+OBS: Se o usuário for do tipo sindico ou funcionário, deve ser escolhido o 
+condomínio onde ele trabalha, se o funcionário não trabalha no condomínio
+não é preciso informar. 
+
+-Para cadastrar um usuário é necessarios possuir os seguintes documentos
+
+-CPF
+-Data de Nascimento
+-Profissão
+-Dados trabalhista (Opcional)
+-Etc..
+</value>
+  </data>
 </root>

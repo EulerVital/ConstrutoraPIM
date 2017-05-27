@@ -16,5 +16,15 @@ namespace ProjetoPimConstrutora.Forms
         {
             InitializeComponent();
         }
+
+        private void btnProsseguir_Click(object sender, EventArgs e)
+        {
+            if(rdbPerfilAdm.Checked)
+            {
+                frmCadastrarUserAdm frm = new frmCadastrarUserAdm();
+                frm.Show();
+                this.Dispose();
+            }
+        }
     }
 }

@@ -117,13 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century, 9.75pt</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 120</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 23</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -133,7 +157,7 @@
     <value>5, 19</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 18</value>
+    <value>158, 18</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -151,7 +175,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="txtNomeCondominio.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century, 9.75pt</value>
@@ -175,7 +199,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;txtNomeCondominio.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnIncluirBlocos.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -220,13 +244,13 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;btnIncluirBlocos.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="ckbStatus.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="ckbStatus.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="ckbStatus.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -235,7 +259,7 @@
     <value>888, 21</value>
   </data>
   <data name="ckbStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>114, 22</value>
   </data>
   <data name="ckbStatus.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -253,13 +277,13 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;ckbStatus.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -268,7 +292,7 @@
     <value>560, 21</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>143, 18</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -286,7 +310,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnSalvar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -325,7 +349,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;btnSalvar.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="mtxtDataFundacao.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century, 10pt</value>
@@ -352,7 +376,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;mtxtDataFundacao.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnIncluiEstacionamento.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -397,40 +421,13 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;btnIncluiEstacionamento.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="cmbBairroCondominio.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="cmbBairroCondominio.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 9.75pt</value>
-  </data>
-  <data name="cmbBairroCondominio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 119</value>
-  </data>
-  <data name="cmbBairroCondominio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 24</value>
-  </data>
-  <data name="cmbBairroCondominio.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;cmbBairroCondominio.Name" xml:space="preserve">
-    <value>cmbBairroCondominio</value>
-  </data>
-  <data name="&gt;&gt;cmbBairroCondominio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbBairroCondominio.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;cmbBairroCondominio.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -439,7 +436,7 @@
     <value>513, 121</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 18</value>
+    <value>58, 18</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -490,7 +487,7 @@
     <value>True</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -499,7 +496,7 @@
     <value>665, 69</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 18</value>
+    <value>62, 18</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -550,7 +547,7 @@
     <value>True</value>
   </data>
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -559,7 +556,7 @@
     <value>809, 124</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 18</value>
+    <value>44, 18</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -610,7 +607,7 @@
     <value>True</value>
   </data>
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -619,7 +616,7 @@
     <value>349, 67</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 18</value>
+    <value>61, 18</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -667,7 +664,7 @@
     <value>True</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -676,7 +673,7 @@
     <value>1, 121</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
+    <value>79, 18</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -724,7 +721,7 @@
     <value>True</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -733,7 +730,7 @@
     <value>1, 66</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 18</value>
+    <value>166, 18</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -787,7 +784,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblTextoPredio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 106</value>
+    <value>6, 104</value>
   </data>
   <data name="lblTextoPredio.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>50, 50, 50, 50</value>
@@ -904,7 +901,7 @@
     <value>3</value>
   </data>
   <data name="lblQtdApartamento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="lblQtdApartamento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1090,7 +1087,7 @@
     <value>True</value>
   </data>
   <data name="lblEscolhaPredio.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="lblEscolhaPredio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1099,7 +1096,7 @@
     <value>6, 52</value>
   </data>
   <data name="lblEscolhaPredio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 18</value>
+    <value>130, 18</value>
   </data>
   <data name="lblEscolhaPredio.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -1123,7 +1120,7 @@
     <value>True</value>
   </data>
   <data name="lblNomePredio.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="lblNomePredio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1132,7 +1129,7 @@
     <value>6, 106</value>
   </data>
   <data name="lblNomePredio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 18</value>
+    <value>125, 18</value>
   </data>
   <data name="lblNomePredio.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -1624,7 +1621,7 @@
     <value>True</value>
   </data>
   <data name="lblQtdVagas.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="lblQtdVagas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1633,7 +1630,7 @@
     <value>5, 151</value>
   </data>
   <data name="lblQtdVagas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 18</value>
+    <value>162, 18</value>
   </data>
   <data name="lblQtdVagas.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -1684,7 +1681,7 @@
     <value>True</value>
   </data>
   <data name="lblTipoEstacionamento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="lblTipoEstacionamento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1693,7 +1690,7 @@
     <value>5, 88</value>
   </data>
   <data name="lblTipoEstacionamento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 18</value>
+    <value>115, 18</value>
   </data>
   <data name="lblTipoEstacionamento.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -1804,7 +1801,7 @@
     <value>True</value>
   </data>
   <data name="lblEscolhaEstacio.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="lblEscolhaEstacio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1813,7 +1810,7 @@
     <value>2, 57</value>
   </data>
   <data name="lblEscolhaEstacio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 18</value>
+    <value>71, 18</value>
   </data>
   <data name="lblEscolhaEstacio.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -2152,7 +2149,7 @@
     <value>True</value>
   </data>
   <data name="lblQuantPredios.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="lblQuantPredios.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2161,7 +2158,7 @@
     <value>6, 127</value>
   </data>
   <data name="lblQuantPredios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 18</value>
+    <value>174, 18</value>
   </data>
   <data name="lblQuantPredios.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -2242,7 +2239,7 @@
     <value>True</value>
   </data>
   <data name="lblEscolhaBloco.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="lblEscolhaBloco.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2251,7 +2248,7 @@
     <value>6, 58</value>
   </data>
   <data name="lblEscolhaBloco.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 18</value>
+    <value>122, 18</value>
   </data>
   <data name="lblEscolhaBloco.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -2275,7 +2272,7 @@
     <value>True</value>
   </data>
   <data name="lblNomeBloco.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century, 11.25pt, style=Bold</value>
+    <value>Century, 11.25pt</value>
   </data>
   <data name="lblNomeBloco.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2284,7 +2281,7 @@
     <value>4, 81</value>
   </data>
   <data name="lblNomeBloco.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 18</value>
+    <value>117, 18</value>
   </data>
   <data name="lblNomeBloco.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>

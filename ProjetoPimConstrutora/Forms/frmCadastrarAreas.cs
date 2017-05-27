@@ -1,5 +1,4 @@
-﻿using ProjetoPimConstrutora.Forms.UserControls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,12 @@ using System.Windows.Forms;
 
 namespace ProjetoPimConstrutora.Forms
 {
-    public partial class frmCadastrarUserAdm : Form
+    public partial class frmCadastrarAreas : Form
     {
-        public frmCadastrarUserAdm()
+        public frmCadastrarAreas()
         {
             InitializeComponent();
-
-            ucDadosPessoaisCad ucCad = new ucDadosPessoaisCad();
-            ucCad.Dock = DockStyle.Fill;
-
-            pnCenter.Controls.Add(ucCad);
         }
+
     }
 }

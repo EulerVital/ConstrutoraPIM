@@ -70,11 +70,29 @@
     <Compile Include="Forms\frmCadastrarApartamento.Designer.cs">
       <DependentUpon>frmCadastrarApartamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCadastrarAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarAreas.Designer.cs">
+      <DependentUpon>frmCadastrarAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarFuncionarios.Designer.cs">
+      <DependentUpon>frmCadastrarFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastrarPredios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmCadastrarPredios.Designer.cs">
       <DependentUpon>frmCadastrarPredios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarProfissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarProfissao.Designer.cs">
+      <DependentUpon>frmCadastrarProfissao.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmCadastrarUserAdm.cs">
       <SubType>Form</SubType>
@@ -88,17 +106,35 @@
     <Compile Include="Forms\frmConsultarApartamentos.Designer.cs">
       <DependentUpon>frmConsultarApartamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmConsultarAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultarAreas.Designer.cs">
+      <DependentUpon>frmConsultarAreas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmConsultarBlocos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmConsultarBlocos.Designer.cs">
       <DependentUpon>frmConsultarBlocos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmConsultarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultarFuncionario.Designer.cs">
+      <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmConsultarPredios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmConsultarPredios.Designer.cs">
       <DependentUpon>frmConsultarPredios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultarUsuario.Designer.cs">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmEscolherTipoUsuario.cs">
       <SubType>Form</SubType>
@@ -111,6 +147,12 @@
     </Compile>
     <Compile Include="Forms\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReservarAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReservarAreas.Designer.cs">
+      <DependentUpon>frmReservarAreas.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserControls\ucCadastrarBlocos.cs">
       <SubType>UserControl</SubType>
@@ -136,13 +178,28 @@
     <Compile Include="Forms\UserControls\ucConsultarCondominio.Designer.cs">
       <DependentUpon>ucConsultarCondominio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserControls\ucDadosPessoaisCad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\ucDadosPessoaisCad.Designer.cs">
+      <DependentUpon>ucDadosPessoaisCad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmCadastrarApartamento.resx">
       <DependentUpon>frmCadastrarApartamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarAreas.resx">
+      <DependentUpon>frmCadastrarAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarFuncionarios.resx">
+      <DependentUpon>frmCadastrarFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarPredios.resx">
       <DependentUpon>frmCadastrarPredios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarProfissao.resx">
+      <DependentUpon>frmCadastrarProfissao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarUserAdm.resx">
       <DependentUpon>frmCadastrarUserAdm.cs</DependentUpon>
@@ -150,17 +207,29 @@
     <EmbeddedResource Include="Forms\frmConsultarApartamentos.resx">
       <DependentUpon>frmConsultarApartamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultarAreas.resx">
+      <DependentUpon>frmConsultarAreas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarBlocos.resx">
       <DependentUpon>frmConsultarBlocos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultarFuncionario.resx">
+      <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarPredios.resx">
       <DependentUpon>frmConsultarPredios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultarUsuario.resx">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEscolherTipoUsuario.resx">
       <DependentUpon>frmEscolherTipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReservarAreas.resx">
+      <DependentUpon>frmReservarAreas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserControls\ucCadastrarBlocos.resx">
       <DependentUpon>ucCadastrarBlocos.cs</DependentUpon>
@@ -176,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserControls\ucConsultarCondominio.resx">
       <DependentUpon>ucConsultarCondominio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\ucDadosPessoaisCad.resx">
+      <DependentUpon>ucDadosPessoaisCad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -227,6 +299,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\178.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittrash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.2.0.45\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.2.0.45\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
