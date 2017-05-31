@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCadastrarCondominio));
-            this.btnIncluiEstacionamento = new System.Windows.Forms.Button();
-            this.btnIncluirBlocos = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeCondominio = new System.Windows.Forms.TextBox();
+            this.btnIncluirBlocos = new System.Windows.Forms.Button();
             this.ckbStatus = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.mtxtDataFundacao = new System.Windows.Forms.MaskedTextBox();
-            this.cmbBairroCondominio = new System.Windows.Forms.ComboBox();
+            this.btnIncluiEstacionamento = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbCidadeCondominio = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -116,36 +116,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdPredios)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnIncluiEstacionamento
-            // 
-            resources.ApplyResources(this.btnIncluiEstacionamento, "btnIncluiEstacionamento");
-            this.btnIncluiEstacionamento.BackColor = System.Drawing.Color.LightGray;
-            this.btnIncluiEstacionamento.ForeColor = System.Drawing.Color.Black;
-            this.btnIncluiEstacionamento.Name = "btnIncluiEstacionamento";
-            this.btnIncluiEstacionamento.UseVisualStyleBackColor = false;
-            this.btnIncluiEstacionamento.Click += new System.EventHandler(this.btnIncluiEstacionamento_Click);
-            // 
-            // btnIncluirBlocos
-            // 
-            resources.ApplyResources(this.btnIncluirBlocos, "btnIncluirBlocos");
-            this.btnIncluirBlocos.BackColor = System.Drawing.Color.LightGray;
-            this.btnIncluirBlocos.ForeColor = System.Drawing.Color.Black;
-            this.btnIncluirBlocos.Name = "btnIncluirBlocos";
-            this.btnIncluirBlocos.UseVisualStyleBackColor = false;
-            this.btnIncluirBlocos.Click += new System.EventHandler(this.btnIncluirBlocos_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.LightGray;
-            resources.ApplyResources(this.btnSalvar, "btnSalvar");
-            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtNomeCondominio);
             this.panel2.Controls.Add(this.btnIncluirBlocos);
@@ -154,7 +128,6 @@
             this.panel2.Controls.Add(this.btnSalvar);
             this.panel2.Controls.Add(this.mtxtDataFundacao);
             this.panel2.Controls.Add(this.btnIncluiEstacionamento);
-            this.panel2.Controls.Add(this.cmbBairroCondominio);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.cmbCidadeCondominio);
             this.panel2.Controls.Add(this.label7);
@@ -169,6 +142,12 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -180,6 +159,16 @@
             this.txtNomeCondominio.BackColor = System.Drawing.Color.LightGray;
             resources.ApplyResources(this.txtNomeCondominio, "txtNomeCondominio");
             this.txtNomeCondominio.Name = "txtNomeCondominio";
+            // 
+            // btnIncluirBlocos
+            // 
+            resources.ApplyResources(this.btnIncluirBlocos, "btnIncluirBlocos");
+            this.btnIncluirBlocos.BackColor = System.Drawing.Color.LightGray;
+            this.btnIncluirBlocos.ForeColor = System.Drawing.Color.Black;
+            this.btnIncluirBlocos.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_add;
+            this.btnIncluirBlocos.Name = "btnIncluirBlocos";
+            this.btnIncluirBlocos.UseVisualStyleBackColor = false;
+            this.btnIncluirBlocos.Click += new System.EventHandler(this.btnIncluirBlocos_Click);
             // 
             // ckbStatus
             // 
@@ -195,6 +184,16 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Name = "label3";
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.btnSalvar, "btnSalvar");
+            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvar.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // mtxtDataFundacao
             // 
             this.mtxtDataFundacao.BackColor = System.Drawing.Color.LightGray;
@@ -202,13 +201,15 @@
             this.mtxtDataFundacao.Name = "mtxtDataFundacao";
             this.mtxtDataFundacao.ValidatingType = typeof(System.DateTime);
             // 
-            // cmbBairroCondominio
+            // btnIncluiEstacionamento
             // 
-            this.cmbBairroCondominio.BackColor = System.Drawing.Color.LightGray;
-            this.cmbBairroCondominio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.cmbBairroCondominio, "cmbBairroCondominio");
-            this.cmbBairroCondominio.FormattingEnabled = true;
-            this.cmbBairroCondominio.Name = "cmbBairroCondominio";
+            resources.ApplyResources(this.btnIncluiEstacionamento, "btnIncluiEstacionamento");
+            this.btnIncluiEstacionamento.BackColor = System.Drawing.Color.LightGray;
+            this.btnIncluiEstacionamento.ForeColor = System.Drawing.Color.Black;
+            this.btnIncluiEstacionamento.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_add;
+            this.btnIncluiEstacionamento.Name = "btnIncluiEstacionamento";
+            this.btnIncluiEstacionamento.UseVisualStyleBackColor = false;
+            this.btnIncluiEstacionamento.Click += new System.EventHandler(this.btnIncluiEstacionamento_Click);
             // 
             // label8
             // 
@@ -337,6 +338,7 @@
             this.btnSalvarPredios.BackColor = System.Drawing.Color.LightGray;
             resources.ApplyResources(this.btnSalvarPredios, "btnSalvarPredios");
             this.btnSalvarPredios.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvarPredios.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
             this.btnSalvarPredios.Name = "btnSalvarPredios";
             this.btnSalvarPredios.UseVisualStyleBackColor = false;
             // 
@@ -359,6 +361,7 @@
             this.btnExcluirListaPredio.BackColor = System.Drawing.Color.LightGray;
             resources.ApplyResources(this.btnExcluirListaPredio, "btnExcluirListaPredio");
             this.btnExcluirListaPredio.ForeColor = System.Drawing.Color.Black;
+            this.btnExcluirListaPredio.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_remove;
             this.btnExcluirListaPredio.Name = "btnExcluirListaPredio";
             this.btnExcluirListaPredio.UseVisualStyleBackColor = false;
             // 
@@ -373,6 +376,7 @@
             this.btnAddPredio.BackColor = System.Drawing.Color.LightGray;
             resources.ApplyResources(this.btnAddPredio, "btnAddPredio");
             this.btnAddPredio.ForeColor = System.Drawing.Color.Black;
+            this.btnAddPredio.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_add;
             this.btnAddPredio.Name = "btnAddPredio";
             this.btnAddPredio.UseVisualStyleBackColor = false;
             // 
@@ -491,6 +495,7 @@
             this.btnExcluirListaEstacionamento.BackColor = System.Drawing.Color.LightGray;
             resources.ApplyResources(this.btnExcluirListaEstacionamento, "btnExcluirListaEstacionamento");
             this.btnExcluirListaEstacionamento.ForeColor = System.Drawing.Color.Black;
+            this.btnExcluirListaEstacionamento.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_remove;
             this.btnExcluirListaEstacionamento.Name = "btnExcluirListaEstacionamento";
             this.btnExcluirListaEstacionamento.UseVisualStyleBackColor = false;
             // 
@@ -499,6 +504,7 @@
             this.btnSalvarEstacionamento.BackColor = System.Drawing.Color.LightGray;
             resources.ApplyResources(this.btnSalvarEstacionamento, "btnSalvarEstacionamento");
             this.btnSalvarEstacionamento.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvarEstacionamento.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
             this.btnSalvarEstacionamento.Name = "btnSalvarEstacionamento";
             this.btnSalvarEstacionamento.UseVisualStyleBackColor = false;
             // 
@@ -535,6 +541,7 @@
             this.btnAddEstacionamento.BackColor = System.Drawing.Color.LightGray;
             resources.ApplyResources(this.btnAddEstacionamento, "btnAddEstacionamento");
             this.btnAddEstacionamento.ForeColor = System.Drawing.Color.Black;
+            this.btnAddEstacionamento.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_add;
             this.btnAddEstacionamento.Name = "btnAddEstacionamento";
             this.btnAddEstacionamento.UseVisualStyleBackColor = false;
             // 
@@ -596,6 +603,7 @@
             this.btnExcluirListaBloco.BackColor = System.Drawing.Color.LightGray;
             resources.ApplyResources(this.btnExcluirListaBloco, "btnExcluirListaBloco");
             this.btnExcluirListaBloco.ForeColor = System.Drawing.Color.Black;
+            this.btnExcluirListaBloco.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_remove;
             this.btnExcluirListaBloco.Name = "btnExcluirListaBloco";
             this.btnExcluirListaBloco.UseVisualStyleBackColor = false;
             this.btnExcluirListaBloco.Click += new System.EventHandler(this.btnExcluirListaBloco_Click);
@@ -630,6 +638,7 @@
             this.btnSalvarBlocos.BackColor = System.Drawing.Color.LightGray;
             resources.ApplyResources(this.btnSalvarBlocos, "btnSalvarBlocos");
             this.btnSalvarBlocos.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvarBlocos.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
             this.btnSalvarBlocos.Name = "btnSalvarBlocos";
             this.btnSalvarBlocos.UseVisualStyleBackColor = false;
             // 
@@ -644,6 +653,7 @@
             this.btnAddBloco.BackColor = System.Drawing.Color.LightGray;
             resources.ApplyResources(this.btnAddBloco, "btnAddBloco");
             this.btnAddBloco.ForeColor = System.Drawing.Color.Black;
+            this.btnAddBloco.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_add;
             this.btnAddBloco.Name = "btnAddBloco";
             this.btnAddBloco.UseVisualStyleBackColor = false;
             this.btnAddBloco.Click += new System.EventHandler(this.btnAddBloco_Click);
@@ -729,7 +739,6 @@
         private System.Windows.Forms.TextBox txtEnderecoCondominio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbBairroCondominio;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbCidadeCondominio;
         private System.Windows.Forms.Label label7;
@@ -793,8 +802,9 @@
         private System.Windows.Forms.NumericUpDown nudQtdAparta;
         private System.Windows.Forms.NumericUpDown nudQtdPredios;
         private System.Windows.Forms.Label lblTextoBloco;
-        private System.Windows.Forms.Label lblTextoPredio;
         private System.Windows.Forms.NumericUpDown nudQtdVagas;
         private System.Windows.Forms.Label lblTextoEstacionamento;
+        private System.Windows.Forms.Label lblTextoPredio;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

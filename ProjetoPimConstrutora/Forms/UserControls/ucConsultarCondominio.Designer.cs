@@ -39,7 +39,6 @@
             this.txtNomeCondominio = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.BlocosCondominio = new System.Windows.Forms.DataGridViewButtonColumn();
             this.AlterarCondominio = new System.Windows.Forms.DataGridViewButtonColumn();
             this.StatusCondominio = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.pnTabelaConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondominios)).BeginInit();
@@ -66,11 +66,11 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtNomeCondominio);
             this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.btnSalvar);
-            this.panel2.Controls.Add(this.comboBox3);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.label7);
@@ -126,25 +126,16 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvar.Image = global::ProjetoPimConstrutora.Properties.Resources.Search;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnSalvar.Location = new System.Drawing.Point(8, 89);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(141, 33);
+            this.btnSalvar.Size = new System.Drawing.Size(124, 33);
             this.btnSalvar.TabIndex = 7;
-            this.btnSalvar.Text = "FILTRAR";
+            this.btnSalvar.Text = "Pesquisar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Century", 9.75F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(415, 55);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(192, 24);
-            this.comboBox3.TabIndex = 23;
             // 
             // label8
             // 
@@ -372,6 +363,15 @@
             this.StatusCondominio.ReadOnly = true;
             this.StatusCondominio.Width = 70;
             // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.LightGray;
+            this.textBox2.Font = new System.Drawing.Font("Century", 9.75F);
+            this.textBox2.Location = new System.Drawing.Point(403, 58);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(212, 23);
+            this.textBox2.TabIndex = 25;
+            // 
             // ucConsultarCondominio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,7 +396,6 @@
         private System.Windows.Forms.TextBox txtNomeCondominio;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label7;
@@ -415,5 +414,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn BlocosCondominio;
         private System.Windows.Forms.DataGridViewButtonColumn AlterarCondominio;
         private System.Windows.Forms.DataGridViewButtonColumn StatusCondominio;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

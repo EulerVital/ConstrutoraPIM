@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoPimConstrutora.Forms.UserControls;
+using System.Threading;
 
 namespace ProjetoPimConstrutora.Forms
 {
@@ -16,6 +10,9 @@ namespace ProjetoPimConstrutora.Forms
         public frmPrincipal()
         {
             InitializeComponent();
+            this.Visible = false;
+            Thread.Sleep(2000);
+            this.Show();
             cmbTipoUsuario.SelectedIndex = 0;
         }
 
@@ -79,10 +76,66 @@ namespace ProjetoPimConstrutora.Forms
             frm.Show();
         }
 
+        private void msAdmCondApartCons_Click(object sender, EventArgs e)
+        {
+            frmConsultarApartamentos frm = new frmConsultarApartamentos();
+            frm.Show();
+        }
+
+        private void msAdmUserSysCad_Click(object sender, EventArgs e)
+        {
+            frmEscolherTipoUsuario frm = new frmEscolherTipoUsuario();
+            frm.Show();
+        }
+
+        private void msAdmFuncionarioCadFunc_Click(object sender, EventArgs e)
+        {
+            frmCadastrarFuncionarios frm = new frmCadastrarFuncionarios();
+            frm.Show();
+        }
+
+        private void msAdmFuncionarioCadProf_Click(object sender, EventArgs e)
+        {
+            frmCadastrarProfissao frm = new frmCadastrarProfissao();
+            frm.Show();
+        }
+
+        private void msAdmAreaCondCad_Click(object sender, EventArgs e)
+        {
+            frmCadastrarAreas frm = new frmCadastrarAreas();
+            frm.Show();
+        }
+
+        private void msGcReservarAreas_Click(object sender, EventArgs e)
+        {
+            frmReservarAreas frm = new frmReservarAreas();
+            frm.Show();
+        }
+
+        private void msAdmAreaCondCons_Click(object sender, EventArgs e)
+        {
+            frmConsultarAreas frm = new frmConsultarAreas();
+            frm.Show();
+        }
+
+        private void msAdmFuncionarioConsFunc_Click(object sender, EventArgs e)
+        {
+            frmConsultarFuncionario frm = new frmConsultarFuncionario();
+            frm.Show();
+        }
+
+        private void msAdmUserSysCons_Click(object sender, EventArgs e)
+        {
+            frmConsultarUsuario frm = new frmConsultarUsuario();
+            frm.Show();
+        }
+
         #endregion
 
         #region Metodos
 
         #endregion
+
+
     }
 }
