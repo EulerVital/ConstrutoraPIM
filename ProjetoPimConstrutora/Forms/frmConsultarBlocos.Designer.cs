@@ -50,7 +50,7 @@
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(454, 76);
+            this.pnTop.Size = new System.Drawing.Size(505, 76);
             this.pnTop.TabIndex = 2;
             // 
             // comboBox3
@@ -145,7 +145,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCondominios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCondominios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCondominios.Size = new System.Drawing.Size(454, 249);
+            this.dgvCondominios.Size = new System.Drawing.Size(505, 249);
             this.dgvCondominios.TabIndex = 3;
             // 
             // frmConsultarBlocos
@@ -153,7 +153,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(454, 325);
+            this.ClientSize = new System.Drawing.Size(505, 325);
             this.Controls.Add(this.dgvCondominios);
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
