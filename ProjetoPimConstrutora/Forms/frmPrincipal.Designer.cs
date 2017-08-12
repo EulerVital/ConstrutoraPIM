@@ -81,6 +81,8 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
+            this.controleDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenuPrincipal.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnPrincipal.SuspendLayout();
@@ -248,15 +250,17 @@
             // 
             this.msAdmCondEstaCad.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondEstaCad.Name = "msAdmCondEstaCad";
-            this.msAdmCondEstaCad.Size = new System.Drawing.Size(146, 22);
+            this.msAdmCondEstaCad.Size = new System.Drawing.Size(152, 22);
             this.msAdmCondEstaCad.Text = "Cadastar";
+            this.msAdmCondEstaCad.Click += new System.EventHandler(this.msAdmCondEstaCad_Click);
             // 
             // msAdmCondEstaCons
             // 
             this.msAdmCondEstaCons.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondEstaCons.Name = "msAdmCondEstaCons";
-            this.msAdmCondEstaCons.Size = new System.Drawing.Size(146, 22);
+            this.msAdmCondEstaCons.Size = new System.Drawing.Size(152, 22);
             this.msAdmCondEstaCons.Text = "Consultar";
+            this.msAdmCondEstaCons.Click += new System.EventHandler(this.msAdmCondEstaCons_Click);
             // 
             // msAdmUserSys
             // 
@@ -419,8 +423,9 @@
             // 
             this.controleDeVagasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.controleDeVagasToolStripMenuItem.Name = "controleDeVagasToolStripMenuItem";
-            this.controleDeVagasToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.controleDeVagasToolStripMenuItem.Text = "Controle de Vagas";
+            this.controleDeVagasToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.controleDeVagasToolStripMenuItem.Text = "Alugar Vaga Estacionamento";
+            this.controleDeVagasToolStripMenuItem.Click += new System.EventHandler(this.controleDeVagasToolStripMenuItem_Click);
             // 
             // msGcReservarAreas
             // 
@@ -440,6 +445,9 @@
             // segurançaToolStripMenuItem
             // 
             this.segurançaToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.segurançaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.controleDeVigilânciaToolStripMenuItem,
+            this.relatórioDeVigilânciaToolStripMenuItem});
             this.segurançaToolStripMenuItem.Name = "segurançaToolStripMenuItem";
             this.segurançaToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.segurançaToolStripMenuItem.Text = "Segurança";
@@ -452,7 +460,7 @@
             this.pnTop.Controls.Add(this.lblTitulo);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.ForeColor = System.Drawing.Color.Black;
-            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Location = new System.Drawing.Point(0, 24);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1174, 43);
             this.pnTop.TabIndex = 1;
@@ -490,9 +498,9 @@
             this.pnPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnPrincipal.Controls.Add(this.pnLogin);
             this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPrincipal.Location = new System.Drawing.Point(0, 43);
+            this.pnPrincipal.Location = new System.Drawing.Point(0, 67);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(1174, 460);
+            this.pnPrincipal.Size = new System.Drawing.Size(1174, 436);
             this.pnPrincipal.TabIndex = 2;
             // 
             // pnLogin
@@ -613,6 +621,20 @@
             this.txtLogin.Size = new System.Drawing.Size(286, 26);
             this.txtLogin.TabIndex = 11;
             // 
+            // controleDeVigilânciaToolStripMenuItem
+            // 
+            this.controleDeVigilânciaToolStripMenuItem.Name = "controleDeVigilânciaToolStripMenuItem";
+            this.controleDeVigilânciaToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.controleDeVigilânciaToolStripMenuItem.Text = "Controle de Vigilância";
+            this.controleDeVigilânciaToolStripMenuItem.Click += new System.EventHandler(this.controleDeVigilânciaToolStripMenuItem_Click);
+            // 
+            // relatórioDeVigilânciaToolStripMenuItem
+            // 
+            this.relatórioDeVigilânciaToolStripMenuItem.Name = "relatórioDeVigilânciaToolStripMenuItem";
+            this.relatórioDeVigilânciaToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.relatórioDeVigilânciaToolStripMenuItem.Text = "Relatório de Vigilância";
+            this.relatórioDeVigilânciaToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeVigilânciaToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -694,5 +716,7 @@
         private System.Windows.Forms.ComboBox cmbTipoUsuario;
         private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.ToolStripMenuItem controleDeVigilânciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDeVigilânciaToolStripMenuItem;
     }
 }

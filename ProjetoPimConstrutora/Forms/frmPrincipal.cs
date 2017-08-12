@@ -130,12 +130,41 @@ namespace ProjetoPimConstrutora.Forms
             frm.Show();
         }
 
+        private void msAdmCondEstaCad_Click(object sender, EventArgs e)
+        {
+            frmCadastrarVagaEstacionamento frm = new frmCadastrarVagaEstacionamento();
+            frm.Show();
+        }
+
+        private void msAdmCondEstaCons_Click(object sender, EventArgs e)
+        {
+            frmConsultarEstacionamento frm = new frmConsultarEstacionamento();
+            frm.Show();
+        }
+
+        private void controleDeVagasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAluguelEstacionamento frm = new frmAluguelEstacionamento();
+            frm.Show();
+        }
+
+        private void controleDeVigilânciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmControleVigilancia frm = new frmControleVigilancia();
+            frm.Show();
+        }
+
+        private void relatórioDeVigilânciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelatorioVigilancia frm = new frmRelatorioVigilancia();
+            frm.Show();
+        }
+
         #endregion
 
         #region Metodos
 
         #endregion
-
 
     }
 }
