@@ -40,7 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="nBloco.cs" />
+    <Compile Include="nCondominio.cs" />
+    <Compile Include="nPredio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{3C0171AA-A90C-4FBC-8543-1B1FE513B961}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENT\ENT.csproj">
+      <Project>{CF97E72F-253C-4FF8-9A8F-A9B69D75E7E2}</Project>
+      <Name>ENT</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

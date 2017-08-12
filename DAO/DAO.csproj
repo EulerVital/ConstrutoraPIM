@@ -41,7 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBase\DBase.cs" />
+    <Compile Include="dBloco.cs" />
+    <Compile Include="dCondominio.cs" />
+    <Compile Include="dPredio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ENT\ENT.csproj">
+      <Project>{cf97e72f-253c-4ff8-9a8f-a9b69d75e7e2}</Project>
+      <Name>ENT</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

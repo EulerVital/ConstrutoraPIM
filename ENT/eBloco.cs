@@ -12,6 +12,7 @@ namespace ENT
         public string Nome { get; set; }
         public int QtdPredios { get; set; }
         public bool StatusAtivo { get; set; }
+        public string TipoBloco { get; set; }
         public eCondominio Condominio { get; set; }
     }
 }
