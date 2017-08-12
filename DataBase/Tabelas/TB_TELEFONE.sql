@@ -1,0 +1,11 @@
+IF NOT EXISTS(select * from sys.tables where name =  'TB_TELEFONE')
+BEGIN
+	CREATE TABLE TB_TELEFONE
+	(
+		 TelefoneID INT PRIMARY KEY IDENTITY(1,1)
+		,Contato VARCHAR(50) NOT NULL
+		,TipoTelefoneID INT FOREIGN KEY(TipoTelefoneID) REFERENCES TB_TIPO_TELEFONE
+		,Excluido BIT DEFAULT(0)
+	)
+END
+GO

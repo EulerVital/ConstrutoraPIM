@@ -1,0 +1,10 @@
+IF NOT EXISTS(select * from sys.tables where name = 'TB_TIPO_CORRESPONDENCIA')
+BEGIN
+	CREATE TABLE TB_TIPO_CORRESPONDENCIA
+	(
+		 TipoCorrespondenciaID INT PRIMARY KEY IDENTITY(1,1)
+		,TipoNome VARCHAR(100) NOT NULL
+		,Excluido BIT NULL
+	)
+END
+GO
