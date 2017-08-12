@@ -36,7 +36,8 @@ CREATE PROC USP_CONDOMINIO_GET
 AS
 BEGIN
 	SELECT
-		 Nome
+		 CondominioID
+		,Nome
 		,QtdBlocos
 		,Endereco
 		,CEP
@@ -47,6 +48,8 @@ BEGIN
 	FROM
 		UVW_CONDOMINIO
 	WHERE
+		 CondominioID = COALESCE(@CondominioID, CondominioID)
+	AND
 		 Nome = COALESCE(@Nome, Nome)
 	AND
 		 QtdBlocos = COALESCE(@QtdBlocos, QtdBlocos)

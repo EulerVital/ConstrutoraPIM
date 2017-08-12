@@ -25,11 +25,12 @@ GO
 CREATE VIEW UVW_CONDOMINIO
 AS
 	SELECT
-		 Nome
+		 CondominioID
+		,Nome
 		,QtdBlocos
-		,Endereco
-		,CEP
-		,Bairro
+		,ISNULL(Endereco, 'ND') Endereco
+		,ISNULL(CEP, 'ND') CEP
+		,ISNULL(Bairro, 'ND') Bairro
 		,ISNULL(CI.Id, 0) CidadeID
 		,ISNULL(CI.Name, 'ND') CidadeNome
 		,Excluido
