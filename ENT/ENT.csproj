@@ -44,6 +44,7 @@
     <Compile Include="eCidade.cs" />
     <Compile Include="eCondominio.cs" />
     <Compile Include="eEstado.cs" />
+    <Compile Include="ePredio.cs" />
     <Compile Include="eUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
