@@ -64,6 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frmAluguelEstacionamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAluguelEstacionamento.Designer.cs">
+      <DependentUpon>frmAluguelEstacionamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastrarApartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     <Compile Include="Forms\frmCadastrarUserAdm.Designer.cs">
       <DependentUpon>frmCadastrarUserAdm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCadastrarVagaEstacionamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarVagaEstacionamento.Designer.cs">
+      <DependentUpon>frmCadastrarVagaEstacionamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmConsultarApartamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,12 @@
     </Compile>
     <Compile Include="Forms\frmConsultarBlocos.Designer.cs">
       <DependentUpon>frmConsultarBlocos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConsultarEstacionamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultarEstacionamento.Designer.cs">
+      <DependentUpon>frmConsultarEstacionamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmConsultarFuncionario.cs">
       <SubType>Form</SubType>
@@ -136,6 +154,12 @@
     <Compile Include="Forms\frmConsultarUsuario.Designer.cs">
       <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmControleVigilancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmControleVigilancia.Designer.cs">
+      <DependentUpon>frmControleVigilancia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmEscolherTipoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +171,12 @@
     </Compile>
     <Compile Include="Forms\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRelatorioVigilancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRelatorioVigilancia.Designer.cs">
+      <DependentUpon>frmRelatorioVigilancia.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmReservarAreas.cs">
       <SubType>Form</SubType>
@@ -186,6 +216,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmAluguelEstacionamento.resx">
+      <DependentUpon>frmAluguelEstacionamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarApartamento.resx">
       <DependentUpon>frmCadastrarApartamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +237,9 @@
     <EmbeddedResource Include="Forms\frmCadastrarUserAdm.resx">
       <DependentUpon>frmCadastrarUserAdm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarVagaEstacionamento.resx">
+      <DependentUpon>frmCadastrarVagaEstacionamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarApartamentos.resx">
       <DependentUpon>frmConsultarApartamentos.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarBlocos.resx">
       <DependentUpon>frmConsultarBlocos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultarEstacionamento.resx">
+      <DependentUpon>frmConsultarEstacionamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarFuncionario.resx">
       <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
@@ -222,11 +261,17 @@
     <EmbeddedResource Include="Forms\frmConsultarUsuario.resx">
       <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmControleVigilancia.resx">
+      <DependentUpon>frmControleVigilancia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEscolherTipoUsuario.resx">
       <DependentUpon>frmEscolherTipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRelatorioVigilancia.resx">
+      <DependentUpon>frmRelatorioVigilancia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReservarAreas.resx">
       <DependentUpon>frmReservarAreas.cs</DependentUpon>
