@@ -34,9 +34,9 @@ namespace DAO
         SqlParameter[] param = null;
         #endregion
 
-        public IList<eBloco> Bloco_GET(eBloco obj)
+        public List<eBloco> Bloco_GET(eBloco obj)
         {
-            IList<eBloco> retorno = new List<eBloco>();
+            List<eBloco> retorno = new List<eBloco>();
             cmd = new SqlCommand();
             param = new SqlParameter[7];
 
@@ -49,7 +49,7 @@ namespace DAO
                 MontarParametro(3, param, ParameterDirection.Input, "@TipoBloco", obj.TipoBloco, SqlDbType.Char);
                 MontarParametro(4, param, ParameterDirection.Input, "@StatusAtivo", obj.StatusAtivo, SqlDbType.Bit);
                 MontarParametro(5, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Int);
-                MontarParametro(6, param, ParameterDirection.Input, "@CidadeID", obj.Condominio.Nome, SqlDbType.VarChar);
+                MontarParametro(6, param, ParameterDirection.Input, "@NomeCondominio", obj.Condominio.Nome, SqlDbType.VarChar);
 
                 dr = ExecReader("USP_BLOCO_GET", cmd, param);
 

@@ -27,7 +27,7 @@ CREATE PROC USP_BLOCO_GET
 	 @BlocoID INT = NULL
 	,@Nome VARCHAR(150) = NULL
 	,@QtdPredios INT = NULL
-	,@TipoBloco CHAR(1) = NULL
+	,@TipoBloco CHAR(2) = NULL
 	,@StatusAtivo BIT = NULL
 	,@CondominioID INT = NULL
 	,@NomeCondominio VARCHAR(150) = NULL

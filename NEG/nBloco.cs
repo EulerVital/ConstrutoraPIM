@@ -28,7 +28,7 @@ namespace NEG
         /// </summary>
         #endregion
 
-        public static IList<eBloco> Bloco_GET(eBloco obj)
+        public static List<eBloco> Bloco_GET(eBloco obj)
         {
             try
             {

@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="DBase\DBase.cs" />
     <Compile Include="dBloco.cs" />
+    <Compile Include="dCidade.cs" />
     <Compile Include="dCondominio.cs" />
+    <Compile Include="dEstado.cs" />
     <Compile Include="dPredio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

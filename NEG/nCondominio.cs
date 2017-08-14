@@ -28,7 +28,7 @@ namespace NEG
         /// </summary>
         #endregion
 
-        public static IList<eCondominio> Condominio_GET(eCondominio obj)
+        public static List<eCondominio> Condominio_GET(eCondominio obj)
         {
             try
             {

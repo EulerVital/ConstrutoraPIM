@@ -37,9 +37,9 @@ namespace DAO
         SqlParameter[] param = null;
         #endregion
 
-        public IList<ePredio> Predio_GET(ePredio obj)
+        public List<ePredio> Predio_GET(ePredio obj)
         {
-            IList<ePredio> retorno = new List<ePredio>();
+            List<ePredio> retorno = new List<ePredio>();
             cmd = new SqlCommand();
             param = new SqlParameter[7];
 

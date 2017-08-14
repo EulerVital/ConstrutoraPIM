@@ -44,6 +44,9 @@ BEGIN
 		,Bairro
 		,CidadeID
 		,CidadeNome
+		,EstadoID
+		,EstadoNome
+		,UF
 		,Excluido
 	FROM
 		UVW_CONDOMINIO

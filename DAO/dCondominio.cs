@@ -33,9 +33,9 @@ namespace DAO
         IDataReader dr = null;
         SqlParameter[] param = null;
         #endregion
-        public IList<eCondominio> Condominio_GET(eCondominio obj)
+        public List<eCondominio> Condominio_GET(eCondominio obj)
         {
-            IList<eCondominio> retorno = new List<eCondominio>();
+            List<eCondominio> retorno = new List<eCondominio>();
             cmd = new SqlCommand();
             param = new SqlParameter[8];
 
@@ -88,6 +88,9 @@ namespace DAO
                 obj.Bairro = GetString("Bairro", dr);
                 obj.Cidade.CidadeID = GetInt32("CidadeID", dr).ToString();
                 obj.Cidade.Nome = GetString("CidadeNome", dr);
+                obj.Cidade.Estado.EstadoID = GetInt32("EstadoID", dr).ToString();
+                obj.Cidade.Estado.Nome = GetString("EstadoID", dr);
+                obj.Cidade.Estado.UF = GetString("UF", dr);
                 obj.Excluido = GetBoolean("Excluido", dr);
 
                 return obj;

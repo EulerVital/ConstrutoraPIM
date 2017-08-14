@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace NEG
 {
-    public class nPredio
+    public class nEstado
     {
         #region Assinaturas
         /// <summary>
         /// *********Criação*************
         /// Autor: Euler Vital
-        /// Motivo: Classe Negocio de Predio
+        /// Motivo: Classe Negocio de Estado
         /// Data Criação: 12/08/2017
         /// ********Alteração************
         /// Autor: 
@@ -30,30 +30,17 @@ namespace NEG
         /// Data Criação:
         /// </summary>
         #endregion
-        
-        public nPredio()
+
+        public nEstado()
         {
 
         }
-        public static List<ePredio> Predio_GET(ePredio obj)
+        public static List<eEstado> Estado_GET(eEstado obj)
         {
             try
             {
-                dPredio db = new dPredio();
-                return db.Predio_GET(obj);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public static string Predio_SET(ePredio obj)
-        {
-            try
-            {
-                dPredio db = new dPredio();
-                return db.Predio_SET(obj);
+                dEstado db = new dEstado();
+                return db.Estado_GET(obj);
             }
             catch (Exception ex)
             {

@@ -22,7 +22,7 @@ GO
 * Autor:
 */
 
-CREATE PROC USP_PREDIO_GET
+CREATE PROC Qtd
 (
 	 @PredioID INT  = NULL
 	,@Nome VARCHAR(150) = NULL

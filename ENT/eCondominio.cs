@@ -2,6 +2,11 @@
 {
     public class eCondominio
     {
+        public eCondominio()
+        {
+            Cidade = new eCidade();
+        }
+
         public string CondominioID { get; set; }
         public string Nome { get; set; }
         public int QtdBlocos { get; set; }

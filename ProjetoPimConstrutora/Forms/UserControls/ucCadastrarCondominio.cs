@@ -1,10 +1,20 @@
-﻿using System;
+﻿using ENT;
+using NEG;
+using NEG.Util;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ProjetoPimConstrutora.Forms.UserControls
 {
     public partial class ucCadastrarCondominio : UserControl
     {
+        #region Propriedades
+        public List<eEstado> ListaEstados { get; set; }
+        public List<eCidade> ListaCidades { get; set; }
+        public string CondominioID { get; set; }
+        #endregion
         public ucCadastrarCondominio()
         {
             InitializeComponent();
@@ -12,13 +22,31 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             visualizarCamposBlocos(false);
             visualizarCamposPredios(false);
             visualizarCamposEstacionamento(false);
+            CarregarCombosCondominio();
         }
 
         #region Eventos
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            btnIncluirBlocos.Enabled = true;
-            btnIncluiEstacionamento.Enabled = true;
+            eCondominio obj = null;
+            obj = ValidaCamposCondominio();
+
+            if(obj != null)
+            {
+                CondominioID = nCondominio.Condominio_SET(obj);
+                if (CondominioID.Equals("0"))
+                {
+                    Util.MensagemErro("Condominio já existe");
+                }
+                else
+                {
+                    Util.MensagemSucesso("Dados gravado com sucesso");
+                    IsBloquearCamposCondominio(true);
+                }
+            }else
+            {
+                Util.MensagemErro("Dados de condominio invalido");
+            }
         }
 
         private void btnIncluirBlocos_Click(object sender, EventArgs e)
@@ -27,7 +55,6 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             lblQtdBlocos.Visible = true;
             lblQtdBlocos.Text = "Nº Blocos " + nudQtdBlocos.Value;
             visualizarCamposBlocos(true);
-            popularBlocos();
         }
 
         private void btnIncluiEstacionamento_Click(object sender, EventArgs e)
@@ -63,6 +90,18 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                     lstBlocos.Items.RemoveAt(lstBlocos.SelectedIndex);
                 }
             }
+        }
+
+        private void cmbEstadoCondominio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var Estado = (eEstado)((ComboBox)sender).SelectedItem;
+            var ListCidade = new List<eCidade>();
+
+            cmbCidadeCondominio.DataSource = null;
+            ListCidade = ListaCidades.Where(c => c.Estado.EstadoID == Estado.EstadoID).ToList();
+            cmbCidadeCondominio.DataSource = ListCidade.OrderBy(c=>c.Nome).ToList();
+            cmbCidadeCondominio.DisplayMember = "Nome";
+            cmbCidadeCondominio.ValueMember = "CidadeID";
         }
 
         #endregion
@@ -271,18 +310,76 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         }
 
         /// <summary>
-        /// Popular blocos
+        /// Carrega Propriedades do formulario
         /// </summary>
-        private void popularBlocos()
+        private void CarregarCombosCondominio()
         {
-            for(int i = 0; i < 20; i++)
-            {
-                cmbEscolhaBloco.Items.Add("BLOCO_" + i);
-            }
+            ListaEstados = nEstado.Estado_GET(new eEstado());
+            ListaCidades = nCidade.Cidade_GET(new eCidade());
 
-            cmbEscolhaBloco.SelectedIndex = 0;
+            cmbEstadoCondominio.DataSource = ListaEstados;
+            cmbEstadoCondominio.DisplayMember = "UF";
+            cmbEstadoCondominio.ValueMember = "EstadoID";
+
         }
 
+        /// <summary>
+        /// Valida dados de condominio e retorna o objeto
+        /// </summary>
+        /// <returns></returns>
+        private eCondominio ValidaCamposCondominio()
+        {
+            eCondominio objCond = null;
+
+            try
+            {
+                if(!string.IsNullOrEmpty(txtNomeCondominio.Text) || nudQtdBlocos.Value > 0)
+                {
+                    objCond = new eCondominio();
+
+                    objCond.Nome = txtNomeCondominio.Text;
+                    objCond.QtdBlocos = (int)nudQtdBlocos.Value;
+                    objCond.Endereco = Util.RetornaValueNull(txtEnderecoCondominio.Text);
+                    objCond.Bairro = Util.RetornaValueNull(txtBairro.Text);
+                    objCond.Cidade.CidadeID = Util.RetornaValueNull(((eCidade)cmbCidadeCondominio.SelectedItem).CidadeID);
+                    objCond.CEP = Util.RetornaValueNull(mtxtCepCondominio.Text);
+                    objCond.Excluido = ckbStatus.Checked;
+                }
+            }
+            catch { }
+
+            return objCond;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="isBloquer"></param>
+        private void IsBloquearCamposCondominio(bool isBloquer)
+        {
+            if (isBloquer)
+            {
+                txtNomeCondominio.Enabled = false;
+                txtBairro.Enabled = false;
+                txtEnderecoCondominio.Enabled = false;
+                txtNomePredio.Enabled = false;
+                btnIncluirBlocos.Enabled = true;
+                btnIncluiEstacionamento.Enabled = true;
+                btnSalvar.Enabled = false;
+            }
+            else
+            {
+                txtNomeCondominio.Enabled = true;
+                txtBairro.Enabled = true;
+                txtEnderecoCondominio.Enabled = true;
+                txtNomePredio.Enabled = true;
+                btnIncluirBlocos.Enabled = false;
+                btnIncluiEstacionamento.Enabled = false;
+                btnSalvar.Enabled = true;
+            }
+        } 
+
         #endregion
+
     }
 }

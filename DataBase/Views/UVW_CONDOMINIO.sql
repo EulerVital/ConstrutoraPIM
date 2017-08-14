@@ -26,18 +26,21 @@ CREATE VIEW UVW_CONDOMINIO
 AS
 	SELECT
 		 CondominioID
-		,Nome
+		,CO.Nome
 		,QtdBlocos
 		,ISNULL(Endereco, 'ND') Endereco
 		,ISNULL(CEP, 'ND') CEP
 		,ISNULL(Bairro, 'ND') Bairro
 		,ISNULL(CI.Id, 0) CidadeID
-		,ISNULL(CI.Name, 'ND') CidadeNome
+		,ISNULL(CI.Nome, 'ND') CidadeNome
+		,EstadoID
+		,EstadoNome
+		,UF
 		,Excluido
 	FROM
 		TB_CONDOMINIO CO
 	left join
-		TB_CIDADE CI
+		UVW_CIDADE CI
 	ON
 		CI.Id = CO.CidadeID
 GO
