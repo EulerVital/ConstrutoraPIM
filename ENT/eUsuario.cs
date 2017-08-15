@@ -11,7 +11,7 @@ namespace ENT
         public string UsuarioID { get; set; }
         public string NomeUser { get; set; }
         public string Senha { get; set; }
-        public string Sexo { get; set; }
+        public bool Sexo { get; set; }
         public eCondominio Condominio { get; set; }
     }
 }
