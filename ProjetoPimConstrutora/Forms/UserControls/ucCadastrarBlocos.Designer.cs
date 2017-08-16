@@ -129,6 +129,7 @@
             this.rdbAmbas.TabIndex = 4;
             this.rdbAmbas.Text = "Por Ambas";
             this.rdbAmbas.UseVisualStyleBackColor = true;
+            this.rdbAmbas.CheckedChanged += new System.EventHandler(this.rdbAmbas_CheckedChanged);
             // 
             // rdbPorLetras
             // 
@@ -140,6 +141,7 @@
             this.rdbPorLetras.TabIndex = 3;
             this.rdbPorLetras.Text = "Por Letras";
             this.rdbPorLetras.UseVisualStyleBackColor = true;
+            this.rdbPorLetras.CheckedChanged += new System.EventHandler(this.rdbPorLetras_CheckedChanged);
             // 
             // rdbPorNumeros
             // 
@@ -153,6 +155,7 @@
             this.rdbPorNumeros.TabStop = true;
             this.rdbPorNumeros.Text = "Por Numeros";
             this.rdbPorNumeros.UseVisualStyleBackColor = true;
+            this.rdbPorNumeros.CheckedChanged += new System.EventHandler(this.rdbPorNumeros_CheckedChanged);
             // 
             // lstBlocos
             // 

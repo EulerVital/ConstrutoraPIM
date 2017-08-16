@@ -34,6 +34,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             //PN = Por Numeros
 
             eBloco objBloco = new eBloco();
+            objBloco.StatusAtivo = true;
 
             if (rdbAmbas.Checked)
             {
@@ -95,6 +96,24 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 }
             }
         }
+
+        private void rdbPorNumeros_CheckedChanged(object sender, EventArgs e)
+        {
+            popularListaBlocos();
+        }
+
+        private void rdbPorLetras_CheckedChanged(object sender, EventArgs e)
+        {
+            popularListaBlocos();
+        }
+
+        private void rdbAmbas_CheckedChanged(object sender, EventArgs e)
+        {
+            popularListaBlocos();
+        }
+
         #endregion
+
+
     }
 }
