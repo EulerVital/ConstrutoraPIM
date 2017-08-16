@@ -1,0 +1,10 @@
+IF NOT EXISTS(select * from sys.tables where name = 'TB_TIPO_TELEFONE')
+BEGIN
+	CREATE TABLE TB_TIPO_TELEFONE
+	(
+		 TipoTelefoneID INT PRIMARY KEY IDENTITY(1,1)
+		,Descricao VARCHAR(50) NULL
+		,Excluido BIT DEFAULT(0) NOT NULL
+	)
+END
+GO

@@ -1,0 +1,11 @@
+IF NOT EXISTS(select * from sys.tables  where name = 'TB_PROFISSAO')
+BEGIN
+	CREATE TABLE TB_PROFISSAO
+	(
+		 ProfissaoID INT PRIMARY KEY IDENTITY(1,1)
+		,Nome VARCHAR(150) NOT NULL
+		,Area VARCHAR(150) NOT NULL
+		,Descricao VARCHAR(300) NULL
+	)
+END
+GO

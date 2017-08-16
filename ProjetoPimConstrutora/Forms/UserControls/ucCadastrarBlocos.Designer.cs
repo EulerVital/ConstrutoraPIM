@@ -129,6 +129,7 @@
             this.rdbAmbas.TabIndex = 4;
             this.rdbAmbas.Text = "Por Ambas";
             this.rdbAmbas.UseVisualStyleBackColor = true;
+            this.rdbAmbas.CheckedChanged += new System.EventHandler(this.rdbAmbas_CheckedChanged);
             // 
             // rdbPorLetras
             // 
@@ -140,6 +141,7 @@
             this.rdbPorLetras.TabIndex = 3;
             this.rdbPorLetras.Text = "Por Letras";
             this.rdbPorLetras.UseVisualStyleBackColor = true;
+            this.rdbPorLetras.CheckedChanged += new System.EventHandler(this.rdbPorLetras_CheckedChanged);
             // 
             // rdbPorNumeros
             // 
@@ -153,6 +155,7 @@
             this.rdbPorNumeros.TabStop = true;
             this.rdbPorNumeros.Text = "Por Numeros";
             this.rdbPorNumeros.UseVisualStyleBackColor = true;
+            this.rdbPorNumeros.CheckedChanged += new System.EventHandler(this.rdbPorNumeros_CheckedChanged);
             // 
             // lstBlocos
             // 
@@ -214,13 +217,14 @@
             this.btnCadastrarBloco.TabIndex = 9;
             this.btnCadastrarBloco.Text = "CADASTRAR";
             this.btnCadastrarBloco.UseVisualStyleBackColor = false;
+            this.btnCadastrarBloco.Click += new System.EventHandler(this.btnCadastrarBloco_Click);
             // 
             // cmbTipoNomeBloco
             // 
             this.cmbTipoNomeBloco.BackColor = System.Drawing.Color.LightGray;
             this.cmbTipoNomeBloco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoNomeBloco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTipoNomeBloco.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipoNomeBloco.Font = new System.Drawing.Font("Century", 10F);
             this.cmbTipoNomeBloco.FormattingEnabled = true;
             this.cmbTipoNomeBloco.Items.AddRange(new object[] {
             "SOMENTE POR NUMEROS (EX: 001, 002)",
@@ -228,7 +232,7 @@
             "POR LETRA E NUMEROS (EX: A1, A2, B3)"});
             this.cmbTipoNomeBloco.Location = new System.Drawing.Point(325, 21);
             this.cmbTipoNomeBloco.Name = "cmbTipoNomeBloco";
-            this.cmbTipoNomeBloco.Size = new System.Drawing.Size(309, 28);
+            this.cmbTipoNomeBloco.Size = new System.Drawing.Size(309, 24);
             this.cmbTipoNomeBloco.TabIndex = 0;
             // 
             // label5

@@ -118,29 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txtBairro.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century, 9.75pt</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtBairro.Location" type="System.Drawing.Point, System.Drawing">
     <value>580, 120</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtBairro.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 23</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtBairro.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="&gt;&gt;txtBairro.Name" xml:space="preserve">
+    <value>txtBairro</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtBairro.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtBairro.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtBairro.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
@@ -259,13 +259,13 @@
     <value>888, 21</value>
   </data>
   <data name="ckbStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 22</value>
+    <value>89, 22</value>
   </data>
   <data name="ckbStatus.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="ckbStatus.Text" xml:space="preserve">
-    <value>Status Ativo</value>
+    <value>Excluido</value>
   </data>
   <data name="&gt;&gt;ckbStatus.Name" xml:space="preserve">
     <value>ckbStatus</value>

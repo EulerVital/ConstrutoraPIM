@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCadastrarCondominio));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeCondominio = new System.Windows.Forms.TextBox();
             this.btnIncluirBlocos = new System.Windows.Forms.Button();
@@ -119,7 +119,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtBairro);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtNomeCondominio);
             this.panel2.Controls.Add(this.btnIncluirBlocos);
@@ -142,11 +142,11 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
-            // textBox1
+            // txtBairro
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            this.txtBairro.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.txtBairro, "txtBairro");
+            this.txtBairro.Name = "txtBairro";
             // 
             // label1
             // 
@@ -173,8 +173,6 @@
             // ckbStatus
             // 
             resources.ApplyResources(this.ckbStatus, "ckbStatus");
-            this.ckbStatus.Checked = true;
-            this.ckbStatus.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckbStatus.Name = "ckbStatus";
             this.ckbStatus.UseVisualStyleBackColor = true;
             // 
@@ -250,6 +248,7 @@
             resources.ApplyResources(this.cmbEstadoCondominio, "cmbEstadoCondominio");
             this.cmbEstadoCondominio.FormattingEnabled = true;
             this.cmbEstadoCondominio.Name = "cmbEstadoCondominio";
+            this.cmbEstadoCondominio.SelectedIndexChanged += new System.EventHandler(this.cmbEstadoCondominio_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -805,6 +804,6 @@
         private System.Windows.Forms.NumericUpDown nudQtdVagas;
         private System.Windows.Forms.Label lblTextoEstacionamento;
         private System.Windows.Forms.Label lblTextoPredio;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBairro;
     }
 }
