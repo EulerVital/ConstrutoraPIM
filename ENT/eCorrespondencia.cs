@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ENT;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ namespace ENT
         public string Titulo { get; set; }
         public string AvisoDescricao { get; set; }
         public eMorador Morador { get; set; }
-        public eTipoCorrespondecia TipoCorrespondecia { get; set; }
+        public eTipo_Correspondencia TipoCorrespondecia { get; set; }
 
 
 

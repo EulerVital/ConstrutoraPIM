@@ -28,6 +28,16 @@ namespace NEG
         /// </summary>
         #endregion
 
+        private string caracteres = @"qwertyuiopéèúùíìòóaáàsdfghjklçãâôõûêzxcvbnm";
+        private string caracteresEspecias = @",.;:~^}º]{[ª+=§-_)(*&¨¬%¢$£#³²@¹!'/\ °?|";
+        private char aspasDuplas = '"';
+        private string numeros = "0123456789";
+
+        public nBloco()
+        {
+            caracteresEspecias += aspasDuplas.ToString();
+        }
+
         public static List<eBloco> Bloco_GET(eBloco obj)
         {
             try
@@ -52,6 +62,43 @@ namespace NEG
             {
                 throw ex;
             }
+        }
+
+        public string RetornaNumeros(string valor)
+        {
+            caracteres += caracteresEspecias;
+
+            char[] arrayChar = caracteres.ToCharArray();
+
+            foreach (var caracter in arrayChar)
+            {
+                valor = valor.ToLower().Replace(caracter.ToString(), "");
+            }
+            return valor;
+        }
+
+        public string RetornaLetras(string valor)
+        {
+            numeros += caracteresEspecias;
+
+            char[] arrayChar = numeros.ToCharArray();
+
+            foreach (var caracter in arrayChar)
+            {
+                valor = valor.ToLower().Replace(caracter.ToString(), "");
+            }
+            return valor;
+        }
+
+        public string RetornaNumerosLetras(string valor)
+        {
+            char[] arrayChar = caracteresEspecias.ToCharArray();
+
+            foreach (var caracter in arrayChar)
+            {
+                valor = valor.ToLower().Replace(caracter.ToString(), "");
+            }
+            return valor;
         }
     }
 }

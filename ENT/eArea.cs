@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENT
 {
-    class eArea
+    public class eArea
     {
         public string AreaID { get; set; }
         public string NomeArea { get; set; }
@@ -15,6 +15,6 @@ namespace ENT
         public int ValorArea { get; set; }
         public string ListaHorarios { get; set; }
         public bool StatusAtivo { get; set; }
-        public eCondominio condominio { get; set; }
+        public eCondominio Condominio { get; set; }
     }
 }

@@ -57,6 +57,7 @@
             this.msAdmMoradoresCons = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmFuncionario = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmFuncionarioCadProf = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarProfissãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmFuncionarioCadFunc = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmFuncionarioConsFunc = new System.Windows.Forms.ToolStripMenuItem();
             this.reservaDeVagasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +69,8 @@
             this.msGcReservarAreas = new System.Windows.Forms.ToolStripMenuItem();
             this.correspondenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.segurançaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controleDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -81,8 +84,6 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
-            this.controleDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatórioDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenuPrincipal.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnPrincipal.SuspendLayout();
@@ -250,7 +251,7 @@
             // 
             this.msAdmCondEstaCad.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondEstaCad.Name = "msAdmCondEstaCad";
-            this.msAdmCondEstaCad.Size = new System.Drawing.Size(152, 22);
+            this.msAdmCondEstaCad.Size = new System.Drawing.Size(146, 22);
             this.msAdmCondEstaCad.Text = "Cadastar";
             this.msAdmCondEstaCad.Click += new System.EventHandler(this.msAdmCondEstaCad_Click);
             // 
@@ -258,7 +259,7 @@
             // 
             this.msAdmCondEstaCons.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondEstaCons.Name = "msAdmCondEstaCons";
-            this.msAdmCondEstaCons.Size = new System.Drawing.Size(152, 22);
+            this.msAdmCondEstaCons.Size = new System.Drawing.Size(146, 22);
             this.msAdmCondEstaCons.Text = "Consultar";
             this.msAdmCondEstaCons.Click += new System.EventHandler(this.msAdmCondEstaCons_Click);
             // 
@@ -343,6 +344,7 @@
             this.msAdmFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.msAdmFuncionario.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msAdmFuncionarioCadProf,
+            this.consultarProfissãoToolStripMenuItem,
             this.msAdmFuncionarioCadFunc,
             this.msAdmFuncionarioConsFunc});
             this.msAdmFuncionario.Name = "msAdmFuncionario";
@@ -356,6 +358,13 @@
             this.msAdmFuncionarioCadProf.Size = new System.Drawing.Size(242, 22);
             this.msAdmFuncionarioCadProf.Text = "Cadastrar Profissão";
             this.msAdmFuncionarioCadProf.Click += new System.EventHandler(this.msAdmFuncionarioCadProf_Click);
+            // 
+            // consultarProfissãoToolStripMenuItem
+            // 
+            this.consultarProfissãoToolStripMenuItem.Name = "consultarProfissãoToolStripMenuItem";
+            this.consultarProfissãoToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.consultarProfissãoToolStripMenuItem.Text = "Consultar Profissão";
+            this.consultarProfissãoToolStripMenuItem.Click += new System.EventHandler(this.consultarProfissãoToolStripMenuItem_Click);
             // 
             // msAdmFuncionarioCadFunc
             // 
@@ -452,15 +461,29 @@
             this.segurançaToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.segurançaToolStripMenuItem.Text = "Segurança";
             // 
+            // controleDeVigilânciaToolStripMenuItem
+            // 
+            this.controleDeVigilânciaToolStripMenuItem.Name = "controleDeVigilânciaToolStripMenuItem";
+            this.controleDeVigilânciaToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.controleDeVigilânciaToolStripMenuItem.Text = "Controle de Vigilância";
+            this.controleDeVigilânciaToolStripMenuItem.Click += new System.EventHandler(this.controleDeVigilânciaToolStripMenuItem_Click);
+            // 
+            // relatórioDeVigilânciaToolStripMenuItem
+            // 
+            this.relatórioDeVigilânciaToolStripMenuItem.Name = "relatórioDeVigilânciaToolStripMenuItem";
+            this.relatórioDeVigilânciaToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.relatórioDeVigilânciaToolStripMenuItem.Text = "Relatório de Vigilância";
+            this.relatórioDeVigilânciaToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeVigilânciaToolStripMenuItem_Click);
+            // 
             // pnTop
             // 
-            this.pnTop.BackColor = System.Drawing.Color.Transparent;
+            this.pnTop.BackColor = System.Drawing.Color.LightGray;
             this.pnTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnTop.Controls.Add(this.btnSair);
             this.pnTop.Controls.Add(this.lblTitulo);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.ForeColor = System.Drawing.Color.Black;
-            this.pnTop.Location = new System.Drawing.Point(0, 24);
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1174, 43);
             this.pnTop.TabIndex = 1;
@@ -498,9 +521,9 @@
             this.pnPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnPrincipal.Controls.Add(this.pnLogin);
             this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPrincipal.Location = new System.Drawing.Point(0, 67);
+            this.pnPrincipal.Location = new System.Drawing.Point(0, 43);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(1174, 436);
+            this.pnPrincipal.Size = new System.Drawing.Size(1174, 460);
             this.pnPrincipal.TabIndex = 2;
             // 
             // pnLogin
@@ -621,20 +644,6 @@
             this.txtLogin.Size = new System.Drawing.Size(286, 26);
             this.txtLogin.TabIndex = 11;
             // 
-            // controleDeVigilânciaToolStripMenuItem
-            // 
-            this.controleDeVigilânciaToolStripMenuItem.Name = "controleDeVigilânciaToolStripMenuItem";
-            this.controleDeVigilânciaToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
-            this.controleDeVigilânciaToolStripMenuItem.Text = "Controle de Vigilância";
-            this.controleDeVigilânciaToolStripMenuItem.Click += new System.EventHandler(this.controleDeVigilânciaToolStripMenuItem_Click);
-            // 
-            // relatórioDeVigilânciaToolStripMenuItem
-            // 
-            this.relatórioDeVigilânciaToolStripMenuItem.Name = "relatórioDeVigilânciaToolStripMenuItem";
-            this.relatórioDeVigilânciaToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
-            this.relatórioDeVigilânciaToolStripMenuItem.Text = "Relatório de Vigilância";
-            this.relatórioDeVigilânciaToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeVigilânciaToolStripMenuItem_Click);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -645,11 +654,12 @@
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.msMenuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.msMenuPrincipal;
-            this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Construtora Imperatriz";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.msMenuPrincipal.ResumeLayout(false);
             this.msMenuPrincipal.PerformLayout();
             this.pnTop.ResumeLayout(false);
@@ -718,5 +728,6 @@
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.ToolStripMenuItem controleDeVigilânciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioDeVigilânciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarProfissãoToolStripMenuItem;
     }
 }

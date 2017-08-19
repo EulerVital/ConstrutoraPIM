@@ -13,10 +13,11 @@ namespace ProjetoPimConstrutora.Forms
 {
     public partial class frmCadastrarUserAdm : Form
     {
-        public frmCadastrarUserAdm()
+        public frmCadastrarUserAdm(frmPrincipal frm)
         {
             InitializeComponent();
 
+            this.MdiParent = frm;
             ucDadosPessoaisCad ucCad = new ucDadosPessoaisCad();
             ucCad.Dock = DockStyle.Fill;
 

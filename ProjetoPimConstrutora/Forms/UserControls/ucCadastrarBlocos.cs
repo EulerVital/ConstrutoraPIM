@@ -19,6 +19,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         {
             InitializeComponent();
             popularListaBlocos();
+            cmbTipoNomeBloco.SelectedIndex = 0;
         }
 
         #region Metodos
@@ -35,6 +36,8 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 
             eBloco objBloco = new eBloco();
             objBloco.StatusAtivo = true;
+
+            lstBlocos.DataSource = null;
 
             if (rdbAmbas.Checked)
             {
@@ -112,8 +115,30 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             popularListaBlocos();
         }
 
+        private void txtNomeBloco_TextChanged(object sender, EventArgs e)
+        {
+            nBloco objNeg = new nBloco();
+
+            if (cmbTipoNomeBloco.SelectedIndex == 0)
+            {
+                txtNomeBloco.Text = objNeg.RetornaNumeros(txtNomeBloco.Text);
+            }else if(cmbTipoNomeBloco.SelectedIndex == 1)
+            {
+                txtNomeBloco.Text =  objNeg.RetornaLetras(txtNomeBloco.Text);
+            }else
+            {
+                txtNomeBloco.Text = objNeg.RetornaNumerosLetras(txtNomeBloco.Text);
+            }
+
+            txtNomeBloco.Focus();
+        }
+
+        private void cmbTipoNomeBloco_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtNomeBloco.Clear();
+            txtNomeBloco.Focus();
+        }
+
         #endregion
-
-
     }
 }

@@ -43,5 +43,22 @@ namespace NEG.Util
         {
             return MessageBox.Show(valor, "Operação não realizada", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        public static string RemoveLetras(string valor)
+        {
+            string aux = string.Empty;
+            int valorAux = 0;
+
+            for(int i=0; i<= valor.Length; i++)
+            {
+                aux = valor.Substring(i);
+                if(!int.TryParse(aux, out valorAux))
+                {
+                    valor = valor.Replace(aux, "");
+                }
+            }
+
+            return valor;
+        }
     }
 }

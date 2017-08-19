@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENT
 {
-    class eProfissao
+    public class eProfissao
     {
         public string ProfissaoID { get; set; }
         public string Nome { get; set; }

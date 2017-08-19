@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ENT
 {
-    class eReservar_Area
+    public class eReservar_Area
     {
         public string ReservaAreaID { get; set; }
         public DateTime DataHora { get; set; }
-        public string eMorad{ get; set; }
-        public int eArea AreaID { get; set; }
+        public eMorador Morador{ get; set; }
+        public eArea Area { get; set; }
     }
 }

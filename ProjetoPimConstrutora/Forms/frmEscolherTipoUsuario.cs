@@ -12,16 +12,19 @@ namespace ProjetoPimConstrutora.Forms
 {
     public partial class frmEscolherTipoUsuario : Form
     {
-        public frmEscolherTipoUsuario()
+        public frmPrincipal frmPrincipal { get; set; }         
+
+        public frmEscolherTipoUsuario(frmPrincipal frm)
         {
             InitializeComponent();
+            frmPrincipal = frm;
         }
 
         private void btnProsseguir_Click(object sender, EventArgs e)
         {
             if(rdbPerfilAdm.Checked)
             {
-                frmCadastrarUserAdm frm = new frmCadastrarUserAdm();
+                frmCadastrarUserAdm frm = new frmCadastrarUserAdm(frmPrincipal);
                 frm.Show();
                 this.Dispose();
             }

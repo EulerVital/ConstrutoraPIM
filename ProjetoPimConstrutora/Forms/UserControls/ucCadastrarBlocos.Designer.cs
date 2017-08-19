@@ -177,9 +177,9 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(7, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 18);
+            this.label1.Size = new System.Drawing.Size(126, 18);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Nome do Condomino:";
+            this.label1.Text = "Nome do Bloco";
             // 
             // txtNomeBloco
             // 
@@ -189,6 +189,7 @@
             this.txtNomeBloco.Name = "txtNomeBloco";
             this.txtNomeBloco.Size = new System.Drawing.Size(444, 27);
             this.txtNomeBloco.TabIndex = 1;
+            this.txtNomeBloco.TextChanged += new System.EventHandler(this.txtNomeBloco_TextChanged);
             // 
             // ckbStatus
             // 
@@ -234,6 +235,7 @@
             this.cmbTipoNomeBloco.Name = "cmbTipoNomeBloco";
             this.cmbTipoNomeBloco.Size = new System.Drawing.Size(309, 24);
             this.cmbTipoNomeBloco.TabIndex = 0;
+            this.cmbTipoNomeBloco.SelectedIndexChanged += new System.EventHandler(this.cmbTipoNomeBloco_SelectedIndexChanged);
             // 
             // label5
             // 
