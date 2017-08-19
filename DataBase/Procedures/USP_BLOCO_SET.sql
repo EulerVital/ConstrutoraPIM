@@ -28,7 +28,7 @@ CREATE PROC USP_BLOCO_SET
 	,@Nome VARCHAR(150) = NULL
 	,@QtdPredios INT = NULL
 	,@CondominioID INT = NULL
-	,@TipoBloco CHAR(1) = NULL
+	,@TipoBloco CHAR(2) = NULL
 	,@StatusAtivo BIT = NULL
 )
 AS

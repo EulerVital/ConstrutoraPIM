@@ -2,7 +2,7 @@ IF NOT EXISTS(select * from sys.tables  where name = 'TB_BLOCO')
 BEGIN
 	CREATE TABLE TB_BLOCO
 	(
-		 BlocoID INT PRIMARY KEY IDENTITY(1,1)
+		 BlocoID INT PRIMARY KEY IDENTITY(1,1) --auto_increment
 		,Nome VARCHAR(150) NOT NULL
 		,QtdPredios INT NOT NULL
 		,CondominioID INT FOREIGN KEY (CondominioID) REFERENCES TB_CONDOMINIO

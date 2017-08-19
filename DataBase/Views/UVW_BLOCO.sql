@@ -30,20 +30,20 @@ AS
 		,B.QtdPredios
 		,B.TipoBloco
 		,B.StatusAtivo
-		,ISNULL(C.BlocoID, 0) BlocoID
-		,C.Nome NomeBLOCO
-		,C.QtdBlocos
-		,C.Endereco
-		,C.CEP
-		,C.Bairro
-		,C.CidadeID
-		,C.CidadeNome
-		,C.Excluido
+		,ISNULL(C.CondominioID, 0) CondominioID
+		,ISNULL(C.Nome, 'ND') NomeCondominio
+		,ISNULL(C.QtdBlocos, 0) QtdBlocos
+		,ISNULL(C.Endereco, 'ND') Endereco
+		,ISNULL(C.CEP, 'ND') CEP
+		,ISNULL(C.Bairro, 'ND') Bairro
+		,ISNULL(C.CidadeID, 0) CidadeID
+		,ISNULL(C.CidadeNome, 'ND') CidadeNome
+		,ISNULL(C.Excluido, 0) Excluido 
 	FROM
 		TB_BLOCO B
 	left join
-		UVW_BLOCO C
+		UVW_CONDOMINIO C
 	ON
-		B.BlocoID = C.BlocoID
+		B.CondominioID = C.CondominioID
 GO
 
