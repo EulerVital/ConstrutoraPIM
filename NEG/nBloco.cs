@@ -74,7 +74,7 @@ namespace NEG
             {
                 valor = valor.ToLower().Replace(caracter.ToString(), "");
             }
-            return valor;
+            return valor.ToUpper();
         }
 
         public string RetornaLetras(string valor)
@@ -87,7 +87,7 @@ namespace NEG
             {
                 valor = valor.ToLower().Replace(caracter.ToString(), "");
             }
-            return valor;
+            return valor.ToUpper();
         }
 
         public string RetornaNumerosLetras(string valor)
@@ -98,7 +98,7 @@ namespace NEG
             {
                 valor = valor.ToLower().Replace(caracter.ToString(), "");
             }
-            return valor;
+            return valor.ToUpper();
         }
     }
 }
