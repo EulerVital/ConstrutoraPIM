@@ -45,7 +45,7 @@ namespace DAO.DBase
         {
             cn = new SqlConnection(strConn);
             cn.Open();
-            cmd.Connection = cn;
+            cmd.Connection = cn; 
         }
 
         /// <summary>
