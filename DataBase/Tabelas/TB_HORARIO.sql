@@ -1,0 +1,12 @@
+IF NOT EXISTS(select * from sys.tables where name =  'TB_HORARIO')
+BEGIN
+	CREATE TABLE TB_HORARIO
+	(
+	 	 HorarioID INT PRIMARY KEY IDENTITY(1,1)
+		,HoraInicio VARCHAR(50) NOT NULL
+		,HoraFim VARCHAR(50) NULL
+		,Excluido BIT NOT NULL DEFAULT(1)
+		,AreaID INT FOREIGN KEY(AreaID) REFERENCES TB_AREA
+	)
+END
+GO

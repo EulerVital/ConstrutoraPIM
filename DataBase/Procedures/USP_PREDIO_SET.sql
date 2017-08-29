@@ -27,6 +27,7 @@ CREATE PROC USP_PREDIO_SET
 	 @PredioID INT = 0
 	,@Nome VARCHAR(150) = NULL
 	,@QtdApartamentos INT = NULL
+	,@Excluido BIT = 0
 	,@BlocoID INT = NULL
 )
 AS
@@ -41,10 +42,12 @@ BEGIN
 				 Nome
 				,QtdApartamentos
 				,BlocoID
+				,Excluido
 			)SELECT
 				 @Nome
 				,@QtdApartamentos
 				,@BlocoID
+				,@Excluido
 
 			SET @PredioID = @@IDENTITY
 		END
@@ -55,6 +58,7 @@ BEGIN
 			 Nome = ISNULL(@Nome, Nome)
 			,QtdApartamentos = ISNULL(@QtdApartamentos, QtdApartamentos)
 			,BlocoID = ISNULL(@BlocoID, BlocoID)
+			,Excluido = ISNULL(@Excluido, Excluido)
 		WHERE
 			PredioID = @PredioID
 	END

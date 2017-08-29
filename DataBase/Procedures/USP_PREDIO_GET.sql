@@ -22,7 +22,7 @@ GO
 * Autor:
 */
 
-CREATE PROC Qtd
+CREATE PROC USP_PREDIO_GET
 (
 	 @PredioID INT  = NULL
 	,@Nome VARCHAR(150) = NULL
@@ -31,6 +31,7 @@ CREATE PROC Qtd
 	,@NomeBloco VARCHAR(150) = NULL
 	,@CondominioID INT = NULL
 	,@NomeCondominio VARCHAR(150) = NULL
+	,@Excluido BIT = NULL
 )
 AS
 BEGIN
@@ -38,6 +39,7 @@ BEGIN
 		 PredioID
 		,Nome
 		,QtdApartamentos
+		,Excluido
 		,BlocoID
 		,NomeBloco
 		,QtdPredios
@@ -51,7 +53,7 @@ BEGIN
 		,Bairro
 		,CidadeID
 		,CidadeNome
-		,Excluido
+		,CondominioExcluido
 	FROM
 		UVW_PREDIO
 	WHERE
@@ -68,5 +70,7 @@ BEGIN
 		 CondominioID = COALESCE(@CondominioID, CondominioID)
 	AND
 		 NomeCondominio = COALESCE(@NomeCondominio, NomeCondominio)
+	AND
+		Excluido = COALESCE(@Excluido, Excluido)
 END
 GO

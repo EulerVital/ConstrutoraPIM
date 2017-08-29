@@ -60,8 +60,6 @@ BEGIN
 	AND
 		 TipoBloco = COALESCE(@TipoBloco, TipoBloco)
 	AND
-		 StatusAtivo = COALESCE(@StatusAtivo, StatusAtivo)
-	AND
 		 CondominioID = COALESCE(@CondominioID, CondominioID)
 	AND
 		 NomeCondominio = COALESCE(@NomeCondominio, NomeCondominio)

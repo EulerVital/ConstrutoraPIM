@@ -30,6 +30,7 @@ AS
 		,P.QtdApartamentos
 		,ISNULL(B.BlocoID, 0) BlocoID
 		,ISNULL(B.Nome, 'ND') NomeBloco
+		,P.Excluido 
 		,B.QtdPredios
 		,B.TipoBloco
 		,B.StatusAtivo
@@ -41,7 +42,7 @@ AS
 		,B.Bairro
 		,B.CidadeID
 		,B.CidadeNome
-		,B.Excluido
+		,B.Excluido CondominioExcluido
 	FROM
 		TB_PREDIO P
 	left join
