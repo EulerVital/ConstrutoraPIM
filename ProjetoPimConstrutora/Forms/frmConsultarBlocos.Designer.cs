@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.ckbAtivos = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ckbAmbas = new System.Windows.Forms.CheckBox();
@@ -42,7 +43,6 @@
             this.cmbCondominio = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvBlocos = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.BlocoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Blocos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QtdApt = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +67,19 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(769, 135);
             this.pnTop.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(560, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 98);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "OBS: O dado Tipo é o tipo de bloco\r\n\r\nPN = Por Números\r\nPL = Por Letras\r\nA = Amba" +
+    "s";
             // 
             // ckbAtivos
             // 
@@ -208,19 +221,7 @@
             this.dgvBlocos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBlocos.Size = new System.Drawing.Size(769, 270);
             this.dgvBlocos.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(560, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 98);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "OBS: O dado Tipo é o tipo de bloco\r\n\r\nPN = Por Números\r\nPL = Por Letras\r\nA = Amba" +
-    "s";
+            this.dgvBlocos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBlocos_CellClick);
             // 
             // BlocoID
             // 
@@ -268,9 +269,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.Apartamentos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Apartamentos.HeaderText = "";
+            this.Apartamentos.HeaderText = "Prédios";
             this.Apartamentos.Name = "Apartamentos";
-            this.Apartamentos.Width = 5;
+            this.Apartamentos.Width = 65;
             // 
             // Excluir
             // 

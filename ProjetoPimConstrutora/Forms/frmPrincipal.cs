@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ProjetoPimConstrutora.Forms.UserControls;
 using System.Threading;
+using ENT;
 
 namespace ProjetoPimConstrutora.Forms
 {

@@ -1,5 +1,6 @@
 ﻿using ENT;
 using NEG;
+using NEG.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,24 @@ namespace ProjetoPimConstrutora.Forms
         protected void FiltrarChecksBoks(object sender, EventArgs e)
         {
             CarregarBlocos(false);
+        }
+
+        private void dgvBlocos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 5)
+            {
+                if((int)dgvBlocos.Rows[e.RowIndex].Cells[3].Value > 0)
+                {
+                    var obj = ListaBlocos.FirstOrDefault(c => c.BlocoID == dgvBlocos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                }else
+                {
+                    Util.MensagemInformacao("Não a Prédios para esse bloco.");
+                }
+            }
+            else if(e.ColumnIndex == 6)
+            {
+                var obj = ListaBlocos.FirstOrDefault(c => c.BlocoID == dgvBlocos.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
         }
 
         #endregion

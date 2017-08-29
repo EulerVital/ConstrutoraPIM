@@ -485,7 +485,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 
                 if (lista == null)
                 {
-                    ListaBlocos = nBloco.Bloco_GET(new eBloco { StatusAtivo = true });
+                    ListaBlocos = nBloco.Bloco_GET(new eBloco()).Where(c=>c.StatusAtivo == true).ToList();
                     lista = ListaBlocos;
                 }
 
