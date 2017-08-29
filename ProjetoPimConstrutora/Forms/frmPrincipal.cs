@@ -225,8 +225,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmConsultarProfissao frm = new frmConsultarProfissao();
-            frm.MdiParent = this;
+            frmConsultarProfissao frm = new frmConsultarProfissao(this);
             frm.Show();
         }
 

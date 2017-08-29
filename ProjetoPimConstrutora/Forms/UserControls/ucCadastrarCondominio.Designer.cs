@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCadastrarCondominio));
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnCadCondominio = new System.Windows.Forms.Panel();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeCondominio = new System.Windows.Forms.TextBox();
@@ -88,6 +88,10 @@
             this.cmbEstacionamento = new System.Windows.Forms.ComboBox();
             this.lblEscolhaEstacio = new System.Windows.Forms.Label();
             this.pnIncluirBlocos = new System.Windows.Forms.Panel();
+            this.gpbTipoBloco = new System.Windows.Forms.GroupBox();
+            this.rdbLetrasNumeros = new System.Windows.Forms.RadioButton();
+            this.rdbLetras = new System.Windows.Forms.RadioButton();
+            this.rdbNumeros = new System.Windows.Forms.RadioButton();
             this.lblTextoBloco = new System.Windows.Forms.Label();
             this.nudQtdPredios = new System.Windows.Forms.NumericUpDown();
             this.btnExcluirListaBloco = new System.Windows.Forms.Button();
@@ -104,7 +108,9 @@
             this.txtNomeBloco = new System.Windows.Forms.TextBox();
             this.lblTituloBloco = new System.Windows.Forms.Label();
             this.splitter3 = new System.Windows.Forms.Splitter();
-            this.panel2.SuspendLayout();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnAjuda = new System.Windows.Forms.Button();
+            this.pnCadCondominio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdBlocos)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -113,34 +119,37 @@
             this.pnIncluirEstacionamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdVagas)).BeginInit();
             this.pnIncluirBlocos.SuspendLayout();
+            this.gpbTipoBloco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdPredios)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnCadCondominio
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtBairro);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtNomeCondominio);
-            this.panel2.Controls.Add(this.btnIncluirBlocos);
-            this.panel2.Controls.Add(this.ckbStatus);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.btnSalvar);
-            this.panel2.Controls.Add(this.mtxtDataFundacao);
-            this.panel2.Controls.Add(this.btnIncluiEstacionamento);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.cmbCidadeCondominio);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.mtxtCepCondominio);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.cmbEstadoCondominio);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtEnderecoCondominio);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.nudQtdBlocos);
-            this.panel2.Controls.Add(this.label2);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
+            this.pnCadCondominio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnCadCondominio.Controls.Add(this.label13);
+            this.pnCadCondominio.Controls.Add(this.btnAjuda);
+            this.pnCadCondominio.Controls.Add(this.txtBairro);
+            this.pnCadCondominio.Controls.Add(this.label1);
+            this.pnCadCondominio.Controls.Add(this.txtNomeCondominio);
+            this.pnCadCondominio.Controls.Add(this.btnIncluirBlocos);
+            this.pnCadCondominio.Controls.Add(this.ckbStatus);
+            this.pnCadCondominio.Controls.Add(this.label3);
+            this.pnCadCondominio.Controls.Add(this.btnSalvar);
+            this.pnCadCondominio.Controls.Add(this.mtxtDataFundacao);
+            this.pnCadCondominio.Controls.Add(this.btnIncluiEstacionamento);
+            this.pnCadCondominio.Controls.Add(this.label8);
+            this.pnCadCondominio.Controls.Add(this.cmbCidadeCondominio);
+            this.pnCadCondominio.Controls.Add(this.label7);
+            this.pnCadCondominio.Controls.Add(this.mtxtCepCondominio);
+            this.pnCadCondominio.Controls.Add(this.label6);
+            this.pnCadCondominio.Controls.Add(this.cmbEstadoCondominio);
+            this.pnCadCondominio.Controls.Add(this.label5);
+            this.pnCadCondominio.Controls.Add(this.txtEnderecoCondominio);
+            this.pnCadCondominio.Controls.Add(this.label4);
+            this.pnCadCondominio.Controls.Add(this.nudQtdBlocos);
+            this.pnCadCondominio.Controls.Add(this.label2);
+            resources.ApplyResources(this.pnCadCondominio, "pnCadCondominio");
+            this.pnCadCondominio.Name = "pnCadCondominio";
             // 
             // txtBairro
             // 
@@ -567,6 +576,7 @@
             // pnIncluirBlocos
             // 
             this.pnIncluirBlocos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnIncluirBlocos.Controls.Add(this.gpbTipoBloco);
             this.pnIncluirBlocos.Controls.Add(this.lblTextoBloco);
             this.pnIncluirBlocos.Controls.Add(this.nudQtdPredios);
             this.pnIncluirBlocos.Controls.Add(this.btnExcluirListaBloco);
@@ -584,6 +594,39 @@
             this.pnIncluirBlocos.Controls.Add(this.lblTituloBloco);
             resources.ApplyResources(this.pnIncluirBlocos, "pnIncluirBlocos");
             this.pnIncluirBlocos.Name = "pnIncluirBlocos";
+            // 
+            // gpbTipoBloco
+            // 
+            this.gpbTipoBloco.Controls.Add(this.rdbLetrasNumeros);
+            this.gpbTipoBloco.Controls.Add(this.rdbLetras);
+            this.gpbTipoBloco.Controls.Add(this.rdbNumeros);
+            this.gpbTipoBloco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.gpbTipoBloco, "gpbTipoBloco");
+            this.gpbTipoBloco.Name = "gpbTipoBloco";
+            this.gpbTipoBloco.TabStop = false;
+            // 
+            // rdbLetrasNumeros
+            // 
+            resources.ApplyResources(this.rdbLetrasNumeros, "rdbLetrasNumeros");
+            this.rdbLetrasNumeros.Name = "rdbLetrasNumeros";
+            this.rdbLetrasNumeros.UseVisualStyleBackColor = true;
+            this.rdbLetrasNumeros.CheckedChanged += new System.EventHandler(this.rdbLetrasNumeros_CheckedChanged);
+            // 
+            // rdbLetras
+            // 
+            resources.ApplyResources(this.rdbLetras, "rdbLetras");
+            this.rdbLetras.Name = "rdbLetras";
+            this.rdbLetras.UseVisualStyleBackColor = true;
+            this.rdbLetras.CheckedChanged += new System.EventHandler(this.rdbLetras_CheckedChanged);
+            // 
+            // rdbNumeros
+            // 
+            resources.ApplyResources(this.rdbNumeros, "rdbNumeros");
+            this.rdbNumeros.Checked = true;
+            this.rdbNumeros.Name = "rdbNumeros";
+            this.rdbNumeros.TabStop = true;
+            this.rdbNumeros.UseVisualStyleBackColor = true;
+            this.rdbNumeros.CheckedChanged += new System.EventHandler(this.rdbNumeros_CheckedChanged);
             // 
             // lblTextoBloco
             // 
@@ -630,7 +673,8 @@
             resources.ApplyResources(this.lstBlocos, "lstBlocos");
             this.lstBlocos.FormattingEnabled = true;
             this.lstBlocos.Name = "lstBlocos";
-            this.lstBlocos.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lstBlocos.SelectedIndexChanged += new System.EventHandler(this.lstBlocos_SelectedIndexChanged);
+            this.lstBlocos.DoubleClick += new System.EventHandler(this.lstBlocos_DoubleClick);
             // 
             // btnSalvarBlocos
             // 
@@ -701,6 +745,21 @@
             this.splitter3.Name = "splitter3";
             this.splitter3.TabStop = false;
             // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Name = "label13";
+            // 
+            // btnAjuda
+            // 
+            this.btnAjuda.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.btnAjuda, "btnAjuda");
+            this.btnAjuda.ForeColor = System.Drawing.Color.Black;
+            this.btnAjuda.Image = global::ProjetoPimConstrutora.Properties.Resources._4927_32x32;
+            this.btnAjuda.Name = "btnAjuda";
+            this.btnAjuda.UseVisualStyleBackColor = false;
+            // 
             // ucCadastrarCondominio
             // 
             resources.ApplyResources(this, "$this");
@@ -708,10 +767,10 @@
             this.BackColor = System.Drawing.Color.LightGray;
             this.Controls.Add(this.splitter3);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnCadCondominio);
             this.Name = "ucCadastrarCondominio";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnCadCondominio.ResumeLayout(false);
+            this.pnCadCondominio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdBlocos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -724,13 +783,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdVagas)).EndInit();
             this.pnIncluirBlocos.ResumeLayout(false);
             this.pnIncluirBlocos.PerformLayout();
+            this.gpbTipoBloco.ResumeLayout(false);
+            this.gpbTipoBloco.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdPredios)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnCadCondominio;
         private System.Windows.Forms.NumericUpDown nudQtdBlocos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbEstadoCondominio;
@@ -805,5 +866,11 @@
         private System.Windows.Forms.Label lblTextoEstacionamento;
         private System.Windows.Forms.Label lblTextoPredio;
         private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.GroupBox gpbTipoBloco;
+        private System.Windows.Forms.RadioButton rdbLetrasNumeros;
+        private System.Windows.Forms.RadioButton rdbLetras;
+        private System.Windows.Forms.RadioButton rdbNumeros;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnAjuda;
     }
 }

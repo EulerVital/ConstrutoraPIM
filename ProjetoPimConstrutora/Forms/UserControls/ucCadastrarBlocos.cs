@@ -130,7 +130,8 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 txtNomeBloco.Text = objNeg.RetornaNumerosLetras(txtNomeBloco.Text);
             }
 
-            txtNomeBloco.Focus();
+            txtNomeBloco.Text = txtNomeBloco.Text.ToUpper();
+            txtNomeBloco.Select(txtNomeBloco.Text.Length, 0);
         }
 
         private void cmbTipoNomeBloco_SelectedIndexChanged(object sender, EventArgs e)

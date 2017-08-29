@@ -186,6 +186,7 @@
             this.txtNomeBloco.BackColor = System.Drawing.Color.LightGray;
             this.txtNomeBloco.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeBloco.Location = new System.Drawing.Point(193, 76);
+            this.txtNomeBloco.MaxLength = 4;
             this.txtNomeBloco.Name = "txtNomeBloco";
             this.txtNomeBloco.Size = new System.Drawing.Size(444, 27);
             this.txtNomeBloco.TabIndex = 1;

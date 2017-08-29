@@ -48,11 +48,11 @@ namespace ProjetoPimConstrutora.Forms
             {
                 if (item.StatusAtivo)
                 {
-                    dgvBlocos.Rows.Add(item.BlocoID, item.Condominio.Nome, item.Nome, item.QtdPredios, "Visualizar", "Desativar");
+                    dgvBlocos.Rows.Add(item.BlocoID, item.Condominio.Nome, item.Nome, item.QtdPredios, item.TipoBloco, "Visualizar", "Desativar");
                 }
                 else
                 {
-                    dgvBlocos.Rows.Add(item.BlocoID, item.Condominio.Nome, item.Nome, item.QtdPredios, "Visualizar", "Ativar");
+                    dgvBlocos.Rows.Add(item.BlocoID, item.Condominio.Nome, item.Nome, item.QtdPredios, item.TipoBloco, "Visualizar", "Ativar");
                 }
             }
         }

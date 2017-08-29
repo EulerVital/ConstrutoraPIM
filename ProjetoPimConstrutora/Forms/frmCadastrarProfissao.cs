@@ -16,14 +16,18 @@ namespace ProjetoPimConstrutora.Forms
     public partial class frmCadastrarProfissao : Form
     {
         public eProfissao Profissao { get; set; }
+        public frmPrincipal frmPrincipal { get; set; }
         public frmCadastrarProfissao()
         {
             InitializeComponent();
         }
 
-        public frmCadastrarProfissao(eProfissao Profissao)
+        public frmCadastrarProfissao(eProfissao Profissao, frmPrincipal frm)
         {
             InitializeComponent();
+
+            this.MdiParent = frm;
+            frmPrincipal = frm;
 
             txtNome.Text = Profissao.Nome;
             txtDescricao.Text = Profissao.Descricao;
@@ -79,6 +83,9 @@ namespace ProjetoPimConstrutora.Forms
                 if (Profissao != null)
                 {
                     Util.MensagemSucesso("Alteração efetuada com sucesso.");
+                    frmConsultarProfissao frm = new frmConsultarProfissao(frmPrincipal);
+                    frm.Show();
+                    this.Dispose();
                 }
                 else
                 {

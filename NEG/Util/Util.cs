@@ -39,6 +39,16 @@ namespace NEG.Util
         /// </summary>
         /// <param name="valor"></param>
         /// <returns></returns>
+        public static DialogResult MensagemInformacao(string valor = "Não é possivle realizar essa operação !!")
+        {
+            return MessageBox.Show(valor, "Operação invalida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /// <summary>
+        /// Mensagem de Erro
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns></returns>
         public static DialogResult MensagemErro(string valor = "Algo aconteceu ao realizada essa operação !!")
         {
             return MessageBox.Show(valor, "Operação não realizada", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
@@ -40,10 +42,12 @@
             this.cmbCondominio = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvBlocos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.BlocoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Blocos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QtdApt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomePredio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoBloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apartamentos = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnTop.SuspendLayout();
@@ -53,6 +57,7 @@
             // 
             // pnTop
             // 
+            this.pnTop.Controls.Add(this.label1);
             this.pnTop.Controls.Add(this.ckbAtivos);
             this.pnTop.Controls.Add(this.groupBox1);
             this.pnTop.Controls.Add(this.cmbCondominio);
@@ -60,7 +65,7 @@
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(657, 135);
+            this.pnTop.Size = new System.Drawing.Size(769, 135);
             this.pnTop.TabIndex = 2;
             // 
             // ckbAtivos
@@ -176,32 +181,46 @@
             this.Blocos,
             this.QtdApt,
             this.NomePredio,
+            this.TipoBloco,
             this.Apartamentos,
             this.Excluir});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBlocos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBlocos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBlocos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBlocos.GridColor = System.Drawing.Color.Black;
             this.dgvBlocos.Location = new System.Drawing.Point(0, 135);
             this.dgvBlocos.MultiSelect = false;
             this.dgvBlocos.Name = "dgvBlocos";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBlocos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBlocos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvBlocos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBlocos.Size = new System.Drawing.Size(657, 268);
+            this.dgvBlocos.Size = new System.Drawing.Size(769, 270);
             this.dgvBlocos.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(560, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 98);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "OBS: O dado Tipo é o tipo de bloco\r\n\r\nPN = Por Números\r\nPL = Por Letras\r\nA = Amba" +
+    "s";
             // 
             // BlocoID
             // 
@@ -233,9 +252,22 @@
             this.NomePredio.ToolTipText = "Nome do Prédio";
             this.NomePredio.Width = 114;
             // 
+            // TipoBloco
+            // 
+            this.TipoBloco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TipoBloco.HeaderText = "Tipo";
+            this.TipoBloco.Name = "TipoBloco";
+            this.TipoBloco.Width = 63;
+            // 
             // Apartamentos
             // 
             this.Apartamentos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.Apartamentos.DefaultCellStyle = dataGridViewCellStyle2;
             this.Apartamentos.HeaderText = "";
             this.Apartamentos.Name = "Apartamentos";
             this.Apartamentos.Width = 5;
@@ -243,6 +275,12 @@
             // Excluir
             // 
             this.Excluir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Excluir.DefaultCellStyle = dataGridViewCellStyle3;
             this.Excluir.HeaderText = "";
             this.Excluir.Name = "Excluir";
             this.Excluir.Width = 5;
@@ -252,11 +290,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(657, 403);
+            this.ClientSize = new System.Drawing.Size(769, 405);
             this.Controls.Add(this.dgvBlocos);
             this.Controls.Add(this.pnTop);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "frmConsultarBlocos";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Blocos";
             this.pnTop.ResumeLayout(false);
@@ -277,12 +316,14 @@
         private System.Windows.Forms.CheckBox ckbAmbas;
         private System.Windows.Forms.CheckBox ckbLetras;
         private System.Windows.Forms.CheckBox ckbNumeros;
+        private System.Windows.Forms.CheckBox ckbAtivos;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn BlocoID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Blocos;
         private System.Windows.Forms.DataGridViewTextBoxColumn QtdApt;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomePredio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoBloco;
         private System.Windows.Forms.DataGridViewButtonColumn Apartamentos;
         private System.Windows.Forms.DataGridViewButtonColumn Excluir;
-        private System.Windows.Forms.CheckBox ckbAtivos;
     }
 }

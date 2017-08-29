@@ -29,7 +29,7 @@ namespace NEG
         #endregion
 
         private string caracteres = @"qwertyuiopéèúùíìòóaáàsdfghjklçãâôõûêzxcvbnm";
-        private string caracteresEspecias = @",.;:~^}º]{[ª+=§-_)(*&¨¬%¢$£#³²@¹!'/\ °?|";
+        private string caracteresEspecias = @",.;:~^}º]{[ª+=§-_)(*&¨¬%¢$£#³²@¹!'/\ °?|´`";
         private char aspasDuplas = '"';
         private string numeros = "0123456789";
 

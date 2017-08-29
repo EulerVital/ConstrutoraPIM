@@ -14,6 +14,9 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         public List<eEstado> ListaEstados { get; set; }
         public List<eCidade> ListaCidades { get; set; }
         public string CondominioID { get; set; }
+        public List<eBloco> ListaBlocos { get; set; }
+        public List<eBloco> ListaBlocosIncluidos { get; set; }
+        eCondominio obj = null;
         #endregion
         public ucCadastrarCondominio()
         {
@@ -23,12 +26,13 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             visualizarCamposPredios(false);
             visualizarCamposEstacionamento(false);
             CarregarCombosCondominio();
+
+            ListaBlocosIncluidos = new List<eBloco>();
         }
 
         #region Eventos
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            eCondominio obj = null;
             obj = ValidaCamposCondominio();
 
             if(obj != null)
@@ -41,7 +45,10 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 else
                 {
                     Util.MensagemSucesso("Dados gravado com sucesso");
+                    lblTituloBloco.Text = "Inserir blocos para o condomínio \"" + obj.Nome;
                     IsBloquearCamposCondominio(true);
+                    CarregarCombosBlocos(null);
+                    obj.CondominioID = CondominioID;
                 }
             }else
             {
@@ -52,9 +59,9 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         private void btnIncluirBlocos_Click(object sender, EventArgs e)
         {
             pnIncluirBlocos.Enabled = true;
-            lblQtdBlocos.Visible = true;
-            lblQtdBlocos.Text = "Nº Blocos " + nudQtdBlocos.Value;
+            lblQtdBlocos.Text = "Nº Blocos " + nudQtdBlocos.Value;  
             visualizarCamposBlocos(true);
+            CarregarCombosBlocos(null);
         }
 
         private void btnIncluiEstacionamento_Click(object sender, EventArgs e)
@@ -65,31 +72,61 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 
         private void btnIncluirPredio_Click(object sender, EventArgs e)
         {
-            pnPredios.Enabled = true;
-            lblQtdPredios.Visible = true;
-            lblQtdPredios.Text = "Nº Prédios " + nudQtdPredios.Value;
-            visualizarCamposPredios(true);
+            if (lstBlocos.SelectedItem != null && nudQtdPredios.Value > 0)
+            {
+                pnPredios.Enabled = true;
+                lblQtdPredios.Visible = true;
+
+                var eBloco = (eBloco)lstBlocos.SelectedItem;
+                eBloco.QtdPredios = (int)nudQtdPredios.Value;
+
+                lblQtdPredios.Text = "Nº Prédios " + nudQtdPredios.Value;
+                lblTituloPredio.Text = "Add Prédios para o Bloco: " + txtNomeBloco.Text + " do Condôminio: " + txtNomeCondominio.Text;
+                IsBloquearCamposBlocos(true);
+                IsBloquearCamposCondominio(true);
+                visualizarCamposPredios(true);
+            }else
+            {
+                Util.MensagemInformacao("Requesistos para inclusão de Prédios. \n\n-Selecionar o Bloco na lista de blocos.\n\n-Definir a quantidade de prédios, sendo maior que 0.");
+            }
         }
 
         private void btnAddBloco_Click(object sender, EventArgs e)
         {
-            if(cmbEscolhaBloco.Items.Count > 0 && cmbEscolhaBloco.SelectedItem != null)
+            if(ListaBlocosIncluidos.Count() >= nudQtdBlocos.Value)
             {
-                lstBlocos.Items.Add(cmbEscolhaBloco.SelectedItem);
-                cmbEscolhaBloco.Items.RemoveAt(cmbEscolhaBloco.SelectedIndex);
+                Util.MensagemInformacao("Foi atingido o numero máximo de Blocos para esse Condôminio.");
+            }
+            else if(cmbEscolhaBloco.Items.Count > 0 && cmbEscolhaBloco.SelectedItem != null)
+            {
+                //Pega lista da combo de blocos a serem incluidos
+                var lista = (List<eBloco>)cmbEscolhaBloco.DataSource;
+
+                //Pega itém selecionado da combo
+                var blocoInclue = lista.Find(c => c.BlocoID == cmbEscolhaBloco.SelectedValue.ToString());
+                //Remove o item após ser pego
+                lista.RemoveAll(c => c.BlocoID == cmbEscolhaBloco.SelectedValue.ToString());
+
+                //Limpa a lista de blocos incluídos: OBS: Necessário pois estva dando bug no sistema.
+                lstBlocos.DataSource = null;
+                //Incluí item na lista auxílio de blocos incluídos
+                ListaBlocosIncluidos.Add(blocoInclue);
+
+                //Passa valor para lista de blocos
+                lstBlocos.DataSource = ListaBlocosIncluidos;
+                //Define qual propriedade da classe eBloco será apresentada em tela na lista.
+                lstBlocos.DisplayMember = "Nome";
+                //Define qual a propriedade da classe eBloco será o valor do itém
+                lstBlocos.ValueMember = "BlocoID";
+
+                //chamando metódo para polular a combo com a novo lista atualizada
+                CarregarCombosBlocos(lista);
             }
         }
 
         private void btnExcluirListaBloco_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < lstBlocos.Items.Count; i++)
-            {
-                if (lstBlocos.GetSelected(i))
-                {
-                    cmbEscolhaBloco.Items.Insert(lstBlocos.SelectedIndex, lstBlocos.SelectedItem);
-                    lstBlocos.Items.RemoveAt(lstBlocos.SelectedIndex);
-                }
-            }
+            RemoverBlocoLista();
         }
 
         private void cmbEstadoCondominio_SelectedIndexChanged(object sender, EventArgs e)
@@ -102,6 +139,45 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             cmbCidadeCondominio.DataSource = ListCidade.OrderBy(c=>c.Nome).ToList();
             cmbCidadeCondominio.DisplayMember = "Nome";
             cmbCidadeCondominio.ValueMember = "CidadeID";
+        }
+
+        private void lstBlocos_DoubleClick(object sender, EventArgs e)
+        {
+            RemoverBlocoLista();
+        }
+
+        private void lstBlocos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstBlocos.SelectedItem != null)
+            {
+                var eBloco = (eBloco)lstBlocos.SelectedItem;
+                txtNomeBloco.Text = eBloco.Nome;
+                nudQtdPredios.Value = eBloco.QtdPredios;
+                nudQtdPredios.Focus();
+            }else
+            {
+                txtNomeBloco.Clear();
+                nudQtdPredios.Value = 0;
+            }
+        }
+
+        private void rdbNumeros_CheckedChanged(object sender, EventArgs e)
+        {
+                cmbEscolhaBloco.DataSource = null;
+                CarregarCombosBlocos(ListaBlocos);
+
+        }
+
+        private void rdbLetras_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbEscolhaBloco.DataSource = null;
+            CarregarCombosBlocos(ListaBlocos);
+        }
+
+        private void rdbLetrasNumeros_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbEscolhaBloco.DataSource = null;
+            CarregarCombosBlocos(ListaBlocos);
         }
 
         #endregion
@@ -144,8 +220,12 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 //ListBox
                 lstBlocos.Visible = true;
 
+                gpbTipoBloco.Visible = true;
+
                 //Texto aparecer
                 lblTextoBloco.Visible = false;
+                
+                
             }else
             {
                 //Labels
@@ -174,6 +254,8 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 
                 //ListBox
                 lstBlocos.Visible = false;
+
+                gpbTipoBloco.Visible = false;
 
                 //Texto aparecer
                 lblTextoBloco.Visible = true;
@@ -359,27 +441,127 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         {
             if (isBloquer)
             {
-                txtNomeCondominio.Enabled = false;
-                txtBairro.Enabled = false;
-                txtEnderecoCondominio.Enabled = false;
-                txtNomePredio.Enabled = false;
-                btnIncluirBlocos.Enabled = true;
-                btnIncluiEstacionamento.Enabled = true;
-                btnSalvar.Enabled = false;
+                pnCadCondominio.Enabled = false;
             }
             else
             {
-                txtNomeCondominio.Enabled = true;
-                txtBairro.Enabled = true;
-                txtEnderecoCondominio.Enabled = true;
-                txtNomePredio.Enabled = true;
-                btnIncluirBlocos.Enabled = false;
-                btnIncluiEstacionamento.Enabled = false;
-                btnSalvar.Enabled = true;
+                pnCadCondominio.Enabled = true;
             }
         } 
 
-        #endregion
+        private void IsBloquearCamposBlocos(bool isBloquear)
+        {
+            if (isBloquear)
+            {
+                pnIncluirBlocos.Enabled = false;
+            }else
+            {
+                pnIncluirBlocos.Enabled = true;
+            }
+        }
 
+        /// <summary>
+        /// Carrega combo de blocos para serem inseridos no condominio
+        /// </summary>
+        private void CarregarCombosBlocos(List<eBloco> lista)
+        {
+            CondominioID = "8";
+
+            if (!string.IsNullOrEmpty(CondominioID))
+            {
+                if (ListaBlocosIncluidos.Count() > 0)
+                {
+                    gpbTipoBloco.Enabled = false;
+                }
+                else
+                {
+                    gpbTipoBloco.Enabled = true;
+                }
+
+                if (lista == null)
+                {
+                    ListaBlocos = nBloco.Bloco_GET(new eBloco { StatusAtivo = true });
+                    lista = ListaBlocos;
+                }
+
+                if (rdbNumeros.Checked)
+                {
+                    lista = lista.Where(c => c.TipoBloco == "PN").ToList();
+                }
+                else if (rdbLetras.Checked)
+                {
+                    lista = lista.Where(c => c.TipoBloco == "PL").ToList();
+                }
+                else
+                {
+                    lista = lista.Where(c => c.TipoBloco == "A").ToList();
+                }
+
+                #region Remover blocos que já estão excluidos
+
+                if (ListaBlocosIncluidos != null)
+                {
+                    foreach (var item in ListaBlocosIncluidos)
+                    {
+                        lista.Remove(item);
+                    }
+                }
+
+                #endregion
+
+                if (lista.Count > 0)
+                {
+                    var listaAux = new List<eBloco>();
+
+                    foreach (var item in lista)
+                    {
+                        item.Condominio.CondominioID = CondominioID;
+                        listaAux.Add(item);
+                    }
+
+                    lista.Clear();
+                    lista.AddRange(listaAux);
+                    lista = lista.OrderBy(c => c.BlocoID).ToList();
+
+                    cmbEscolhaBloco.DataSource = lista;
+                    cmbEscolhaBloco.DisplayMember = "Nome";
+                    cmbEscolhaBloco.ValueMember = "BlocoID";
+                    cmbEscolhaBloco.SelectedIndex = 0;
+                }
+            }
+        }
+
+        private void RemoverBlocoLista()
+        {
+            if (lstBlocos.SelectedItem != null)
+            {
+                try
+                {
+                    var listaCombo = (List<eBloco>)cmbEscolhaBloco.DataSource;
+                    var eBloco = (eBloco)lstBlocos.SelectedItem;
+
+                    ListaBlocosIncluidos.Remove(eBloco);
+
+                    listaCombo.Add(eBloco);
+                    lstBlocos.DataSource = null;
+                    lstBlocos.DataSource = ListaBlocosIncluidos;
+                    lstBlocos.DisplayMember = "Nome";
+                    lstBlocos.ValueMember = "BlocoID";
+                    listaCombo = listaCombo.OrderBy(c => c.BlocoID).ToList();
+                    CarregarCombosBlocos(listaCombo);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else
+            {
+                Util.MensagemInformacao("É necessario selecionar o bloco da lista para remove-lo");
+            }
+        }
+
+        #endregion
     }
 }
