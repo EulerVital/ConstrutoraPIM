@@ -18,6 +18,7 @@ namespace ProjetoPimConstrutora.Forms
         #region Propriedades & Atributos
 
         nBloco obj = null;
+        public ePredio Predio { get; set; }
 
         #endregion
 
@@ -35,9 +36,23 @@ namespace ProjetoPimConstrutora.Forms
                 Util.MensagemInformacao("Preencha o campo nome do Prédio");
             }else
             {
-                ePredio obj = new ePredio();
+                Predio = new ePredio();
 
-                obj.Nome = txtNome.Text;
+                Predio.Nome = txtNome.Text;
+                Predio.Excluido = ckbExcluido.Checked;
+                Predio.PredioID = nPredio.Predio_SET(Predio);
+
+                if (!Predio.PredioID.Equals("0"))
+                {
+                    Util.MensagemSucesso("Cadastro Efetuado com sucessso");
+                    txtNome.Clear();
+                    txtNome.Focus();
+                    ckbExcluido.Checked = false;
+                }
+                else
+                {
+                    Util.MensagemErro();
+                }                
             }   
         }
 

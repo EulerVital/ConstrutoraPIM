@@ -8,6 +8,10 @@ namespace ENT
 {
     public class ePredio
     {
+        public ePredio()
+        {
+            Bloco = new eBloco();
+        }
         public string PredioID { get; set; }
         public string Nome { get; set; }
         public int QtdApartamentos { get; set; }

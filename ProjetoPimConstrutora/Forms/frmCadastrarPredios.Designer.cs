@@ -31,7 +31,7 @@
             this.pnTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAjuda = new System.Windows.Forms.Button();
-            this.cbStatus = new System.Windows.Forms.CheckBox();
+            this.ckbExcluido = new System.Windows.Forms.CheckBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@
             this.pnTop.Controls.Add(this.btnSalvar);
             this.pnTop.Controls.Add(this.label1);
             this.pnTop.Controls.Add(this.btnAjuda);
-            this.pnTop.Controls.Add(this.cbStatus);
+            this.pnTop.Controls.Add(this.ckbExcluido);
             this.pnTop.Controls.Add(this.txtNome);
             this.pnTop.Controls.Add(this.label8);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -78,25 +78,24 @@
             this.btnAjuda.TabIndex = 28;
             this.btnAjuda.UseVisualStyleBackColor = false;
             // 
-            // cbStatus
+            // ckbExcluido
             // 
-            this.cbStatus.AutoSize = true;
-            this.cbStatus.Checked = true;
-            this.cbStatus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbStatus.Font = new System.Drawing.Font("Century", 11F, System.Drawing.FontStyle.Bold);
-            this.cbStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cbStatus.Location = new System.Drawing.Point(15, 131);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(126, 22);
-            this.cbStatus.TabIndex = 26;
-            this.cbStatus.Text = "Status Ativo";
-            this.cbStatus.UseVisualStyleBackColor = true;
+            this.ckbExcluido.AutoSize = true;
+            this.ckbExcluido.Font = new System.Drawing.Font("Century", 11F, System.Drawing.FontStyle.Bold);
+            this.ckbExcluido.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ckbExcluido.Location = new System.Drawing.Point(15, 131);
+            this.ckbExcluido.Name = "ckbExcluido";
+            this.ckbExcluido.Size = new System.Drawing.Size(97, 22);
+            this.ckbExcluido.TabIndex = 26;
+            this.ckbExcluido.Text = "Excluído";
+            this.ckbExcluido.UseVisualStyleBackColor = true;
             // 
             // txtNome
             // 
             this.txtNome.BackColor = System.Drawing.Color.LightGray;
             this.txtNome.Font = new System.Drawing.Font("Century", 9.75F);
             this.txtNome.Location = new System.Drawing.Point(158, 85);
+            this.txtNome.MaxLength = 3;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(254, 23);
             this.txtNome.TabIndex = 25;
@@ -153,7 +152,7 @@
         private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.CheckBox cbStatus;
+        private System.Windows.Forms.CheckBox ckbExcluido;
         private System.Windows.Forms.Button btnAjuda;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvar;
