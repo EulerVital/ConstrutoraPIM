@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.pnTop = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAjuda = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.cbStatus = new System.Windows.Forms.CheckBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTop
             // 
+            this.pnTop.Controls.Add(this.btnSalvar);
             this.pnTop.Controls.Add(this.label1);
             this.pnTop.Controls.Add(this.btnAjuda);
-            this.pnTop.Controls.Add(this.btnSalvar);
             this.pnTop.Controls.Add(this.cbStatus);
             this.pnTop.Controls.Add(this.txtNome);
             this.pnTop.Controls.Add(this.label8);
@@ -51,6 +51,17 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(454, 179);
             this.pnTop.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(96, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 49);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Clique em \"?\" para obter mais informações sobre o cadastro.";
             // 
             // btnAjuda
             // 
@@ -66,20 +77,6 @@
             this.btnAjuda.Size = new System.Drawing.Size(46, 33);
             this.btnAjuda.TabIndex = 28;
             this.btnAjuda.UseVisualStyleBackColor = false;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.LightGray;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
-            this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSalvar.Location = new System.Drawing.Point(335, 128);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(77, 27);
-            this.btnSalvar.TabIndex = 27;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
             // cbStatus
             // 
@@ -103,6 +100,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(254, 23);
             this.txtNome.TabIndex = 25;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label8
             // 
@@ -116,16 +114,23 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Nome do Prédio:";
             // 
-            // label1
+            // btnSalvar
             // 
-            this.label1.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(96, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 49);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Clique em \"?\" para obter mais informações sobre o cadastro.";
+            this.btnSalvar.BackColor = System.Drawing.Color.LightGray;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvar.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSalvar.Location = new System.Drawing.Point(315, 132);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(97, 35);
+            this.btnSalvar.TabIndex = 47;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmCadastrarPredios
             // 
@@ -150,7 +155,7 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.CheckBox cbStatus;
         private System.Windows.Forms.Button btnAjuda;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

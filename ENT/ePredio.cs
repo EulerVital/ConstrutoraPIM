@@ -11,6 +11,7 @@ namespace ENT
         public string PredioID { get; set; }
         public string Nome { get; set; }
         public int QtdApartamentos { get; set; }
+        public bool Excluido { get; set; }
         public eBloco Bloco { get; set; }
     }
 }

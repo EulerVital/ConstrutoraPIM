@@ -10,12 +10,15 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 {
     public partial class ucCadastrarCondominio : UserControl
     {
-        #region Propriedades
+        #region Propriedades & Atributos
         public List<eEstado> ListaEstados { get; set; }
         public List<eCidade> ListaCidades { get; set; }
         public string CondominioID { get; set; }
         public List<eBloco> ListaBlocos { get; set; }
         public List<eBloco> ListaBlocosIncluidos { get; set; }
+        public List<ePredio> ListaPredios { get; set; }
+        public List<ePredio> ListaPrediosIncluidos { get; set; }
+
         eCondominio obj = null;
         #endregion
         public ucCadastrarCondominio()
@@ -28,6 +31,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             CarregarCombosCondominio();
 
             ListaBlocosIncluidos = new List<eBloco>();
+            ListaPrediosIncluidos = new List<ePredio>();
         }
 
         #region Eventos
@@ -85,6 +89,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 IsBloquearCamposBlocos(true);
                 IsBloquearCamposCondominio(true);
                 visualizarCamposPredios(true);
+
             }else
             {
                 Util.MensagemInformacao("Requesistos para inclusão de Prédios. \n\n-Selecionar o Bloco na lista de blocos.\n\n-Definir a quantidade de prédios, sendo maior que 0.");

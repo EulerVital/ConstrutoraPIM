@@ -122,16 +122,29 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             if (cmbTipoNomeBloco.SelectedIndex == 0)
             {
                 txtNomeBloco.Text = objNeg.RetornaNumeros(txtNomeBloco.Text);
-            }else if(cmbTipoNomeBloco.SelectedIndex == 1)
-            {
-                txtNomeBloco.Text =  objNeg.RetornaLetras(txtNomeBloco.Text);
-            }else
-            {
-                txtNomeBloco.Text = objNeg.RetornaNumerosLetras(txtNomeBloco.Text);
             }
+            else if (cmbTipoNomeBloco.SelectedIndex == 1)
+            {
+                txtNomeBloco.Text = objNeg.RetornaLetras(txtNomeBloco.Text);
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(txtNomeBloco.Text))
+                {
+                    var texto = txtNomeBloco.Text.Substring(0,1);
 
-            txtNomeBloco.Text = txtNomeBloco.Text.ToUpper();
-            txtNomeBloco.Select(txtNomeBloco.Text.Length, 0);
+                    if (txtNomeBloco.TextLength >= 2)
+                    {
+                        txtNomeBloco.Text = texto + objNeg.RetornaNumeros(txtNomeBloco.Text);
+                    }
+                    else
+                    {
+                        txtNomeBloco.Text = objNeg.RetornaLetras(txtNomeBloco.Text);
+                    }
+                }
+            }
+                txtNomeBloco.Text = txtNomeBloco.Text.ToUpper().Trim();
+                txtNomeBloco.Select(txtNomeBloco.Text.Length, 0);
         }
 
         private void cmbTipoNomeBloco_SelectedIndexChanged(object sender, EventArgs e)

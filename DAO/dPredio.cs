@@ -41,7 +41,7 @@ namespace DAO
         {
             List<ePredio> retorno = new List<ePredio>();
             cmd = new SqlCommand();
-            param = new SqlParameter[7];
+            param = new SqlParameter[8];
 
             try
             {
@@ -52,7 +52,8 @@ namespace DAO
                 MontarParametro(3, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
                 MontarParametro(4, param, ParameterDirection.Input, "@NomeBloco", obj.Bloco.Nome, SqlDbType.VarChar);
                 MontarParametro(5, param, ParameterDirection.Input, "@CondominioID", obj.Bloco.Condominio.CondominioID, SqlDbType.Int);
-                MontarParametro(6, param, ParameterDirection.Input, "@NomeCondominio", obj.Bloco.Condominio.Nome, SqlDbType.VarChar);
+                MontarParametro(6, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
+                MontarParametro(7, param, ParameterDirection.Input, "@NomeCondominio", obj.Bloco.Condominio.Nome, SqlDbType.VarChar);
 
                 dr = ExecReader("USP_PREDIO_GET", cmd, param);
 
@@ -115,7 +116,7 @@ namespace DAO
             try
             {
                 cmd = new SqlCommand();
-                param = new SqlParameter[4];
+                param = new SqlParameter[5];
 
                 if (string.IsNullOrEmpty(obj.PredioID))
                     obj.PredioID = "0";
@@ -123,7 +124,8 @@ namespace DAO
                 MontarParametro(0, param, ParameterDirection.Input, "@PredioID", obj.PredioID, SqlDbType.Int);
                 MontarParametro(1, param, ParameterDirection.Input, "@Nome", obj.Nome, SqlDbType.VarChar);
                 MontarParametro(2, param, ParameterDirection.Input, "@QtdApartamentos", obj.QtdApartamentos, SqlDbType.Int);
-                MontarParametro(3, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
+                MontarParametro(3, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
+                MontarParametro(4, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
 
                 retorno = Convert.ToString(ExecNonQuery("USP_PREDIO_SET", cmd, param));
             }
