@@ -19,7 +19,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         public List<ePredio> ListaPredios { get; set; }
         public List<ePredio> ListaPrediosIncluidos { get; set; }
 
-        eCondominio obj = null;
+        eCondominio objCondominio = null;
         #endregion
         public ucCadastrarCondominio()
         {
@@ -37,11 +37,11 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         #region Eventos
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            obj = ValidaCamposCondominio();
+            objCondominio = ValidaCamposCondominio();
 
-            if(obj != null)
+            if(objCondominio != null)
             {
-                CondominioID = nCondominio.Condominio_SET(obj);
+                CondominioID = nCondominio.Condominio_SET(objCondominio);
                 if (CondominioID.Equals("0"))
                 {
                     Util.MensagemErro("Condominio já existe");
@@ -49,10 +49,10 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 else
                 {
                     Util.MensagemSucesso("Dados gravado com sucesso");
-                    lblTituloBloco.Text = "Inserir blocos para o condomínio \"" + obj.Nome;
+                    lblTituloBloco.Text = "Inserir blocos para o condomínio \"" + objCondominio.Nome;
                     IsBloquearCamposCondominio(true);
                     CarregarCombosBlocos(null);
-                    obj.CondominioID = CondominioID;
+                    objCondominio.CondominioID = CondominioID;
                 }
             }else
             {
@@ -89,6 +89,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 IsBloquearCamposBlocos(true);
                 IsBloquearCamposCondominio(true);
                 visualizarCamposPredios(true);
+                CarregarComboPredios(null);
 
             }else
             {
@@ -126,6 +127,35 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 
                 //chamando metódo para polular a combo com a novo lista atualizada
                 CarregarCombosBlocos(lista);
+            }
+        }
+
+        private void btnAddPredio_Click(object sender, EventArgs e)
+        {
+            if(ListaPrediosIncluidos.Count >= nudQtdBlocos.Value)
+            {
+                Util.MensagemInformacao("Foi atingido o numero máximo de Prédios para o Bloco: " + txtNomeBloco.Text + ".");
+            }
+            else if(cmbEscolhaPredios.Items.Count > 0 && cmbEscolhaPredios.SelectedItem != null)
+            {
+                var lista = (List<ePredio>)cmbEscolhaPredios.DataSource;
+
+                var predioInclue = lista.Find(c => c.PredioID == cmbEscolhaPredios.SelectedValue.ToString());
+
+                lista.RemoveAll(c => c.PredioID == cmbEscolhaPredios.SelectedValue.ToString());
+
+                lstPredios.DataSource = null;
+
+                ListaPrediosIncluidos.Add(predioInclue);
+
+                lstPredios.DataSource = ListaPrediosIncluidos;
+
+                lstPredios.DisplayMember = "Nome";
+
+                lstPredios.ValueMember = "PredioID";
+
+                //chamando metódo para polular a combo com a novo lista atualizada
+                CarregarComboPredios(lista);
             }
         }
 
@@ -183,6 +213,73 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         {
             cmbEscolhaBloco.DataSource = null;
             CarregarCombosBlocos(ListaBlocos);
+        }
+
+
+        private void btnExcluirListaPredio_Click(object sender, EventArgs e)
+        {
+            RemoverPredioLista();
+        }
+
+        private void lstPredios_DoubleClick(object sender, EventArgs e)
+        {
+            RemoverPredioLista();
+        }
+
+        private void lstPredios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstPredios.SelectedItem != null)
+            {
+                var ePredio = (ePredio)lstPredios.SelectedItem;
+                txtNomePredio.Text = ePredio.Nome;
+                nudQtdAparta.Value = ePredio.QtdApartamentos;
+                nudQtdAparta.Focus();
+            }
+            else
+            {
+                txtNomePredio.Clear();
+                nudQtdAparta.Value = 0;
+            }
+        }
+
+        private void btnSalvarBlocos_Click(object sender, EventArgs e)
+        {
+            bool gravou = false;
+            int count = 0;
+
+            if (btnSalvarBlocos.Text.Equals("Salvar Inclusão"))
+            {
+                if (ListaBlocosIncluidos != null && ListaBlocosIncluidos.Count > 0)
+                {
+                    foreach (var item in ListaBlocosIncluidos)
+                    {
+                        if (nBloco.Bloco_SET(item) != "0")
+                        {
+                            gravou = true;
+                            count++;
+                        }
+                        else
+                        {
+                            gravou = false;
+                            break;
+                        }
+                    }
+
+                    if (gravou)
+                    {
+                        Util.MensagemSucesso("Quantidade de blocos incluidos: " + count + "\nSe a quantidade for direferente do que você incluiu por gentilea contate o Administrador do sistema.\nEm Ajuda>>Contatar Desenvolvedor!");
+                        btnSalvarBlocos.Text = "Alterar Inclusão";
+                        //btnSalvarBlocos.Image = Properties.Resources.Edit
+                    }
+                    else
+                    {
+                        Util.MensagemErro("Por gentileza contate o Administrador do sistema, pois a inclusão na foi bem sucedida.\nEm Ajuda>>Contatar desenvolvedor");
+                    }
+                }
+            }else
+            {
+
+            }
         }
 
         #endregion
@@ -471,6 +568,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         private void CarregarCombosBlocos(List<eBloco> lista)
         {
             CondominioID = "8";
+            cmbEscolhaBloco.DataSource = null;
 
             if (!string.IsNullOrEmpty(CondominioID))
             {
@@ -542,7 +640,11 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             {
                 try
                 {
-                    var listaCombo = (List<eBloco>)cmbEscolhaBloco.DataSource;
+                    List<eBloco> listaCombo = new List<eBloco>();
+                    if (cmbEscolhaBloco.DataSource != null)
+                    {
+                        listaCombo = (List<eBloco>)cmbEscolhaBloco.DataSource;
+                    }
                     var eBloco = (eBloco)lstBlocos.SelectedItem;
 
                     ListaBlocosIncluidos.Remove(eBloco);
@@ -564,6 +666,58 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             else
             {
                 Util.MensagemInformacao("É necessario selecionar o bloco da lista para remove-lo");
+            }
+        }
+
+        private void CarregarComboPredios(List<ePredio> lista)
+        {
+            if(lista == null)
+            {
+                ListaPredios = nPredio.Predio_GET(new ePredio());
+                lista = ListaPredios;
+            }
+
+            cmbEscolhaPredios.DataSource = null;
+            cmbEscolhaPredios.DataSource = lista;
+            cmbEscolhaPredios.DisplayMember = "Nome";
+            cmbEscolhaPredios.ValueMember = "PredioID";
+            cmbEscolhaPredios.SelectedIndex = 0;
+        }
+
+        private void RemoverPredioLista()
+        {
+            if (lstPredios.SelectedItem != null)
+            {
+                try
+                {
+                    List<ePredio> listaCombo = new List<ePredio>();
+
+                    if (cmbEscolhaPredios.DataSource != null)
+                    {
+                        listaCombo = (List<ePredio>)cmbEscolhaPredios.DataSource;
+                    }
+
+                    var ePredio = (ePredio)lstPredios.SelectedItem;
+
+                    ListaPrediosIncluidos.Remove(ePredio);
+
+                    listaCombo.Add(ePredio);
+                    lstPredios.DataSource = null;
+                    lstPredios.DataSource = ListaPrediosIncluidos;
+                    lstPredios.DisplayMember = "Nome";
+                    lstPredios.ValueMember = "PredioID";
+                    listaCombo = listaCombo.OrderBy(c => c.PredioID).ToList();
+                    CarregarComboPredios(listaCombo);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else
+            {
+                Util.MensagemInformacao("É necessario selecionar o prédio da lista para remove-lo");
             }
         }
 

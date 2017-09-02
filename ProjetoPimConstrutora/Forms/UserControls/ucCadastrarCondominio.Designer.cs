@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCadastrarCondominio));
             this.pnCadCondominio = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnAjuda = new System.Windows.Forms.Button();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeCondominio = new System.Windows.Forms.TextBox();
@@ -108,8 +110,6 @@
             this.txtNomeBloco = new System.Windows.Forms.TextBox();
             this.lblTituloBloco = new System.Windows.Forms.Label();
             this.splitter3 = new System.Windows.Forms.Splitter();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnAjuda = new System.Windows.Forms.Button();
             this.pnCadCondominio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdBlocos)).BeginInit();
             this.panel3.SuspendLayout();
@@ -150,6 +150,21 @@
             this.pnCadCondominio.Controls.Add(this.label2);
             resources.ApplyResources(this.pnCadCondominio, "pnCadCondominio");
             this.pnCadCondominio.Name = "pnCadCondominio";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Name = "label13";
+            // 
+            // btnAjuda
+            // 
+            this.btnAjuda.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.btnAjuda, "btnAjuda");
+            this.btnAjuda.ForeColor = System.Drawing.Color.Black;
+            this.btnAjuda.Image = global::ProjetoPimConstrutora.Properties.Resources._4927_32x32;
+            this.btnAjuda.Name = "btnAjuda";
+            this.btnAjuda.UseVisualStyleBackColor = false;
             // 
             // txtBairro
             // 
@@ -356,7 +371,8 @@
             resources.ApplyResources(this.lstPredios, "lstPredios");
             this.lstPredios.FormattingEnabled = true;
             this.lstPredios.Name = "lstPredios";
-            this.lstPredios.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lstPredios.SelectedIndexChanged += new System.EventHandler(this.lstPredios_SelectedIndexChanged);
+            this.lstPredios.DoubleClick += new System.EventHandler(this.lstPredios_DoubleClick);
             // 
             // lblQtdApartamento
             // 
@@ -372,6 +388,7 @@
             this.btnExcluirListaPredio.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_remove;
             this.btnExcluirListaPredio.Name = "btnExcluirListaPredio";
             this.btnExcluirListaPredio.UseVisualStyleBackColor = false;
+            this.btnExcluirListaPredio.Click += new System.EventHandler(this.btnExcluirListaPredio_Click);
             // 
             // lblQtdPredios
             // 
@@ -387,6 +404,7 @@
             this.btnAddPredio.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_add;
             this.btnAddPredio.Name = "btnAddPredio";
             this.btnAddPredio.UseVisualStyleBackColor = false;
+            this.btnAddPredio.Click += new System.EventHandler(this.btnAddPredio_Click);
             // 
             // cmbEscolhaPredios
             // 
@@ -684,6 +702,7 @@
             this.btnSalvarBlocos.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
             this.btnSalvarBlocos.Name = "btnSalvarBlocos";
             this.btnSalvarBlocos.UseVisualStyleBackColor = false;
+            this.btnSalvarBlocos.Click += new System.EventHandler(this.btnSalvarBlocos_Click);
             // 
             // lblQuantPredios
             // 
@@ -744,21 +763,6 @@
             resources.ApplyResources(this.splitter3, "splitter3");
             this.splitter3.Name = "splitter3";
             this.splitter3.TabStop = false;
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Name = "label13";
-            // 
-            // btnAjuda
-            // 
-            this.btnAjuda.BackColor = System.Drawing.Color.LightGray;
-            resources.ApplyResources(this.btnAjuda, "btnAjuda");
-            this.btnAjuda.ForeColor = System.Drawing.Color.Black;
-            this.btnAjuda.Image = global::ProjetoPimConstrutora.Properties.Resources._4927_32x32;
-            this.btnAjuda.Name = "btnAjuda";
-            this.btnAjuda.UseVisualStyleBackColor = false;
             // 
             // ucCadastrarCondominio
             // 
