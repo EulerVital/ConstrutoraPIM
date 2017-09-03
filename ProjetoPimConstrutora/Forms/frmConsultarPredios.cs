@@ -15,11 +15,22 @@ namespace ProjetoPimConstrutora.Forms
     public partial class frmConsultarPredios : Form
     {
         public List<ePredio> ListaPredio { get; set; }
-        public frmConsultarPredios()
+        public frmConsultarPredios(frmPrincipal frm)
         {
             InitializeComponent();
             CarregarComboCondominio(true, null);
             CarregarTabelaPredio(false);
+        }
+
+        public frmConsultarPredios(frmPrincipal frm, eBloco bloco)
+        {
+            InitializeComponent();
+
+            var lista = nPredio.Predio_GET(new ePredio() { Bloco = bloco });
+            this.MdiParent = frm;
+            CarregarComboCondominio(true, lista);
+            CarregarTabelaPredio(false);
+            cmbCondominio.SelectedIndex = 1;
         }
 
         #region Eventos
@@ -35,12 +46,14 @@ namespace ProjetoPimConstrutora.Forms
 
         private void cmbCondominio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CarregarTabelaPredio(false);
+            if(cmbCondominio.SelectedIndex > 0)
+                CarregarTabelaPredio(false);
         }
 
         private void cmbBlocos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CarregarTabelaPredio(false);
+            if (cmbBlocos.SelectedIndex > 0)
+                CarregarTabelaPredio(false);
         }
 
         #endregion
@@ -49,20 +62,24 @@ namespace ProjetoPimConstrutora.Forms
 
         private void CarregarComboCondominio(bool isCarregarBase, List<ePredio> lista)
         {
+            if (isCarregarBase)
+            {
+                ListaPredio = nPredio.Predio_GET(new ePredio());
+            }
+
+            cmbCondominio.DataSource = null;
             if (lista == null)
             {
-                if (isCarregarBase)
-                {
-                    ListaPredio = nPredio.Predio_GET(new ePredio());
-                }
-
                 lista = ListaPredio;
             }
 
+            var listaAux = new List<eCondominio>();
+
             foreach (var item in lista)
             {
-                if (!item.Bloco.Condominio.CondominioID.Equals("0"))
+                if (!item.Bloco.Condominio.CondominioID.Equals("0") && !listaAux.Exists(c=>c.CondominioID == item.Bloco.Condominio.CondominioID))
                 {
+                    listaAux.Add(item.Bloco.Condominio);
                     cmbCondominio.Items.Add(item.Bloco.Condominio);
                     cmbCondominio.DisplayMember = "Nome";
                     cmbCondominio.ValueMember = "CondominioID";
@@ -77,18 +94,24 @@ namespace ProjetoPimConstrutora.Forms
 
         private void CarregarComboBloco(List<ePredio> lista)
         {
-            foreach(var item in lista)
+            var listaAux = new List<eBloco>();
+            cmbBlocos.DataSource = null;
+
+            foreach (var item in lista)
             {
-                if (!item.Bloco.BlocoID.Equals("0"))
+                if (!item.Bloco.BlocoID.Equals("0") && !listaAux.Exists(c => c.BlocoID == item.Bloco.BlocoID))
                 {
-                    cmbCondominio.Items.Add(item.Bloco);
-                    cmbCondominio.DisplayMember = "Nome";
-                    cmbCondominio.ValueMember = "BlocoID";
+                    listaAux.Add(item.Bloco);
+                    cmbBlocos.Items.Add(item.Bloco);
+                    cmbBlocos.DisplayMember = "Nome";
+                    cmbBlocos.ValueMember = "BlocoID";
                 }
             }
 
             cmbBlocos.Items.Insert(0, "Selecione");
-            cmbBlocos.SelectedIndex = 0;
+
+            if(cmbBlocos.SelectedIndex > -1) 
+                cmbBlocos.SelectedIndex = 0;
         }
 
         private void CarregarTabelaPredio(bool isCarregarBase)
@@ -133,13 +156,13 @@ namespace ProjetoPimConstrutora.Forms
 
                 if (cmbCondominio.SelectedIndex > 0)
                 {
-                    lista = lista.Where(c => c.Bloco.Condominio.CondominioID == cmbCondominio.SelectedValue.ToString()).ToList();
+                    lista = lista.Where(c => c.Bloco.Condominio.CondominioID == ((eCondominio)cmbCondominio.SelectedItem).CondominioID).ToList();
                     CarregarComboBloco(lista);
                 }
 
                 if (cmbBlocos.SelectedIndex > 0)
                 {
-                    lista = lista.Where(c => c.Bloco.BlocoID == cmbBlocos.SelectedValue.ToString()).ToList();
+                    lista = lista.Where(c => c.Bloco.BlocoID == ((eBloco)cmbBlocos.SelectedItem).BlocoID).ToList();
                 }
 
             }

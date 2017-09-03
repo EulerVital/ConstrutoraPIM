@@ -16,11 +16,13 @@ namespace ProjetoPimConstrutora.Forms
     public partial class frmConsultarBlocos : Form
     {
         public List<eBloco> ListaBlocos { get; set; }
-        public frmConsultarBlocos()
+        private frmPrincipal frmPrinc { get; set; }
+        public frmConsultarBlocos(frmPrincipal frm)
         {
             InitializeComponent();
             ListaBlocos = new List<eBloco>();
             CarregarBlocos(true);
+            frmPrinc = frm;
         }
 
         #region Eventos
@@ -32,20 +34,32 @@ namespace ProjetoPimConstrutora.Forms
 
         private void dgvBlocos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 5)
+            if (e.RowIndex > -1)
             {
-                if((int)dgvBlocos.Rows[e.RowIndex].Cells[3].Value > 0)
+                if (e.ColumnIndex == 5)
+                {
+                    if ((int)dgvBlocos.Rows[e.RowIndex].Cells[3].Value > 0)
+                    {
+                        var obj = ListaBlocos.FirstOrDefault(c => c.BlocoID == dgvBlocos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        frmConsultarPredios frm = new frmConsultarPredios(frmPrinc, obj);
+                        frm.Show();
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        Util.MensagemInformacao("Não a Prédios para esse bloco.");
+                    }
+                }
+                else if (e.ColumnIndex == 6)
                 {
                     var obj = ListaBlocos.FirstOrDefault(c => c.BlocoID == dgvBlocos.Rows[e.RowIndex].Cells[0].Value.ToString());
-                }else
-                {
-                    Util.MensagemInformacao("Não a Prédios para esse bloco.");
                 }
             }
-            else if(e.ColumnIndex == 6)
-            {
-                var obj = ListaBlocos.FirstOrDefault(c => c.BlocoID == dgvBlocos.Rows[e.RowIndex].Cells[0].Value.ToString());
-            }
+        }
+
+        private void cmbCondominio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregarBlocos(false);
         }
 
         #endregion
@@ -101,7 +115,8 @@ namespace ProjetoPimConstrutora.Forms
             
             if(cmbCondominio.SelectedIndex != 0)
             {
-                listaAux = ListaBlocos.Where(c => c.Condominio.CondominioID == cmbCondominio.SelectedValue.ToString()).ToList();
+                lista.Clear();
+                listaAux = ListaBlocos.Where(c => c.Condominio.CondominioID == ((eCondominio)cmbCondominio.SelectedItem).CondominioID).ToList();
                 lista.AddRange(listaAux);
             }
 
@@ -110,10 +125,15 @@ namespace ProjetoPimConstrutora.Forms
 
         private void CarregarComboCondominio()
         {
+            var listaComboCondominio = new List<eCondominio>();
+
             foreach(var item in ListaBlocos)
             {
-                if (!item.Condominio.CondominioID.Equals("0"))
+
+
+                if (!item.Condominio.CondominioID.Equals("0") && !listaComboCondominio.Exists(c=>c.CondominioID == item.Condominio.CondominioID))
                 {
+                    listaComboCondominio.Add(item.Condominio);
                     cmbCondominio.Items.Add(item.Condominio);
                     cmbCondominio.DisplayMember = "Nome";
                     cmbCondominio.ValueMember = "CondominioID";

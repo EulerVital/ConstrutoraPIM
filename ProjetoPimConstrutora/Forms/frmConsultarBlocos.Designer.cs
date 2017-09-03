@@ -161,6 +161,7 @@
             this.cmbCondominio.Name = "cmbCondominio";
             this.cmbCondominio.Size = new System.Drawing.Size(249, 24);
             this.cmbCondominio.TabIndex = 25;
+            this.cmbCondominio.SelectedIndexChanged += new System.EventHandler(this.cmbCondominio_SelectedIndexChanged);
             // 
             // label8
             // 

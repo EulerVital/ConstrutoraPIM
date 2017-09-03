@@ -121,7 +121,7 @@ namespace DAO
                 MontarParametro(4, param, ParameterDirection.Input, "@StatusAtivo", obj.StatusAtivo, SqlDbType.Bit);
                 MontarParametro(5, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Int);
 
-                retorno = Convert.ToString(ExecNonQuery("USP_BLOCO_SET", cmd, param));
+                retorno = Convert.ToString(ExecScalar("USP_BLOCO_SET", cmd, param));
             }
             catch (SqlException sqlex)
             {

@@ -122,7 +122,7 @@ namespace DAO
                 MontarParametro(7, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
 
 
-                retorno = Convert.ToString(ExecNonQuery("USP_CONDOMINIO_SET", cmd, param));
+                retorno = Convert.ToString(ExecScalar("USP_CONDOMINIO_SET", cmd, param));
             }
             catch (SqlException sqlex)
             {

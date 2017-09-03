@@ -72,7 +72,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmConsultarPredios frm = new frmConsultarPredios();
+            frmConsultarPredios frm = new frmConsultarPredios(this);
             frm.MdiParent = this;
             frm.Show();
         }
@@ -81,7 +81,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmConsultarBlocos frm = new frmConsultarBlocos();
+            frmConsultarBlocos frm = new frmConsultarBlocos(this);
             frm.MdiParent = this;
             frm.Show();
         }

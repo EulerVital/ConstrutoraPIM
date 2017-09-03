@@ -127,7 +127,7 @@ namespace DAO
                 MontarParametro(3, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
                 MontarParametro(4, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
 
-                retorno = Convert.ToString(ExecNonQuery("USP_PREDIO_SET", cmd, param));
+                retorno = Convert.ToString(ExecScalar("USP_PREDIO_SET", cmd, param));
             }
             catch (SqlException sqlex)
             {

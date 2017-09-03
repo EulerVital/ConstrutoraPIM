@@ -37,26 +37,33 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         #region Eventos
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            objCondominio = ValidaCamposCondominio();
-
-            if(objCondominio != null)
+            if (btnSalvar.Text.Equals("Salvar"))
             {
-                CondominioID = nCondominio.Condominio_SET(objCondominio);
-                if (CondominioID.Equals("0"))
+                objCondominio = ValidaCamposCondominio();
+
+                if (objCondominio != null)
                 {
-                    Util.MensagemErro("Condominio já existe");
+                    CondominioID = nCondominio.Condominio_SET(objCondominio);
+                    if (CondominioID.Equals("0"))
+                    {
+                        Util.MensagemErro("Condominio já existe");
+                    }
+                    else
+                    {
+                        Util.MensagemSucesso("Dados gravado com sucesso");
+                        lblTituloBloco.Text = "Inserir blocos para o condomínio \"" + objCondominio.Nome;
+                        IsBloquearCamposCondominio(true);
+                        CarregarCombosBlocos(null);
+                        objCondominio.CondominioID = CondominioID;
+                    }
                 }
                 else
                 {
-                    Util.MensagemSucesso("Dados gravado com sucesso");
-                    lblTituloBloco.Text = "Inserir blocos para o condomínio \"" + objCondominio.Nome;
-                    IsBloquearCamposCondominio(true);
-                    CarregarCombosBlocos(null);
-                    objCondominio.CondominioID = CondominioID;
+                    Util.MensagemErro("Dados de condominio invalido");
                 }
             }else
             {
-                Util.MensagemErro("Dados de condominio invalido");
+
             }
         }
 
@@ -84,11 +91,13 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 var eBloco = (eBloco)lstBlocos.SelectedItem;
                 eBloco.QtdPredios = (int)nudQtdPredios.Value;
 
+                lstPredios.DataSource = null;
+
                 lblQtdPredios.Text = "Nº Prédios " + nudQtdPredios.Value;
                 lblTituloPredio.Text = "Add Prédios para o Bloco: " + txtNomeBloco.Text + " do Condôminio: " + txtNomeCondominio.Text;
                 IsBloquearCamposBlocos(true);
-                IsBloquearCamposCondominio(true);
                 visualizarCamposPredios(true);
+                IsBloquearCamposPredioSalvando(false);
                 CarregarComboPredios(null);
 
             }else
@@ -153,6 +162,8 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 lstPredios.DisplayMember = "Nome";
 
                 lstPredios.ValueMember = "PredioID";
+
+                IsBloquearCamposPredio(false);
 
                 //chamando metódo para polular a combo com a novo lista atualizada
                 CarregarComboPredios(lista);
@@ -269,16 +280,77 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                     {
                         Util.MensagemSucesso("Quantidade de blocos incluidos: " + count + "\nSe a quantidade for direferente do que você incluiu por gentilea contate o Administrador do sistema.\nEm Ajuda>>Contatar Desenvolvedor!");
                         btnSalvarBlocos.Text = "Alterar Inclusão";
-                        //btnSalvarBlocos.Image = Properties.Resources.Edit
+                        btnSalvarBlocos.Image = Properties.Resources.Edit;
+                        IsBloquearCamposBlocosSalvando(true);
                     }
                     else
                     {
-                        Util.MensagemErro("Por gentileza contate o Administrador do sistema, pois a inclusão na foi bem sucedida.\nEm Ajuda>>Contatar desenvolvedor");
+                        Util.MensagemErro("Por gentileza contate o Administrador do sistema, pois a inclusão na foi bem sucedida.\nEm Ajuda>>Contatar Desenvolvedor.");
                     }
                 }
             }else
             {
+                btnSalvarBlocos.Text = "Salvar Inclusão";
+                btnSalvarBlocos.Image = Properties.Resources.Save;
+                IsBloquearCamposBlocosSalvando(false);
+                
+                if(lstBlocos.SelectedIndex > -1)
+                {
+                    lstBlocos.SelectedIndex = 0;
+                }
+            }
+        }
 
+        private void btnSalvarPredios_Click(object sender, EventArgs e)
+        {
+            bool gravou = false;
+            int count = 0;
+
+            if (btnSalvarPredios.Text.Equals("Salvar Inclusão"))
+            {
+                if (ListaPrediosIncluidos != null && ListaPrediosIncluidos.Count > 0)
+                {
+                    foreach (var item in ListaPrediosIncluidos)
+                    {
+                        if (nPredio.Predio_SET(item) != "0")
+                        {
+                            gravou = true;
+                            count++;
+                        }
+                        else
+                        {
+                            gravou = false;
+                            break;
+                        }
+                    }
+
+                    if (gravou)
+                    {
+                        Util.MensagemSucesso("Quantidade de prédios incluidos: " + count + "\nSe a quantidade for direferente do que você incluiu por gentileza contate o Administrador do sistema.\nEm Ajuda>>Contatar Desenvolvedor!");
+                        btnSalvarPredios.Text = "Alterar Inclusão";
+                        btnSalvarPredios.Image = Properties.Resources.Edit;
+                        IsBloquearCamposPredioSalvando(true);
+                        if (btnSalvarBlocos.Text.Equals("Salvar Inclusão"))
+                        {
+                            IsBloquearCamposBlocos(false);
+                        }
+                    }
+                    else
+                    {
+                        Util.MensagemErro("Por gentileza contate o Administrador do sistema, pois a inclusão na foi bem sucedida.\nEm Ajuda>>Contatar Desenvolvedor.");
+                    }
+                }
+            }
+            else
+            {
+                btnSalvarPredios.Text = "Salvar Inclusão";
+                btnSalvarPredios.Image = Properties.Resources.Save;
+                IsBloquearCamposPredioSalvando(false);
+
+                if (lstPredios.SelectedIndex > -1)
+                {
+                    lstPredios.SelectedIndex = 0;
+                }
             }
         }
 
@@ -543,11 +615,47 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         {
             if (isBloquer)
             {
-                pnCadCondominio.Enabled = false;
+                txtNomeCondominio.Enabled = false;
+                mtxtDataFundacao.Enabled = false;
+                mtxtCepCondominio.Enabled = false;
+                txtBairro.Enabled = false;
+                txtEnderecoCondominio.Enabled = false;
+                cmbCidadeCondominio.Enabled = false;
+                cmbEstadoCondominio.Enabled = false;
+                ckbStatus.Enabled = false;
+                nudQtdBlocos.Enabled = false;
+
+                btnIncluirBlocos.Enabled = true;
+                btnIncluiEstacionamento.Enabled = true;
+
+                btnSalvar.Text = "Alterar";
+                btnSalvar.Image = Properties.Resources.Edit;
+
+                IsBloquearCamposBlocos(false);
+                IsBloquearCamposPredio(false);
             }
             else
             {
-                pnCadCondominio.Enabled = true;
+                txtNomeCondominio.Enabled = true;
+                mtxtDataFundacao.Enabled = true;
+                mtxtCepCondominio.Enabled = true;
+                txtBairro.Enabled = true;
+                txtEnderecoCondominio.Enabled = true;
+                cmbCidadeCondominio.Enabled = true;
+                cmbEstadoCondominio.Enabled = true;
+                ckbStatus.Enabled = true;
+                nudQtdBlocos.Enabled = true;
+
+                btnIncluirBlocos.Enabled = false;
+                btnIncluiEstacionamento.Enabled = false;
+                IsBloquearCamposBlocos(false);
+                IsBloquearCamposPredio(false);
+
+                btnSalvar.Text = "Salvar";
+                btnSalvar.Image = Properties.Resources.Save;
+
+                txtNomeCondominio.Focus();
+                txtNomeCondominio.Select(txtNomeCondominio.TextLength, 0);
             }
         } 
 
@@ -562,19 +670,100 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             }
         }
 
+       private void IsBloquearCamposPredio(bool isBloquear)
+       {
+            if (isBloquear)
+            {
+                pnPredios.Enabled = false;
+            }
+            else
+            {
+                pnPredios.Enabled = true;
+            }
+       }
+
+       private void IsBloquearCamposBlocosSalvando(bool isBloquear)
+       {
+            if (isBloquear)
+            {
+                gpbTipoBloco.Enabled = false;
+                cmbEscolhaBloco.Enabled = false;
+                nudQtdPredios.Enabled = false;
+                btnAddBloco.Enabled = false;
+                btnExcluirListaBloco.Enabled = false;
+                lstBlocos.Enabled = false;
+                btnIncluirEstacioBloco.Enabled = false;
+                btnIncluirPredio.Enabled = false;
+            }else
+            {
+                gpbTipoBloco.Enabled = true;
+                cmbEscolhaBloco.Enabled = true;
+                nudQtdPredios.Enabled = true;
+                btnAddBloco.Enabled = true;
+                btnExcluirListaBloco.Enabled = true;
+                lstBlocos.Enabled = true;
+                btnIncluirEstacioBloco.Enabled = true;
+                btnIncluirPredio.Enabled = true;
+            }
+       }
+
+        private void IsBloquearCamposPredioSalvando(bool isBloquear)
+        {
+            if (isBloquear)
+            {
+                cmbEscolhaPredios.Enabled = false;
+                nudQtdAparta.Enabled = false;
+                btnAddPredio.Enabled = false;
+                btnExcluirListaPredio.Enabled = false;
+                lstPredios.Enabled = false;
+            }
+            else
+            {
+                cmbEscolhaPredios.Enabled = true;
+                nudQtdAparta.Enabled = true;
+                btnAddPredio.Enabled = true;
+                btnExcluirListaPredio.Enabled = true;
+                lstPredios.Enabled = true;
+            }
+        }
+
+
         /// <summary>
         /// Carrega combo de blocos para serem inseridos no condominio
         /// </summary>
         private void CarregarCombosBlocos(List<eBloco> lista)
-        {
-            CondominioID = "8";
+        { 
             cmbEscolhaBloco.DataSource = null;
 
-            if (!string.IsNullOrEmpty(CondominioID))
+            if (objCondominio != null)
             {
+
+                var lista_ = nBloco.Bloco_GET(new eBloco() { Condominio = objCondominio });
+
+                if(lista_.Count > 0)
+                {
+                    ListaBlocosIncluidos.AddRange(lista_);
+                    ListaBlocosIncluidos = ListaBlocosIncluidos.OrderBy(c => c.BlocoID).ToList();
+                }
+
                 if (ListaBlocosIncluidos.Count() > 0)
                 {
                     gpbTipoBloco.Enabled = false;
+
+                    var tipoBloco = ListaBlocosIncluidos.FirstOrDefault().TipoBloco;
+
+                    if (tipoBloco.Equals("PN"))
+                    {
+                        rdbNumeros.Checked = true;
+                    }
+                    else if (tipoBloco.Equals("PL"))
+                    {
+                        rdbLetras.Checked = true;
+                    }
+                    else if (tipoBloco.Equals("A"))
+                    {
+                        rdbLetrasNumeros.Checked = true;
+                    }
                 }
                 else
                 {
@@ -583,7 +772,9 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 
                 if (lista == null)
                 {
-                    ListaBlocos = nBloco.Bloco_GET(new eBloco()).Where(c=>c.StatusAtivo == true).ToList();
+                    eBloco obj = new eBloco();
+                    obj.Condominio.CondominioID = "0";
+                    ListaBlocos = nBloco.Bloco_GET(obj).Where(c=>c.StatusAtivo == true).ToList();
                     lista = ListaBlocos;
                 }
 
@@ -618,7 +809,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 
                     foreach (var item in lista)
                     {
-                        item.Condominio.CondominioID = CondominioID;
+                        item.Condominio = objCondominio;
                         listaAux.Add(item);
                     }
 
@@ -671,17 +862,53 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 
         private void CarregarComboPredios(List<ePredio> lista)
         {
-            if(lista == null)
-            {
-                ListaPredios = nPredio.Predio_GET(new ePredio());
-                lista = ListaPredios;
-            }
+            eBloco Bloco_ = null;
 
-            cmbEscolhaPredios.DataSource = null;
-            cmbEscolhaPredios.DataSource = lista;
-            cmbEscolhaPredios.DisplayMember = "Nome";
-            cmbEscolhaPredios.ValueMember = "PredioID";
-            cmbEscolhaPredios.SelectedIndex = 0;
+            if (lstBlocos.SelectedItem != null)
+            {
+                Bloco_ = (eBloco)lstBlocos.SelectedItem;
+
+                if (ListaPrediosIncluidos.Count <= 0)
+                {
+                    ListaPrediosIncluidos = nPredio.Predio_GET(new ePredio() { Bloco = Bloco_ });
+
+                    if (ListaPrediosIncluidos.Count > 0)
+                    {
+                        lstBlocos.DataSource = null;
+                        lstBlocos.DataSource = ListaPrediosIncluidos;
+                        lstBlocos.DisplayMember = "Nome";
+                        lstBlocos.ValueMember = "PredioID";
+                    }
+                }
+
+                if (lista == null)
+                {
+                    ePredio obj = new ePredio();
+                    obj.Bloco.BlocoID = "0";
+                    ListaPredios = nPredio.Predio_GET(obj).Where(c => c.Excluido == false).ToList();
+                    lista = ListaPredios;
+                }
+
+                var listaAux = new List<ePredio>();
+
+                foreach (var item in lista)
+                {
+                    item.Bloco = Bloco_;
+                    listaAux.Add(item);
+                }
+
+                lista.Clear();
+                lista = listaAux;
+
+                cmbEscolhaPredios.DataSource = null;
+                cmbEscolhaPredios.DataSource = lista;
+                cmbEscolhaPredios.DisplayMember = "Nome";
+                cmbEscolhaPredios.ValueMember = "PredioID";
+                if (lista.Count > 0)
+                {
+                    cmbEscolhaPredios.SelectedIndex = 0;
+                }
+            }
         }
 
         private void RemoverPredioLista()
@@ -722,5 +949,6 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         }
 
         #endregion
+
     }
 }

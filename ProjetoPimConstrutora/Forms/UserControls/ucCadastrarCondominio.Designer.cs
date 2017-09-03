@@ -364,6 +364,7 @@
             this.btnSalvarPredios.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
             this.btnSalvarPredios.Name = "btnSalvarPredios";
             this.btnSalvarPredios.UseVisualStyleBackColor = false;
+            this.btnSalvarPredios.Click += new System.EventHandler(this.btnSalvarPredios_Click);
             // 
             // lstPredios
             // 

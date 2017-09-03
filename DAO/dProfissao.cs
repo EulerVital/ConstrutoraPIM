@@ -109,7 +109,7 @@ namespace DAO
                 MontarParametro(2, param, ParameterDirection.Input, "@Area", obj.Area, SqlDbType.VarChar);
                 MontarParametro(3, param, ParameterDirection.Input, "@Descricao", obj.Descricao, SqlDbType.VarChar);
 
-                retorno = Convert.ToString(ExecNonQuery("USP_PROFISSAO_SET", cmd, param));
+                retorno = Convert.ToString(ExecScalar("USP_PROFISSAO_SET", cmd, param));
             }
             catch (SqlException sqlex)
             {
