@@ -840,381 +840,6 @@
   <data name="&gt;&gt;pnCadCondominio.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitter2.Name" xml:space="preserve">
-    <value>splitter2</value>
-  </data>
-  <data name="&gt;&gt;splitter2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitter2.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;splitter2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;splitter1.Name" xml:space="preserve">
-    <value>splitter1</value>
-  </data>
-  <data name="&gt;&gt;splitter1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitter1.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;splitter1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirEstacionamento.Name" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirEstacionamento.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirEstacionamento.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirBlocos.Name" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirBlocos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirBlocos.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirBlocos.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 161</value>
-  </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1474, 495</value>
-  </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pnPredios.Name" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;pnPredios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnPredios.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;pnPredios.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label11.Name" xml:space="preserve">
-    <value>label11</value>
-  </data>
-  <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
-  </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
-    <value>textBox3</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 0</value>
-  </data>
-  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>594, 495</value>
-  </data>
-  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblTextoPredio.Name" xml:space="preserve">
-    <value>lblTextoPredio</value>
-  </data>
-  <data name="&gt;&gt;lblTextoPredio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTextoPredio.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;lblTextoPredio.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;nudQtdAparta.Name" xml:space="preserve">
-    <value>nudQtdAparta</value>
-  </data>
-  <data name="&gt;&gt;nudQtdAparta.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudQtdAparta.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;nudQtdAparta.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarPredios.Name" xml:space="preserve">
-    <value>btnSalvarPredios</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarPredios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarPredios.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarPredios.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lstPredios.Name" xml:space="preserve">
-    <value>lstPredios</value>
-  </data>
-  <data name="&gt;&gt;lstPredios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lstPredios.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;lstPredios.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblQtdApartamento.Name" xml:space="preserve">
-    <value>lblQtdApartamento</value>
-  </data>
-  <data name="&gt;&gt;lblQtdApartamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblQtdApartamento.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;lblQtdApartamento.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaPredio.Name" xml:space="preserve">
-    <value>btnExcluirListaPredio</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaPredio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaPredio.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaPredio.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblQtdPredios.Name" xml:space="preserve">
-    <value>lblQtdPredios</value>
-  </data>
-  <data name="&gt;&gt;lblQtdPredios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblQtdPredios.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;lblQtdPredios.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btnAddPredio.Name" xml:space="preserve">
-    <value>btnAddPredio</value>
-  </data>
-  <data name="&gt;&gt;btnAddPredio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddPredio.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;btnAddPredio.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;cmbEscolhaPredios.Name" xml:space="preserve">
-    <value>cmbEscolhaPredios</value>
-  </data>
-  <data name="&gt;&gt;cmbEscolhaPredios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbEscolhaPredios.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;cmbEscolhaPredios.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblTituloPredio.Name" xml:space="preserve">
-    <value>lblTituloPredio</value>
-  </data>
-  <data name="&gt;&gt;lblTituloPredio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTituloPredio.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;lblTituloPredio.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaPredio.Name" xml:space="preserve">
-    <value>lblEscolhaPredio</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaPredio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaPredio.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaPredio.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lblNomePredio.Name" xml:space="preserve">
-    <value>lblNomePredio</value>
-  </data>
-  <data name="&gt;&gt;lblNomePredio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblNomePredio.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;lblNomePredio.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;txtNomePredio.Name" xml:space="preserve">
-    <value>txtNomePredio</value>
-  </data>
-  <data name="&gt;&gt;txtNomePredio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtNomePredio.Parent" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;txtNomePredio.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="pnPredios.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="pnPredios.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="pnPredios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnPredios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>594, 495</value>
-  </data>
-  <data name="pnPredios.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="&gt;&gt;pnPredios.Name" xml:space="preserve">
-    <value>pnPredios</value>
-  </data>
-  <data name="&gt;&gt;pnPredios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnPredios.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;pnPredios.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="lblTextoPredio.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century, 21.75pt, style=Bold</value>
   </data>
@@ -1614,6 +1239,33 @@
   <data name="&gt;&gt;txtNomePredio.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="pnPredios.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pnPredios.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pnPredios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnPredios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>594, 495</value>
+  </data>
+  <data name="pnPredios.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;pnPredios.Name" xml:space="preserve">
+    <value>pnPredios</value>
+  </data>
+  <data name="&gt;&gt;pnPredios.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnPredios.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;pnPredios.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1800,6 +1452,30 @@
   <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>469, 0</value>
+  </data>
+  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>594, 495</value>
+  </data>
+  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="splitter2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -1850,177 +1526,6 @@
   </data>
   <data name="&gt;&gt;splitter1.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblTextoEstacionamento.Name" xml:space="preserve">
-    <value>lblTextoEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;lblTextoEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTextoEstacionamento.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;lblTextoEstacionamento.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;nudQtdVagas.Name" xml:space="preserve">
-    <value>nudQtdVagas</value>
-  </data>
-  <data name="&gt;&gt;nudQtdVagas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudQtdVagas.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;nudQtdVagas.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaEstacionamento.Name" xml:space="preserve">
-    <value>btnExcluirListaEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaEstacionamento.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaEstacionamento.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarEstacionamento.Name" xml:space="preserve">
-    <value>btnSalvarEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarEstacionamento.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarEstacionamento.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lstEstacionamento.Name" xml:space="preserve">
-    <value>lstEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;lstEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lstEstacionamento.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;lstEstacionamento.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblQtdVagas.Name" xml:space="preserve">
-    <value>lblQtdVagas</value>
-  </data>
-  <data name="&gt;&gt;lblQtdVagas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblQtdVagas.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;lblQtdVagas.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;cmbTipoEstacionamento.Name" xml:space="preserve">
-    <value>cmbTipoEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;cmbTipoEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbTipoEstacionamento.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;cmbTipoEstacionamento.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblTipoEstacionamento.Name" xml:space="preserve">
-    <value>lblTipoEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;lblTipoEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTipoEstacionamento.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;lblTipoEstacionamento.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btnAddEstacionamento.Name" xml:space="preserve">
-    <value>btnAddEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;btnAddEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddEstacionamento.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;btnAddEstacionamento.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblTituloEstacionamento.Name" xml:space="preserve">
-    <value>lblTituloEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;lblTituloEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTituloEstacionamento.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;lblTituloEstacionamento.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;cmbEstacionamento.Name" xml:space="preserve">
-    <value>cmbEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;cmbEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbEstacionamento.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;cmbEstacionamento.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaEstacio.Name" xml:space="preserve">
-    <value>lblEscolhaEstacio</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaEstacio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaEstacio.Parent" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaEstacio.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="pnIncluirEstacionamento.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="pnIncluirEstacionamento.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="pnIncluirEstacionamento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1073, 0</value>
-  </data>
-  <data name="pnIncluirEstacionamento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>401, 495</value>
-  </data>
-  <data name="pnIncluirEstacionamento.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirEstacionamento.Name" xml:space="preserve">
-    <value>pnIncluirEstacionamento</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirEstacionamento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirEstacionamento.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirEstacionamento.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="lblTextoEstacionamento.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century, 21.75pt, style=Bold</value>
@@ -2388,281 +1893,32 @@
   <data name="&gt;&gt;lblEscolhaEstacio.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;gpbTipoBloco.Name" xml:space="preserve">
-    <value>gpbTipoBloco</value>
+  <data name="pnIncluirEstacionamento.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
   </data>
-  <data name="&gt;&gt;gpbTipoBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gpbTipoBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;gpbTipoBloco.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblTextoBloco.Name" xml:space="preserve">
-    <value>lblTextoBloco</value>
-  </data>
-  <data name="&gt;&gt;lblTextoBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTextoBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;lblTextoBloco.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;nudQtdPredios.Name" xml:space="preserve">
-    <value>nudQtdPredios</value>
-  </data>
-  <data name="&gt;&gt;nudQtdPredios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudQtdPredios.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;nudQtdPredios.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaBloco.Name" xml:space="preserve">
-    <value>btnExcluirListaBloco</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;btnExcluirListaBloco.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnIncluirPredio.Name" xml:space="preserve">
-    <value>btnIncluirPredio</value>
-  </data>
-  <data name="&gt;&gt;btnIncluirPredio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnIncluirPredio.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;btnIncluirPredio.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnIncluirEstacioBloco.Name" xml:space="preserve">
-    <value>btnIncluirEstacioBloco</value>
-  </data>
-  <data name="&gt;&gt;btnIncluirEstacioBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnIncluirEstacioBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;btnIncluirEstacioBloco.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lstBlocos.Name" xml:space="preserve">
-    <value>lstBlocos</value>
-  </data>
-  <data name="&gt;&gt;lstBlocos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lstBlocos.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;lstBlocos.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarBlocos.Name" xml:space="preserve">
-    <value>btnSalvarBlocos</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarBlocos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarBlocos.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;btnSalvarBlocos.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblQuantPredios.Name" xml:space="preserve">
-    <value>lblQuantPredios</value>
-  </data>
-  <data name="&gt;&gt;lblQuantPredios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblQuantPredios.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;lblQuantPredios.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;btnAddBloco.Name" xml:space="preserve">
-    <value>btnAddBloco</value>
-  </data>
-  <data name="&gt;&gt;btnAddBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;btnAddBloco.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;cmbEscolhaBloco.Name" xml:space="preserve">
-    <value>cmbEscolhaBloco</value>
-  </data>
-  <data name="&gt;&gt;cmbEscolhaBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbEscolhaBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;cmbEscolhaBloco.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaBloco.Name" xml:space="preserve">
-    <value>lblEscolhaBloco</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;lblEscolhaBloco.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lblNomeBloco.Name" xml:space="preserve">
-    <value>lblNomeBloco</value>
-  </data>
-  <data name="&gt;&gt;lblNomeBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblNomeBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;lblNomeBloco.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;lblQtdBlocos.Name" xml:space="preserve">
-    <value>lblQtdBlocos</value>
-  </data>
-  <data name="&gt;&gt;lblQtdBlocos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblQtdBlocos.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;lblQtdBlocos.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;txtNomeBloco.Name" xml:space="preserve">
-    <value>txtNomeBloco</value>
-  </data>
-  <data name="&gt;&gt;txtNomeBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtNomeBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;txtNomeBloco.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;lblTituloBloco.Name" xml:space="preserve">
-    <value>lblTituloBloco</value>
-  </data>
-  <data name="&gt;&gt;lblTituloBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTituloBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;lblTituloBloco.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="pnIncluirBlocos.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="pnIncluirBlocos.Enabled" type="System.Boolean, mscorlib">
+  <data name="pnIncluirEstacionamento.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="pnIncluirBlocos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="pnIncluirEstacionamento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1073, 0</value>
   </data>
-  <data name="pnIncluirBlocos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 495</value>
+  <data name="pnIncluirEstacionamento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>401, 495</value>
   </data>
-  <data name="pnIncluirBlocos.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirBlocos.Name" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirBlocos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirBlocos.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;pnIncluirBlocos.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;rdbLetrasNumeros.Name" xml:space="preserve">
-    <value>rdbLetrasNumeros</value>
-  </data>
-  <data name="&gt;&gt;rdbLetrasNumeros.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdbLetrasNumeros.Parent" xml:space="preserve">
-    <value>gpbTipoBloco</value>
-  </data>
-  <data name="&gt;&gt;rdbLetrasNumeros.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;rdbLetras.Name" xml:space="preserve">
-    <value>rdbLetras</value>
-  </data>
-  <data name="&gt;&gt;rdbLetras.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdbLetras.Parent" xml:space="preserve">
-    <value>gpbTipoBloco</value>
-  </data>
-  <data name="&gt;&gt;rdbLetras.ZOrder" xml:space="preserve">
+  <data name="pnIncluirEstacionamento.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;rdbNumeros.Name" xml:space="preserve">
-    <value>rdbNumeros</value>
+  <data name="&gt;&gt;pnIncluirEstacionamento.Name" xml:space="preserve">
+    <value>pnIncluirEstacionamento</value>
   </data>
-  <data name="&gt;&gt;rdbNumeros.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pnIncluirEstacionamento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;rdbNumeros.Parent" xml:space="preserve">
-    <value>gpbTipoBloco</value>
+  <data name="&gt;&gt;pnIncluirEstacionamento.Parent" xml:space="preserve">
+    <value>panel3</value>
   </data>
-  <data name="&gt;&gt;rdbNumeros.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="gpbTipoBloco.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 39</value>
-  </data>
-  <data name="gpbTipoBloco.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 57</value>
-  </data>
-  <data name="gpbTipoBloco.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="&gt;&gt;gpbTipoBloco.Name" xml:space="preserve">
-    <value>gpbTipoBloco</value>
-  </data>
-  <data name="&gt;&gt;gpbTipoBloco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gpbTipoBloco.Parent" xml:space="preserve">
-    <value>pnIncluirBlocos</value>
-  </data>
-  <data name="&gt;&gt;gpbTipoBloco.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;pnIncluirEstacionamento.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="rdbLetrasNumeros.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2759,6 +2015,27 @@
   </data>
   <data name="&gt;&gt;rdbNumeros.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="gpbTipoBloco.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 39</value>
+  </data>
+  <data name="gpbTipoBloco.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 57</value>
+  </data>
+  <data name="gpbTipoBloco.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;gpbTipoBloco.Name" xml:space="preserve">
+    <value>gpbTipoBloco</value>
+  </data>
+  <data name="&gt;&gt;gpbTipoBloco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gpbTipoBloco.Parent" xml:space="preserve">
+    <value>pnIncluirBlocos</value>
+  </data>
+  <data name="&gt;&gt;gpbTipoBloco.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="lblTextoBloco.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century, 21.75pt, style=Bold</value>
@@ -3296,6 +2573,57 @@
   </data>
   <data name="&gt;&gt;lblTituloBloco.ZOrder" xml:space="preserve">
     <value>15</value>
+  </data>
+  <data name="pnIncluirBlocos.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnIncluirBlocos.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pnIncluirBlocos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnIncluirBlocos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>459, 495</value>
+  </data>
+  <data name="pnIncluirBlocos.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnIncluirBlocos.Name" xml:space="preserve">
+    <value>pnIncluirBlocos</value>
+  </data>
+  <data name="&gt;&gt;pnIncluirBlocos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnIncluirBlocos.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;pnIncluirBlocos.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 161</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1474, 495</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="splitter3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

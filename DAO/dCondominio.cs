@@ -92,6 +92,7 @@ namespace DAO
                 obj.Cidade.Estado.Nome = GetString("EstadoID", dr);
                 obj.Cidade.Estado.UF = GetString("UF", dr);
                 obj.Excluido = GetBoolean("Excluido", dr);
+                obj.DataFundacao = GetDateTimeNullable("DataFundacao", dr);
 
                 return obj;
             }
@@ -107,7 +108,7 @@ namespace DAO
             try
             {
                 cmd = new SqlCommand();
-                param = new SqlParameter[8];
+                param = new SqlParameter[9];
 
                 if (string.IsNullOrEmpty(obj.CondominioID))
                     obj.CondominioID = "0";
@@ -120,6 +121,7 @@ namespace DAO
                 MontarParametro(5, param, ParameterDirection.Input, "@Bairro", obj.Bairro, SqlDbType.VarChar);
                 MontarParametro(6, param, ParameterDirection.Input, "@CidadeID", obj.Cidade.CidadeID, SqlDbType.VarChar);
                 MontarParametro(7, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
+                MontarParametro(8, param, ParameterDirection.Input, "@DataFundacao", obj.DataFundacao, SqlDbType.Date);
 
 
                 retorno = Convert.ToString(ExecScalar("USP_CONDOMINIO_SET", cmd, param));

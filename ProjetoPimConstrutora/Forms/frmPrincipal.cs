@@ -21,12 +21,18 @@ namespace ProjetoPimConstrutora.Forms
 
         private void msAdmCondCondCad_Click(object sender, EventArgs e)
         {
-            ucCadastrarCondominio ucCadCond = new ucCadastrarCondominio();
-            lblTitulo.Text = "Cadastro de Condomínios";
-            ucCadCond.Dock = DockStyle.Fill;
-            pnPrincipal.Visible = true;
-            pnPrincipal.Controls.Clear();
-            pnPrincipal.Controls.Add(ucCadCond);
+            //ucCadastrarCondominio ucCadCond = new ucCadastrarCondominio();
+            //lblTitulo.Text = "Cadastro de Condomínios";
+            //ucCadCond.Dock = DockStyle.Fill;
+            //pnPrincipal.Visible = true;
+            //pnPrincipal.Controls.Clear();
+            //pnPrincipal.Controls.Add(ucCadCond);
+
+            lblTitulo.Visible = false;
+            pnPrincipal.Visible = false;
+            frmCadastrarCondominio frm = new frmCadastrarCondominio(this);
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)

@@ -82,6 +82,12 @@
     <Compile Include="Forms\frmCadastrarAreas.Designer.cs">
       <DependentUpon>frmCadastrarAreas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCadastrarCondominio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarCondominio.Designer.cs">
+      <DependentUpon>frmCadastrarCondominio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastrarFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,12 @@
     <Compile Include="Forms\frmEscolherTipoUsuario.Designer.cs">
       <DependentUpon>frmEscolherTipoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmIncluirBlocos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncluirBlocos.Designer.cs">
+      <DependentUpon>frmIncluirBlocos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +243,9 @@
     <EmbeddedResource Include="Forms\frmCadastrarAreas.resx">
       <DependentUpon>frmCadastrarAreas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarCondominio.resx">
+      <DependentUpon>frmCadastrarCondominio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarFuncionarios.resx">
       <DependentUpon>frmCadastrarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEscolherTipoUsuario.resx">
       <DependentUpon>frmEscolherTipoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncluirBlocos.resx">
+      <DependentUpon>frmIncluirBlocos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

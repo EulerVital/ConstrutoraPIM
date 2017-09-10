@@ -2,12 +2,8 @@
 using NEG;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoPimConstrutora.Forms
@@ -27,10 +23,10 @@ namespace ProjetoPimConstrutora.Forms
             InitializeComponent();
 
             var lista = nPredio.Predio_GET(new ePredio() { Bloco = bloco });
+            ListaPredio = lista;
             this.MdiParent = frm;
-            CarregarComboCondominio(true, lista);
+            CarregarComboCondominio(false, lista);
             CarregarTabelaPredio(false);
-            cmbCondominio.SelectedIndex = 1;
         }
 
         #region Eventos
@@ -46,14 +42,15 @@ namespace ProjetoPimConstrutora.Forms
 
         private void cmbCondominio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbCondominio.SelectedIndex > 0)
-                CarregarTabelaPredio(false);
+            CarregarTabelaPredio(false);
         }
 
         private void cmbBlocos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbBlocos.SelectedIndex > 0)
+            if (cmbCondominio.SelectedIndex > 0)
                 CarregarTabelaPredio(false);
+            else
+                CarregarTabelaPredio(true);
         }
 
         #endregion
@@ -109,9 +106,6 @@ namespace ProjetoPimConstrutora.Forms
             }
 
             cmbBlocos.Items.Insert(0, "Selecione");
-
-            if(cmbBlocos.SelectedIndex > -1) 
-                cmbBlocos.SelectedIndex = 0;
         }
 
         private void CarregarTabelaPredio(bool isCarregarBase)
