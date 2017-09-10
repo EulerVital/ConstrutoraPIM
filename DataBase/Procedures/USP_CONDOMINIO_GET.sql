@@ -31,6 +31,7 @@ CREATE PROC USP_CONDOMINIO_GET
 	,@CEP VARCHAR(20) = NULL
 	,@Bairro VARCHAR(100) = NULL
 	,@CidadeID INT = NULL
+	,@DataFundacao DATE = NULL
 	,@Excluido BIT = NULL
 )
 AS
@@ -48,25 +49,12 @@ BEGIN
 		,EstadoNome
 		,UF
 		,Excluido
+		,DataFundacao
 	FROM
 		UVW_CONDOMINIO
 	WHERE
 		 CondominioID = COALESCE(@CondominioID, CondominioID)
 	AND
 		 Nome = COALESCE(@Nome, Nome)
-	AND
-		 QtdBlocos = COALESCE(@QtdBlocos, QtdBlocos)
-	AND
-		Endereco = COALESCE(@Endereco, Endereco)
-	AND
-		 CEP = COALESCE(@CEP, CEP)
-	AND
-		 Bairro = COALESCE(@Bairro, Bairro)
-	AND
-		 CidadeID = COALESCE(@CidadeID, CidadeID)
-	AND
-		 Nome = COALESCE(@Nome, Nome)
-	AND
-		 Excluido = COALESCE(@Excluido, Excluido)
 END
 GO

@@ -31,6 +31,7 @@ CREATE PROC USP_CONDOMINIO_SET
 	,@CEP VARCHAR(20) = NULL
 	,@Bairro VARCHAR(100) = NULL
 	,@CidadeID INT = NULL
+	,@DataFundacao DATE = NULL
 	,@Excluido BIT = 0
 )
 AS
@@ -49,6 +50,7 @@ BEGIN
 				,Bairro
 				,CidadeID
 				,Excluido
+				,DataFundacao
 			)SELECT
 				 @Nome
 				,@QtdBlocos
@@ -57,6 +59,7 @@ BEGIN
 				,@Bairro
 				,@CidadeID
 				,@Excluido
+				,@DataFundacao
 
 			SET @CondominioID = @@IDENTITY
 		END

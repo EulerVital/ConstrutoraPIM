@@ -27,22 +27,23 @@ AS
 	SELECT
 		 P.PredioID
 		,P.Nome
-		,P.QtdApartamentos
+		,ISNULL(P.QtdApartamentos, 0) QtdApartamentos
 		,ISNULL(B.BlocoID, 0) BlocoID
 		,ISNULL(B.Nome, 'ND') NomeBloco
 		,P.Excluido 
-		,B.QtdPredios
-		,B.TipoBloco
-		,B.StatusAtivo
-		,B.CondominioID
-		,B.NomeCondominio
-		,B.QtdBlocos
-		,B.Endereco
-		,B.CEP
-		,B.Bairro
-		,B.CidadeID
-		,B.CidadeNome
-		,B.Excluido CondominioExcluido
+		,ISNULL(B.QtdPredios, 0) QtdPredios
+		,ISNULL(B.TipoBloco, 'ND') TipoBloco
+		,ISNULL(B.StatusAtivo, 0) StatusAtivo
+		,ISNULL(B.CondominioID, 0) CondominioID
+		,ISNULL(B.NomeCondominio, 'ND') NomeCondominio
+		,B.DataFundacao
+		,ISNULL(B.QtdBlocos, 0) QtdBlocos
+		,ISNULL(B.Endereco, 'ND') Endereco
+		,ISNULL(B.CEP, 'ND') CEP
+		,ISNULL(B.Bairro, 'ND') Bairro
+		,ISNULL(B.CidadeID, 0) CidadeID
+		,ISNULL(B.CidadeNome, 'ND') CidadeNome
+		,ISNULL(B.Excluido, 0) CondominioExcluido
 	FROM
 		TB_PREDIO P
 	left join

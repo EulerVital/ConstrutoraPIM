@@ -35,22 +35,19 @@ BEGIN
 
 	IF @PredioID = 0
 	BEGIN
-		IF(select count(1) from TB_PREDIO where Nome = @Nome) = 0
-		BEGIN
-			INSERT INTO TB_PREDIO
-			(
-				 Nome
-				,QtdApartamentos
-				,BlocoID
-				,Excluido
-			)SELECT
-				 @Nome
-				,@QtdApartamentos
-				,@BlocoID
-				,@Excluido
+		INSERT INTO TB_PREDIO
+		(
+			 Nome
+			,QtdApartamentos
+			,BlocoID
+			,Excluido
+		)SELECT
+				@Nome
+			,@QtdApartamentos
+			,@BlocoID
+			,@Excluido
 
-			SET @PredioID = @@IDENTITY
-		END
+		SET @PredioID = @@IDENTITY
 	END
 	ELSE
 	BEGIN

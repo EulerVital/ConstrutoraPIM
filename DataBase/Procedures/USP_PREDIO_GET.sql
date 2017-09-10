@@ -48,6 +48,7 @@ BEGIN
 		,CondominioID
 		,NomeCondominio
 		,QtdBlocos
+		,DataFundacao
 		,Endereco
 		,CEP
 		,Bairro
@@ -60,8 +61,6 @@ BEGIN
 		 PredioID = COALESCE(@PredioID, PredioID)
 	AND
 		 Nome = COALESCE(@Nome, Nome)
-	AND
-		 QtdApartamentos = COALESCE(@QtdApartamentos, QtdApartamentos)
 	AND
 		 BlocoID = COALESCE(@BlocoID, BlocoID)
 	AND

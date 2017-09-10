@@ -33,6 +33,7 @@ AS
 		,ISNULL(Bairro, 'ND') Bairro
 		,ISNULL(CI.Id, 0) CidadeID
 		,ISNULL(CI.Nome, 'ND') CidadeNome
+		,DataFundacao
 		,EstadoID
 		,EstadoNome
 		,UF

@@ -33,6 +33,7 @@ AS
 		,ISNULL(C.CondominioID, 0) CondominioID
 		,ISNULL(C.Nome, 'ND') NomeCondominio
 		,ISNULL(C.QtdBlocos, 0) QtdBlocos
+		,C.DataFundacao
 		,ISNULL(C.Endereco, 'ND') Endereco
 		,ISNULL(C.CEP, 'ND') CEP
 		,ISNULL(C.Bairro, 'ND') Bairro

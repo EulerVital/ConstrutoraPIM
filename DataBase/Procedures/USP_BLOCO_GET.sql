@@ -42,6 +42,7 @@ BEGIN
 		,StatusAtivo
 		,CondominioID
 		,NomeCondominio
+		,DataFundacao
 		,QtdBlocos
 		,Endereco
 		,CEP
@@ -56,12 +57,11 @@ BEGIN
 	AND
 		 Nome = COALESCE(@Nome, Nome)
 	AND
-		 QtdPredios = COALESCE(@QtdPredios, QtdPredios)
-	AND
 		 TipoBloco = COALESCE(@TipoBloco, TipoBloco)
 	AND
 		 CondominioID = COALESCE(@CondominioID, CondominioID)
 	AND
 		 NomeCondominio = COALESCE(@NomeCondominio, NomeCondominio)
+		
 END
 GO

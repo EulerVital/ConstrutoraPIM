@@ -36,24 +36,21 @@ BEGIN
 
 	IF @BlocoID = 0
 	BEGIN
-		IF(select count(1) from TB_BLOCO where Nome = @Nome and TipoBloco = @TipoBloco) = 0
-		BEGIN
-			INSERT INTO TB_BLOCO
-			(
-				 Nome
-				,QtdPredios
-				,CondominioID
-				,TipoBloco
-				,StatusAtivo
-			)SELECT
-				 @Nome
-				,@QtdPredios
-				,@CondominioID
-				,@TipoBloco
-				,@StatusAtivo
+		INSERT INTO TB_BLOCO
+		(
+				Nome
+			,QtdPredios
+			,CondominioID
+			,TipoBloco
+			,StatusAtivo
+		)SELECT
+			 @Nome
+			,@QtdPredios
+			,@CondominioID
+			,@TipoBloco
+			,@StatusAtivo
 
-			SET @BlocoID = @@IDENTITY
-		END
+		SET @BlocoID = @@IDENTITY
 	END
 	ELSE
 	BEGIN
