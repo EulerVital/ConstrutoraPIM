@@ -49,6 +49,7 @@
             this.NomePredio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoBloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apartamentos = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Alterar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnTop.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -197,6 +198,7 @@
             this.NomePredio,
             this.TipoBloco,
             this.Apartamentos,
+            this.Alterar,
             this.Excluir});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
@@ -211,6 +213,7 @@
             this.dgvBlocos.Location = new System.Drawing.Point(0, 135);
             this.dgvBlocos.MultiSelect = false;
             this.dgvBlocos.Name = "dgvBlocos";
+            this.dgvBlocos.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -229,6 +232,7 @@
             this.BlocoID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.BlocoID.HeaderText = "Cod. Bloco";
             this.BlocoID.Name = "BlocoID";
+            this.BlocoID.ReadOnly = true;
             this.BlocoID.Width = 104;
             // 
             // Blocos
@@ -236,6 +240,7 @@
             this.Blocos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Blocos.HeaderText = "Condomínio";
             this.Blocos.Name = "Blocos";
+            this.Blocos.ReadOnly = true;
             this.Blocos.Width = 113;
             // 
             // QtdApt
@@ -243,6 +248,7 @@
             this.QtdApt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.QtdApt.HeaderText = "Nome";
             this.QtdApt.Name = "QtdApt";
+            this.QtdApt.ReadOnly = true;
             this.QtdApt.ToolTipText = "Quantidade de apartamentos.";
             this.QtdApt.Width = 72;
             // 
@@ -251,6 +257,7 @@
             this.NomePredio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.NomePredio.HeaderText = "Qtd Prédios";
             this.NomePredio.Name = "NomePredio";
+            this.NomePredio.ReadOnly = true;
             this.NomePredio.ToolTipText = "Nome do Prédio";
             this.NomePredio.Width = 114;
             // 
@@ -259,6 +266,7 @@
             this.TipoBloco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.TipoBloco.HeaderText = "Tipo";
             this.TipoBloco.Name = "TipoBloco";
+            this.TipoBloco.ReadOnly = true;
             this.TipoBloco.Width = 63;
             // 
             // Apartamentos
@@ -272,7 +280,16 @@
             this.Apartamentos.DefaultCellStyle = dataGridViewCellStyle2;
             this.Apartamentos.HeaderText = "Prédios";
             this.Apartamentos.Name = "Apartamentos";
+            this.Apartamentos.ReadOnly = true;
             this.Apartamentos.Width = 65;
+            // 
+            // Alterar
+            // 
+            this.Alterar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Alterar.HeaderText = "";
+            this.Alterar.Name = "Alterar";
+            this.Alterar.ReadOnly = true;
+            this.Alterar.Width = 5;
             // 
             // Excluir
             // 
@@ -285,6 +302,7 @@
             this.Excluir.DefaultCellStyle = dataGridViewCellStyle3;
             this.Excluir.HeaderText = "";
             this.Excluir.Name = "Excluir";
+            this.Excluir.ReadOnly = true;
             this.Excluir.Width = 5;
             // 
             // frmConsultarBlocos
@@ -326,6 +344,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NomePredio;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoBloco;
         private System.Windows.Forms.DataGridViewButtonColumn Apartamentos;
+        private System.Windows.Forms.DataGridViewButtonColumn Alterar;
         private System.Windows.Forms.DataGridViewButtonColumn Excluir;
     }
 }

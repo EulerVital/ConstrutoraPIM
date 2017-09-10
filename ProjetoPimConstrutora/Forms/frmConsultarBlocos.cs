@@ -18,6 +18,7 @@ namespace ProjetoPimConstrutora.Forms
             InitializeComponent();
             ListaBlocos = new List<eBloco>();
             CarregarBlocos(true);
+            this.MdiParent = frm;
             frmPrinc = frm;
         }
 
@@ -49,6 +50,46 @@ namespace ProjetoPimConstrutora.Forms
                 else if (e.ColumnIndex == 6)
                 {
                     var obj = ListaBlocos.FirstOrDefault(c => c.BlocoID == dgvBlocos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    frmCadastrarBloco frm = new frmCadastrarBloco(frmPrinc, obj);
+                    frm.Show();
+                    this.Dispose();
+                }else if(e.ColumnIndex == 7)
+                {
+                    var obj = ListaBlocos.FirstOrDefault(c => c.BlocoID == dgvBlocos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    
+
+                    if (obj.StatusAtivo)
+                    {
+                        obj.StatusAtivo = false;
+                    }
+                    else
+                    {
+                        obj.StatusAtivo = true;
+                    }
+
+                    if (nBloco.Bloco_SET(obj).Equals("0"))
+                    {
+                        if (obj.StatusAtivo)
+                        {
+                            Util.MensagemErro("Erro ao ativar bloco");
+                        }
+                        else
+                        {
+                            Util.MensagemErro("Erro ao excluir bloco");
+                        }
+                    }else
+                    {
+                        if (obj.StatusAtivo)
+                        {
+                            Util.MensagemErro("Bloco ativado com sucesso");
+                            CarregarBlocos(true);
+                        }
+                        else
+                        {
+                            Util.MensagemErro("Bloco excluido com sucesso");
+                            CarregarBlocos(true);
+                        }
+                    }
                 }
             }
         }
@@ -77,11 +118,11 @@ namespace ProjetoPimConstrutora.Forms
             {
                 if (item.StatusAtivo)
                 {
-                    dgvBlocos.Rows.Add(item.BlocoID, item.Condominio.Nome, item.Nome, item.QtdPredios, item.TipoBloco, "Visualizar", "Desativar");
+                    dgvBlocos.Rows.Add(item.BlocoID, item.Condominio.Nome, item.Nome, item.QtdPredios, item.TipoBloco, "Visualizar", "Alterar", "Desativar");
                 }
                 else
                 {
-                    dgvBlocos.Rows.Add(item.BlocoID, item.Condominio.Nome, item.Nome, item.QtdPredios, item.TipoBloco, "Visualizar", "Ativar");
+                    dgvBlocos.Rows.Add(item.BlocoID, item.Condominio.Nome, item.Nome, item.QtdPredios, item.TipoBloco, "Visualizar", "Alterar", "Ativar");
                 }
             }
         }

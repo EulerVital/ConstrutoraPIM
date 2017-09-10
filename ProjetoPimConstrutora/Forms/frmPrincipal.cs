@@ -56,13 +56,18 @@ namespace ProjetoPimConstrutora.Forms
 
         private void msAdmCondBlocoCad_Click(object sender, EventArgs e)
         {
-            lblTitulo.Visible = true;
-            ucCadastrarBlocos ucCadBlocos = new ucCadastrarBlocos();
-            lblTitulo.Text = "Cadastrar Blocos";
-            ucCadBlocos.Dock = DockStyle.Fill;
-            pnPrincipal.Visible = true;
-            pnPrincipal.Controls.Clear();
-            pnPrincipal.Controls.Add(ucCadBlocos);
+            //lblTitulo.Visible = true;
+            //ucCadastrarBlocos ucCadBlocos = new ucCadastrarBlocos();
+            //lblTitulo.Text = "Cadastrar Blocos";
+            //ucCadBlocos.Dock = DockStyle.Fill;
+            //pnPrincipal.Visible = true;
+            //pnPrincipal.Controls.Clear();
+            //pnPrincipal.Controls.Add(ucCadBlocos);
+
+            lblTitulo.Visible = false;
+            pnPrincipal.Visible = false;
+            frmCadastrarBloco frm = new frmCadastrarBloco(this);
+            frm.Show();
         }
 
         private void msAdmCondPredioCad_Click(object sender, EventArgs e)

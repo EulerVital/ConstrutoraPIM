@@ -11,6 +11,8 @@ namespace ProjetoPimConstrutora.Forms
     public partial class frmConsultarPredios : Form
     {
         public List<ePredio> ListaPredio { get; set; }
+
+        private bool AtualizarComboBloco = true;
         public frmConsultarPredios(frmPrincipal frm)
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace ProjetoPimConstrutora.Forms
             this.MdiParent = frm;
             CarregarComboCondominio(false, lista);
             CarregarTabelaPredio(false);
+            AtualizarComboBloco = false;
         }
 
         #region Eventos
@@ -92,20 +95,23 @@ namespace ProjetoPimConstrutora.Forms
         private void CarregarComboBloco(List<ePredio> lista)
         {
             var listaAux = new List<eBloco>();
-            cmbBlocos.DataSource = null;
 
-            foreach (var item in lista)
+            if (AtualizarComboBloco)
             {
-                if (!item.Bloco.BlocoID.Equals("0") && !listaAux.Exists(c => c.BlocoID == item.Bloco.BlocoID))
+                cmbBlocos.Items.Clear();
+                foreach (var item in lista)
                 {
-                    listaAux.Add(item.Bloco);
-                    cmbBlocos.Items.Add(item.Bloco);
-                    cmbBlocos.DisplayMember = "Nome";
-                    cmbBlocos.ValueMember = "BlocoID";
+                    if (!item.Bloco.BlocoID.Equals("0") && !listaAux.Exists(c => c.BlocoID == item.Bloco.BlocoID))
+                    {
+                        listaAux.Add(item.Bloco);
+                        cmbBlocos.Items.Add(item.Bloco);
+                        cmbBlocos.DisplayMember = "Nome";
+                        cmbBlocos.ValueMember = "BlocoID";
+                    }
                 }
-            }
 
-            cmbBlocos.Items.Insert(0, "Selecione");
+                cmbBlocos.Items.Insert(0, "Selecione");
+            }
         }
 
         private void CarregarTabelaPredio(bool isCarregarBase)
@@ -151,7 +157,11 @@ namespace ProjetoPimConstrutora.Forms
                 if (cmbCondominio.SelectedIndex > 0)
                 {
                     lista = lista.Where(c => c.Bloco.Condominio.CondominioID == ((eCondominio)cmbCondominio.SelectedItem).CondominioID).ToList();
-                    CarregarComboBloco(lista);
+                    if (cmbBlocos.SelectedIndex < 1)
+                    {
+                        CarregarComboBloco(lista);
+                    }
+
                 }
 
                 if (cmbBlocos.SelectedIndex > 0)

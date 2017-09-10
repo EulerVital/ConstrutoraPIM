@@ -29,12 +29,38 @@ namespace ProjetoPimConstrutora.Forms
             txtNome.Focus();
         }
 
+        #region Eventos
+
         private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            SalvarPredio();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            txtNome.Text = obj.RetornaNumeros(txtNome.Text).Trim();
+            txtNome.Select(txtNome.TextLength, 0);
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                SalvarPredio();
+            }
+        }
+
+        #endregion
+
+        #region Metodos
+
+        private void SalvarPredio()
         {
             if (string.IsNullOrEmpty(txtNome.Text))
             {
                 Util.MensagemInformacao("Preencha o campo nome do Prédio");
-            }else
+            }
+            else
             {
                 Predio = new ePredio();
 
@@ -52,14 +78,10 @@ namespace ProjetoPimConstrutora.Forms
                 else
                 {
                     Util.MensagemErro();
-                }                
-            }   
+                }
+            }
         }
 
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-            txtNome.Text = obj.RetornaNumeros(txtNome.Text).Trim();
-            txtNome.Select(txtNome.TextLength, 0);
-        }
+        #endregion
     }
 }
