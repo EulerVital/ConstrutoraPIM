@@ -718,7 +718,6 @@
         private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Panel pnPrincipal;
         private System.Windows.Forms.Panel pnLogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -731,5 +730,6 @@
         private System.Windows.Forms.ToolStripMenuItem controleDeVigilânciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioDeVigilânciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarProfissãoToolStripMenuItem;
+        public System.Windows.Forms.Panel pnPrincipal;
     }
 }

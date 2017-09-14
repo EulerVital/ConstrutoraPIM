@@ -17,7 +17,18 @@ namespace ProjetoPimConstrutora.Forms
         {
             InitializeComponent();
             ListaBlocos = new List<eBloco>();
-            CarregarBlocos(true);
+            CarregarBlocos(true, false);
+            this.MdiParent = frm;
+            frmPrinc = frm;
+        }
+
+        public frmConsultarBlocos(frmPrincipal frm, eCondominio objCond)
+        {
+            InitializeComponent();
+            ListaBlocos = nBloco.Bloco_GET(new eBloco() { Condominio = objCond });
+
+            frm.pnPrincipal.Visible = false;
+            CarregarBlocos(false, true);
             this.MdiParent = frm;
             frmPrinc = frm;
         }
@@ -26,7 +37,7 @@ namespace ProjetoPimConstrutora.Forms
 
         protected void FiltrarChecksBoks(object sender, EventArgs e)
         {
-            CarregarBlocos(false);
+            CarregarBlocos(false, false);
         }
 
         private void dgvBlocos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -82,12 +93,12 @@ namespace ProjetoPimConstrutora.Forms
                         if (obj.StatusAtivo)
                         {
                             Util.MensagemErro("Bloco ativado com sucesso");
-                            CarregarBlocos(true);
+                            CarregarBlocos(true, false);
                         }
                         else
                         {
                             Util.MensagemErro("Bloco excluido com sucesso");
-                            CarregarBlocos(true);
+                            CarregarBlocos(true, false);
                         }
                     }
                 }
@@ -96,18 +107,23 @@ namespace ProjetoPimConstrutora.Forms
 
         private void cmbCondominio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CarregarBlocos(false);
+            CarregarBlocos(false, false);
         }
 
         #endregion
 
         #region Metodos
 
-        private void CarregarBlocos(bool isCarregarBase)
+        private void CarregarBlocos(bool isCarregarBase, bool isCarregarCombo)
         {
             if (isCarregarBase)
             {
                 ListaBlocos = nBloco.Bloco_GET(new eBloco());
+                CarregarComboCondominio();
+            }
+
+            if (isCarregarCombo)
+            {
                 CarregarComboCondominio();
             }
 

@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtBairro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeCondominio = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
+            this.ckbExcluido = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbCidade = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pnTabelaConsulta = new System.Windows.Forms.Panel();
             this.dgvCondominios = new System.Windows.Forms.DataGridView();
@@ -57,7 +57,6 @@
             this.BlocosCondominio = new System.Windows.Forms.DataGridViewButtonColumn();
             this.AlterarCondominio = new System.Windows.Forms.DataGridViewButtonColumn();
             this.StatusCondominio = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.pnTabelaConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondominios)).BeginInit();
@@ -66,24 +65,33 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtBairro);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtNomeCondominio);
-            this.panel2.Controls.Add(this.checkBox1);
-            this.panel2.Controls.Add(this.btnSalvar);
+            this.panel2.Controls.Add(this.ckbExcluido);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.cmbCidade);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cmbEstado);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtEndereco);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1174, 135);
+            this.panel2.Size = new System.Drawing.Size(1174, 105);
             this.panel2.TabIndex = 6;
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.BackColor = System.Drawing.Color.LightGray;
+            this.txtBairro.Font = new System.Drawing.Font("Century", 9.75F);
+            this.txtBairro.Location = new System.Drawing.Point(403, 58);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(212, 23);
+            this.txtBairro.TabIndex = 25;
+            this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
             // 
             // label1
             // 
@@ -105,37 +113,20 @@
             this.txtNomeCondominio.Name = "txtNomeCondominio";
             this.txtNomeCondominio.Size = new System.Drawing.Size(444, 23);
             this.txtNomeCondominio.TabIndex = 9;
+            this.txtNomeCondominio.TextChanged += new System.EventHandler(this.txtNomeCondominio_TextChanged);
             // 
-            // checkBox1
+            // ckbExcluido
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Century", 11F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox1.Location = new System.Drawing.Point(666, 18);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(126, 22);
-            this.checkBox1.TabIndex = 24;
-            this.checkBox1.Text = "Status Ativo";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.LightGray;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
-            this.btnSalvar.Image = global::ProjetoPimConstrutora.Properties.Resources.Search;
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSalvar.Location = new System.Drawing.Point(8, 89);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(124, 33);
-            this.btnSalvar.TabIndex = 7;
-            this.btnSalvar.Text = "Pesquisar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.ckbExcluido.AutoSize = true;
+            this.ckbExcluido.Font = new System.Drawing.Font("Century", 11F, System.Drawing.FontStyle.Bold);
+            this.ckbExcluido.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ckbExcluido.Location = new System.Drawing.Point(666, 18);
+            this.ckbExcluido.Name = "ckbExcluido";
+            this.ckbExcluido.Size = new System.Drawing.Size(97, 22);
+            this.ckbExcluido.TabIndex = 24;
+            this.ckbExcluido.Text = "Excluido";
+            this.ckbExcluido.UseVisualStyleBackColor = true;
+            this.ckbExcluido.CheckedChanged += new System.EventHandler(this.ckbExcluido_CheckedChanged);
             // 
             // label8
             // 
@@ -149,17 +140,18 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Bairro:";
             // 
-            // comboBox2
+            // cmbCidade
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Century", 9.75F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(80, 55);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(220, 24);
-            this.comboBox2.TabIndex = 21;
+            this.cmbCidade.BackColor = System.Drawing.Color.LightGray;
+            this.cmbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCidade.Font = new System.Drawing.Font("Century", 9.75F);
+            this.cmbCidade.FormattingEnabled = true;
+            this.cmbCidade.Location = new System.Drawing.Point(80, 55);
+            this.cmbCidade.Name = "cmbCidade";
+            this.cmbCidade.Size = new System.Drawing.Size(220, 24);
+            this.cmbCidade.TabIndex = 21;
+            this.cmbCidade.SelectedIndexChanged += new System.EventHandler(this.cmbCidade_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -173,17 +165,18 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Cidade:";
             // 
-            // comboBox1
+            // cmbEstado
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Century", 9.75F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(913, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 24);
-            this.comboBox1.TabIndex = 17;
+            this.cmbEstado.BackColor = System.Drawing.Color.LightGray;
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbEstado.Font = new System.Drawing.Font("Century", 9.75F);
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Location = new System.Drawing.Point(913, 18);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(217, 24);
+            this.cmbEstado.TabIndex = 17;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -197,14 +190,15 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Estado:";
             // 
-            // textBox1
+            // txtEndereco
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(729, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(427, 23);
-            this.textBox1.TabIndex = 15;
+            this.txtEndereco.BackColor = System.Drawing.Color.LightGray;
+            this.txtEndereco.Font = new System.Drawing.Font("Century", 9.75F);
+            this.txtEndereco.Location = new System.Drawing.Point(729, 56);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(427, 23);
+            this.txtEndereco.TabIndex = 15;
+            this.txtEndereco.TextChanged += new System.EventHandler(this.txtEndereco_TextChanged);
             // 
             // label4
             // 
@@ -222,9 +216,9 @@
             // 
             this.pnTabelaConsulta.Controls.Add(this.dgvCondominios);
             this.pnTabelaConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnTabelaConsulta.Location = new System.Drawing.Point(0, 135);
+            this.pnTabelaConsulta.Location = new System.Drawing.Point(0, 105);
             this.pnTabelaConsulta.Name = "pnTabelaConsulta";
-            this.pnTabelaConsulta.Size = new System.Drawing.Size(1174, 325);
+            this.pnTabelaConsulta.Size = new System.Drawing.Size(1174, 355);
             this.pnTabelaConsulta.TabIndex = 7;
             // 
             // dgvCondominios
@@ -232,14 +226,14 @@
             this.dgvCondominios.AllowUserToAddRows = false;
             this.dgvCondominios.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvCondominios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCondominios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCondominios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvCondominios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCondominios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeCondominio,
@@ -251,30 +245,30 @@
             this.BlocosCondominio,
             this.AlterarCondominio,
             this.StatusCondominio});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCondominios.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCondominios.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvCondominios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCondominios.GridColor = System.Drawing.Color.Black;
             this.dgvCondominios.Location = new System.Drawing.Point(0, 0);
             this.dgvCondominios.MultiSelect = false;
             this.dgvCondominios.Name = "dgvCondominios";
             this.dgvCondominios.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCondominios.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCondominios.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvCondominios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCondominios.Size = new System.Drawing.Size(1174, 325);
+            this.dgvCondominios.Size = new System.Drawing.Size(1174, 355);
             this.dgvCondominios.TabIndex = 0;
             this.dgvCondominios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCondominios_CellClick);
             // 
@@ -321,12 +315,12 @@
             // 
             // BlocosCondominio
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.BlocosCondominio.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
+            this.BlocosCondominio.DefaultCellStyle = dataGridViewCellStyle26;
             this.BlocosCondominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BlocosCondominio.HeaderText = "Ver Blocos";
             this.BlocosCondominio.Name = "BlocosCondominio";
@@ -337,12 +331,12 @@
             // 
             // AlterarCondominio
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.AlterarCondominio.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
+            this.AlterarCondominio.DefaultCellStyle = dataGridViewCellStyle27;
             this.AlterarCondominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AlterarCondominio.HeaderText = "Alterar Dados";
             this.AlterarCondominio.Name = "AlterarCondominio";
@@ -351,26 +345,17 @@
             // 
             // StatusCondominio
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.StatusCondominio.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
+            this.StatusCondominio.DefaultCellStyle = dataGridViewCellStyle28;
             this.StatusCondominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StatusCondominio.HeaderText = "Status";
             this.StatusCondominio.Name = "StatusCondominio";
             this.StatusCondominio.ReadOnly = true;
             this.StatusCondominio.Width = 70;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.LightGray;
-            this.textBox2.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox2.Location = new System.Drawing.Point(403, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 23);
-            this.textBox2.TabIndex = 25;
             // 
             // ucConsultarCondominio
             // 
@@ -394,14 +379,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNomeCondominio;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.CheckBox ckbExcluido;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbCidade;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pnTabelaConsulta;
         private System.Windows.Forms.DataGridView dgvCondominios;
@@ -414,6 +398,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn BlocosCondominio;
         private System.Windows.Forms.DataGridViewButtonColumn AlterarCondominio;
         private System.Windows.Forms.DataGridViewButtonColumn StatusCondominio;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBairro;
     }
 }

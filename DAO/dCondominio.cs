@@ -89,7 +89,7 @@ namespace DAO
                 obj.Cidade.CidadeID = GetInt32("CidadeID", dr).ToString();
                 obj.Cidade.Nome = GetString("CidadeNome", dr);
                 obj.Cidade.Estado.EstadoID = GetInt32("EstadoID", dr).ToString();
-                obj.Cidade.Estado.Nome = GetString("EstadoID", dr);
+                obj.Cidade.Estado.Nome = GetString("EstadoNome", dr);
                 obj.Cidade.Estado.UF = GetString("UF", dr);
                 obj.Excluido = GetBoolean("Excluido", dr);
                 obj.DataFundacao = GetDateTimeNullable("DataFundacao", dr);

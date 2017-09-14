@@ -46,7 +46,7 @@ namespace ProjetoPimConstrutora.Forms
         private void msAdmCondCondCons_Click(object sender, EventArgs e)
         {
             lblTitulo.Visible = true;
-            ucConsultarCondominio ucConsCond = new ucConsultarCondominio();
+            ucConsultarCondominio ucConsCond = new ucConsultarCondominio(this);
             lblTitulo.Text = "Consultar Condomínios";
             ucConsCond.Dock = DockStyle.Fill;
             pnPrincipal.Visible = true;
