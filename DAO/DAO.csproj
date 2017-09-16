@@ -44,6 +44,7 @@
     <Compile Include="dBloco.cs" />
     <Compile Include="dCidade.cs" />
     <Compile Include="dCondominio.cs" />
+    <Compile Include="dEstacionamento.cs" />
     <Compile Include="dEstado.cs" />
     <Compile Include="dPredio.cs" />
     <Compile Include="dProfissao.cs" />
