@@ -55,6 +55,7 @@
     <Compile Include="eProfissao.cs" />
     <Compile Include="eReservar_Area.cs" />
     <Compile Include="eTelefone.cs" />
+    <Compile Include="eTipoEstadia.cs" />
     <Compile Include="eTipo_Correspondencia.cs" />
     <Compile Include="eTipo_Telefone.cs" />
     <Compile Include="eUsuario.cs" />

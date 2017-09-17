@@ -11,12 +11,14 @@ namespace ENT
         public eApartamento()
         {
             Predio = new ePredio();
+            TipoEstadia = new eTipoEstadia();
         }
 
         public string ApartamentoID { get; set;}
         public int NumeroApartamento { get; set;}
-        public string TipoEstadia { get; set;}
+        public eTipoEstadia TipoEstadia { get; set;}
         public int AndarPredio { get; set; }
+        public decimal ValorApartamento { get; set; }
         public ePredio Predio { get; set; }
     }
 }

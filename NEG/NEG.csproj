@@ -48,6 +48,7 @@
     <Compile Include="nEstado.cs" />
     <Compile Include="nPredio.cs" />
     <Compile Include="nProfissao.cs" />
+    <Compile Include="nTipoEstadia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Util.cs" />
   </ItemGroup>

@@ -81,8 +81,12 @@ namespace DAO
             {
                 obj.ApartamentoID = GetInt32("ApartamentoID", dr).ToString();
                 obj.NumeroApartamento = GetInt32("NumeroApartamento", dr);
-                obj.TipoEstadia = GetString("TipoEstadia", dr);
                 obj.AndarPredio = GetInt32("AndarPredio", dr);
+                obj.ValorApartamento = GetDecimal("ValorApartamento", dr);
+                obj.TipoEstadia.TipoEstadiaID = GetInt32("TipoEstadiaID", dr).ToString();
+                obj.TipoEstadia.Nome = GetString("TipoEstadiaNome", dr).ToString();
+                obj.TipoEstadia.ValorFixo = GetDecimalNullable("ValorFixo", dr);
+                obj.TipoEstadia.Excluido = GetBooleanNullable("TipoEstadiaExcluido", dr);
                 obj.Predio.PredioID = GetInt32("PredioID", dr).ToString();
                 obj.Predio.Nome = GetString("Nome", dr);
                 obj.Predio.QtdApartamentos = GetInt32("QtdApartamentos", dr);
@@ -117,16 +121,17 @@ namespace DAO
             try
             {
                 cmd = new SqlCommand();
-                param = new SqlParameter[5];
+                param = new SqlParameter[6];
 
                 if (string.IsNullOrEmpty(obj.ApartamentoID))
                     obj.ApartamentoID = "0";
 
                 MontarParametro(0, param, ParameterDirection.Input, "@BlocoID", obj.ApartamentoID, SqlDbType.Int);
                 MontarParametro(1, param, ParameterDirection.Input, "@Nome", obj.NumeroApartamento, SqlDbType.Int);
-                MontarParametro(2, param, ParameterDirection.Input, "@TipoEstadia", obj.TipoEstadia, SqlDbType.Char);
+                MontarParametro(2, param, ParameterDirection.Input, "@TipoEstadiaID", obj.TipoEstadia.TipoEstadiaID, SqlDbType.Int);
                 MontarParametro(3, param, ParameterDirection.Input, "@AndarPredio", obj.AndarPredio, SqlDbType.Int);
-                MontarParametro(4, param, ParameterDirection.Input, "@StatusAtivo", obj.Predio.PredioID, SqlDbType.Int);
+                MontarParametro(4, param, ParameterDirection.Input, "@ValorApartamento", obj.ValorApartamento, SqlDbType.Decimal);
+                MontarParametro(5, param, ParameterDirection.Input, "@PredioID", obj.Predio.PredioID, SqlDbType.Int);
 
                 retorno = Convert.ToString(ExecScalar("USP_APARTAMENTO_SET", cmd, param));
             }

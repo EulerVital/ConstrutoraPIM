@@ -49,6 +49,7 @@
     <Compile Include="dEstado.cs" />
     <Compile Include="dPredio.cs" />
     <Compile Include="dProfissao.cs" />
+    <Compile Include="dTipoEstadia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
