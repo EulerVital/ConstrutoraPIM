@@ -280,7 +280,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                     {
                         Util.MensagemSucesso("Quantidade de blocos incluidos: " + count + "\nSe a quantidade for direferente do que você incluiu por gentilea contate o Administrador do sistema.\nEm Ajuda>>Contatar Desenvolvedor!");
                         btnSalvarBlocos.Text = "Alterar Inclusão";
-                        btnSalvarBlocos.Image = Properties.Resources.Edit;
+                        //btnSalvarBlocos.Image = Properties.Resources.Edit;
                         IsBloquearCamposBlocosSalvando(true);
                     }
                     else
@@ -328,7 +328,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                     {
                         Util.MensagemSucesso("Quantidade de prédios incluidos: " + count + "\nSe a quantidade for direferente do que você incluiu por gentileza contate o Administrador do sistema.\nEm Ajuda>>Contatar Desenvolvedor!");
                         btnSalvarPredios.Text = "Alterar Inclusão";
-                        btnSalvarPredios.Image = Properties.Resources.Edit;
+                        //btnSalvarPredios.Image = Properties.Resources.Edit;
                         IsBloquearCamposPredioSalvando(true);
                         if (btnSalvarBlocos.Text.Equals("Salvar Inclusão"))
                         {
@@ -629,7 +629,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 btnIncluiEstacionamento.Enabled = true;
 
                 btnSalvar.Text = "Alterar";
-                btnSalvar.Image = Properties.Resources.Edit;
+               // btnSalvar.Image = Properties.Resources.Edit;
 
                 IsBloquearCamposBlocos(false);
                 IsBloquearCamposPredio(false);

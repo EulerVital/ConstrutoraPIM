@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="nApartamento.cs" />
     <Compile Include="nBloco.cs" />
     <Compile Include="nCidade.cs" />
     <Compile Include="nCondominio.cs" />

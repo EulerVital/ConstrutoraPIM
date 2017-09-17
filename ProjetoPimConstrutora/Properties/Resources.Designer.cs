@@ -159,15 +159,13 @@ namespace ProjetoPimConstrutora.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Edit
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("Edit", resourceCulture);
+        internal static System.Drawing.Bitmap View_icon_icons_com_71837 {
+            get {
+                object obj = ResourceManager.GetObject("View_icon-icons.com_71837", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
