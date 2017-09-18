@@ -78,10 +78,10 @@ namespace DAO
             finally { CloseConnection(); }
         }
 
-        private eEstacionamento Bloco(IDataReader dr)
+        private eEstacionamento Estacionamento(IDataReader dr)
         {
             eEstacionamento obj = new eEstacionamento();
-
+            
             try
             {
                 obj.EstacionamentoID =  GetInt32("EstacionamentoID", dr).ToString();
@@ -89,7 +89,11 @@ namespace DAO
                 obj.QtdVagas = GetInt32("QtdVagas", dr);
                 obj.TipoEstacionamento = GetString("TipoEstacionamento", dr);
                 obj.Bloco.BlocoID = GetInt32("BlocoID", dr).ToString();
-                obj.Bloco.Nome = GetString("Nome", dr);
+                obj.Bloco.Nome = GetString("NomeBloco", dr);
+                obj.Bloco.QtdPredios = GetInt32("QtdPredios", dr);
+                obj.Bloco.TipoBloco = GetString("TipoBloco", dr);
+                obj.Bloco.StatusAtivo = GetBoolean("StatusAtivo", dr);
+                obj.Condominio.CondominioID = GetInt32("CondominioID", dr).ToString();
                 obj.Condominio.Nome = GetString("NomeCondominio", dr);
                 obj.Condominio.QtdBlocos = GetInt32("QtdBlocos", dr);
                 obj.Condominio.Endereco = GetString("Endereco", dr);
@@ -97,8 +101,8 @@ namespace DAO
                 obj.Condominio.Bairro = GetString("Bairro", dr);
                 obj.Condominio.Cidade.CidadeID = GetInt32("CidadeID", dr).ToString();
                 obj.Condominio.Cidade.Nome = GetString("CidadeNome", dr);
-                obj.Condominio.Excluido = GetBoolean("Excluido", dr);
-
+                obj.Condominio.Excluido = GetBoolean("CondominioExcluido", dr);
+               
                 return obj;
             }
             catch (Exception ex)
@@ -107,7 +111,7 @@ namespace DAO
             }
         }
 
-        public string Bloco_SET(eBloco obj)
+        public string Estacionamento_SET(eBloco obj)
         {
             string retorno = string.Empty;
             try
