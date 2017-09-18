@@ -79,9 +79,9 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.DarkGray;
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(302, 34);
+            this.lblTitulo.Size = new System.Drawing.Size(307, 34);
             this.lblTitulo.TabIndex = 96;
-            this.lblTitulo.Text = "Selecionar visitante";
+            this.lblTitulo.Text = "Selecionar Visitante";
             // 
             // btnSalvar
             // 
@@ -111,9 +111,10 @@
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ucSelecionarVisitante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Selecionar visitante";
+            this.Text = "Seleção do Visitante";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -36,11 +36,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.dgvCondominios = new System.Windows.Forms.DataGridView();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.NomeCondominio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoCondominio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CidadeCondominio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +47,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondominios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,9 +71,9 @@
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label6.Location = new System.Drawing.Point(3, 49);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 18);
+            this.label6.Size = new System.Drawing.Size(125, 18);
             this.label6.TabIndex = 103;
-            this.label6.Text = "*Nome Completo:";
+            this.label6.Text = "Nome Completo:";
             // 
             // textBox1
             // 
@@ -83,7 +82,7 @@
             this.textBox1.Font = new System.Drawing.Font("Century", 9.75F);
             this.textBox1.Location = new System.Drawing.Point(133, 48);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(599, 23);
+            this.textBox1.Size = new System.Drawing.Size(614, 23);
             this.textBox1.TabIndex = 118;
             // 
             // label1
@@ -94,9 +93,9 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(3, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 18);
+            this.label1.Size = new System.Drawing.Size(43, 18);
             this.label1.TabIndex = 119;
-            this.label1.Text = "*CPF:";
+            this.label1.Text = "CPF:";
             // 
             // label2
             // 
@@ -104,26 +103,11 @@
             this.label2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(161, 90);
+            this.label2.Location = new System.Drawing.Point(186, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 18);
             this.label2.TabIndex = 120;
             this.label2.Text = "RG:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Century", 11F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox1.Location = new System.Drawing.Point(757, 49);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(126, 22);
-            this.checkBox1.TabIndex = 121;
-            this.checkBox1.Text = "Status Ativo";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // maskedTextBox2
             // 
@@ -132,17 +116,17 @@
             this.maskedTextBox2.Location = new System.Drawing.Point(56, 89);
             this.maskedTextBox2.Mask = "000-00-0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(89, 24);
+            this.maskedTextBox2.Size = new System.Drawing.Size(112, 24);
             this.maskedTextBox2.TabIndex = 129;
             // 
             // maskedTextBox1
             // 
             this.maskedTextBox1.BackColor = System.Drawing.Color.LightGray;
             this.maskedTextBox1.Font = new System.Drawing.Font("Century", 10F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(202, 89);
+            this.maskedTextBox1.Location = new System.Drawing.Point(227, 90);
             this.maskedTextBox1.Mask = "000-00-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(89, 24);
+            this.maskedTextBox1.Size = new System.Drawing.Size(112, 24);
             this.maskedTextBox1.TabIndex = 130;
             // 
             // dgvCondominios
@@ -177,7 +161,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCondominios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCondominios.GridColor = System.Drawing.Color.Black;
-            this.dgvCondominios.Location = new System.Drawing.Point(-3, 168);
+            this.dgvCondominios.Location = new System.Drawing.Point(-3, 138);
             this.dgvCondominios.MultiSelect = false;
             this.dgvCondominios.Name = "dgvCondominios";
             this.dgvCondominios.ReadOnly = true;
@@ -190,25 +174,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCondominios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCondominios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCondominios.Size = new System.Drawing.Size(936, 259);
+            this.dgvCondominios.Size = new System.Drawing.Size(933, 289);
             this.dgvCondominios.TabIndex = 131;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.LightGray;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
-            this.btnSalvar.Image = global::ProjetoPimConstrutora.Properties.Resources.Search;
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSalvar.Location = new System.Drawing.Point(6, 129);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(124, 33);
-            this.btnSalvar.TabIndex = 132;
-            this.btnSalvar.Text = "Pesquisar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
             // NomeCondominio
             // 
@@ -263,17 +230,27 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Century", 11.25F);
+            this.checkBox1.Location = new System.Drawing.Point(785, 49);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(121, 22);
+            this.checkBox1.TabIndex = 133;
+            this.checkBox1.Text = "Status Ativos";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // ucVerificarVisitantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(929, 426);
-            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dgvCondominios);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -281,7 +258,8 @@
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ucVerificarVisitantes";
-            this.Text = "Verificar Visitantes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Consulta de Visitantes";
             this.Load += new System.EventHandler(this.ucVerificarVisitantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondominios)).EndInit();
             this.ResumeLayout(false);
@@ -296,11 +274,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.DataGridView dgvCondominios;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeCondominio;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoCondominio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CidadeCondominio;
@@ -309,5 +285,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

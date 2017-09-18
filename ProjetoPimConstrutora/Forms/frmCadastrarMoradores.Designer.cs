@@ -46,6 +46,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnIncluirPredio = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
@@ -57,7 +58,6 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +69,7 @@
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox3.Font = new System.Drawing.Font("Century", 9.75F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(107, 54);
+            this.comboBox3.Location = new System.Drawing.Point(104, 58);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(201, 24);
             this.comboBox3.TabIndex = 40;
@@ -92,7 +92,7 @@
             this.label5.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(4, 54);
+            this.label5.Location = new System.Drawing.Point(1, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 18);
             this.label5.TabIndex = 98;
@@ -104,7 +104,7 @@
             this.label4.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(316, 54);
+            this.label4.Location = new System.Drawing.Point(320, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 18);
             this.label4.TabIndex = 99;
@@ -116,7 +116,7 @@
             this.label1.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(3, 110);
+            this.label1.Location = new System.Drawing.Point(4, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 18);
             this.label1.TabIndex = 100;
@@ -128,7 +128,7 @@
             this.label2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(316, 110);
+            this.label2.Location = new System.Drawing.Point(320, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 18);
             this.label2.TabIndex = 101;
@@ -141,7 +141,7 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Century", 9.75F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(66, 109);
+            this.comboBox1.Location = new System.Drawing.Point(69, 98);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 24);
             this.comboBox1.TabIndex = 102;
@@ -153,7 +153,7 @@
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.Font = new System.Drawing.Font("Century", 9.75F);
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(420, 109);
+            this.comboBox2.Location = new System.Drawing.Point(431, 99);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(200, 24);
             this.comboBox2.TabIndex = 103;
@@ -165,7 +165,7 @@
             this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox4.Font = new System.Drawing.Font("Century", 9.75F);
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(373, 54);
+            this.comboBox4.Location = new System.Drawing.Point(377, 58);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(208, 24);
             this.comboBox4.TabIndex = 104;
@@ -176,7 +176,7 @@
             this.label3.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(203, 13);
+            this.label3.Location = new System.Drawing.Point(187, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(236, 20);
             this.label3.TabIndex = 99;
@@ -212,7 +212,7 @@
             this.label8.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(204, 111);
+            this.label8.Location = new System.Drawing.Point(204, 112);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 18);
             this.label8.TabIndex = 103;
@@ -224,11 +224,11 @@
             this.label9.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(6, 160);
+            this.label9.Location = new System.Drawing.Point(6, 147);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 18);
+            this.label9.Size = new System.Drawing.Size(81, 18);
             this.label9.TabIndex = 104;
-            this.label9.Text = "Telefone:";
+            this.label9.Text = "*Telefone:";
             // 
             // label10
             // 
@@ -236,7 +236,7 @@
             this.label10.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(204, 160);
+            this.label10.Location = new System.Drawing.Point(204, 153);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 18);
             this.label10.TabIndex = 105;
@@ -248,7 +248,7 @@
             this.label11.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(388, 161);
+            this.label11.Location = new System.Drawing.Point(389, 158);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(72, 18);
             this.label11.TabIndex = 106;
@@ -280,6 +280,18 @@
             this.panel1.Size = new System.Drawing.Size(661, 378);
             this.panel1.TabIndex = 105;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Century", 11.25F);
+            this.checkBox1.Location = new System.Drawing.Point(325, 253);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(197, 22);
+            this.checkBox1.TabIndex = 119;
+            this.checkBox1.Text = "Vaga de estacionamento";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // btnIncluirPredio
             // 
             this.btnIncluirPredio.BackColor = System.Drawing.Color.LightGray;
@@ -302,7 +314,7 @@
             this.textBox1.BackColor = System.Drawing.Color.LightGray;
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(71, 197);
+            this.textBox1.Location = new System.Drawing.Point(68, 189);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(266, 23);
             this.textBox1.TabIndex = 116;
@@ -311,7 +323,7 @@
             // 
             this.maskedTextBox4.BackColor = System.Drawing.Color.LightGray;
             this.maskedTextBox4.Font = new System.Drawing.Font("Century", 10F);
-            this.maskedTextBox4.Location = new System.Drawing.Point(457, 161);
+            this.maskedTextBox4.Location = new System.Drawing.Point(457, 157);
             this.maskedTextBox4.Mask = "(999) 000-0000";
             this.maskedTextBox4.Name = "maskedTextBox4";
             this.maskedTextBox4.Size = new System.Drawing.Size(95, 24);
@@ -321,7 +333,7 @@
             // 
             this.maskedTextBox3.BackColor = System.Drawing.Color.LightGray;
             this.maskedTextBox3.Font = new System.Drawing.Font("Century", 10F);
-            this.maskedTextBox3.Location = new System.Drawing.Point(85, 160);
+            this.maskedTextBox3.Location = new System.Drawing.Point(85, 147);
             this.maskedTextBox3.Mask = "(999) 000-0000";
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(87, 24);
@@ -331,7 +343,7 @@
             // 
             this.maskedTextBox2.BackColor = System.Drawing.Color.LightGray;
             this.maskedTextBox2.Font = new System.Drawing.Font("Century", 10F);
-            this.maskedTextBox2.Location = new System.Drawing.Point(275, 159);
+            this.maskedTextBox2.Location = new System.Drawing.Point(275, 152);
             this.maskedTextBox2.Mask = "(999) 000-0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(92, 24);
@@ -341,7 +353,7 @@
             // 
             this.maskedTextBox1.BackColor = System.Drawing.Color.LightGray;
             this.maskedTextBox1.Font = new System.Drawing.Font("Century", 10F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(251, 105);
+            this.maskedTextBox1.Location = new System.Drawing.Point(261, 111);
             this.maskedTextBox1.Mask = "000-00-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(126, 24);
@@ -351,7 +363,7 @@
             // 
             this.maskedTextBox5.BackColor = System.Drawing.Color.LightGray;
             this.maskedTextBox5.Font = new System.Drawing.Font("Century", 10F);
-            this.maskedTextBox5.Location = new System.Drawing.Point(47, 105);
+            this.maskedTextBox5.Location = new System.Drawing.Point(55, 106);
             this.maskedTextBox5.Mask = "000-00-0000";
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(111, 24);
@@ -387,7 +399,7 @@
             this.textBox3.BackColor = System.Drawing.Color.LightGray;
             this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox3.Location = new System.Drawing.Point(130, 64);
+            this.textBox3.Location = new System.Drawing.Point(132, 64);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(390, 23);
             this.textBox3.TabIndex = 108;
@@ -398,23 +410,11 @@
             this.label12.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(6, 197);
+            this.label12.Location = new System.Drawing.Point(6, 188);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 18);
             this.label12.TabIndex = 107;
             this.label12.Text = "E-mail:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Century", 11.25F);
-            this.checkBox1.Location = new System.Drawing.Point(355, 253);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(197, 22);
-            this.checkBox1.TabIndex = 119;
-            this.checkBox1.Text = "Vaga de estacionamento";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // frmCadastrarMoradores
             // 
@@ -434,7 +434,7 @@
             this.Controls.Add(this.comboBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCadastrarMoradores";
-            this.Text = "Vaga de estacionamento";
+            this.Text = "Cadastro de Moradores";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

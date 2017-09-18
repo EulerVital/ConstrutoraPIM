@@ -39,7 +39,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
@@ -53,6 +52,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnAjuda = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -74,11 +74,11 @@
             this.label6.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(12, 99);
+            this.label6.Location = new System.Drawing.Point(12, 104);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 18);
+            this.label6.Size = new System.Drawing.Size(133, 18);
             this.label6.TabIndex = 102;
-            this.label6.Text = "Nome Completo:";
+            this.label6.Text = "*Nome Completo:";
             // 
             // label7
             // 
@@ -86,11 +86,11 @@
             this.label7.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(12, 146);
+            this.label7.Location = new System.Drawing.Point(12, 145);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 18);
+            this.label7.Size = new System.Drawing.Size(43, 18);
             this.label7.TabIndex = 103;
-            this.label7.Text = "RG:";
+            this.label7.Text = "*RG:";
             // 
             // label8
             // 
@@ -100,9 +100,9 @@
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label8.Location = new System.Drawing.Point(183, 151);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 18);
+            this.label8.Size = new System.Drawing.Size(51, 18);
             this.label8.TabIndex = 104;
-            this.label8.Text = "CPF:";
+            this.label8.Text = "*CPF:";
             // 
             // label9
             // 
@@ -170,21 +170,11 @@
             this.label2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(296, 276);
+            this.label2.Location = new System.Drawing.Point(325, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 18);
             this.label2.TabIndex = 110;
             this.label2.Text = "Saida";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.LightGray;
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox3.Location = new System.Drawing.Point(143, 99);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(355, 23);
-            this.textBox3.TabIndex = 111;
             // 
             // maskedTextBox5
             // 
@@ -253,7 +243,7 @@
             this.maskedTextBox6.Location = new System.Drawing.Point(186, 274);
             this.maskedTextBox6.Mask = "00/00/0000 90:00";
             this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(87, 24);
+            this.maskedTextBox6.Size = new System.Drawing.Size(114, 24);
             this.maskedTextBox6.TabIndex = 119;
             this.maskedTextBox6.ValidatingType = typeof(System.DateTime);
             // 
@@ -261,7 +251,7 @@
             // 
             this.maskedTextBox7.BackColor = System.Drawing.Color.LightGray;
             this.maskedTextBox7.Font = new System.Drawing.Font("Century", 10F);
-            this.maskedTextBox7.Location = new System.Drawing.Point(349, 273);
+            this.maskedTextBox7.Location = new System.Drawing.Point(385, 273);
             this.maskedTextBox7.Mask = "90:00";
             this.maskedTextBox7.Name = "maskedTextBox7";
             this.maskedTextBox7.Size = new System.Drawing.Size(44, 24);
@@ -277,7 +267,7 @@
             this.btnSalvar.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSalvar.Location = new System.Drawing.Point(319, 366);
+            this.btnSalvar.Location = new System.Drawing.Point(294, 386);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(99, 30);
             this.btnSalvar.TabIndex = 121;
@@ -310,16 +300,16 @@
             this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label14.Location = new System.Drawing.Point(12, 62);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(147, 18);
+            this.label14.Size = new System.Drawing.Size(139, 18);
             this.label14.TabIndex = 157;
-            this.label14.Text = "*Nome do Morador:";
+            this.label14.Text = "Nome do Morador:";
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.LightGray;
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox2.Location = new System.Drawing.Point(165, 62);
+            this.textBox2.Location = new System.Drawing.Point(157, 62);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(295, 23);
             this.textBox2.TabIndex = 158;
@@ -333,21 +323,31 @@
             this.btnAjuda.Image = global::ProjetoPimConstrutora.Properties.Resources._4927_32x32;
             this.btnAjuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAjuda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAjuda.Location = new System.Drawing.Point(488, 56);
+            this.btnAjuda.Location = new System.Drawing.Point(458, 47);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Size = new System.Drawing.Size(46, 33);
             this.btnAjuda.TabIndex = 159;
             this.btnAjuda.UseVisualStyleBackColor = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.LightGray;
+            this.textBox3.Enabled = false;
+            this.textBox3.Font = new System.Drawing.Font("Century", 9.75F);
+            this.textBox3.Location = new System.Drawing.Point(151, 103);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(411, 23);
+            this.textBox3.TabIndex = 160;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(549, 56);
+            this.label5.Location = new System.Drawing.Point(510, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 49);
-            this.label5.TabIndex = 160;
+            this.label5.Size = new System.Drawing.Size(153, 80);
+            this.label5.TabIndex = 161;
             this.label5.Text = "Clique em \"?\" para obter mais informações sobre o cadastro.";
             // 
             // FrmPrestadordeServiço
@@ -355,8 +355,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(745, 408);
+            this.ClientSize = new System.Drawing.Size(666, 428);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.btnAjuda);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label14);
@@ -370,7 +371,6 @@
             this.Controls.Add(this.maskedTextBox3);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.maskedTextBox5);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label12);
@@ -383,7 +383,7 @@
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmPrestadordeServiço";
-            this.Text = "FrmPrestadordeServiço";
+            this.Text = "Inclusão Prestador de Serviço";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,7 +401,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox5;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
@@ -415,6 +414,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnAjuda;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
     }
 }

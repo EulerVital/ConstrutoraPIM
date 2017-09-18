@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
@@ -58,6 +57,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnAjuda = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -104,9 +104,9 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(185, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 18);
+            this.label2.Size = new System.Drawing.Size(47, 18);
             this.label2.TabIndex = 105;
-            this.label2.Text = "RG (opcional): ";
+            this.label2.Text = "*RG: ";
             // 
             // label4
             // 
@@ -120,21 +120,11 @@
             this.label4.TabIndex = 126;
             this.label4.Text = "Tempo de permanência";
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(151, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 23);
-            this.textBox1.TabIndex = 131;
-            // 
             // maskedTextBox2
             // 
             this.maskedTextBox2.BackColor = System.Drawing.Color.LightGray;
             this.maskedTextBox2.Font = new System.Drawing.Font("Century", 10F);
-            this.maskedTextBox2.Location = new System.Drawing.Point(69, 130);
+            this.maskedTextBox2.Location = new System.Drawing.Point(58, 130);
             this.maskedTextBox2.Mask = "000-00-0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(89, 24);
@@ -144,7 +134,7 @@
             // 
             this.maskedTextBox1.BackColor = System.Drawing.Color.LightGray;
             this.maskedTextBox1.Font = new System.Drawing.Font("Century", 10F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(303, 130);
+            this.maskedTextBox1.Location = new System.Drawing.Point(229, 130);
             this.maskedTextBox1.Mask = "000-00-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(89, 24);
@@ -392,7 +382,7 @@
             this.btnAjuda.Image = global::ProjetoPimConstrutora.Properties.Resources._4927_32x32;
             this.btnAjuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAjuda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAjuda.Location = new System.Drawing.Point(456, 51);
+            this.btnAjuda.Location = new System.Drawing.Point(456, 37);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Size = new System.Drawing.Size(46, 33);
             this.btnAjuda.TabIndex = 158;
@@ -403,18 +393,29 @@
             this.label5.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(508, 46);
+            this.label5.Location = new System.Drawing.Point(508, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 49);
+            this.label5.Size = new System.Drawing.Size(181, 71);
             this.label5.TabIndex = 159;
             this.label5.Text = "Clique em \"?\" para obter mais informações sobre o cadastro.";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightGray;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Century", 9.75F);
+            this.textBox1.Location = new System.Drawing.Point(151, 85);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(411, 23);
+            this.textBox1.TabIndex = 160;
             // 
             // frmIncluirVisitanteEstavel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(707, 406);
+            this.ClientSize = new System.Drawing.Size(691, 406);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnAjuda);
             this.Controls.Add(this.textBox3);
@@ -438,7 +439,6 @@
             this.Controls.Add(this.maskedTextBox4);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -446,7 +446,7 @@
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmIncluirVisitanteEstavel";
-            this.Text = "Incluir Visitante Estavel";
+            this.Text = "Inclusão Visitante Estavel";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,7 +459,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox4;
@@ -483,5 +482,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btnAjuda;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

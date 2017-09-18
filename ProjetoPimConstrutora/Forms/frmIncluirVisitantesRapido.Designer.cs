@@ -33,7 +33,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
@@ -49,6 +48,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnAjuda = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -96,19 +96,9 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(184, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 18);
+            this.label2.Size = new System.Drawing.Size(47, 18);
             this.label2.TabIndex = 104;
-            this.label2.Text = "RG (opcional): ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(153, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 23);
-            this.textBox1.TabIndex = 117;
+            this.label2.Text = "*RG: ";
             // 
             // label4
             // 
@@ -116,7 +106,7 @@
             this.label4.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(413, 172);
+            this.label4.Location = new System.Drawing.Point(407, 173);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(172, 18);
             this.label4.TabIndex = 123;
@@ -126,7 +116,7 @@
             // 
             this.maskedTextBox1.BackColor = System.Drawing.Color.LightGray;
             this.maskedTextBox1.Font = new System.Drawing.Font("Century", 10F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(296, 129);
+            this.maskedTextBox1.Location = new System.Drawing.Point(228, 129);
             this.maskedTextBox1.Mask = "000-00-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(89, 24);
@@ -148,7 +138,7 @@
             this.label8.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(690, 178);
+            this.label8.Location = new System.Drawing.Point(668, 177);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 18);
             this.label8.TabIndex = 129;
@@ -164,7 +154,7 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Century", 9.75F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(603, 172);
+            this.comboBox1.Location = new System.Drawing.Point(585, 171);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(68, 24);
             this.comboBox1.TabIndex = 131;
@@ -178,7 +168,7 @@
             this.btnSalvar.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSalvar.Location = new System.Drawing.Point(346, 267);
+            this.btnSalvar.Location = new System.Drawing.Point(317, 260);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(99, 30);
             this.btnSalvar.TabIndex = 130;
@@ -267,7 +257,7 @@
             this.textBox2.BackColor = System.Drawing.Color.LightGray;
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox2.Location = new System.Drawing.Point(161, 53);
+            this.textBox2.Location = new System.Drawing.Point(153, 53);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(284, 23);
             this.textBox2.TabIndex = 156;
@@ -292,18 +282,29 @@
             this.label5.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(541, 47);
+            this.label5.Location = new System.Drawing.Point(533, 31);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 49);
+            this.label5.Size = new System.Drawing.Size(186, 60);
             this.label5.TabIndex = 158;
             this.label5.Text = "Clique em \"?\" para obter mais informações sobre o cadastro.";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightGray;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Century", 9.75F);
+            this.textBox1.Location = new System.Drawing.Point(153, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(411, 23);
+            this.textBox1.TabIndex = 159;
             // 
             // frmIncluirVisitantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(765, 320);
+            this.ClientSize = new System.Drawing.Size(731, 302);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnAjuda);
             this.Controls.Add(this.textBox2);
@@ -319,7 +320,6 @@
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
@@ -327,7 +327,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmIncluirVisitantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Incluir Visitantes";
+            this.Text = "Inclusão Visitante Rapido";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +339,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
@@ -355,5 +354,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnAjuda;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

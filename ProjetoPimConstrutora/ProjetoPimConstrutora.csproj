@@ -70,35 +70,23 @@
     <Compile Include="Forms\frmCadastrarApartamento.Designer.cs">
       <DependentUpon>frmCadastrarApartamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCadastrarCorrespondencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarCorrespondencias.Designer.cs">
+      <DependentUpon>frmCadastrarCorrespondencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastrarMoradores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmCadastrarMoradores.Designer.cs">
       <DependentUpon>frmCadastrarMoradores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmCadastrarPredios.cs">
+    <Compile Include="Forms\UserControls\ucConsultarApartamentos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmCadastrarPredios.Designer.cs">
-      <DependentUpon>frmCadastrarPredios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmConsultarApartamentos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmConsultarApartamentos.Designer.cs">
-      <DependentUpon>frmConsultarApartamentos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmConsultarBlocos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmConsultarBlocos.Designer.cs">
-      <DependentUpon>frmConsultarBlocos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmConsultarPredios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmConsultarPredios.Designer.cs">
-      <DependentUpon>frmConsultarPredios.cs</DependentUpon>
+    <Compile Include="Forms\UserControls\ucConsultarApartamentos.Designer.cs">
+      <DependentUpon>ucConsultarApartamentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmIncluirVisitanteEstavel.cs">
       <SubType>Form</SubType>
@@ -112,59 +100,23 @@
     <Compile Include="Forms\frmIncluirVisitantesRapido.Designer.cs">
       <DependentUpon>frmIncluirVisitantesRapido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmPrestadordeServiço.cs">
+    <Compile Include="Forms\frmPrestadordeServiço.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmPrestadordeServiço.Designer.cs">
-      <DependentUpon>FrmPrestadordeServiço.cs</DependentUpon>
+    <Compile Include="Forms\frmPrestadordeServiço.Designer.cs">
+      <DependentUpon>frmPrestadordeServiço.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmPrincipal.cs">
+    <Compile Include="Forms\UserControls\ucConsultarCorrespondencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucControleFuncionalidade.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucControleFuncionalidade.Designer.cs">
-      <DependentUpon>ucControleFuncionalidade.cs</DependentUpon>
+    <Compile Include="Forms\UserControls\ucConsultarCorrespondencia.Designer.cs">
+      <DependentUpon>ucConsultarCorrespondencia.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmSelecionarVisitante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmSelecionarVisitante.Designer.cs">
       <DependentUpon>frmSelecionarVisitante.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucCadastrarBlocos.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucCadastrarBlocos.Designer.cs">
-      <DependentUpon>ucCadastrarBlocos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucCadastrarCondominio.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucCadastrarCondominio.Designer.cs">
-      <DependentUpon>ucCadastrarCondominio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucCadastrarCorrespondencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucCadastrarCorrespondencia.Designer.cs">
-      <DependentUpon>ucCadastrarCorrespondencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucCadastrarUsuarios.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucCadastrarUsuarios.Designer.cs">
-      <DependentUpon>ucCadastrarUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucConsultarCondominio.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\UserControls\ucConsultarCondominio.Designer.cs">
-      <DependentUpon>ucConsultarCondominio.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserControls\ucConsultarMoradores.cs">
       <SubType>Form</SubType>
@@ -183,20 +135,14 @@
     <EmbeddedResource Include="Forms\frmCadastrarApartamento.resx">
       <DependentUpon>frmCadastrarApartamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarCorrespondencias.resx">
+      <DependentUpon>frmCadastrarCorrespondencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarMoradores.resx">
       <DependentUpon>frmCadastrarMoradores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmCadastrarPredios.resx">
-      <DependentUpon>frmCadastrarPredios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmConsultarApartamentos.resx">
-      <DependentUpon>frmConsultarApartamentos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmConsultarBlocos.resx">
-      <DependentUpon>frmConsultarBlocos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmConsultarPredios.resx">
-      <DependentUpon>frmConsultarPredios.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserControls\ucConsultarApartamentos.resx">
+      <DependentUpon>ucConsultarApartamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmIncluirVisitanteEstavel.resx">
       <DependentUpon>frmIncluirVisitanteEstavel.cs</DependentUpon>
@@ -204,35 +150,14 @@
     <EmbeddedResource Include="Forms\frmIncluirVisitantesRapido.resx">
       <DependentUpon>frmIncluirVisitantesRapido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmPrestadordeServiço.resx">
-      <DependentUpon>FrmPrestadordeServiço.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmPrestadordeServiço.resx">
+      <DependentUpon>frmPrestadordeServiço.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserControls\ucControleFuncionalidade.resx">
-      <DependentUpon>ucControleFuncionalidade.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserControls\ucConsultarCorrespondencia.resx">
+      <DependentUpon>ucConsultarCorrespondencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSelecionarVisitante.resx">
       <DependentUpon>frmSelecionarVisitante.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserControls\ucCadastrarBlocos.resx">
-      <DependentUpon>ucCadastrarBlocos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserControls\ucCadastrarCondominio.pt-BR.resx">
-      <DependentUpon>ucCadastrarCondominio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserControls\ucCadastrarCondominio.resx">
-      <DependentUpon>ucCadastrarCondominio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserControls\ucCadastrarCorrespondencia.resx">
-      <DependentUpon>ucCadastrarCorrespondencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserControls\ucCadastrarUsuarios.resx">
-      <DependentUpon>ucCadastrarUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserControls\ucConsultarCondominio.resx">
-      <DependentUpon>ucConsultarCondominio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserControls\ucConsultarMoradores.resx">
       <DependentUpon>ucConsultarMoradores.cs</DependentUpon>

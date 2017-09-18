@@ -26,5 +26,10 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         {
 
         }
+
+        private void dgvCondominios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
