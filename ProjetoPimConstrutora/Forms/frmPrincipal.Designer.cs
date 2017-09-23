@@ -44,6 +44,8 @@
             this.msAdmCondApart = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondApartCad = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondApartCons = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondApartCadTipoEstadia = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondApartConsTipoEstadia = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondEstacionamento = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondEstaCad = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondEstaCons = new System.Windows.Forms.ToolStripMenuItem();
@@ -217,7 +219,9 @@
             this.msAdmCondApart.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondApart.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msAdmCondApartCad,
-            this.msAdmCondApartCons});
+            this.msAdmCondApartCons,
+            this.msAdmCondApartCadTipoEstadia,
+            this.msAdmCondApartConsTipoEstadia});
             this.msAdmCondApart.Name = "msAdmCondApart";
             this.msAdmCondApart.Size = new System.Drawing.Size(196, 22);
             this.msAdmCondApart.Text = "Apartamentos";
@@ -226,7 +230,7 @@
             // 
             this.msAdmCondApartCad.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondApartCad.Name = "msAdmCondApartCad";
-            this.msAdmCondApartCad.Size = new System.Drawing.Size(147, 22);
+            this.msAdmCondApartCad.Size = new System.Drawing.Size(241, 22);
             this.msAdmCondApartCad.Text = "Cadastrar";
             this.msAdmCondApartCad.Click += new System.EventHandler(this.msAdmCondApartCad_Click);
             // 
@@ -234,9 +238,23 @@
             // 
             this.msAdmCondApartCons.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondApartCons.Name = "msAdmCondApartCons";
-            this.msAdmCondApartCons.Size = new System.Drawing.Size(147, 22);
+            this.msAdmCondApartCons.Size = new System.Drawing.Size(241, 22);
             this.msAdmCondApartCons.Text = "Consultar";
             this.msAdmCondApartCons.Click += new System.EventHandler(this.msAdmCondApartCons_Click);
+            // 
+            // msAdmCondApartCadTipoEstadia
+            // 
+            this.msAdmCondApartCadTipoEstadia.Name = "msAdmCondApartCadTipoEstadia";
+            this.msAdmCondApartCadTipoEstadia.Size = new System.Drawing.Size(241, 22);
+            this.msAdmCondApartCadTipoEstadia.Text = "Cadastrar Tipo Estadia";
+            this.msAdmCondApartCadTipoEstadia.Click += new System.EventHandler(this.msAdmCondApartCadTipoEstadia_Click);
+            // 
+            // msAdmCondApartConsTipoEstadia
+            // 
+            this.msAdmCondApartConsTipoEstadia.Name = "msAdmCondApartConsTipoEstadia";
+            this.msAdmCondApartConsTipoEstadia.Size = new System.Drawing.Size(241, 22);
+            this.msAdmCondApartConsTipoEstadia.Text = "Consultar Tipo Estadia";
+            this.msAdmCondApartConsTipoEstadia.Click += new System.EventHandler(this.msAdmCondApartConsTipoEstadia_Click);
             // 
             // msAdmCondEstacionamento
             // 
@@ -731,5 +749,7 @@
         private System.Windows.Forms.ToolStripMenuItem relatórioDeVigilânciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarProfissãoToolStripMenuItem;
         public System.Windows.Forms.Panel pnPrincipal;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondApartCadTipoEstadia;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondApartConsTipoEstadia;
     }
 }

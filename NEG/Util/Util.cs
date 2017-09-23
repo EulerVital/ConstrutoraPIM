@@ -59,7 +59,7 @@ namespace NEG.Util
             string aux = string.Empty;
             int valorAux = 0;
 
-            for(int i=0; i<= valor.Length; i++)
+            for(int i=0; i < valor.Length; i++)
             {
                 aux = valor.Substring(i);
                 if(!int.TryParse(aux, out valorAux))
@@ -69,6 +69,39 @@ namespace NEG.Util
             }
 
             return valor;
+        }
+
+        public static string FormatandoMoeda(string valor)
+        {
+            string valores = "0123456789,.";
+            char[] val = valor.ToCharArray();
+            int? indiceVirgula = null;
+            int countVirgula = 0;
+
+            if (!string.IsNullOrEmpty(valor))
+            {
+                if (val[0] != ',')
+                {
+                    if (valor.Contains(","))
+                    {
+                        indiceVirgula = valor.IndexOf(',');
+                    }
+
+                    for (int i = 0; i < val.Length; i++)
+                    {
+                        if (!valores.Contains(val[i].ToString()))
+                        {
+                            valor = valor.Replace(val[i].ToString(), "");
+                        }
+                    }
+                }
+                else
+                {
+                    valor = valor.Replace(",", "");
+                }
+            }
+
+            return valor.ToString();
         }
     }
 }

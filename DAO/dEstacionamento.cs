@@ -61,7 +61,7 @@ namespace DAO
                 {
                     while (dr.Read())
                     {
-                        retorno.Add(Bloco(dr));
+                        retorno.Add(Estacionamento(dr));
                     }
                 }
 

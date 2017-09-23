@@ -100,6 +100,12 @@
     <Compile Include="Forms\frmCadastrarFuncionarios.Designer.cs">
       <DependentUpon>frmCadastrarFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCadastrarMoradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarMoradores.Designer.cs">
+      <DependentUpon>frmCadastrarMoradores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastrarPredios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,12 @@
     <Compile Include="Forms\frmConsultarProfissao.Designer.cs">
       <DependentUpon>frmConsultarProfissao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmConsultarTipoEstadia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultarTipoEstadia.Designer.cs">
+      <DependentUpon>frmConsultarTipoEstadia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmConsultarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +214,24 @@
     <Compile Include="Forms\frmIncluirPredio.Designer.cs">
       <DependentUpon>frmIncluirPredio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmIncluirVisitanteEstavel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncluirVisitanteEstavel.Designer.cs">
+      <DependentUpon>frmIncluirVisitanteEstavel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncluirVisitanteRapido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncluirVisitanteRapido.Designer.cs">
+      <DependentUpon>frmIncluirVisitanteRapido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPrestadorSevico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrestadorSevico.Designer.cs">
+      <DependentUpon>frmPrestadorSevico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +249,12 @@
     </Compile>
     <Compile Include="Forms\frmReservarAreas.Designer.cs">
       <DependentUpon>frmReservarAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelecionarVisitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelecionarVisitante.Designer.cs">
+      <DependentUpon>frmSelecionarVisitante.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserControls\ucCadastrarBlocos.cs">
       <SubType>UserControl</SubType>
@@ -270,6 +306,9 @@
     <EmbeddedResource Include="Forms\frmCadastrarFuncionarios.resx">
       <DependentUpon>frmCadastrarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarMoradores.resx">
+      <DependentUpon>frmCadastrarMoradores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarPredios.resx">
       <DependentUpon>frmCadastrarPredios.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,6 +345,9 @@
     <EmbeddedResource Include="Forms\frmConsultarProfissao.resx">
       <DependentUpon>frmConsultarProfissao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultarTipoEstadia.resx">
+      <DependentUpon>frmConsultarTipoEstadia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarUsuario.resx">
       <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,6 +363,15 @@
     <EmbeddedResource Include="Forms\frmIncluirPredio.resx">
       <DependentUpon>frmIncluirPredio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncluirVisitanteEstavel.resx">
+      <DependentUpon>frmIncluirVisitanteEstavel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncluirVisitanteRapido.resx">
+      <DependentUpon>frmIncluirVisitanteRapido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrestadorSevico.resx">
+      <DependentUpon>frmPrestadorSevico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReservarAreas.resx">
       <DependentUpon>frmReservarAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelecionarVisitante.resx">
+      <DependentUpon>frmSelecionarVisitante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserControls\ucCadastrarBlocos.resx">
       <DependentUpon>ucCadastrarBlocos.cs</DependentUpon>

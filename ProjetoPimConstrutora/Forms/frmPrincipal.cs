@@ -115,6 +115,23 @@ namespace ProjetoPimConstrutora.Forms
             frm.Show();
         }
 
+        private void msAdmCondApartCadTipoEstadia_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Visible = false;
+            pnPrincipal.Visible = false;
+            frmCadastrarTipoEstadia frm = new frmCadastrarTipoEstadia(this, null);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void msAdmCondApartConsTipoEstadia_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Visible = false;
+            pnPrincipal.Visible = false;
+            frmConsultarTipoEstadia frm = new frmConsultarTipoEstadia(this);
+            frm.Show();
+        }
+
         private void msAdmUserSysCad_Click(object sender, EventArgs e)
         {
             lblTitulo.Visible = false;

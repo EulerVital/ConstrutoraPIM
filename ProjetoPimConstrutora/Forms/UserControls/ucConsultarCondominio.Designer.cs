@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -226,14 +226,14 @@
             this.dgvCondominios.AllowUserToAddRows = false;
             this.dgvCondominios.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvCondominios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCondominios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCondominios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCondominios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCondominios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeCondominio,
@@ -245,28 +245,28 @@
             this.BlocosCondominio,
             this.AlterarCondominio,
             this.StatusCondominio});
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCondominios.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCondominios.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCondominios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCondominios.GridColor = System.Drawing.Color.Black;
             this.dgvCondominios.Location = new System.Drawing.Point(0, 0);
             this.dgvCondominios.MultiSelect = false;
             this.dgvCondominios.Name = "dgvCondominios";
             this.dgvCondominios.ReadOnly = true;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCondominios.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCondominios.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCondominios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCondominios.Size = new System.Drawing.Size(1174, 355);
             this.dgvCondominios.TabIndex = 0;
@@ -274,88 +274,98 @@
             // 
             // NomeCondominio
             // 
+            this.NomeCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.NomeCondominio.HeaderText = "Nome";
             this.NomeCondominio.Name = "NomeCondominio";
             this.NomeCondominio.ReadOnly = true;
-            this.NomeCondominio.Width = 220;
+            this.NomeCondominio.Width = 72;
             // 
             // EstadoCondominio
             // 
+            this.EstadoCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.EstadoCondominio.HeaderText = "Estado";
             this.EstadoCondominio.Name = "EstadoCondominio";
             this.EstadoCondominio.ReadOnly = true;
-            this.EstadoCondominio.Width = 70;
+            this.EstadoCondominio.Width = 79;
             // 
             // CidadeCondominio
             // 
+            this.CidadeCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.CidadeCondominio.HeaderText = "Cidade";
             this.CidadeCondominio.Name = "CidadeCondominio";
             this.CidadeCondominio.ReadOnly = true;
-            this.CidadeCondominio.Width = 140;
+            this.CidadeCondominio.Width = 79;
             // 
             // BairroCondominio
             // 
+            this.BairroCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.BairroCondominio.HeaderText = "Bairro";
             this.BairroCondominio.Name = "BairroCondominio";
             this.BairroCondominio.ReadOnly = true;
-            this.BairroCondominio.Width = 140;
+            this.BairroCondominio.Width = 77;
             // 
             // EnderecoCondominio
             // 
+            this.EnderecoCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.EnderecoCondominio.HeaderText = "Endereço";
             this.EnderecoCondominio.Name = "EnderecoCondominio";
             this.EnderecoCondominio.ReadOnly = true;
-            this.EnderecoCondominio.Width = 250;
+            this.EnderecoCondominio.Width = 95;
             // 
             // CepCondominio
             // 
+            this.CepCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.CepCondominio.HeaderText = "CEP";
             this.CepCondominio.Name = "CepCondominio";
             this.CepCondominio.ReadOnly = true;
+            this.CepCondominio.Width = 63;
             // 
             // BlocosCondominio
             // 
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
-            this.BlocosCondominio.DefaultCellStyle = dataGridViewCellStyle26;
+            this.BlocosCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.BlocosCondominio.DefaultCellStyle = dataGridViewCellStyle2;
             this.BlocosCondominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BlocosCondominio.HeaderText = "Ver Blocos";
             this.BlocosCondominio.Name = "BlocosCondominio";
             this.BlocosCondominio.ReadOnly = true;
             this.BlocosCondominio.Text = "VER";
             this.BlocosCondominio.UseColumnTextForButtonValue = true;
-            this.BlocosCondominio.Width = 55;
+            this.BlocosCondominio.Width = 86;
             // 
             // AlterarCondominio
             // 
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
-            this.AlterarCondominio.DefaultCellStyle = dataGridViewCellStyle27;
+            this.AlterarCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.AlterarCondominio.DefaultCellStyle = dataGridViewCellStyle3;
             this.AlterarCondominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AlterarCondominio.HeaderText = "Alterar Dados";
             this.AlterarCondominio.Name = "AlterarCondominio";
             this.AlterarCondominio.ReadOnly = true;
-            this.AlterarCondominio.Width = 70;
+            this.AlterarCondominio.Width = 99;
             // 
             // StatusCondominio
             // 
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
-            this.StatusCondominio.DefaultCellStyle = dataGridViewCellStyle28;
+            this.StatusCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.StatusCondominio.DefaultCellStyle = dataGridViewCellStyle4;
             this.StatusCondominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StatusCondominio.HeaderText = "Status";
             this.StatusCondominio.Name = "StatusCondominio";
             this.StatusCondominio.ReadOnly = true;
-            this.StatusCondominio.Width = 70;
+            this.StatusCondominio.Width = 59;
             // 
             // ucConsultarCondominio
             // 
@@ -389,6 +399,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pnTabelaConsulta;
         private System.Windows.Forms.DataGridView dgvCondominios;
+        private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeCondominio;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoCondominio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CidadeCondominio;
@@ -398,6 +409,5 @@
         private System.Windows.Forms.DataGridViewButtonColumn BlocosCondominio;
         private System.Windows.Forms.DataGridViewButtonColumn AlterarCondominio;
         private System.Windows.Forms.DataGridViewButtonColumn StatusCondominio;
-        private System.Windows.Forms.TextBox txtBairro;
     }
 }

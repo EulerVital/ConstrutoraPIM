@@ -31,36 +31,40 @@ namespace ProjetoPimConstrutora.Forms.UserControls
         #region Eventos
         private void dgvCondominios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 6)
+            if (e.RowIndex > -1)
             {
-                var objCond = ListaCondominio.Where(c => c.Nome == dgvCondominios.Rows[e.RowIndex].Cells[0].Value.ToString() && c.CEP == dgvCondominios.Rows[e.RowIndex].Cells[5].Value.ToString()).FirstOrDefault();
-
-                var valor = nBloco.Bloco_GET(new eBloco() { Condominio = objCond });
-
-                if (valor.Count > 0)
+                if (e.ColumnIndex == 6)
                 {
-                    frmConsultarBlocos frm = new frmConsultarBlocos(frmPrinc, objCond);
-                    frm.Show();
-                    this.Dispose();
-                }else
-                {
-                    Util.MensagemInformacao("Não há blocos incluídos para esse condomínio.");
+                    var objCond = ListaCondominio.Where(c => c.Nome == dgvCondominios.Rows[e.RowIndex].Cells[0].Value.ToString() && c.CEP == dgvCondominios.Rows[e.RowIndex].Cells[5].Value.ToString()).FirstOrDefault();
+
+                    var valor = nBloco.Bloco_GET(new eBloco() { Condominio = objCond });
+
+                    if (valor.Count > 0)
+                    {
+                        frmConsultarBlocos frm = new frmConsultarBlocos(frmPrinc, objCond);
+                        frm.Show();
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        Util.MensagemInformacao("Não há blocos incluídos para esse condomínio.");
+                    }
                 }
-            }
-            else if (e.ColumnIndex == 7)
-            {
-                var objCond = ListaCondominio.Where(c => c.Nome == dgvCondominios.Rows[e.RowIndex].Cells[0].Value.ToString() && c.CEP == dgvCondominios.Rows[e.RowIndex].Cells[5].Value.ToString()).FirstOrDefault();
-
-                if(objCond != null)
+                else if (e.ColumnIndex == 7)
                 {
-                    frmCadastrarCondominio frm = new frmCadastrarCondominio(frmPrinc, objCond);
-                    frm.Show();
-                    frmPrinc.pnPrincipal.Visible = false;
+                    var objCond = ListaCondominio.Where(c => c.Nome == dgvCondominios.Rows[e.RowIndex].Cells[0].Value.ToString() && c.CEP == dgvCondominios.Rows[e.RowIndex].Cells[5].Value.ToString()).FirstOrDefault();
+
+                    if (objCond != null)
+                    {
+                        frmCadastrarCondominio frm = new frmCadastrarCondominio(frmPrinc, objCond);
+                        frm.Show();
+                        frmPrinc.pnPrincipal.Visible = false;
+                    }
                 }
-            }
-            else if(e.ColumnIndex == 8)
-            {
-                MessageBox.Show("Cliquei em status na linha " + e.RowIndex);
+                else if (e.ColumnIndex == 8)
+                {
+                    MessageBox.Show("Cliquei em status na linha " + e.RowIndex);
+                }
             }
         }
 

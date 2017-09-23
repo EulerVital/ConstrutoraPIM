@@ -41,15 +41,13 @@ namespace DAO
         {
             List<eTipoEstadia> retorno = new List<eTipoEstadia>();
             cmd = new SqlCommand();
-            param = new SqlParameter[4];
+            param = new SqlParameter[2];
 
             try
             {
 
                 MontarParametro(0, param, ParameterDirection.Input, "@TipoEstadiaID", obj.TipoEstadiaID, SqlDbType.Int);
                 MontarParametro(1, param, ParameterDirection.Input, "@Nome", obj.Nome, SqlDbType.VarChar);
-                MontarParametro(2, param, ParameterDirection.Input, "@QtdPredios", obj.ValorFixo, SqlDbType.Decimal);
-                MontarParametro(3, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
 
                 dr = ExecReader("USP_TIPOESTADIA_GET", cmd, param);
 
@@ -99,12 +97,12 @@ namespace DAO
             try
             {
                 cmd = new SqlCommand();
-                param = new SqlParameter[6];
+                param = new SqlParameter[4];
 
                 if (string.IsNullOrEmpty(obj.TipoEstadiaID))
                     obj.TipoEstadiaID = "0";
 
-                MontarParametro(0, param, ParameterDirection.Input, "@TipoEstadia", obj.TipoEstadiaID, SqlDbType.Int);
+                MontarParametro(0, param, ParameterDirection.Input, "@TipoEstadiaID", obj.TipoEstadiaID, SqlDbType.Int);
                 MontarParametro(1, param, ParameterDirection.Input, "@Nome", obj.Nome, SqlDbType.VarChar);
                 MontarParametro(2, param, ParameterDirection.Input, "@ValorFixo", obj.ValorFixo, SqlDbType.Int);
                 MontarParametro(3, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);

@@ -46,9 +46,10 @@ namespace ProjetoPimConstrutora.Forms
             {
                 if (e.ColumnIndex == 5)
                 {
-                    if ((int)dgvBlocos.Rows[e.RowIndex].Cells[3].Value > 0)
+                    var obj = ListaBlocos.FirstOrDefault(c => c.BlocoID == dgvBlocos.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+                    if (nPredio.Predio_GET(new ePredio() { Bloco = obj }).Count > 0)
                     {
-                        var obj = ListaBlocos.FirstOrDefault(c => c.BlocoID == dgvBlocos.Rows[e.RowIndex].Cells[0].Value.ToString());
                         frmConsultarPredios frm = new frmConsultarPredios(frmPrinc, obj);
                         frm.Show();
                         this.Dispose();
@@ -92,13 +93,16 @@ namespace ProjetoPimConstrutora.Forms
                     {
                         if (obj.StatusAtivo)
                         {
-                            Util.MensagemErro("Bloco ativado com sucesso");
+                            Util.MensagemSucesso("Bloco ativado com sucesso");
                             CarregarBlocos(true, false);
                         }
                         else
                         {
-                            Util.MensagemErro("Bloco excluido com sucesso");
-                            CarregarBlocos(true, false);
+                            if (MessageBox.Show("Deseja realmente excluir esse bloco ?", "Excluir Bloco", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                            {
+                                Util.MensagemSucesso("Bloco excluido com sucesso");
+                                CarregarBlocos(true, false);
+                            }
                         }
                     }
                 }
