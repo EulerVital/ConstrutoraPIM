@@ -94,6 +94,12 @@
     <Compile Include="Forms\frmCadastrarCondominio.Designer.cs">
       <DependentUpon>frmCadastrarCondominio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCadastrarCorrespondencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarCorrespondencia.Designer.cs">
+      <DependentUpon>frmCadastrarCorrespondencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastrarFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,12 @@
     <Compile Include="Forms\frmConsultarFuncionario.Designer.cs">
       <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmConsultarMoradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultarMoradores.Designer.cs">
+      <DependentUpon>frmConsultarMoradores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmConsultarPredios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +201,12 @@
     </Compile>
     <Compile Include="Forms\frmConsultarUsuario.Designer.cs">
       <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmControleFuncionalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmControleFuncionalidade.Designer.cs">
+      <DependentUpon>frmControleFuncionalidade.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmControleVigilancia.cs">
       <SubType>Form</SubType>
@@ -256,6 +274,12 @@
     <Compile Include="Forms\frmSelecionarVisitante.Designer.cs">
       <DependentUpon>frmSelecionarVisitante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmVerificarVisitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVerificarVisitante.Designer.cs">
+      <DependentUpon>frmVerificarVisitante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserControls\ucCadastrarBlocos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -303,6 +327,9 @@
     <EmbeddedResource Include="Forms\frmCadastrarCondominio.resx">
       <DependentUpon>frmCadastrarCondominio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarCorrespondencia.resx">
+      <DependentUpon>frmCadastrarCorrespondencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarFuncionarios.resx">
       <DependentUpon>frmCadastrarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +366,9 @@
     <EmbeddedResource Include="Forms\frmConsultarFuncionario.resx">
       <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultarMoradores.resx">
+      <DependentUpon>frmConsultarMoradores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarPredios.resx">
       <DependentUpon>frmConsultarPredios.cs</DependentUpon>
     </EmbeddedResource>
@@ -350,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarUsuario.resx">
       <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmControleFuncionalidade.resx">
+      <DependentUpon>frmControleFuncionalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmControleVigilancia.resx">
       <DependentUpon>frmControleVigilancia.cs</DependentUpon>
@@ -383,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSelecionarVisitante.resx">
       <DependentUpon>frmSelecionarVisitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVerificarVisitante.resx">
+      <DependentUpon>frmVerificarVisitante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserControls\ucCadastrarBlocos.resx">
       <DependentUpon>ucCadastrarBlocos.cs</DependentUpon>
