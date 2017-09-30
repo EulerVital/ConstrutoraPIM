@@ -1,5 +1,6 @@
 ﻿using ENT;
 using NEG;
+using NEG.Util;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,11 +12,14 @@ namespace ProjetoPimConstrutora.Forms
     public partial class frmConsultarPredios : Form
     {
         public List<ePredio> ListaPredio { get; set; }
+        private frmPrincipal frmPrincipal { get; set; }
 
         private bool AtualizarComboBloco = true;
         public frmConsultarPredios(frmPrincipal frm)
         {
             InitializeComponent();
+            frmPrincipal = frm;
+            this.MdiParent = frm;
             CarregarComboCondominio(true, null);
             CarregarTabelaPredio(false);
         }
@@ -54,6 +58,52 @@ namespace ProjetoPimConstrutora.Forms
                 CarregarTabelaPredio(false);
             else
                 CarregarTabelaPredio(true);
+        }
+
+        private void dgvPredios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex > -1)
+            {
+                var obj = ListaPredio.Where(c => c.PredioID == dgvPredios.Rows[e.RowIndex].Cells[0].Value.ToString()).FirstOrDefault();
+
+                if (e.ColumnIndex == 4)
+                {
+
+                }
+                else if(e.ColumnIndex == 5)
+                {
+                    frmCadastrarPredios frm = new frmCadastrarPredios(frmPrincipal, obj);
+                    frm.Show();
+                    this.Dispose();
+                }
+                else if(e.ColumnIndex == 6)
+                {
+                    if (obj.Excluido)
+                    {
+                        obj.Excluido = false;
+                    }
+                    else
+                    {
+                        obj.Excluido = true;
+                    }
+
+                    if (nPredio.Predio_SET(obj).Equals("0"))
+                    {
+                        Util.MensagemErro();
+                    }else
+                    {
+                        if (obj.Excluido)
+                        {
+                            Util.MensagemSucesso("Registro excluido com sucesso");
+                        }else
+                        {
+                            Util.MensagemSucesso("Registro ativado com sucesso");
+                        }
+
+                        CarregarTabelaPredio(true);
+                    }
+                }
+            }
         }
 
         #endregion
@@ -129,11 +179,11 @@ namespace ProjetoPimConstrutora.Forms
             {
                 if (item.Excluido)
                 {
-                    dgvPredios.Rows.Add(item.Bloco.Nome, item.Nome, item.QtdApartamentos, "Visualizar", "Alterar", "Restaurar");
+                    dgvPredios.Rows.Add(item.PredioID, item.Bloco.Nome, item.Nome, item.QtdApartamentos, "Ver", "Alterar", "Ativar");
                 }
                 else
                 {
-                    dgvPredios.Rows.Add(item.Bloco.Nome, item.Nome, item.QtdApartamentos, "Visualizar", "Alterar", "Excluir");
+                    dgvPredios.Rows.Add(item.PredioID, item.Bloco.Nome, item.Nome, item.QtdApartamentos, "Ver", "Alterar", "Excluir");
                 }
             }
 
@@ -175,5 +225,6 @@ namespace ProjetoPimConstrutora.Forms
         }
 
         #endregion
+
     }
 }

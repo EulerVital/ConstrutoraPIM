@@ -74,8 +74,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmCadastrarPredios frm = new frmCadastrarPredios();
-            frm.MdiParent = this;
+            frmCadastrarPredios frm = new frmCadastrarPredios(this, null);
             frm.Show();
         }
 
@@ -101,7 +100,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmCadastrarApartamento frm = new frmCadastrarApartamento();
+            frmCadastrarApartamento frm = new frmCadastrarApartamento(this, null);
             frm.MdiParent = this;
             frm.Show();
         }

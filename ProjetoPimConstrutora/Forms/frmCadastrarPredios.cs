@@ -19,13 +19,23 @@ namespace ProjetoPimConstrutora.Forms
 
         nBloco obj = null;
         public ePredio Predio { get; set; }
+        private frmPrincipal frmPrincipal { get; set; }
 
         #endregion
 
-        public frmCadastrarPredios()
+        public frmCadastrarPredios(frmPrincipal frm, ePredio objPredio)
         {
             InitializeComponent();
+            frmPrincipal = frm;
+            this.MdiParent = frm;
             obj = new nBloco();
+
+            if(objPredio != null)
+            {
+                Predio = objPredio;
+                PreencherCampos();
+            }
+
             txtNome.Focus();
         }
 
@@ -54,6 +64,12 @@ namespace ProjetoPimConstrutora.Forms
 
         #region Metodos
 
+        private void PreencherCampos()
+        {
+            txtNome.Text = Predio.Nome;
+            ckbExcluido.Checked = Predio.Excluido;
+        }
+
         private void SalvarPredio()
         {
             if (string.IsNullOrEmpty(txtNome.Text))
@@ -62,7 +78,12 @@ namespace ProjetoPimConstrutora.Forms
             }
             else
             {
-                Predio = new ePredio();
+                bool isAlteracao = true;
+                if (Predio == null)
+                {
+                    Predio = new ePredio();
+                    isAlteracao = false;
+                }
 
                 Predio.Nome = txtNome.Text;
                 Predio.Excluido = ckbExcluido.Checked;
@@ -70,10 +91,21 @@ namespace ProjetoPimConstrutora.Forms
 
                 if (!Predio.PredioID.Equals("0"))
                 {
-                    Util.MensagemSucesso("Cadastro Efetuado com sucessso");
-                    txtNome.Clear();
-                    txtNome.Focus();
-                    ckbExcluido.Checked = false;
+                    if (isAlteracao)
+                    {
+                        Util.MensagemSucesso("Alteração Efetuada com sucessso");
+                        frmConsultarPredios frm = new frmConsultarPredios(frmPrincipal);
+                        frm.Show();
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        Util.MensagemSucesso("Cadastro Efetuado com sucessso");
+                        txtNome.Clear();
+                        txtNome.Focus();
+                        ckbExcluido.Checked = false;
+                        Predio = null;
+                    }
                 }
                 else
                 {

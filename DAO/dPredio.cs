@@ -87,6 +87,7 @@ namespace DAO
                 obj.PredioID = GetInt32("PredioID", dr).ToString();
                 obj.Nome = GetString("Nome", dr);
                 obj.QtdApartamentos = GetInt32("QtdApartamentos", dr);
+                obj.Excluido = GetBoolean("Excluido", dr);
                 obj.Bloco.BlocoID = GetInt32("BlocoID", dr).ToString();
                 obj.Bloco.Nome = GetString("NomeBloco", dr);
                 obj.Bloco.QtdPredios = GetInt32("QtdPredios", dr);

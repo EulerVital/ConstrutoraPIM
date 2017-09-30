@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.ckbExcluidos = new System.Windows.Forms.CheckBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbBlocos = new System.Windows.Forms.ComboBox();
@@ -39,13 +40,13 @@
             this.cmbCondominio = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvPredios = new System.Windows.Forms.DataGridView();
+            this.PredioID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Blocos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomePredio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QtdApt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apartamentos = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Alterar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ckbExcluidos = new System.Windows.Forms.CheckBox();
             this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPredios)).BeginInit();
             this.SuspendLayout();
@@ -62,8 +63,20 @@
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(546, 161);
+            this.pnTop.Size = new System.Drawing.Size(597, 161);
             this.pnTop.TabIndex = 0;
+            // 
+            // ckbExcluidos
+            // 
+            this.ckbExcluidos.AutoSize = true;
+            this.ckbExcluidos.Font = new System.Drawing.Font("Century", 11.25F);
+            this.ckbExcluidos.Location = new System.Drawing.Point(387, 71);
+            this.ckbExcluidos.Name = "ckbExcluidos";
+            this.ckbExcluidos.Size = new System.Drawing.Size(96, 22);
+            this.ckbExcluidos.TabIndex = 30;
+            this.ckbExcluidos.Text = "Excluídos";
+            this.ckbExcluidos.UseVisualStyleBackColor = true;
+            this.ckbExcluidos.CheckedChanged += new System.EventHandler(this.ckbExcluidos_CheckedChanged);
             // 
             // txtNome
             // 
@@ -144,52 +157,63 @@
             this.dgvPredios.AllowUserToOrderColumns = true;
             this.dgvPredios.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvPredios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPredios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPredios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPredios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPredios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PredioID,
             this.Blocos,
             this.NomePredio,
             this.QtdApt,
             this.Apartamentos,
             this.Alterar,
             this.Excluir});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPredios.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPredios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPredios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPredios.GridColor = System.Drawing.Color.Black;
             this.dgvPredios.Location = new System.Drawing.Point(0, 161);
             this.dgvPredios.MultiSelect = false;
             this.dgvPredios.Name = "dgvPredios";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPredios.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPredios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPredios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPredios.Size = new System.Drawing.Size(546, 267);
+            this.dgvPredios.Size = new System.Drawing.Size(597, 303);
             this.dgvPredios.TabIndex = 4;
+            this.dgvPredios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPredios_CellClick);
+            // 
+            // PredioID
+            // 
+            this.PredioID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.PredioID.HeaderText = "Cod.";
+            this.PredioID.Name = "PredioID";
+            this.PredioID.ReadOnly = true;
+            this.PredioID.Width = 63;
             // 
             // Blocos
             // 
-            this.Blocos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Blocos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Blocos.HeaderText = "Blocos";
             this.Blocos.Name = "Blocos";
+            this.Blocos.Width = 76;
             // 
             // NomePredio
             // 
@@ -210,9 +234,9 @@
             // Apartamentos
             // 
             this.Apartamentos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Apartamentos.HeaderText = "";
+            this.Apartamentos.HeaderText = "Apartamentos";
             this.Apartamentos.Name = "Apartamentos";
-            this.Apartamentos.Width = 5;
+            this.Apartamentos.Width = 110;
             // 
             // Alterar
             // 
@@ -228,24 +252,12 @@
             this.Excluir.Name = "Excluir";
             this.Excluir.Width = 5;
             // 
-            // ckbExcluidos
-            // 
-            this.ckbExcluidos.AutoSize = true;
-            this.ckbExcluidos.Font = new System.Drawing.Font("Century", 11.25F);
-            this.ckbExcluidos.Location = new System.Drawing.Point(387, 71);
-            this.ckbExcluidos.Name = "ckbExcluidos";
-            this.ckbExcluidos.Size = new System.Drawing.Size(96, 22);
-            this.ckbExcluidos.TabIndex = 30;
-            this.ckbExcluidos.Text = "Excluídos";
-            this.ckbExcluidos.UseVisualStyleBackColor = true;
-            this.ckbExcluidos.CheckedChanged += new System.EventHandler(this.ckbExcluidos_CheckedChanged);
-            // 
             // frmConsultarPredios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(546, 428);
+            this.ClientSize = new System.Drawing.Size(597, 464);
             this.Controls.Add(this.dgvPredios);
             this.Controls.Add(this.pnTop);
             this.MaximizeBox = false;
@@ -268,14 +280,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbBlocos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox ckbExcluidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PredioID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Blocos;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomePredio;
         private System.Windows.Forms.DataGridViewTextBoxColumn QtdApt;
         private System.Windows.Forms.DataGridViewButtonColumn Apartamentos;
         private System.Windows.Forms.DataGridViewButtonColumn Alterar;
         private System.Windows.Forms.DataGridViewButtonColumn Excluir;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox ckbExcluidos;
     }
 }
