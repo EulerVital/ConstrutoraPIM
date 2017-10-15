@@ -20,5 +20,7 @@ namespace ENT
         public int AndarPredio { get; set; }
         public decimal ValorApartamento { get; set; }
         public ePredio Predio { get; set; }
+        public bool IsCadAutomatico { get; set; }
+        public string AptAndar { get; set; }
     }
 }

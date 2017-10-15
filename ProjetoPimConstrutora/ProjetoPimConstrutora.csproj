@@ -504,6 +504,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Edit.png" />
+    <None Include="Resources\enviar.gif" />
     <Content Include="Resources\IconeSistemaDesktop.ico" />
     <Content Include="Resources\View_icon-icons.com_71837.png" />
     <None Include="Resources\View_icon-icons.com_718371.png" />

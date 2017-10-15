@@ -109,8 +109,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmConsultarApartamentos frm = new frmConsultarApartamentos();
-            frm.MdiParent = this;
+            frmConsultarApartamentos frm = new frmConsultarApartamentos(this);
             frm.Show();
         }
 

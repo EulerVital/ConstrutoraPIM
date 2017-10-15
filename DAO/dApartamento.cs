@@ -103,9 +103,11 @@ namespace DAO
                 obj.Predio.Bloco.Condominio.Endereco = GetString("Endereco", dr);
                 obj.Predio.Bloco.Condominio.CEP = GetString("CEP", dr);
                 obj.Predio.Bloco.Condominio.Bairro = GetString("Bairro", dr);
-                obj.Predio.Bloco.Condominio.Cidade.CidadeID = GetString("CidadeID", dr);
+                obj.Predio.Bloco.Condominio.Cidade.CidadeID = GetInt32("CidadeID", dr).ToString();
                 obj.Predio.Bloco.Condominio.Cidade.Nome = GetString("CidadeNome", dr);
                 obj.Predio.Bloco.Condominio.Excluido = GetBooleanNullable("CondominioExcluido", dr);
+                obj.IsCadAutomatico = GetBoolean("IsCadAutomatico", dr);
+                obj.AptAndar = "APT." + obj.NumeroApartamento + "-" + obj.AndarPredio;
 
                 return obj;
             }
@@ -121,17 +123,18 @@ namespace DAO
             try
             {
                 cmd = new SqlCommand();
-                param = new SqlParameter[6];
+                param = new SqlParameter[7];
 
                 if (string.IsNullOrEmpty(obj.ApartamentoID))
                     obj.ApartamentoID = "0";
 
-                MontarParametro(0, param, ParameterDirection.Input, "@BlocoID", obj.ApartamentoID, SqlDbType.Int);
-                MontarParametro(1, param, ParameterDirection.Input, "@Nome", obj.NumeroApartamento, SqlDbType.Int);
+                MontarParametro(0, param, ParameterDirection.Input, "@ApartamentoID", obj.ApartamentoID, SqlDbType.Int);
+                MontarParametro(1, param, ParameterDirection.Input, "@NumeroApartamento", obj.NumeroApartamento, SqlDbType.Int);
                 MontarParametro(2, param, ParameterDirection.Input, "@TipoEstadiaID", obj.TipoEstadia.TipoEstadiaID, SqlDbType.Int);
                 MontarParametro(3, param, ParameterDirection.Input, "@AndarPredio", obj.AndarPredio, SqlDbType.Int);
                 MontarParametro(4, param, ParameterDirection.Input, "@ValorApartamento", obj.ValorApartamento, SqlDbType.Decimal);
                 MontarParametro(5, param, ParameterDirection.Input, "@PredioID", obj.Predio.PredioID, SqlDbType.Int);
+                MontarParametro(6, param, ParameterDirection.Input, "@IsCadAutomatico", obj.IsCadAutomatico, SqlDbType.Bit);
 
                 retorno = Convert.ToString(ExecScalar("USP_APARTAMENTO_SET", cmd, param));
             }

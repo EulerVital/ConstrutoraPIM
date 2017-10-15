@@ -18,18 +18,27 @@ namespace ProjetoPimConstrutora.Forms
         private List<ePredio> ListaPredio { get; set; }
         private List<eCondominio> ListaCondominio { get; set; }
         private List<eBloco> ListaBloco { get; set; }
+        private eApartamento objApartamento { get; set; }
+        private List<eApartamento> ListaApartamentosSalvos { get; set; }
+        private List<eApartamento> ListaApartamento { get; set; } 
+        
         public frmCadastrarApartamento(frmPrincipal frm, eApartamento obj)
         {
             InitializeComponent();
 
             ListaCondominio = new List<eCondominio>();
             ListaBloco = new List<eBloco>();
+            ListaApartamentosSalvos = new List<eApartamento>();
 
             CarregarComboCondominioPrincipal(true);
         }
 
         #region Eventos
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            SalvarApartamento();
+        }
         private void cmbCondominio_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbCondominio.SelectedIndex > 0)
@@ -60,7 +69,14 @@ namespace ProjetoPimConstrutora.Forms
                 if (lstPredios.DataSource != null)
                 {
                     pnCadastro.Enabled = true;
-                }else
+
+                    if (ListaApartamentosSalvos.Exists(c => c.Predio.PredioID == ((ePredio)lstPredios.SelectedItem).PredioID))
+                    {
+                        CarregarApartamentos(ListaApartamentosSalvos);
+                    }
+
+                }
+                else
                 {
                     pnCadastro.Enabled = false;
                 }
@@ -95,17 +111,199 @@ namespace ProjetoPimConstrutora.Forms
             }
         }
 
+        private void cmbTipoEstadia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbTipoEstadia.SelectedIndex > 0)
+            {
+                var tipoestadia = (eTipoEstadia)cmbTipoEstadia.SelectedItem;
+                if (tipoestadia.ValorFixo != null)
+                {
+                    txtValorApt.Text = tipoestadia.ValorFixo.ToString();
+                }
+            }else
+            {
+                txtValorApt.Clear();
+            }
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            CarregarComboCondominioPrincipal(true);
+            IsBloquearControles(false);
+            ListaApartamentosSalvos = new List<eApartamento>();
+        }
+
         #endregion
 
         #region Metodos
+
+        private void CarregarApartamentos(List<eApartamento> listaApartamentosSalvos)
+        {
+            lstApartamentos.DataSource = null;
+            lstApartamentos.DataSource = listaApartamentosSalvos;
+            lstApartamentos.DisplayMember = "AptAndar";
+            lstApartamentos.ValueMember = "ApartamentoID";
+        }
+
+        private void SalvarApartamento()
+        {
+            if (Validando())
+            {
+                if (ckbCadastroAutomatico.Checked)
+                {
+                    SalvandoAllApt();   
+                }
+                else
+                {
+                    try
+                    {
+                        int qtdApartamento = Convert.ToInt32(nudAndarPredio.Value * nudQtdAptAndar.Value);
+
+                        if (ListaApartamentosSalvos.Count < qtdApartamento)
+                        {
+                            ValidandoAndarApartamento();
+
+                            objApartamento.ApartamentoID = nApartamento.Apartamento_SET(objApartamento);
+                            if (objApartamento.Equals("0"))
+                            {
+                                Util.MensagemErro("Erro ao cadastrar apartamento.");
+                            }
+                            else
+                            {
+                                ListaApartamento = nApartamento.Apartamento_GET(new eApartamento() { Predio = objApartamento.Predio });
+                                ListaApartamentosSalvos = ListaApartamento;
+                                Util.MensagemSucesso("Apartamento " + objApartamento.NumeroApartamento + "-" + objApartamento.AndarPredio + " cadastrado com sucesso");
+                                CarregarApartamentos(ListaApartamento);
+                                IsBloquearControles(true);
+                            }
+                        }else
+                        {
+                            Util.MensagemInformacao("Limite de cadastro excedido para esse prédio");
+                        }
+                        
+                    }
+                    catch
+                    {
+                        Util.MensagemErro("Houve um problema ao caadastrar o apartamento, por gentileza contate o Desenvolvedor do sistema");
+                    }
+                }
+            }
+        }
+
+        private void IsBloquearControles(bool IsBloquear)
+        {
+            if (IsBloquear)
+            {
+                cmbCondominio.Enabled = false;
+                cmbBloco.Enabled = false;
+                lstPredios.Enabled = false;
+                nudAndarPredio.Enabled = false;
+                nudQtdAptAndar.Enabled = false;
+                ckbCadastroAutomatico.Enabled = false;
+                txtNumeroAndar.Clear();
+                txtNumeroAndar.Focus();
+                btnFinalizar.Visible = true;
+            }
+            else
+            {
+                cmbCondominio.Enabled = true;
+                cmbBloco.Enabled = true;
+                lstPredios.Enabled = true;
+                nudAndarPredio.Enabled = true;
+                nudQtdAptAndar.Enabled = true;
+                ckbCadastroAutomatico.Enabled = true;
+                btnFinalizar.Visible = false;
+                lstApartamentos.DataSource = null;
+            }
+        }
+
+        private void ValidandoAndarApartamento()
+        {
+            if (ListaApartamentosSalvos.Count > 0)
+            {
+                //pegando o valor maximo do campo Andar
+                int ultimoAndar = ListaApartamentosSalvos.Max(c => c.AndarPredio);
+                if (ListaApartamentosSalvos.Count(c => c.AndarPredio == ultimoAndar) < nudQtdAptAndar.Value)
+                {
+                    objApartamento.AndarPredio = ultimoAndar;
+                }
+                else
+                {
+                    objApartamento.AndarPredio = ultimoAndar + 1;
+                }
+
+                objApartamento.AptAndar = "APT. " + objApartamento.NumeroApartamento + "-" + objApartamento.AndarPredio;
+            }
+            else
+            {
+                objApartamento.AndarPredio = 1;
+                objApartamento.AptAndar = "APT. " + objApartamento.NumeroApartamento + "-" + objApartamento.AndarPredio;
+            }
+        }
+
+        private bool Validando()
+        {
+            objApartamento = new eApartamento();
+            bool valido = false;
+
+            if(!string.IsNullOrEmpty(txtNumeroAndar.Text) && cmbTipoEstadia.SelectedIndex > 0
+                && !string.IsNullOrEmpty(txtValorApt.Text) && lstPredios.SelectedIndex > -1)
+            {
+                objApartamento.Predio = (ePredio)lstPredios.SelectedItem;
+                objApartamento.TipoEstadia = (eTipoEstadia)cmbTipoEstadia.SelectedItem;
+                objApartamento.ValorApartamento = decimal.Parse(txtValorApt.Text);
+                objApartamento.NumeroApartamento = int.Parse(txtNumeroAndar.Text);
+                objApartamento.IsCadAutomatico = ckbCadastroAutomatico.Checked;
+                valido = true;
+            }
+
+
+            return valido;
+        }
+
+        private int SalvandoAllApt()
+        {
+            int andar = 1;
+            int numApt = 1;
+
+            for (int i = 1; i <= nudAndarPredio.Value; i++)
+            {
+                for (int j = 0; j < nudQtdAptAndar.Value; j++)
+                {
+                    objApartamento.ApartamentoID = null;
+                    objApartamento.NumeroApartamento = numApt;
+                    objApartamento.AndarPredio = andar;
+                    objApartamento.ApartamentoID = nApartamento.Apartamento_SET(objApartamento);
+
+                    if (objApartamento.Equals("0"))
+                    {
+                        Util.MensagemErro("Houve um erro no precesso atual");
+                        numApt--;
+                    }
+
+                    numApt++;
+                }
+                andar++;
+            }
+
+            ListaApartamentosSalvos = nApartamento.Apartamento_GET(new eApartamento() { Predio = objApartamento.Predio });
+
+            if ((numApt-1) == int.Parse(txtNumeroAndar.Text))
+            {
+                Util.MensagemSucesso("Cadastro Automatico efetuado com sucesso, quantidade cadastrada: " + (numApt-1));
+                CarregarApartamentos(ListaApartamentosSalvos);
+            }
+
+            CarregarComboCondominioPrincipal(true);
+
+            return numApt;
+        }
 
         private void HabilitarCadastroAutomatico(bool isHabilitar)
         {
             if(isHabilitar)
             {
                 lblNumQtdApt.Text = "Qtd de Apts a serem cadastrados:";
-                lblQtdAptAndar.Text = "Qtd de Apts nos Andares:";
-                lblAndarQtPredio.Text = "Qtd de Andar no Prédio";
                 nudAndarPredio.Value = 1;
                 nudQtdAptAndar.Value = 1;
                 txtNumeroAndar.Enabled = false;
@@ -115,9 +313,7 @@ namespace ProjetoPimConstrutora.Forms
             }
             else
             {
-                lblQtdAptAndar.Text = "Qtd Apt no Andar:";
                 lblNumQtdApt.Text = "Número do Apartamento:";
-                lblAndarQtPredio.Text = "Andar no Prédio";
                 nudAndarPredio.Value = 1;
                 nudQtdAptAndar.Value = 1;
                 txtNumeroAndar.Enabled = true;
@@ -133,6 +329,7 @@ namespace ProjetoPimConstrutora.Forms
             nudAndarPredio.Value = 1;
             nudQtdAptAndar.Value = 0;
             txtNumeroAndar.Clear();
+            txtValorApt.Clear();
 
             if (((List<eTipoEstadia>)cmbTipoEstadia.DataSource).Count > 1)
             {
@@ -144,21 +341,38 @@ namespace ProjetoPimConstrutora.Forms
         {
             if (isCarregarBase)
             {
+                ListaApartamento = nApartamento.Apartamento_GET(new eApartamento());
                 ListaPredio = nPredio.Predio_GET(new ePredio()).Where(c => c.Bloco.BlocoID != "0").ToList();
+                var listaAux = new List<ePredio>();
 
                 foreach (var item in ListaPredio)
                 {
-                    if (!ListaCondominio.Exists(c => c.CondominioID == item.Bloco.Condominio.CondominioID) 
+                    if (ListaApartamento.Exists(c => c.Predio.PredioID == item.PredioID))
+                    {
+                        listaAux.Add(item);   
+                    }
+                }
+
+                foreach(var item in listaAux)
+                {
+                    ListaPredio.Remove(item);
+                }
+
+                foreach (var item in ListaPredio)
+                {
+
+                    if (!ListaCondominio.Exists(c => c.CondominioID == item.Bloco.Condominio.CondominioID)
                         && item.Bloco.Condominio.CondominioID != "0" && item.Bloco.Condominio.Excluido == false)
                     {
                         ListaCondominio.Add(item.Bloco.Condominio);
 
-                        if (!ListaBloco.Exists(c => c.BlocoID == item.Bloco.BlocoID) && item.Bloco.BlocoID != "0" 
+                        if (!ListaBloco.Exists(c => c.BlocoID == item.Bloco.BlocoID) && item.Bloco.BlocoID != "0"
                             && item.Bloco.StatusAtivo == true)
                         {
                             ListaBloco.Add(item.Bloco);
                         }
                     }
+                    
                 }
 
                 var lista = nTipoEstadia.TipoEstadia_GET(new eTipoEstadia()).Where(c => c.Excluido == false).ToList();
@@ -214,5 +428,11 @@ namespace ProjetoPimConstrutora.Forms
         }
 
         #endregion
+
+        private void txtNumeroAndar_TextChanged(object sender, EventArgs e)
+        {
+            txtNumeroAndar.Text = Util.RemoveLetras(txtNumeroAndar.Text).ToUpper();
+            txtNumeroAndar.Select(txtNumeroAndar.TextLength, 0);
+        }
     }
 }

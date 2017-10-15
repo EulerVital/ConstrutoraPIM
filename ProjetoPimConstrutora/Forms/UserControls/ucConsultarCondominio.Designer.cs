@@ -274,55 +274,49 @@
             // 
             // NomeCondominio
             // 
-            this.NomeCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.NomeCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NomeCondominio.HeaderText = "Nome";
             this.NomeCondominio.Name = "NomeCondominio";
             this.NomeCondominio.ReadOnly = true;
-            this.NomeCondominio.Width = 72;
             // 
             // EstadoCondominio
             // 
-            this.EstadoCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.EstadoCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.EstadoCondominio.HeaderText = "Estado";
             this.EstadoCondominio.Name = "EstadoCondominio";
             this.EstadoCondominio.ReadOnly = true;
-            this.EstadoCondominio.Width = 79;
             // 
             // CidadeCondominio
             // 
-            this.CidadeCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.CidadeCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.CidadeCondominio.HeaderText = "Cidade";
             this.CidadeCondominio.Name = "CidadeCondominio";
             this.CidadeCondominio.ReadOnly = true;
-            this.CidadeCondominio.Width = 79;
             // 
             // BairroCondominio
             // 
-            this.BairroCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.BairroCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.BairroCondominio.HeaderText = "Bairro";
             this.BairroCondominio.Name = "BairroCondominio";
             this.BairroCondominio.ReadOnly = true;
-            this.BairroCondominio.Width = 77;
             // 
             // EnderecoCondominio
             // 
-            this.EnderecoCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.EnderecoCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.EnderecoCondominio.HeaderText = "Endereço";
             this.EnderecoCondominio.Name = "EnderecoCondominio";
             this.EnderecoCondominio.ReadOnly = true;
-            this.EnderecoCondominio.Width = 95;
             // 
             // CepCondominio
             // 
-            this.CepCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.CepCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.CepCondominio.HeaderText = "CEP";
             this.CepCondominio.Name = "CepCondominio";
             this.CepCondominio.ReadOnly = true;
-            this.CepCondominio.Width = 63;
             // 
             // BlocosCondominio
             // 
-            this.BlocosCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.BlocosCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
@@ -335,11 +329,10 @@
             this.BlocosCondominio.ReadOnly = true;
             this.BlocosCondominio.Text = "VER";
             this.BlocosCondominio.UseColumnTextForButtonValue = true;
-            this.BlocosCondominio.Width = 86;
             // 
             // AlterarCondominio
             // 
-            this.AlterarCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.AlterarCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
@@ -350,11 +343,10 @@
             this.AlterarCondominio.HeaderText = "Alterar Dados";
             this.AlterarCondominio.Name = "AlterarCondominio";
             this.AlterarCondominio.ReadOnly = true;
-            this.AlterarCondominio.Width = 99;
             // 
             // StatusCondominio
             // 
-            this.StatusCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.StatusCondominio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.LimeGreen;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
@@ -365,7 +357,6 @@
             this.StatusCondominio.HeaderText = "Status";
             this.StatusCondominio.Name = "StatusCondominio";
             this.StatusCondominio.ReadOnly = true;
-            this.StatusCondominio.Width = 59;
             // 
             // ucConsultarCondominio
             // 
