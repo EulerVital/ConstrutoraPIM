@@ -505,7 +505,10 @@
   <ItemGroup>
     <Content Include="Resources\Edit.png" />
     <None Include="Resources\enviar.gif" />
+    <None Include="Resources\familia.png" />
+    <None Include="Resources\familia_01.png" />
     <Content Include="Resources\IconeSistemaDesktop.ico" />
+    <None Include="Resources\user_accounts_15362.png" />
     <Content Include="Resources\View_icon-icons.com_71837.png" />
     <None Include="Resources\View_icon-icons.com_718371.png" />
   </ItemGroup>

@@ -35,10 +35,17 @@ namespace ProjetoPimConstrutora.Forms
 
         #region Eventos
 
+        private void txtNumeroAndar_TextChanged(object sender, EventArgs e)
+        {
+            txtNumeroAndar.Text = Util.RemoveLetras(txtNumeroAndar.Text).ToUpper();
+            txtNumeroAndar.Select(txtNumeroAndar.TextLength, 0);
+        }
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             SalvarApartamento();
         }
+
         private void cmbCondominio_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbCondominio.SelectedIndex > 0)
@@ -171,7 +178,6 @@ namespace ProjetoPimConstrutora.Forms
                             else
                             {
                                 ListaApartamento = nApartamento.Apartamento_GET(new eApartamento() { Predio = objApartamento.Predio });
-                                ListaApartamentosSalvos = ListaApartamento;
                                 Util.MensagemSucesso("Apartamento " + objApartamento.NumeroApartamento + "-" + objApartamento.AndarPredio + " cadastrado com sucesso");
                                 CarregarApartamentos(ListaApartamento);
                                 IsBloquearControles(true);
@@ -292,6 +298,7 @@ namespace ProjetoPimConstrutora.Forms
             {
                 Util.MensagemSucesso("Cadastro Automatico efetuado com sucesso, quantidade cadastrada: " + (numApt-1));
                 CarregarApartamentos(ListaApartamentosSalvos);
+                ListaApartamentosSalvos = new List<eApartamento>();
             }
 
             CarregarComboCondominioPrincipal(true);
@@ -429,10 +436,5 @@ namespace ProjetoPimConstrutora.Forms
 
         #endregion
 
-        private void txtNumeroAndar_TextChanged(object sender, EventArgs e)
-        {
-            txtNumeroAndar.Text = Util.RemoveLetras(txtNumeroAndar.Text).ToUpper();
-            txtNumeroAndar.Select(txtNumeroAndar.TextLength, 0);
-        }
     }
 }

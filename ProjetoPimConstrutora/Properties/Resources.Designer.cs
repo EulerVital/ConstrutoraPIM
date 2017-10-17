@@ -123,6 +123,26 @@ namespace ProjetoPimConstrutora.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap familia {
+            get {
+                object obj = ResourceManager.GetObject("familia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap familia_01 {
+            get {
+                object obj = ResourceManager.GetObject("familia_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap help {
             get {
                 object obj = ResourceManager.GetObject("help", resourceCulture);
@@ -166,6 +186,16 @@ namespace ProjetoPimConstrutora.Properties {
         internal static System.Drawing.Bitmap sem_usuario_masculino {
             get {
                 object obj = ResourceManager.GetObject("sem-usuario-masculino", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_accounts_15362 {
+            get {
+                object obj = ResourceManager.GetObject("user_accounts_15362", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
