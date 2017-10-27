@@ -74,6 +74,10 @@
             this.segurançaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuUtilitario = new System.Windows.Forms.ToolStripMenuItem();
+            this.UtiTipoTelefone = new System.Windows.Forms.ToolStripMenuItem();
+            this.UtilTipoTelCad = new System.Windows.Forms.ToolStripMenuItem();
+            this.UtilTipoTelCons = new System.Windows.Forms.ToolStripMenuItem();
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -101,7 +105,8 @@
             this.msMenuPrincipal.GripMargin = new System.Windows.Forms.Padding(10, 5, 0, 5);
             this.msMenuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msAdm,
-            this.reservaDeVagasToolStripMenuItem});
+            this.reservaDeVagasToolStripMenuItem,
+            this.menuUtilitario});
             this.msMenuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.msMenuPrincipal.Name = "msMenuPrincipal";
             this.msMenuPrincipal.ShowItemToolTips = true;
@@ -348,14 +353,15 @@
             // 
             this.msAdmMoradoresCad.BackColor = System.Drawing.Color.Transparent;
             this.msAdmMoradoresCad.Name = "msAdmMoradoresCad";
-            this.msAdmMoradoresCad.Size = new System.Drawing.Size(146, 22);
+            this.msAdmMoradoresCad.Size = new System.Drawing.Size(152, 22);
             this.msAdmMoradoresCad.Text = "Cadastar";
+            this.msAdmMoradoresCad.Click += new System.EventHandler(this.msAdmMoradoresCad_Click);
             // 
             // msAdmMoradoresCons
             // 
             this.msAdmMoradoresCons.BackColor = System.Drawing.Color.Transparent;
             this.msAdmMoradoresCons.Name = "msAdmMoradoresCons";
-            this.msAdmMoradoresCons.Size = new System.Drawing.Size(146, 22);
+            this.msAdmMoradoresCons.Size = new System.Drawing.Size(152, 22);
             this.msAdmMoradoresCons.Text = "Consultar";
             // 
             // msAdmFuncionario
@@ -494,6 +500,37 @@
             this.relatórioDeVigilânciaToolStripMenuItem.Text = "Relatório de Vigilância";
             this.relatórioDeVigilânciaToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeVigilânciaToolStripMenuItem_Click);
             // 
+            // menuUtilitario
+            // 
+            this.menuUtilitario.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.UtiTipoTelefone});
+            this.menuUtilitario.Name = "menuUtilitario";
+            this.menuUtilitario.Size = new System.Drawing.Size(94, 20);
+            this.menuUtilitario.Text = "Utilitarios";
+            // 
+            // UtiTipoTelefone
+            // 
+            this.UtiTipoTelefone.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.UtilTipoTelCad,
+            this.UtilTipoTelCons});
+            this.UtiTipoTelefone.Name = "UtiTipoTelefone";
+            this.UtiTipoTelefone.Size = new System.Drawing.Size(194, 22);
+            this.UtiTipoTelefone.Text = "Tipo de Telefone";
+            // 
+            // UtilTipoTelCad
+            // 
+            this.UtilTipoTelCad.Name = "UtilTipoTelCad";
+            this.UtilTipoTelCad.Size = new System.Drawing.Size(147, 22);
+            this.UtilTipoTelCad.Text = "Cadastrar";
+            this.UtilTipoTelCad.Click += new System.EventHandler(this.UtilTipoTelCad_Click);
+            // 
+            // UtilTipoTelCons
+            // 
+            this.UtilTipoTelCons.Name = "UtilTipoTelCons";
+            this.UtilTipoTelCons.Size = new System.Drawing.Size(147, 22);
+            this.UtilTipoTelCons.Text = "Consultar";
+            this.UtilTipoTelCons.Click += new System.EventHandler(this.UtilTipoTelCons_Click);
+            // 
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.LightGray;
@@ -502,7 +539,7 @@
             this.pnTop.Controls.Add(this.lblTitulo);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.ForeColor = System.Drawing.Color.Black;
-            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Location = new System.Drawing.Point(0, 24);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1174, 43);
             this.pnTop.TabIndex = 1;
@@ -540,9 +577,9 @@
             this.pnPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnPrincipal.Controls.Add(this.pnLogin);
             this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPrincipal.Location = new System.Drawing.Point(0, 43);
+            this.pnPrincipal.Location = new System.Drawing.Point(0, 67);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(1174, 460);
+            this.pnPrincipal.Size = new System.Drawing.Size(1174, 436);
             this.pnPrincipal.TabIndex = 2;
             // 
             // pnLogin
@@ -751,5 +788,9 @@
         public System.Windows.Forms.Panel pnPrincipal;
         private System.Windows.Forms.ToolStripMenuItem msAdmCondApartCadTipoEstadia;
         private System.Windows.Forms.ToolStripMenuItem msAdmCondApartConsTipoEstadia;
+        private System.Windows.Forms.ToolStripMenuItem menuUtilitario;
+        private System.Windows.Forms.ToolStripMenuItem UtiTipoTelefone;
+        private System.Windows.Forms.ToolStripMenuItem UtilTipoTelCad;
+        private System.Windows.Forms.ToolStripMenuItem UtilTipoTelCons;
     }
 }

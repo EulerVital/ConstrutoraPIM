@@ -256,6 +256,27 @@ namespace ProjetoPimConstrutora.Forms
             frm.Show();
         }
 
+        private void UtilTipoTelCad_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Visible = false;
+            pnPrincipal.Visible = false;
+            frmCadastrarTipoTelefone frm = new frmCadastrarTipoTelefone(this);
+        }
+
+        private void UtilTipoTelCons_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Visible = false;
+            pnPrincipal.Visible = false;
+            frmConsultarTipoTelefone frm = new frmConsultarTipoTelefone(this);
+        }
+
+        private void msAdmMoradoresCad_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Visible = false;
+            pnPrincipal.Visible = false;
+            new frmCadastrarMoradores(this);
+        }
+
         #endregion
 
         #region Metodos

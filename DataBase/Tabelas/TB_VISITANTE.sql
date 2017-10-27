@@ -27,3 +27,6 @@ ADD TipoVisitante CHAR(1) NOT NULL
 --R = Visitante Rapido
 --P = Visitante Prestador de Serviço
 --E = Visitante Estavél
+
+ALTER TABLE TB_VISITANTE
+ADD Excluido BIT NOT NULL DEFAULT(0)

@@ -60,16 +60,8 @@ BEGIN
 	WHERE
 		 PredioID = COALESCE(@PredioID, PredioID)
 	AND
-		 Nome = COALESCE(@Nome, Nome)
-	AND
 		 BlocoID = COALESCE(@BlocoID, BlocoID)
 	AND
-		 NomeBloco = COALESCE(@NomeBloco, NomeBloco)
-	AND
 		 CondominioID = COALESCE(@CondominioID, CondominioID)
-	AND
-		 NomeCondominio = COALESCE(@NomeCondominio, NomeCondominio)
-	AND
-		Excluido = COALESCE(@Excluido, Excluido)
 END
 GO

@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace ENT
 {
-   public class eVaga_Estacionamento
+    public class eVaga_Estacionamento
     {
-        public string VagaEstacionamento { get; set; }
+        public eVaga_Estacionamento()
+        {
+
+        }
+
+        public string VagaEstacionamentoID { get; set; }
         public string NumeroVaga { get; set; }
         public bool TipoVaga { get; set; }
         public bool ResevadaAlguel { get; set; }

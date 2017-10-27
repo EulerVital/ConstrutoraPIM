@@ -8,9 +8,17 @@ namespace ENT
 {
     public class eTelefone
     {
+        public eTelefone()
+        {
+            TipoTelefone = new eTipo_Telefone();
+            Morador = new eMorador();
+        }
+
         public string TelefoneID { get; set; }
         public string Contato { get; set; }
-        public eTelefone TipoTelefoneID { get; set; }
+        public eTipo_Telefone TipoTelefone { get; set; }
         public bool Excluido { get; set; }
+        public eMorador Morador { get; set; }
+
     }
 }

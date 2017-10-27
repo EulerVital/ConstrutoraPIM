@@ -7,7 +7,6 @@ BEGIN
 		,TipoVaga BIT NOT NULL
 		,ResevadaAluguel BIT NULL
 		,EstacionamentoID INT FOREIGN KEY(EstacionamentoID) REFERENCES TB_ESTACIONAMENTO
-		,MoradorID INT FOREIGN KEY(MoradorID) REFERENCES TB_MORADOR
 	)
 END
 GO

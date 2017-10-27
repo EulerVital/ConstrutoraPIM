@@ -124,11 +124,23 @@
     <Compile Include="Forms\frmCadastrarProfissao.Designer.cs">
       <DependentUpon>frmCadastrarProfissao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCadastrarTelefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarTelefone.Designer.cs">
+      <DependentUpon>frmCadastrarTelefone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastrarTipoEstadia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmCadastrarTipoEstadia.Designer.cs">
       <DependentUpon>frmCadastrarTipoEstadia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarTipoTelefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarTipoTelefone.Designer.cs">
+      <DependentUpon>frmCadastrarTipoTelefone.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmCadastrarUserAdm.cs">
       <SubType>Form</SubType>
@@ -189,6 +201,12 @@
     </Compile>
     <Compile Include="Forms\frmConsultarTipoEstadia.Designer.cs">
       <DependentUpon>frmConsultarTipoEstadia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConsultarTipoTelefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultarTipoTelefone.Designer.cs">
+      <DependentUpon>frmConsultarTipoTelefone.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmConsultarUsuario.cs">
       <SubType>Form</SubType>
@@ -336,8 +354,14 @@
     <EmbeddedResource Include="Forms\frmCadastrarProfissao.resx">
       <DependentUpon>frmCadastrarProfissao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarTelefone.resx">
+      <DependentUpon>frmCadastrarTelefone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarTipoEstadia.resx">
       <DependentUpon>frmCadastrarTipoEstadia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarTipoTelefone.resx">
+      <DependentUpon>frmCadastrarTipoTelefone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarUserAdm.resx">
       <DependentUpon>frmCadastrarUserAdm.cs</DependentUpon>
@@ -368,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarTipoEstadia.resx">
       <DependentUpon>frmConsultarTipoEstadia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultarTipoTelefone.resx">
+      <DependentUpon>frmConsultarTipoTelefone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarUsuario.resx">
       <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
@@ -494,12 +521,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\consultar_frm.png" />
     <Content Include="Resources\Edit.png" />
     <None Include="Resources\enviar.gif" />
     <None Include="Resources\familia.png" />
     <None Include="Resources\familia_01.png" />
     <Content Include="Resources\IconeSistemaDesktop.ico" />
     <None Include="Resources\user_accounts_15362.png" />
+    <None Include="Resources\tipo_contato.png" />
+    <None Include="Resources\tipo_contato_odl.png" />
+    <None Include="Resources\telefone_frm.png" />
     <Content Include="Resources\View_icon-icons.com_71837.png" />
     <None Include="Resources\View_icon-icons.com_718371.png" />
   </ItemGroup>
