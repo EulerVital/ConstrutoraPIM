@@ -111,7 +111,7 @@ namespace DAO
             }
         }
 
-        public string Estacionamento_SET(eBloco obj)
+        public string Estacionamento_SET(eEstacionamento obj)
         {
             string retorno = string.Empty;
             try
@@ -119,17 +119,17 @@ namespace DAO
                 cmd = new SqlCommand();
                 param = new SqlParameter[6];
 
-                if (string.IsNullOrEmpty(obj.BlocoID))
-                    obj.BlocoID = "0";
+                if (string.IsNullOrEmpty(obj.EstacionamentoID))
+                    obj.EstacionamentoID = "0";
 
-                MontarParametro(0, param, ParameterDirection.Input, "@BlocoID", obj.BlocoID, SqlDbType.Int);
+                MontarParametro(0, param, ParameterDirection.Input, "@EstacionamentoID", obj.EstacionamentoID, SqlDbType.Int);
                 MontarParametro(1, param, ParameterDirection.Input, "@Nome", obj.Nome, SqlDbType.VarChar);
-                MontarParametro(2, param, ParameterDirection.Input, "@QtdPredios", obj.QtdPredios, SqlDbType.Int);
-                MontarParametro(3, param, ParameterDirection.Input, "@TipoBloco", obj.TipoBloco, SqlDbType.Char);
-                MontarParametro(4, param, ParameterDirection.Input, "@StatusAtivo", obj.StatusAtivo, SqlDbType.Bit);
-                MontarParametro(5, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Int);
+                MontarParametro(2, param, ParameterDirection.Input, "@QtdVagas", obj.QtdVagas, SqlDbType.Int);
+                MontarParametro(3, param, ParameterDirection.Input, "@TipoEstacionamento", obj.TipoEstacionamento, SqlDbType.Char);
+                MontarParametro(4, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Int);
+                MontarParametro(5, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
 
-                retorno = Convert.ToString(ExecScalar("USP_BLOCO_SET", cmd, param));
+                retorno = Convert.ToString(ExecScalar("USP_ESTACIONAMENTO_SET", cmd, param));
             }
             catch (SqlException sqlex)
             {
