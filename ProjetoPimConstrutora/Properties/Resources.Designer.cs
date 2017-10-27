@@ -83,6 +83,16 @@ namespace ProjetoPimConstrutora.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap consultar_frm {
+            get {
+                object obj = ResourceManager.GetObject("consultar_frm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_add {
             get {
                 object obj = ResourceManager.GetObject("edit_add", resourceCulture);
@@ -186,6 +196,36 @@ namespace ProjetoPimConstrutora.Properties {
         internal static System.Drawing.Bitmap sem_usuario_masculino {
             get {
                 object obj = ResourceManager.GetObject("sem-usuario-masculino", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telefone_frm {
+            get {
+                object obj = ResourceManager.GetObject("telefone_frm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tipo_contato {
+            get {
+                object obj = ResourceManager.GetObject("tipo_contato", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tipo_contato_odl {
+            get {
+                object obj = ResourceManager.GetObject("tipo_contato_odl", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

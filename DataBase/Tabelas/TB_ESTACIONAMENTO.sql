@@ -1,4 +1,4 @@
-IF NOT EXISTS(select * from sys.tables  where name = 'TB_ESTACIONAMENTO')
+ IF NOT EXISTS(select * from sys.tables  where name = 'TB_ESTACIONAMENTO')
 BEGIN
 	CREATE TABLE TB_ESTACIONAMENTO
 	(

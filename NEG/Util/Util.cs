@@ -54,6 +54,11 @@ namespace NEG.Util
             return MessageBox.Show(valor, "Operação não realizada", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        public static DialogResult ConfimacaoOperacao(string valor = "Deseja realmente fazer essa operação ?")
+        {
+            return MessageBox.Show(valor, "Realizar operação ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+        }
+
         public static string RemoveLetras(string valor)
         {
             string aux = string.Empty;

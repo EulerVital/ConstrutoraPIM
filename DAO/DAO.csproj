@@ -47,9 +47,12 @@
     <Compile Include="dCondominio.cs" />
     <Compile Include="dEstacionamento.cs" />
     <Compile Include="dEstado.cs" />
+    <Compile Include="dMorador.cs" />
     <Compile Include="dPredio.cs" />
     <Compile Include="dProfissao.cs" />
+    <Compile Include="dTelefone.cs" />
     <Compile Include="dTipoEstadia.cs" />
+    <Compile Include="dTipo_Telefone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

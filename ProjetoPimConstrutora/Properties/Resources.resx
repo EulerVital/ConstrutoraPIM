@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="sem-usuario-masculino" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sem-usuario-masculino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="familia_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\familia_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_accounts_15362" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_accounts_15362.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tipo_contato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tipo_contato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="consultar_frm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consultar_frm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="familia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\familia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +151,14 @@
   <data name="178" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\178.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sem-usuario-masculino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sem-usuario-masculino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tipo_contato_odl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tipo_contato_odl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +172,7 @@
   <data name="4927_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4927_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="familia_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\familia_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="telefone_frm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telefone_frm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

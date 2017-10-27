@@ -33,6 +33,11 @@ CREATE PROC USP_BLOCO_SET
 )
 AS
 BEGIN
+	
+	IF @CondominioID = 0
+	BEGIN
+		SET @CondominioID = NULL
+	END
 
 	IF @BlocoID = 0
 	BEGIN
@@ -55,11 +60,11 @@ BEGIN
 	ELSE
 	BEGIN
 		UPDATE TB_BLOCO SET
-			 Nome = ISNULL(@Nome, Nome)
-			,QtdPredios = ISNULL(@QtdPredios, QtdPredios)
-			,CondominioID = ISNULL(@CondominioID, CondominioID)
-			,TipoBloco = ISNULL(@TipoBloco, TipoBloco)
-			,StatusAtivo = ISNULL(@StatusAtivo, StatusAtivo)
+			 Nome = @Nome
+			,QtdPredios = @QtdPredios
+			,CondominioID = @CondominioID
+			,TipoBloco = @TipoBloco
+			,StatusAtivo = @StatusAtivo
 		WHERE
 			BlocoID = @BlocoID
 	END

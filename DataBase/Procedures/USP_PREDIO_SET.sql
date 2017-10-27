@@ -42,7 +42,7 @@ BEGIN
 			,BlocoID
 			,Excluido
 		)SELECT
-				@Nome
+			 @Nome
 			,@QtdApartamentos
 			,@BlocoID
 			,@Excluido
@@ -52,10 +52,10 @@ BEGIN
 	ELSE
 	BEGIN
 		UPDATE TB_PREDIO SET
-			 Nome = ISNULL(@Nome, Nome)
-			,QtdApartamentos = ISNULL(@QtdApartamentos, QtdApartamentos)
-			,BlocoID = ISNULL(@BlocoID, BlocoID)
-			,Excluido = ISNULL(@Excluido, Excluido)
+			 Nome = @Nome
+			,QtdApartamentos = @QtdApartamentos
+			,BlocoID = @BlocoID
+			,Excluido = @Excluido
 		WHERE
 			PredioID = @PredioID
 	END

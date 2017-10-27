@@ -16,7 +16,7 @@ namespace DAO
         /// *********Criação*************
         /// Autor: Euler Vital
         /// Motivo: Classe Apartamento de Conexao com a base de dados
-        /// Data Criação: 17/09/2017
+        /// Data Criação: 17/10/2017
         /// ********Alteração************
         /// Autor: 
         /// Motivo:

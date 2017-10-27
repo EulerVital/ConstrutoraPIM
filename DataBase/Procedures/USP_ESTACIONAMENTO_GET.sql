@@ -54,15 +54,15 @@ BEGIN
 		,CondominioExcluido
 	FROM
 		UVW_ESTACIONAMENTO
-	WHERE
-		 EstacionamentoID = COALESCE(@EstacionamentoID, EstacionamentoID)
-	AND
-		 Nome = COALESCE(@Nome, Nome)
-	AND
-		 BlocoID = COALESCE(@BlocoID, BlocoID)
-	AND
-		 CondominioID = COALESCE(@CondominioID, CondominioID)
-	AND
-		 TipoEstacionamento = COALESCE(@TipoEstacionamento, TipoEstacionamento)
+	--WHERE
+	--	 EstacionamentoID = COALESCE(@EstacionamentoID, EstacionamentoID)
+	--AND
+	--	 Nome = COALESCE(@Nome, Nome)
+	--AND
+	--	 BlocoID = COALESCE(@BlocoID, BlocoID)
+	--AND
+	--	 CondominioID = COALESCE(@CondominioID, CondominioID)
+	--AND
+	--	 TipoEstacionamento = COALESCE(@TipoEstacionamento, TipoEstacionamento)
 END
 GO
