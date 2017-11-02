@@ -45,6 +45,7 @@
     <Compile Include="nBloco.cs" />
     <Compile Include="nCidade.cs" />
     <Compile Include="nCondominio.cs" />
+    <Compile Include="nEstacionamento.cs" />
     <Compile Include="nEstado.cs" />
     <Compile Include="nMorador.cs" />
     <Compile Include="nPredio.cs" />

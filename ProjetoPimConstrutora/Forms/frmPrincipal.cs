@@ -214,11 +214,11 @@ namespace ProjetoPimConstrutora.Forms
 
         private void msAdmCondEstaCons_Click(object sender, EventArgs e)
         {
-            lblTitulo.Visible = false;
-            pnPrincipal.Visible = false;
-            frmConsultarEstacionamento frm = new frmConsultarEstacionamento();
-            frm.MdiParent = this;
-            frm.Show();
+            //lblTitulo.Visible = false;
+            //pnPrincipal.Visible = false;
+            //frmConsultarEstacionamento frm = new frmConsultarEstacionamento();
+            //frm.MdiParent = this;
+            //frm.Show();
         }
 
         private void controleDeVagasToolStripMenuItem_Click(object sender, EventArgs e)

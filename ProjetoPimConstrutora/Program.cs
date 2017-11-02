@@ -17,7 +17,7 @@ namespace ProjetoPimConstrutora
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmCadastrarVagaEstacionamento());
         }
     }
 }

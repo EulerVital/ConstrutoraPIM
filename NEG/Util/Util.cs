@@ -9,6 +9,53 @@ namespace NEG.Util
 {
     public class Util
     {
+        private string caracteres = @"qwertyuiopéèúùíìòóaáàsdfghjklçãâôõûêzxcvbnm";
+        private string caracteresEspecias = @",.;:~^}º]{[ª+=§-_)(*&¨¬%¢$£#³²@¹!'/\ °?|´`";
+        private char aspasDuplas = '"';
+        private string numeros = "0123456789";
+        
+        public Util()
+        {
+            caracteresEspecias += aspasDuplas.ToString();
+        }
+
+        public string RetornaNumeros(string valor)
+        {
+            caracteres += caracteresEspecias;
+
+            char[] arrayChar = caracteres.ToCharArray();
+
+            foreach (var caracter in arrayChar)
+            {
+                valor = valor.ToLower().Replace(caracter.ToString(), "");
+            }
+            return valor.ToUpper();
+        }
+
+        public string RetornaLetras(string valor)
+        {
+            numeros += caracteresEspecias;
+
+            char[] arrayChar = numeros.ToCharArray();
+
+            foreach (var caracter in arrayChar)
+            {
+                valor = valor.ToLower().Replace(caracter.ToString(), "");
+            }
+            return valor.ToUpper();
+        }
+
+        public string RetornaNumerosLetras(string valor)
+        {
+            char[] arrayChar = caracteresEspecias.ToCharArray();
+
+            foreach (var caracter in arrayChar)
+            {
+                valor = valor.ToLower().Replace(caracter.ToString(), "");
+            }
+            return valor.ToUpper();
+        }
+
         /// <summary>
         /// Retorna valor passado ou valor nulo se não conter nenhum valor
         /// </summary>
