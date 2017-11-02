@@ -16,6 +16,7 @@ AS
 		,UltimoNome
 		,ISNULL(M.Nome + '.' + M.UltimoNome, 'ND') LoginSite
 		,DataNascimento
+		,IsResponsavel
 		,A.ApartamentoID
 		,A.NumeroApartamento
 		,A.ValorApartamento

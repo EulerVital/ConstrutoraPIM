@@ -111,7 +111,7 @@ namespace DAO
                     obj.TelefoneID = "0";
 
                 MontarParametro(0, param, ParameterDirection.Input, "@TelefoneID", obj.TelefoneID, SqlDbType.Int);
-                MontarParametro(1, param, ParameterDirection.Input, "@contato", obj.Contato, SqlDbType.VarChar);
+                MontarParametro(1, param, ParameterDirection.Input, "@Contato", obj.Contato, SqlDbType.VarChar);
                 MontarParametro(2, param, ParameterDirection.Input, "@TipoTelefoneID", obj.TipoTelefone.TipoTelefoneID, SqlDbType.Int);
                 MontarParametro(3, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
                 MontarParametro(4, param, ParameterDirection.Input, "@MoradorID", obj.Morador.MoradorID, SqlDbType.Int);

@@ -24,6 +24,7 @@ namespace ENT
         public string CPF { get; set; }
         public string Email { get; set; }
         public string CaminhoImagem { get; set; }
+        public bool IsResponsavel { get; set; }
         public DateTime DataNascimento { get; set; }
         public List<eTelefone> ListaTelefone { get; set; }
         public eVisitante Visitante { get; set; }

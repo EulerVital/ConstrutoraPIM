@@ -64,6 +64,8 @@ BEGIN
 				SELECT
 					 @contact
 					,@MoradorID
+
+				SET @TelefoneID = @contact
 			END
 		END
 		ELSE

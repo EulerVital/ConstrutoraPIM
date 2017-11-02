@@ -89,6 +89,7 @@ namespace DAO
                 obj.UltimoNome = GetString("UltimoNome", dr);
                 obj.DataNascimento = (DateTime)GetDateTimeNullable("DataNascimento", dr);
                 obj.LoginSite = GetString("LoginSite", dr);
+                obj.IsResponsavel = GetBoolean("IsResponsavel", dr);
                 obj.VagaEstacionamento.Estacionamento.EstacionamentoID = GetInt32("EstacionamentoID", dr).ToString();
                 obj.VagaEstacionamento.Estacionamento.Nome = GetString("NomeEstacionamento", dr);
                 obj.VagaEstacionamento.Estacionamento.QtdVagas = GetInt32("QtdVagas", dr);
@@ -140,7 +141,7 @@ namespace DAO
             try
             {
                 cmd = new SqlCommand();
-                param = new SqlParameter[10];
+                param = new SqlParameter[11];
 
                 if (string.IsNullOrEmpty(obj.MoradorID))
                     obj.MoradorID = "0";
@@ -155,6 +156,7 @@ namespace DAO
                 MontarParametro(7, param, ParameterDirection.Input, "@UltimoNome", obj.UltimoNome, SqlDbType.VarChar);
                 MontarParametro(8, param, ParameterDirection.Input, "@DataNascimento", obj.DataNascimento, SqlDbType.Date);
                 MontarParametro(9, param, ParameterDirection.Input, "@VagaEstacionamentoID", obj.VagaEstacionamento.VagaEstacionamentoID, SqlDbType.Int);
+                MontarParametro(10, param, ParameterDirection.Input, "@IsResponsavel", obj.IsResponsavel, SqlDbType.Bit);
 
                 retorno = Convert.ToString(ExecScalar("USP_MORADOR_SET", cmd, param));
             }

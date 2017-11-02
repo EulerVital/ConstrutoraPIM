@@ -41,6 +41,7 @@ BEGIN
 		,UltimoNome
 		,DataNascimento
 		,LoginSite
+		,IsResponsavel
 		,EstacionamentoID
 		,NomeEstacionamento
 		,QtdVagas

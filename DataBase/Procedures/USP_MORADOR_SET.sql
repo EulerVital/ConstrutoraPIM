@@ -34,6 +34,7 @@ CREATE PROC USP_MORADOR_SET
 	,@UltimoNome VARCHAR(50) = NULL
 	,@DataNascimento DATE
 	,@VagaEstacionamentoID INT = NULL
+	,@IsResponsavel BIT = 0
 )
 AS
 BEGIN
@@ -52,6 +53,7 @@ BEGIN
 				,UltimoNome
 				,DataNascimento
 				,VagaEstacionamentoID
+				,IsResponsavel
 			)SELECT
 				 @Nome
 				,@RG
@@ -62,6 +64,7 @@ BEGIN
 				,@UltimoNome
 				,@DataNascimento
 				,@VagaEstacionamentoID
+				,@IsResponsavel
 
 			SET @MoradorID = @@IDENTITY
 		END
@@ -78,6 +81,7 @@ BEGIN
 			,UltimoNome = @UltimoNome
 			,DataNascimento = @DataNascimento
 			,VagaEstacionamentoID = @VagaEstacionamentoID
+			,IsResponsavel = @IsResponsavel
 		WHERE
 			MoradorID = @MoradorID
 	END

@@ -31,7 +31,7 @@ CREATE PROC USP_TELEFONE_GET
 )
 AS
 BEGIN
-	SELECT
+	SELECT DISTINCT
 		 T.TelefoneID
 		,Contato
 		,ISNULL(Excluido, 0) Excluido
