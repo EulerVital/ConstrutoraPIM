@@ -13,7 +13,7 @@ namespace ENT
             ListaTelefone = new List<eTelefone>();
             Visitante = new eVisitante();
             Apartamento = new eApartamento();
-            VagaEstacionamento = new eVaga_Estacionamento();
+            VagaEstacionamento = new eVagaEstacionamento();
         }
 
         public string MoradorID { get; set; }
@@ -25,10 +25,11 @@ namespace ENT
         public string Email { get; set; }
         public string CaminhoImagem { get; set; }
         public bool IsResponsavel { get; set; }
+        public bool Excluido { get; set; }
         public DateTime DataNascimento { get; set; }
         public List<eTelefone> ListaTelefone { get; set; }
         public eVisitante Visitante { get; set; }
         public eApartamento Apartamento { get; set; }
-        public eVaga_Estacionamento VagaEstacionamento { get; set; }
+        public eVagaEstacionamento VagaEstacionamento { get; set; }
     }
 }

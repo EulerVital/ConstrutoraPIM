@@ -28,7 +28,7 @@ namespace DAO.DBase
         /// </summary>
         public DBase()
         {
-            try { strConn = ("Data Source=DESKTOP-GJVH4KJ;" +
+            try { strConn = ("Data Source=DESKTOP-URPHR1B;" +
             "Initial catalog=Construtora;" +
             "integrated security=true");
             }

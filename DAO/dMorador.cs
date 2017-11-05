@@ -94,6 +94,7 @@ namespace DAO
                 obj.VagaEstacionamento.Estacionamento.Nome = GetString("NomeEstacionamento", dr);
                 obj.VagaEstacionamento.Estacionamento.QtdVagas = GetInt32("QtdVagas", dr);
                 obj.VagaEstacionamento.Estacionamento.TipoEstacionamento = GetString("TipoEstacionamento", dr);
+                obj.Apartamento.ApartamentoID = GetInt32("ApartamentoID", dr).ToString();
                 obj.Apartamento.NumeroApartamento = GetInt32("NumeroMorador", dr);
                 obj.Apartamento.AndarPredio = GetInt32("AndarPredio", dr);
                 obj.Apartamento.ValorApartamento = GetDecimal("ValorApartamento", dr);
@@ -106,7 +107,7 @@ namespace DAO
                 obj.Apartamento.Predio.QtdApartamentos = GetInt32("QtdApartamentos", dr);
                 obj.Apartamento.Predio.Bloco.BlocoID = GetInt32("BlocoID", dr).ToString();
                 obj.Apartamento.Predio.Bloco.Nome = GetString("NomeBloco", dr);
-                obj.Apartamento.Predio.Excluido = GetBooleanNullable("Excluido", dr);
+                obj.Apartamento.Predio.Excluido = GetBooleanNullable("ExcluidoBloco", dr);
                 obj.Apartamento.Predio.Bloco.QtdPredios = GetInt32("QtdPredios", dr);
                 obj.Apartamento.Predio.Bloco.TipoBloco = GetString("TipoBloco", dr);
                 obj.Apartamento.Predio.Bloco.StatusAtivo = GetBooleanNullable("StatusAtivo", dr);
@@ -141,7 +142,7 @@ namespace DAO
             try
             {
                 cmd = new SqlCommand();
-                param = new SqlParameter[11];
+                param = new SqlParameter[12];
 
                 if (string.IsNullOrEmpty(obj.MoradorID))
                     obj.MoradorID = "0";
@@ -157,6 +158,7 @@ namespace DAO
                 MontarParametro(8, param, ParameterDirection.Input, "@DataNascimento", obj.DataNascimento, SqlDbType.Date);
                 MontarParametro(9, param, ParameterDirection.Input, "@VagaEstacionamentoID", obj.VagaEstacionamento.VagaEstacionamentoID, SqlDbType.Int);
                 MontarParametro(10, param, ParameterDirection.Input, "@IsResponsavel", obj.IsResponsavel, SqlDbType.Bit);
+                MontarParametro(11, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
 
                 retorno = Convert.ToString(ExecScalar("USP_MORADOR_SET", cmd, param));
             }

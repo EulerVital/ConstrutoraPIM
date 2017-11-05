@@ -29,6 +29,7 @@ AS
 		,E.Nome
 		,E.QtdVagas
 		,ISNULL(TipoEstacionamento, 'ND') TipoEstacionamento
+		,E.Excluido
 		,ISNULL(B.BlocoID, 0) BlocoID
 		,ISNULL(B.Nome, 'ND') NomeBloco
 		,ISNULL(B.QtdPredios, 0) QtdPredios

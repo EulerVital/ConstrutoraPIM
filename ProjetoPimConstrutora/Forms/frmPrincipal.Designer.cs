@@ -275,7 +275,7 @@
             // 
             this.msAdmCondEstaCad.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondEstaCad.Name = "msAdmCondEstaCad";
-            this.msAdmCondEstaCad.Size = new System.Drawing.Size(146, 22);
+            this.msAdmCondEstaCad.Size = new System.Drawing.Size(152, 22);
             this.msAdmCondEstaCad.Text = "Cadastar";
             this.msAdmCondEstaCad.Click += new System.EventHandler(this.msAdmCondEstaCad_Click);
             // 
@@ -283,7 +283,7 @@
             // 
             this.msAdmCondEstaCons.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondEstaCons.Name = "msAdmCondEstaCons";
-            this.msAdmCondEstaCons.Size = new System.Drawing.Size(146, 22);
+            this.msAdmCondEstaCons.Size = new System.Drawing.Size(152, 22);
             this.msAdmCondEstaCons.Text = "Consultar";
             this.msAdmCondEstaCons.Click += new System.EventHandler(this.msAdmCondEstaCons_Click);
             // 
@@ -353,7 +353,7 @@
             // 
             this.msAdmMoradoresCad.BackColor = System.Drawing.Color.Transparent;
             this.msAdmMoradoresCad.Name = "msAdmMoradoresCad";
-            this.msAdmMoradoresCad.Size = new System.Drawing.Size(152, 22);
+            this.msAdmMoradoresCad.Size = new System.Drawing.Size(146, 22);
             this.msAdmMoradoresCad.Text = "Cadastar";
             this.msAdmMoradoresCad.Click += new System.EventHandler(this.msAdmMoradoresCad_Click);
             // 
@@ -361,8 +361,9 @@
             // 
             this.msAdmMoradoresCons.BackColor = System.Drawing.Color.Transparent;
             this.msAdmMoradoresCons.Name = "msAdmMoradoresCons";
-            this.msAdmMoradoresCons.Size = new System.Drawing.Size(152, 22);
+            this.msAdmMoradoresCons.Size = new System.Drawing.Size(146, 22);
             this.msAdmMoradoresCons.Text = "Consultar";
+            this.msAdmMoradoresCons.Click += new System.EventHandler(this.msAdmMoradoresCons_Click);
             // 
             // msAdmFuncionario
             // 

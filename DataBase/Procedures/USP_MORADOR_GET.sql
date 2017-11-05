@@ -24,7 +24,7 @@ GO
 
 CREATE PROC USP_MORADOR_GET
 (
-	 @MoradorID INT = 0
+	 @MoradorID INT = NULL
 	,@Nome VARCHAR(100) = NULL
 	,@ApartamentoID INT = NULL
 	,@VagaEstacionamentoID INT = NULL
@@ -36,12 +36,12 @@ BEGIN
 		,Nome
 		,RG
 		,CPF
-		,Emaial
+		,Email
 		,CaminhoImagem
 		,UltimoNome
 		,DataNascimento
-		,LoginSite
 		,IsResponsavel
+		,Excluido
 		,EstacionamentoID
 		,NomeEstacionamento
 		,QtdVagas
@@ -60,7 +60,7 @@ BEGIN
 		,QtdApartamentos
 		,BlocoID
 		,NomeBloco
-		,Excluido
+		,ExcluidoBloco
 		,QtdPredios
 		,TipoBloco
 		,StatusAtivo

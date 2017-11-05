@@ -11,11 +11,12 @@ AS
 		,ISNULL(M.Nome, 'ND') Nome
 		,ISNULL(RG, 'ND') RG
 		,ISNULL(CPF, '') CPF
-		,ISNULL(Email, 'ND') Emaial
+		,ISNULL(Email, 'ND') Email
 		,ISNULL(CaminhoImagem, '') CaminhoImagem
 		,UltimoNome
 		,ISNULL(M.Nome + '.' + M.UltimoNome, 'ND') LoginSite
 		,DataNascimento
+		,M.Excluido 
 		,IsResponsavel
 		,A.ApartamentoID
 		,A.NumeroApartamento
@@ -31,7 +32,7 @@ AS
 		,A.QtdApartamentos
 		,A.BlocoID
 		,A.NomeBloco
-		,A.Excluido
+		,A.Excluido ExcluidoBloco
 		,A.QtdPredios
 		,A.TipoBloco
 		,A.StatusAtivo
@@ -45,14 +46,14 @@ AS
 		,A.CidadeID
 		,A.CidadeNome
 		,A.CondominioExcluido
-		,VE.VagaEstacionamentoID
-		,VE.NumeroVaga
-		,VE.TipoVaga
-		,VE.ResevadaAluguel
-		,VE.EstacionamentoID
-		,VE.Nome NomeEstacionamento
-		,VE.QtdVagas 
-		,VE.TipoEstacionamento
+		,ISNULL(VE.VagaEstacionamentoID, 0) VagaEstacionamentoID
+		,ISNULL(VE.NumeroVaga, 'ND') NumeroVaga
+		,ISNULL(VE.TipoVaga, 0) TipoVaga
+		,ISNULL(VE.ResevadaAluguel, 0) ResevadaAluguel
+		,ISNULL(VE.EstacionamentoID, 0) EstacionamentoID
+		,ISNULL(VE.Nome, 'ND') NomeEstacionamento
+		,ISNULL(VE.QtdVagas, 0) QtdVagas
+		,ISNULL(VE.TipoEstacionamento, 'ND') TipoEstacionamento
 	FROM
 		TB_MORADOR M
 	LEFT JOIN

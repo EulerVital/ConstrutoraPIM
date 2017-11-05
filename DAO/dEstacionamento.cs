@@ -43,17 +43,14 @@ namespace DAO
         {
             List<eEstacionamento> retorno = new List<eEstacionamento>();
             cmd = new SqlCommand();
-            param = new SqlParameter[6];
+            param = new SqlParameter[3];
 
             try
             {
 
                 MontarParametro(0, param, ParameterDirection.Input, "@EstacionamentoID", obj.EstacionamentoID, SqlDbType.Int);
-                MontarParametro(1, param, ParameterDirection.Input, "@Nome", obj.Nome, SqlDbType.VarChar);
-                MontarParametro(2, param, ParameterDirection.Input, "@QtdVagas", obj.QtdVagas, SqlDbType.Int);
-                MontarParametro(3, param, ParameterDirection.Input, "@TipoEstacionamento", obj.TipoEstacionamento, SqlDbType.Char);
-                MontarParametro(4, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Bit);
-                MontarParametro(5, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
+                MontarParametro(1, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Bit);
+                MontarParametro(2, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
 
                 dr = ExecReader("USP_ESTACIONAMENTO_GET", cmd, param);
 
@@ -88,6 +85,7 @@ namespace DAO
                 obj.Nome = GetString("Nome", dr);
                 obj.QtdVagas = GetInt32("QtdVagas", dr);
                 obj.TipoEstacionamento = GetString("TipoEstacionamento", dr);
+                obj.Excluido = GetBoolean("Excluido", dr);
                 obj.Bloco.BlocoID = GetInt32("BlocoID", dr).ToString();
                 obj.Bloco.Nome = GetString("NomeBloco", dr);
                 obj.Bloco.QtdPredios = GetInt32("QtdPredios", dr);
@@ -117,7 +115,7 @@ namespace DAO
             try
             {
                 cmd = new SqlCommand();
-                param = new SqlParameter[6];
+                param = new SqlParameter[7];
 
                 if (string.IsNullOrEmpty(obj.EstacionamentoID))
                     obj.EstacionamentoID = "0";
@@ -128,6 +126,7 @@ namespace DAO
                 MontarParametro(3, param, ParameterDirection.Input, "@TipoEstacionamento", obj.TipoEstacionamento, SqlDbType.Char);
                 MontarParametro(4, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Int);
                 MontarParametro(5, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
+                MontarParametro(6, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
 
                 retorno = Convert.ToString(ExecScalar("USP_ESTACIONAMENTO_SET", cmd, param));
             }

@@ -12,9 +12,9 @@ GO
 * Autor:Rafael Marques
 *********************
 **Alterações
-* Motivo:
-* Data Criação:
-* Autor:
+* Motivo: Add o campo excluido
+* Data Alteração: 05/11/2017 
+* Autor: Euler Vital
 *********************
 **Alterações
 * Motivo:
@@ -30,9 +30,20 @@ CREATE PROC USP_ESTACIONAMENTO_SET
 	,@TipoEstacionamento CHAR(1) = NULL
 	,@CondominioID INT = NULL
 	,@BlocoID INT = NULL
+	,@Excluido BIT = 0
 )
 AS
 BEGIN
+
+	IF @CondominioID = 0
+	BEGIN
+		SET @CondominioID = NULL
+	END 
+
+	IF @BlocoID = 0
+	BEGIN
+		SET @BlocoID = NULL
+	END 
 
 	IF @EstacionamentoID = 0
 	BEGIN
@@ -43,23 +54,26 @@ BEGIN
 			 ,TipoEstacionamento
 			 ,CondominioID
 			 ,BlocoID
+			 ,Excluido
 		)SELECT
 			 @Nome
 			,@QtdVagas
 			,@TipoEstacionamento
 			,@CondominioID
 			,@BlocoID
+			,@Excluido
 
 		SET @EstacionamentoID = @@IDENTITY
 	END
 	ELSE
 	BEGIN
 		UPDATE TB_ESTACIONAMENTO SET
-			 Nome = ISNULL(@Nome, Nome)
-			,QtdVagas = ISNULL(@QtdVagas, QtdVagas)
-			,TipoEstacionamento = ISNULL(@TipoEstacionamento, TipoEstacionamento)
-			,CondominioID = ISNULL(@CondominioID, CondominioID)
-			,BlocoID = ISNUll(@BlocoID,BlocoID)
+			 Nome = @Nome
+			,QtdVagas = @QtdVagas
+			,TipoEstacionamento = @TipoEstacionamento
+			,CondominioID = @CondominioID
+			,BlocoID = @BlocoID
+			,Excluido = @Excluido 
 		WHERE
 			EstacionamentoID = @EstacionamentoID
 	END

@@ -1,6 +1,13 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +20,7 @@ namespace NEG.Util
         private string caracteresEspecias = @",.;:~^}º]{[ª+=§-_)(*&¨¬%¢$£#³²@¹!'/\ °?|´`";
         private char aspasDuplas = '"';
         private string numeros = "0123456789";
-        
+
         public Util()
         {
             caracteresEspecias += aspasDuplas.ToString();
@@ -68,7 +75,7 @@ namespace NEG.Util
                 value = null;
             }
 
-           return value;
+            return value;
         }
 
         /// <summary>
@@ -116,10 +123,10 @@ namespace NEG.Util
             string aux = string.Empty;
             int valorAux = 0;
 
-            for(int i=0; i < valor.Length; i++)
+            for (int i = 0; i < valor.Length; i++)
             {
                 aux = valor.Substring(i);
-                if(!int.TryParse(aux, out valorAux))
+                if (!int.TryParse(aux, out valorAux))
                 {
                     valor = valor.Replace(aux, "");
                 }
@@ -261,6 +268,140 @@ namespace NEG.Util
 
             return cpf.EndsWith(digito);
 
+        }
+
+        public static bool ExportarTableExcel(DataGridView dgvExportar)
+        {
+            System.Data.DataTable dt = new System.Data.DataTable();
+
+            FolderBrowserDialog save = new FolderBrowserDialog();
+            bool isExport = false;
+
+            // este codigo verefica se a grid esta preenchida
+            //com um datatable
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                string caminhoArquivo = save.SelectedPath;
+
+                if (dgvExportar.DataSource is System.Data.DataTable)
+                {
+
+                    try
+                    {
+                        //--- se estiver pega e pass ao teu datatable 
+                        dt = ((System.Data.DataTable)dgvExportar.DataSource);
+
+                        dt.TableName = "Set";
+                        dt.WriteXml(caminhoArquivo + "\\" + dgvExportar.Name + "_" + DateTime.Now + "_..xls", System.Data.XmlWriteMode.IgnoreSchema);
+                        isExport = true;
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                }
+                else //-este else testa se a informacao no grid vem de um dataset
+                {
+                    try
+                    {
+                        dt = ((System.Data.DataTable)dgvExportar.DataSource);
+
+                        dt.TableName = "Set";
+                        dt.WriteXml(caminhoArquivo + "\\" + dgvExportar.Name + "_" + DateTime.Now + "_..xls", System.Data.XmlWriteMode.IgnoreSchema);
+                        isExport = true;
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
+            }
+
+            return isExport;
+        }
+
+        public static void ExportarGridExcel(DataGridView dgvDados)
+        {
+            Microsoft.Office.Interop.Excel.Application XcelApp = new Microsoft.Office.Interop.Excel.Application();
+
+            if (dgvDados.Rows.Count > 0)
+            {
+                try
+                {
+                    XcelApp.Application.Workbooks.Add(Type.Missing);
+                    for (int i = 1; i < dgvDados.Columns.Count + 1; i++)
+                    {
+                        XcelApp.Cells[1, i] = dgvDados.Columns[i - 1].HeaderText;
+                    }
+                    //
+                    for (int i = 0; i < dgvDados.Rows.Count - 1; i++)
+                    {
+                        for (int j = 0; j < dgvDados.Columns.Count; j++)
+                        {
+                            XcelApp.Cells[i + 2, j + 1] = dgvDados.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+                    //
+                    XcelApp.Columns.AutoFit();
+                    //
+                    XcelApp.Visible = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro : " + ex.Message);
+                    XcelApp.Quit();
+                }
+            }
+        }
+
+        public static bool ExportarGridPdf(DataGridView dgvDados)
+        {
+            FolderBrowserDialog save = new FolderBrowserDialog();
+            bool isExport = false;
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                //Creating iTextSharp Table from the DataTable data
+                PdfPTable pdfTable = new PdfPTable(dgvDados.ColumnCount);
+                pdfTable.DefaultCell.Padding = 3;
+                pdfTable.WidthPercentage = 100;
+                pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
+                pdfTable.DefaultCell.BorderWidth = 1;
+
+                //Adding Header row
+                foreach (DataGridViewColumn column in dgvDados.Columns)
+                {
+                    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                    cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
+                    pdfTable.AddCell(cell);
+                }
+
+                //Adding DataRow
+                foreach (DataGridViewRow row in dgvDados.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        pdfTable.AddCell(cell.Value.ToString());
+                    }
+                }
+
+                string caminhoFile = save.SelectedPath + "\\" + dgvDados.Name + "_" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day + "_" + DateTime.Now.Millisecond + ".pdf";
+
+                using (FileStream stream = new FileStream(caminhoFile, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A4, 5f, 5f, 15f, 0f);
+                    PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    pdfDoc.Add(pdfTable);
+                    pdfDoc.Close();
+                    stream.Close();
+                    isExport = true;
+                }
+            }
+
+            return isExport;
         }
     }
 }

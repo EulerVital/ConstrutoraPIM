@@ -70,6 +70,12 @@
     <Compile Include="Forms\frmAluguelEstacionamento.Designer.cs">
       <DependentUpon>frmAluguelEstacionamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCadastrarVagaEstacionamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarVagaEstacionamento.Designer.cs">
+      <DependentUpon>frmCadastrarVagaEstacionamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastrarApartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,11 +154,11 @@
     <Compile Include="Forms\frmCadastrarUserAdm.Designer.cs">
       <DependentUpon>frmCadastrarUserAdm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmCadastrarVagaEstacionamento.cs">
+    <Compile Include="Forms\frmCadastrarEstacionamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmCadastrarVagaEstacionamento.Designer.cs">
-      <DependentUpon>frmCadastrarVagaEstacionamento.cs</DependentUpon>
+    <Compile Include="Forms\frmCadastrarEstacionamento.Designer.cs">
+      <DependentUpon>frmCadastrarEstacionamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmConsultarApartamentos.cs">
       <SubType>Form</SubType>
@@ -171,6 +177,12 @@
     </Compile>
     <Compile Include="Forms\frmConsultarBlocos.Designer.cs">
       <DependentUpon>frmConsultarBlocos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConsultarEstacionamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultarEstacionamento.Designer.cs">
+      <DependentUpon>frmConsultarEstacionamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmConsultarFuncionario.cs">
       <SubType>Form</SubType>
@@ -226,6 +238,12 @@
     <Compile Include="Forms\frmControleVigilancia.Designer.cs">
       <DependentUpon>frmControleVigilancia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmEditarMorador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditarMorador.Designer.cs">
+      <DependentUpon>frmEditarMorador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmEscolherTipoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +255,12 @@
     </Compile>
     <Compile Include="Forms\frmIncluirBlocos.Designer.cs">
       <DependentUpon>frmIncluirBlocos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncluirEstacionamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncluirEstacionamento.Designer.cs">
+      <DependentUpon>frmIncluirEstacionamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmIncluirPredio.cs">
       <SubType>Form</SubType>
@@ -327,6 +351,9 @@
     <EmbeddedResource Include="Forms\frmAluguelEstacionamento.resx">
       <DependentUpon>frmAluguelEstacionamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarVagaEstacionamento.resx">
+      <DependentUpon>frmCadastrarVagaEstacionamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarApartamento.resx">
       <DependentUpon>frmCadastrarApartamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -366,8 +393,8 @@
     <EmbeddedResource Include="Forms\frmCadastrarUserAdm.resx">
       <DependentUpon>frmCadastrarUserAdm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmCadastrarVagaEstacionamento.resx">
-      <DependentUpon>frmCadastrarVagaEstacionamento.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmCadastrarEstacionamento.resx">
+      <DependentUpon>frmCadastrarEstacionamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarApartamentos.resx">
       <DependentUpon>frmConsultarApartamentos.cs</DependentUpon>
@@ -377,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarBlocos.resx">
       <DependentUpon>frmConsultarBlocos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultarEstacionamento.resx">
+      <DependentUpon>frmConsultarEstacionamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarFuncionario.resx">
       <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
@@ -405,11 +435,17 @@
     <EmbeddedResource Include="Forms\frmControleVigilancia.resx">
       <DependentUpon>frmControleVigilancia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditarMorador.resx">
+      <DependentUpon>frmEditarMorador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEscolherTipoUsuario.resx">
       <DependentUpon>frmEscolherTipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmIncluirBlocos.resx">
       <DependentUpon>frmIncluirBlocos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncluirEstacionamento.resx">
+      <DependentUpon>frmIncluirEstacionamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmIncluirPredio.resx">
       <DependentUpon>frmIncluirPredio.cs</DependentUpon>
@@ -526,11 +562,14 @@
     <None Include="Resources\enviar.gif" />
     <None Include="Resources\familia.png" />
     <None Include="Resources\familia_01.png" />
+    <None Include="Resources\expExcel.png" />
+    <None Include="Resources\expPdf.png" />
     <Content Include="Resources\IconeSistemaDesktop.ico" />
     <None Include="Resources\user_accounts_15362.png" />
     <None Include="Resources\tipo_contato.png" />
     <None Include="Resources\tipo_contato_odl.png" />
     <None Include="Resources\telefone_frm.png" />
+    <None Include="Resources\vagaEstacionamento.png" />
     <Content Include="Resources\View_icon-icons.com_71837.png" />
     <None Include="Resources\View_icon-icons.com_718371.png" />
   </ItemGroup>

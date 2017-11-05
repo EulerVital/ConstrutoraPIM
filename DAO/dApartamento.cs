@@ -37,18 +37,19 @@ namespace DAO
         SqlParameter[] param = null;
         #endregion
 
-        public List<eApartamento> Apartamento_GET(eApartamento obj)
+        public List<eApartamento> Apartamento_GET(eApartamento obj, bool? IsApartamentoSemMorador = null)
         {
             List<eApartamento> retorno = new List<eApartamento>();
             cmd = new SqlCommand();
-            param = new SqlParameter[3];
+            param = new SqlParameter[4];
 
             try
             {
 
                 MontarParametro(0, param, ParameterDirection.Input, "@ApartamentoID", obj.ApartamentoID, SqlDbType.Int);
-                MontarParametro(2, param, ParameterDirection.Input, "@PredioID", obj.Predio.PredioID, SqlDbType.Int);
-                MontarParametro(1, param, ParameterDirection.Input, "@NomePredio", obj.Predio.Nome, SqlDbType.VarChar);
+                MontarParametro(1, param, ParameterDirection.Input, "@PredioID", obj.Predio.PredioID, SqlDbType.Int);
+                MontarParametro(2, param, ParameterDirection.Input, "@NomePredio", obj.Predio.Nome, SqlDbType.VarChar);
+                MontarParametro(3, param, ParameterDirection.Input, "@IsApartamentoSemMorador", IsApartamentoSemMorador, SqlDbType.Bit);
 
                 dr = ExecReader("USP_APARTAMENTO_GET", cmd, param);
 

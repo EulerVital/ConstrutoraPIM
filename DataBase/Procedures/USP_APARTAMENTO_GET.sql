@@ -27,45 +27,142 @@ CREATE PROC USP_APARTAMENTO_GET
 	 @ApartamentoID INT  = NULL
 	,@PredioID INT = NULL
 	,@NomePredio VARCHAR(100) = NULL
+	,@IsApartamentoSemMorador BIT = NULL
 )
 AS
 BEGIN
-	SELECT
-		 ApartamentoID
-		,NumeroApartamento
-		,TipoEstadiaID
-		,TipoEstadiaNome
-		,ValorFixo
-		,IsCadAutomatico
-		,TipoEstadiaExcluido
-		,AndarPredio
-		,ValorApartamento
-		,PredioID
-		,Nome
-		,QtdApartamentos
-		,BlocoID
-		,NomeBloco
-		,Excluido
-		,QtdPredios
-		,TipoBloco
-		,StatusAtivo
-		,CondominioID
-		,NomeCondominio
-		,DataFundacao
-		,QtdBlocos
-		,Endereco
-		,CEP
-		,Bairro
-		,CidadeID
-		,CidadeNome
-		,CondominioExcluido
-	FROM
-		UVW_APARTAMENTO
-	WHERE
-		 ApartamentoID = COALESCE(@ApartamentoID, ApartamentoID)
-	AND
-		 PredioID = COALESCE(@PredioID, PredioID)
-	AND
-		 Nome = COALESCE(@NomePredio, Nome)
+	
+	IF @IsApartamentoSemMorador IS NULL
+	BEGIN
+		SELECT
+			 A.ApartamentoID
+			,A.NumeroApartamento
+			,A.TipoEstadiaID
+			,A.TipoEstadiaNome
+			,A.ValorFixo
+			,A.IsCadAutomatico
+			,A.TipoEstadiaExcluido
+			,A.AndarPredio
+			,A.ValorApartamento
+			,A.PredioID
+			,A.Nome
+			,A.QtdApartamentos
+			,A.BlocoID
+			,A.NomeBloco
+			,A.Excluido
+			,A.QtdPredios
+			,A.TipoBloco
+			,A.StatusAtivo
+			,A.CondominioID
+			,A.NomeCondominio
+			,A.DataFundacao
+			,A.QtdBlocos
+			,A.Endereco
+			,A.CEP
+			,A.Bairro
+			,A.CidadeID
+			,A.CidadeNome
+			,A.CondominioExcluido
+		FROM
+			UVW_APARTAMENTO A
+		WHERE
+			 A.ApartamentoID = COALESCE(@ApartamentoID, A.ApartamentoID)
+		AND
+			 A.PredioID = COALESCE(@PredioID, A.PredioID)
+		AND
+			 A.Nome = COALESCE(@NomePredio, A.Nome)
+	END
+	ELSE IF @IsApartamentoSemMorador = 1
+	BEGIN
+			SELECT
+			 A.ApartamentoID
+			,A.NumeroApartamento
+			,A.TipoEstadiaID
+			,A.TipoEstadiaNome
+			,A.ValorFixo
+			,A.IsCadAutomatico
+			,A.TipoEstadiaExcluido
+			,A.AndarPredio
+			,A.ValorApartamento
+			,A.PredioID
+			,A.Nome
+			,A.QtdApartamentos
+			,A.BlocoID
+			,A.NomeBloco
+			,A.Excluido
+			,A.QtdPredios
+			,A.TipoBloco
+			,A.StatusAtivo
+			,A.CondominioID
+			,A.NomeCondominio
+			,A.DataFundacao
+			,A.QtdBlocos
+			,A.Endereco
+			,A.CEP
+			,A.Bairro
+			,A.CidadeID
+			,A.CidadeNome
+			,A.CondominioExcluido
+			,M.MoradorID
+		FROM
+			UVW_APARTAMENTO A
+		LEFT JOIN
+			dbo.UVW_MORADOR M
+		ON
+			A.ApartamentoID = M.ApartamentoID
+		WHERE
+			 A.ApartamentoID = COALESCE(@ApartamentoID, A.ApartamentoID)
+		AND
+			 A.PredioID = COALESCE(@PredioID, A.PredioID)
+		AND
+			 A.Nome = COALESCE(@NomePredio, A.Nome)
+		AND
+			M.MoradorID IS NULL
+	END
+	ELSE
+	BEGIN
+			SELECT
+			 A.ApartamentoID
+			,A.NumeroApartamento
+			,A.TipoEstadiaID
+			,A.TipoEstadiaNome
+			,A.ValorFixo
+			,A.IsCadAutomatico
+			,A.TipoEstadiaExcluido
+			,A.AndarPredio
+			,A.ValorApartamento
+			,A.PredioID
+			,A.Nome
+			,A.QtdApartamentos
+			,A.BlocoID
+			,A.NomeBloco
+			,A.Excluido
+			,A.QtdPredios
+			,A.TipoBloco
+			,A.StatusAtivo
+			,A.CondominioID
+			,A.NomeCondominio
+			,A.DataFundacao
+			,A.QtdBlocos
+			,A.Endereco
+			,A.CEP
+			,A.Bairro
+			,A.CidadeID
+			,A.CidadeNome
+			,A.CondominioExcluido
+			,M.MoradorID
+		FROM
+			UVW_APARTAMENTO A
+		RIGHT JOIN
+			dbo.UVW_MORADOR M
+		ON
+			A.ApartamentoID = M.ApartamentoID
+		WHERE
+			 A.ApartamentoID = COALESCE(@ApartamentoID, A.ApartamentoID)
+		AND
+			 A.PredioID = COALESCE(@PredioID, A.PredioID)
+		AND
+			 A.Nome = COALESCE(@NomePredio, A.Nome)
+	END
 END
 GO

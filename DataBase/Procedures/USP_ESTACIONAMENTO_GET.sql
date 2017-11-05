@@ -25,9 +25,6 @@ GO
 CREATE PROC USP_ESTACIONAMENTO_GET
 (
 	 @EstacionamentoID INT = NULL
-	,@Nome VARCHAR(150) = NULL
-	,@QtdVagas INT = NULL
-	,@TipoEstacionamento CHAR(1) = NULL
 	,@CondominioID INT = NULL
 	,@BlocoID INT = NULL
 )
@@ -38,6 +35,7 @@ BEGIN
 		,Nome
 		,QtdVagas
 		,TipoEstacionamento
+		,Excluido
 		,BlocoID
 		,NomeBloco
 		,QtdPredios
@@ -54,15 +52,11 @@ BEGIN
 		,CondominioExcluido
 	FROM
 		UVW_ESTACIONAMENTO
-	--WHERE
-	--	 EstacionamentoID = COALESCE(@EstacionamentoID, EstacionamentoID)
-	--AND
-	--	 Nome = COALESCE(@Nome, Nome)
-	--AND
-	--	 BlocoID = COALESCE(@BlocoID, BlocoID)
-	--AND
-	--	 CondominioID = COALESCE(@CondominioID, CondominioID)
-	--AND
-	--	 TipoEstacionamento = COALESCE(@TipoEstacionamento, TipoEstacionamento)
+	WHERE
+		dbo.UVW_ESTACIONAMENTO.EstacionamentoID = COALESCE(@EstacionamentoID, EstacionamentoID)
+	AND
+		dbo.UVW_ESTACIONAMENTO.CondominioID = COALESCE(@CondominioID, CondominioID)
+	AND
+		dbo.UVW_ESTACIONAMENTO.BlocoID = COALESCE(@BlocoID, BlocoID)
 END
 GO

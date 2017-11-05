@@ -59,7 +59,7 @@
     <Compile Include="eTipo_Correspondencia.cs" />
     <Compile Include="eTipo_Telefone.cs" />
     <Compile Include="eUsuario.cs" />
-    <Compile Include="eVaga_Estacionamento.cs" />
+    <Compile Include="eVagaEstacionamento.cs" />
     <Compile Include="eVisitante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

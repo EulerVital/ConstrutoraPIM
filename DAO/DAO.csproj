@@ -53,6 +53,7 @@
     <Compile Include="dTelefone.cs" />
     <Compile Include="dTipoEstadia.cs" />
     <Compile Include="dTipo_Telefone.cs" />
+    <Compile Include="dVagaEstacionamento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

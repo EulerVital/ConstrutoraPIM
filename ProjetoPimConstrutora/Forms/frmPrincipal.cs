@@ -207,18 +207,14 @@ namespace ProjetoPimConstrutora.Forms
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmCadastrarVagaEstacionamento frm = new frmCadastrarVagaEstacionamento();
-            frm.MdiParent = this;
-            frm.Show();
+            new frmCadastrarEstacionamento(this);
         }
 
         private void msAdmCondEstaCons_Click(object sender, EventArgs e)
         {
-            //lblTitulo.Visible = false;
-            //pnPrincipal.Visible = false;
-            //frmConsultarEstacionamento frm = new frmConsultarEstacionamento();
-            //frm.MdiParent = this;
-            //frm.Show();
+            lblTitulo.Visible = false;
+            pnPrincipal.Visible = false;
+            new frmConsultarEstacionamento(this);
         }
 
         private void controleDeVagasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -275,6 +271,13 @@ namespace ProjetoPimConstrutora.Forms
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
             new frmCadastrarMoradores(this);
+        }
+
+        private void msAdmMoradoresCons_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Visible = false;
+            pnPrincipal.Visible = false;
+            new frmConsultarMoradores(this);
         }
 
         #endregion
