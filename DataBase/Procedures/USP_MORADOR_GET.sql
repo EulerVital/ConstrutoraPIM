@@ -77,7 +77,7 @@ BEGIN
 		,VagaEstacionamentoID
 		,NumeroVaga
 		,TipoVaga
-		,ResevadaAluguel
+		,ReservadaAluguel
 	FROM
 		UVW_MORADOR
 	WHERE

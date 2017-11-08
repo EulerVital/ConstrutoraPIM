@@ -49,7 +49,7 @@ AS
 		,ISNULL(VE.VagaEstacionamentoID, 0) VagaEstacionamentoID
 		,ISNULL(VE.NumeroVaga, 'ND') NumeroVaga
 		,ISNULL(VE.TipoVaga, 0) TipoVaga
-		,ISNULL(VE.ResevadaAluguel, 0) ResevadaAluguel
+		,ISNULL(VE.ReservadaAluguel, 0) ReservadaAluguel
 		,ISNULL(VE.EstacionamentoID, 0) EstacionamentoID
 		,ISNULL(VE.Nome, 'ND') NomeEstacionamento
 		,ISNULL(VE.QtdVagas, 0) QtdVagas

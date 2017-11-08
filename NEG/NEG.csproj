@@ -52,18 +52,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="nApartamento.cs" />
+    <Compile Include="nArea.cs" />
     <Compile Include="nBloco.cs" />
     <Compile Include="nCidade.cs" />
     <Compile Include="nCondominio.cs" />
+    <Compile Include="nCorrespondencia.cs" />
     <Compile Include="nEstacionamento.cs" />
     <Compile Include="nEstado.cs" />
+    <Compile Include="nFuncionalidade.cs" />
+    <Compile Include="nFuncionario.cs" />
     <Compile Include="nMorador.cs" />
     <Compile Include="nPredio.cs" />
     <Compile Include="nProfissao.cs" />
+    <Compile Include="nReservar_Area.cs" />
     <Compile Include="nTelefone.cs" />
     <Compile Include="nTipoEstadia.cs" />
     <Compile Include="nTipo_Telefone.cs" />
+    <Compile Include="nUsuario.cs" />
     <Compile Include="nVagaEstacionamento.cs" />
+    <Compile Include="nVisitante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Util.cs" />
   </ItemGroup>

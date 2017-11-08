@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +8,10 @@ namespace ENT
 {
     public class eArea
     {
+        public eArea()
+        {
+            Condominio = new eCondominio();
+        }
         public string AreaID { get; set; }
         public string NomeArea { get; set; }
         public string TipoArea { get; set; }

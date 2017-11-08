@@ -125,8 +125,8 @@ namespace DAO
                 obj.Apartamento.AptAndar = "APT." + obj.Apartamento.NumeroApartamento + "-" + obj.Apartamento.AndarPredio;
                 obj.VagaEstacionamento.VagaEstacionamentoID = GetInt32("VagaEstacionamentoID", dr).ToString();
                 obj.VagaEstacionamento.NumeroVaga = GetString("NumeroVaga", dr);
-                obj.VagaEstacionamento.TipoVaga = GetBoolean("TipoVaga", dr);
-                obj.VagaEstacionamento.ResevadaAlguel = GetBoolean("ResevadaAlguel", dr);
+                obj.VagaEstacionamento.TipoVaga = GetString("TipoVaga", dr);
+                obj.VagaEstacionamento.ReservadaAlguel = GetBoolean("ResevadaAlguel", dr);
 
                 return obj;
             }

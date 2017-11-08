@@ -49,7 +49,7 @@ namespace DAO
             {
 
                 MontarParametro(0, param, ParameterDirection.Input, "@EstacionamentoID", obj.EstacionamentoID, SqlDbType.Int);
-                MontarParametro(1, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Bit);
+                MontarParametro(1, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Int);
                 MontarParametro(2, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
 
                 dr = ExecReader("USP_ESTACIONAMENTO_GET", cmd, param);

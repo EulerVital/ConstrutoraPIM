@@ -41,19 +41,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dApartamento.cs" />
+    <Compile Include="dArea.cs" />
     <Compile Include="DBase\DBase.cs" />
     <Compile Include="dBloco.cs" />
     <Compile Include="dCidade.cs" />
     <Compile Include="dCondominio.cs" />
+    <Compile Include="dCorrespondencia.cs" />
     <Compile Include="dEstacionamento.cs" />
     <Compile Include="dEstado.cs" />
+    <Compile Include="dFuncionalidade.cs" />
+    <Compile Include="dFuncionario.cs" />
     <Compile Include="dMorador.cs" />
     <Compile Include="dPredio.cs" />
     <Compile Include="dProfissao.cs" />
+    <Compile Include="dReservar_Area.cs" />
     <Compile Include="dTelefone.cs" />
     <Compile Include="dTipoEstadia.cs" />
     <Compile Include="dTipo_Telefone.cs" />
+    <Compile Include="dUsuario.cs" />
     <Compile Include="dVagaEstacionamento.cs" />
+    <Compile Include="dVisitante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
