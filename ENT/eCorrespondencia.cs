@@ -15,7 +15,7 @@ namespace ENT
         public string Titulo { get; set; }
         public string AvisoDescricao { get; set; }
         public eMorador Morador { get; set; }
-        public eTipo_Correspondencia TipoCorrespondecia { get; set; }
+        public eTipoCorrespondencia TipoCorrespondecia { get; set; }
 
 
 

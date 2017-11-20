@@ -208,6 +208,12 @@
     <Compile Include="Forms\frmConsultarProfissao.Designer.cs">
       <DependentUpon>frmConsultarProfissao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmConsultarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultarReserva.Designer.cs">
+      <DependentUpon>frmConsultarReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmConsultarTipoEstadia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,12 @@
     </Compile>
     <Compile Include="Forms\frmEditarMorador.Designer.cs">
       <DependentUpon>frmEditarMorador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEditarPessoasReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditarPessoasReserva.Designer.cs">
+      <DependentUpon>frmEditarPessoasReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmEscolherTipoUsuario.cs">
       <SubType>Form</SubType>
@@ -420,6 +432,9 @@
     <EmbeddedResource Include="Forms\frmConsultarProfissao.resx">
       <DependentUpon>frmConsultarProfissao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultarReserva.resx">
+      <DependentUpon>frmConsultarReserva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConsultarTipoEstadia.resx">
       <DependentUpon>frmConsultarTipoEstadia.cs</DependentUpon>
     </EmbeddedResource>
@@ -437,6 +452,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEditarMorador.resx">
       <DependentUpon>frmEditarMorador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditarPessoasReserva.resx">
+      <DependentUpon>frmEditarPessoasReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEscolherTipoUsuario.resx">
       <DependentUpon>frmEscolherTipoUsuario.cs</DependentUpon>
@@ -564,12 +582,14 @@
     <None Include="Resources\familia_01.png" />
     <None Include="Resources\expExcel.png" />
     <None Include="Resources\expPdf.png" />
+    <None Include="Resources\icon-cancel.png" />
     <Content Include="Resources\IconeSistemaDesktop.ico" />
     <None Include="Resources\user_accounts_15362.png" />
     <None Include="Resources\tipo_contato.png" />
     <None Include="Resources\tipo_contato_odl.png" />
     <None Include="Resources\telefone_frm.png" />
     <None Include="Resources\vagaEstacionamento.png" />
+    <None Include="Resources\pessoas.png" />
     <Content Include="Resources\View_icon-icons.com_71837.png" />
     <None Include="Resources\View_icon-icons.com_718371.png" />
   </ItemGroup>

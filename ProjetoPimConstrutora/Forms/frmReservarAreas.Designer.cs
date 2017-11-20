@@ -31,195 +31,504 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pnCenter = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnExcluirListaBloco = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btnAddBloco = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.ckbStatus = new System.Windows.Forms.CheckBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lstAreasDisponiveis = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvCondominios = new System.Windows.Forms.DataGridView();
+            this.pnSelecionaMorador = new System.Windows.Forms.Panel();
+            this.tabControlReservar = new System.Windows.Forms.TabControl();
+            this.tbpMorador = new System.Windows.Forms.TabPage();
+            this.pnConsultaMorador = new System.Windows.Forms.Panel();
+            this.cmbCondominio = new System.Windows.Forms.ComboBox();
+            this.cmbApartamento = new System.Windows.Forms.ComboBox();
+            this.dgvMoradores = new System.Windows.Forms.DataGridView();
+            this.MoradorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeMorador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Blocos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailMorador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QtdApt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.QtdApt = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label13 = new System.Windows.Forms.Label();
+            this.cmbBloco = new System.Windows.Forms.ComboBox();
+            this.mtxtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbPredio = new System.Windows.Forms.ComboBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbpReservar = new System.Windows.Forms.TabPage();
+            this.pnReservar = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dtpDataReserva = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gbPessoasArea = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRemoverPessoa = new System.Windows.Forms.Button();
+            this.gbAreaPaga = new System.Windows.Forms.GroupBox();
+            this.cmbTipoPagamento = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnAddPessoa = new System.Windows.Forms.Button();
+            this.cmbResponsavel = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.ckbPessoaMenorIdade = new System.Windows.Forms.CheckBox();
+            this.lstPessoas = new System.Windows.Forms.ListBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPessoaRg = new System.Windows.Forms.TextBox();
+            this.mtxtPessoaCpf = new System.Windows.Forms.MaskedTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPessoaNome = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.cmbHorarios = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbTipoArea = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lstAreasDisponiveis = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.pnCenter.SuspendLayout();
+            this.pnSelecionaMorador.SuspendLayout();
+            this.tabControlReservar.SuspendLayout();
+            this.tbpMorador.SuspendLayout();
+            this.pnConsultaMorador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMoradores)).BeginInit();
+            this.tbpReservar.SuspendLayout();
+            this.pnReservar.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCondominios)).BeginInit();
+            this.gbPessoasArea.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbAreaPaga.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnCenter
+            // pnSelecionaMorador
             // 
-            this.pnCenter.AutoScroll = true;
-            this.pnCenter.BackColor = System.Drawing.Color.LightGray;
-            this.pnCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnCenter.Controls.Add(this.panel1);
-            this.pnCenter.Controls.Add(this.dgvCondominios);
-            this.pnCenter.Controls.Add(this.maskedTextBox5);
-            this.pnCenter.Controls.Add(this.label4);
-            this.pnCenter.Controls.Add(this.label6);
-            this.pnCenter.Controls.Add(this.textBox4);
-            this.pnCenter.Controls.Add(this.comboBox2);
-            this.pnCenter.Controls.Add(this.label3);
-            this.pnCenter.Controls.Add(this.comboBox4);
-            this.pnCenter.Controls.Add(this.label13);
-            this.pnCenter.Controls.Add(this.lblTitulo);
-            this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnCenter.Location = new System.Drawing.Point(0, 0);
-            this.pnCenter.Name = "pnCenter";
-            this.pnCenter.Size = new System.Drawing.Size(856, 515);
-            this.pnCenter.TabIndex = 46;
+            this.pnSelecionaMorador.AutoScroll = true;
+            this.pnSelecionaMorador.BackColor = System.Drawing.Color.LightGray;
+            this.pnSelecionaMorador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnSelecionaMorador.Controls.Add(this.tabControlReservar);
+            this.pnSelecionaMorador.Controls.Add(this.lblTitulo);
+            this.pnSelecionaMorador.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnSelecionaMorador.Location = new System.Drawing.Point(0, 0);
+            this.pnSelecionaMorador.Name = "pnSelecionaMorador";
+            this.pnSelecionaMorador.Size = new System.Drawing.Size(870, 518);
+            this.pnSelecionaMorador.TabIndex = 46;
+            // 
+            // tabControlReservar
+            // 
+            this.tabControlReservar.Controls.Add(this.tbpMorador);
+            this.tabControlReservar.Controls.Add(this.tbpReservar);
+            this.tabControlReservar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlReservar.Font = new System.Drawing.Font("Century", 11.25F);
+            this.tabControlReservar.Location = new System.Drawing.Point(0, 23);
+            this.tabControlReservar.Name = "tabControlReservar";
+            this.tabControlReservar.SelectedIndex = 0;
+            this.tabControlReservar.Size = new System.Drawing.Size(868, 493);
+            this.tabControlReservar.TabIndex = 157;
+            // 
+            // tbpMorador
+            // 
+            this.tbpMorador.BackColor = System.Drawing.Color.LightGray;
+            this.tbpMorador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbpMorador.Controls.Add(this.pnConsultaMorador);
+            this.tbpMorador.Location = new System.Drawing.Point(4, 27);
+            this.tbpMorador.Name = "tbpMorador";
+            this.tbpMorador.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpMorador.Size = new System.Drawing.Size(860, 462);
+            this.tbpMorador.TabIndex = 0;
+            this.tbpMorador.Text = "Escolha o Morador";
+            // 
+            // pnConsultaMorador
+            // 
+            this.pnConsultaMorador.Controls.Add(this.cmbCondominio);
+            this.pnConsultaMorador.Controls.Add(this.cmbApartamento);
+            this.pnConsultaMorador.Controls.Add(this.dgvMoradores);
+            this.pnConsultaMorador.Controls.Add(this.label13);
+            this.pnConsultaMorador.Controls.Add(this.cmbBloco);
+            this.pnConsultaMorador.Controls.Add(this.mtxtCpf);
+            this.pnConsultaMorador.Controls.Add(this.label12);
+            this.pnConsultaMorador.Controls.Add(this.label3);
+            this.pnConsultaMorador.Controls.Add(this.cmbPredio);
+            this.pnConsultaMorador.Controls.Add(this.txtNome);
+            this.pnConsultaMorador.Controls.Add(this.label11);
+            this.pnConsultaMorador.Controls.Add(this.label6);
+            this.pnConsultaMorador.Controls.Add(this.label4);
+            this.pnConsultaMorador.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnConsultaMorador.Location = new System.Drawing.Point(3, 3);
+            this.pnConsultaMorador.Name = "pnConsultaMorador";
+            this.pnConsultaMorador.Size = new System.Drawing.Size(852, 454);
+            this.pnConsultaMorador.TabIndex = 158;
+            // 
+            // cmbCondominio
+            // 
+            this.cmbCondominio.BackColor = System.Drawing.Color.LightGray;
+            this.cmbCondominio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCondominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCondominio.Font = new System.Drawing.Font("Century", 11F);
+            this.cmbCondominio.FormattingEnabled = true;
+            this.cmbCondominio.Location = new System.Drawing.Point(192, 18);
+            this.cmbCondominio.Name = "cmbCondominio";
+            this.cmbCondominio.Size = new System.Drawing.Size(236, 26);
+            this.cmbCondominio.TabIndex = 104;
+            this.cmbCondominio.SelectionChangeCommitted += new System.EventHandler(this.cmbCondominio_SelectionChangeCommitted);
+            // 
+            // cmbApartamento
+            // 
+            this.cmbApartamento.BackColor = System.Drawing.Color.LightGray;
+            this.cmbApartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbApartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbApartamento.Font = new System.Drawing.Font("Century", 11F);
+            this.cmbApartamento.FormattingEnabled = true;
+            this.cmbApartamento.Location = new System.Drawing.Point(537, 65);
+            this.cmbApartamento.Name = "cmbApartamento";
+            this.cmbApartamento.Size = new System.Drawing.Size(183, 26);
+            this.cmbApartamento.TabIndex = 156;
+            this.cmbApartamento.SelectionChangeCommitted += new System.EventHandler(this.cmbApartamento_SelectionChangeCommitted);
+            // 
+            // dgvMoradores
+            // 
+            this.dgvMoradores.AllowUserToAddRows = false;
+            this.dgvMoradores.AllowUserToOrderColumns = true;
+            this.dgvMoradores.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvMoradores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMoradores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMoradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMoradores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MoradorID,
+            this.NomeMorador,
+            this.Blocos,
+            this.EmailMorador,
+            this.QtdApt});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century", 11.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMoradores.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMoradores.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvMoradores.GridColor = System.Drawing.Color.Black;
+            this.dgvMoradores.Location = new System.Drawing.Point(0, 143);
+            this.dgvMoradores.MultiSelect = false;
+            this.dgvMoradores.Name = "dgvMoradores";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 11.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMoradores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMoradores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMoradores.Size = new System.Drawing.Size(852, 311);
+            this.dgvMoradores.TabIndex = 151;
+            this.dgvMoradores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMoradores_CellClick);
+            // 
+            // MoradorID
+            // 
+            this.MoradorID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MoradorID.HeaderText = "Cod. Morador";
+            this.MoradorID.Name = "MoradorID";
+            // 
+            // NomeMorador
+            // 
+            this.NomeMorador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeMorador.HeaderText = "Moradores";
+            this.NomeMorador.Name = "NomeMorador";
+            // 
+            // Blocos
+            // 
+            this.Blocos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Blocos.HeaderText = "CPF";
+            this.Blocos.Name = "Blocos";
+            // 
+            // EmailMorador
+            // 
+            this.EmailMorador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EmailMorador.HeaderText = "E-mail";
+            this.EmailMorador.Name = "EmailMorador";
+            // 
+            // QtdApt
+            // 
+            this.QtdApt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.QtdApt.HeaderText = "Reservar Área";
+            this.QtdApt.Name = "QtdApt";
+            this.QtdApt.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.QtdApt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label13.Location = new System.Drawing.Point(10, 22);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(184, 18);
+            this.label13.TabIndex = 103;
+            this.label13.Text = "Selecione o Condomínio: ";
+            // 
+            // cmbBloco
+            // 
+            this.cmbBloco.BackColor = System.Drawing.Color.LightGray;
+            this.cmbBloco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBloco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbBloco.Font = new System.Drawing.Font("Century", 11F);
+            this.cmbBloco.FormattingEnabled = true;
+            this.cmbBloco.Location = new System.Drawing.Point(583, 20);
+            this.cmbBloco.Name = "cmbBloco";
+            this.cmbBloco.Size = new System.Drawing.Size(146, 26);
+            this.cmbBloco.TabIndex = 146;
+            this.cmbBloco.SelectionChangeCommitted += new System.EventHandler(this.cmbBloco_SelectionChangeCommitted);
+            // 
+            // mtxtCpf
+            // 
+            this.mtxtCpf.BackColor = System.Drawing.Color.LightGray;
+            this.mtxtCpf.Font = new System.Drawing.Font("Century", 11F);
+            this.mtxtCpf.Location = new System.Drawing.Point(503, 111);
+            this.mtxtCpf.Mask = "000.000.000-00";
+            this.mtxtCpf.Name = "mtxtCpf";
+            this.mtxtCpf.Size = new System.Drawing.Size(113, 25);
+            this.mtxtCpf.TabIndex = 150;
+            this.mtxtCpf.TextChanged += new System.EventHandler(this.txt_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label12.Location = new System.Drawing.Point(343, 69);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(188, 18);
+            this.label12.TabIndex = 155;
+            this.label12.Text = "Selecione o Apartamento:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(443, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 18);
+            this.label3.TabIndex = 145;
+            this.label3.Text = "Selecione o Bloco:";
+            // 
+            // cmbPredio
+            // 
+            this.cmbPredio.BackColor = System.Drawing.Color.LightGray;
+            this.cmbPredio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPredio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbPredio.Font = new System.Drawing.Font("Century", 11F);
+            this.cmbPredio.FormattingEnabled = true;
+            this.cmbPredio.Location = new System.Drawing.Point(164, 66);
+            this.cmbPredio.Name = "cmbPredio";
+            this.cmbPredio.Size = new System.Drawing.Size(173, 26);
+            this.cmbPredio.TabIndex = 154;
+            this.cmbPredio.SelectionChangeCommitted += new System.EventHandler(this.cmbPredio_SelectionChangeCommitted);
+            // 
+            // txtNome
+            // 
+            this.txtNome.BackColor = System.Drawing.Color.LightGray;
+            this.txtNome.Font = new System.Drawing.Font("Century", 9.75F);
+            this.txtNome.Location = new System.Drawing.Point(186, 113);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(208, 23);
+            this.txtNome.TabIndex = 147;
+            this.txtNome.TextChanged += new System.EventHandler(this.txt_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label11.Location = new System.Drawing.Point(12, 68);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(146, 18);
+            this.label11.TabIndex = 153;
+            this.label11.Text = "Selecione o Prédio :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label6.Location = new System.Drawing.Point(12, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(172, 18);
+            this.label6.TabIndex = 148;
+            this.label6.Text = "Nome ou Ultimo Nome:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(443, 116);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 18);
+            this.label4.TabIndex = 149;
+            this.label4.Text = "CPF:";
+            // 
+            // tbpReservar
+            // 
+            this.tbpReservar.BackColor = System.Drawing.Color.LightGray;
+            this.tbpReservar.Controls.Add(this.pnReservar);
+            this.tbpReservar.Location = new System.Drawing.Point(4, 27);
+            this.tbpReservar.Name = "tbpReservar";
+            this.tbpReservar.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpReservar.Size = new System.Drawing.Size(860, 462);
+            this.tbpReservar.TabIndex = 1;
+            this.tbpReservar.Text = "Reservar Área";
+            this.tbpReservar.UseVisualStyleBackColor = true;
+            // 
+            // pnReservar
+            // 
+            this.pnReservar.BackColor = System.Drawing.Color.LightGray;
+            this.pnReservar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnReservar.Controls.Add(this.label14);
+            this.pnReservar.Controls.Add(this.dtpDataReserva);
+            this.pnReservar.Controls.Add(this.panel1);
+            this.pnReservar.Controls.Add(this.btnCancelar);
+            this.pnReservar.Controls.Add(this.btnSalvar);
+            this.pnReservar.Controls.Add(this.cmbHorarios);
+            this.pnReservar.Controls.Add(this.label5);
+            this.pnReservar.Controls.Add(this.cmbTipoArea);
+            this.pnReservar.Controls.Add(this.label2);
+            this.pnReservar.Controls.Add(this.lstAreasDisponiveis);
+            this.pnReservar.Controls.Add(this.label1);
+            this.pnReservar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnReservar.Location = new System.Drawing.Point(3, 3);
+            this.pnReservar.Name = "pnReservar";
+            this.pnReservar.Size = new System.Drawing.Size(854, 456);
+            this.pnReservar.TabIndex = 153;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label14.Location = new System.Drawing.Point(9, 13);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(112, 18);
+            this.label14.TabIndex = 171;
+            this.label14.Text = "Reservar para:";
+            // 
+            // dtpDataReserva
+            // 
+            this.dtpDataReserva.CalendarForeColor = System.Drawing.Color.Black;
+            this.dtpDataReserva.CalendarMonthBackground = System.Drawing.Color.LightGray;
+            this.dtpDataReserva.CalendarTitleForeColor = System.Drawing.Color.LightGray;
+            this.dtpDataReserva.CalendarTrailingForeColor = System.Drawing.Color.Black;
+            this.dtpDataReserva.Font = new System.Drawing.Font("Century", 9.75F);
+            this.dtpDataReserva.Location = new System.Drawing.Point(123, 11);
+            this.dtpDataReserva.Name = "dtpDataReserva";
+            this.dtpDataReserva.Size = new System.Drawing.Size(255, 23);
+            this.dtpDataReserva.TabIndex = 170;
+            this.dtpDataReserva.ValueChanged += new System.EventHandler(this.dtpDataReserva_ValueChanged);
             // 
             // panel1
             // 
-            this.panel1.AllowDrop = true;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnSalvar);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lstAreasDisponiveis);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 301);
+            this.panel1.Controls.Add(this.gbPessoasArea);
+            this.panel1.Location = new System.Drawing.Point(259, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(837, 432);
-            this.panel1.TabIndex = 152;
+            this.panel1.Size = new System.Drawing.Size(590, 397);
+            this.panel1.TabIndex = 169;
             // 
-            // btnSalvar
+            // gbPessoasArea
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.LightGray;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
-            this.btnSalvar.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSalvar.Location = new System.Drawing.Point(12, 383);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(97, 35);
-            this.btnSalvar.TabIndex = 167;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.gbPessoasArea.Controls.Add(this.pictureBox1);
+            this.gbPessoasArea.Controls.Add(this.btnRemoverPessoa);
+            this.gbPessoasArea.Controls.Add(this.gbAreaPaga);
+            this.gbPessoasArea.Controls.Add(this.btnAddPessoa);
+            this.gbPessoasArea.Controls.Add(this.cmbResponsavel);
+            this.gbPessoasArea.Controls.Add(this.label10);
+            this.gbPessoasArea.Controls.Add(this.lblInfo);
+            this.gbPessoasArea.Controls.Add(this.ckbPessoaMenorIdade);
+            this.gbPessoasArea.Controls.Add(this.lstPessoas);
+            this.gbPessoasArea.Controls.Add(this.label9);
+            this.gbPessoasArea.Controls.Add(this.txtPessoaRg);
+            this.gbPessoasArea.Controls.Add(this.mtxtPessoaCpf);
+            this.gbPessoasArea.Controls.Add(this.label8);
+            this.gbPessoasArea.Controls.Add(this.label7);
+            this.gbPessoasArea.Controls.Add(this.txtPessoaNome);
+            this.gbPessoasArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbPessoasArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gbPessoasArea.Font = new System.Drawing.Font("Century", 11.75F);
+            this.gbPessoasArea.Location = new System.Drawing.Point(0, 0);
+            this.gbPessoasArea.Name = "gbPessoasArea";
+            this.gbPessoasArea.Size = new System.Drawing.Size(588, 395);
+            this.gbPessoasArea.TabIndex = 164;
+            this.gbPessoasArea.TabStop = false;
+            this.gbPessoasArea.Text = "Pessoas que Utilizaram (Se o morador for maior de idade, ele será o responsável, " +
+    "caso contrario é necessario escolher um)";
             // 
-            // comboBox3
+            // pictureBox1
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Century", 11F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(574, 11);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(200, 26);
-            this.comboBox3.TabIndex = 166;
+            this.pictureBox1.Image = global::ProjetoPimConstrutora.Properties.Resources.pessoas;
+            this.pictureBox1.Location = new System.Drawing.Point(435, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 207);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 162;
+            this.pictureBox1.TabStop = false;
             // 
-            // label5
+            // btnRemoverPessoa
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(409, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 18);
-            this.label5.TabIndex = 165;
-            this.label5.Text = "Horários Disponíveis";
+            this.btnRemoverPessoa.BackColor = System.Drawing.Color.LightGray;
+            this.btnRemoverPessoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverPessoa.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold);
+            this.btnRemoverPessoa.ForeColor = System.Drawing.Color.Black;
+            this.btnRemoverPessoa.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_remove;
+            this.btnRemoverPessoa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRemoverPessoa.Location = new System.Drawing.Point(50, 149);
+            this.btnRemoverPessoa.Name = "btnRemoverPessoa";
+            this.btnRemoverPessoa.Size = new System.Drawing.Size(30, 28);
+            this.btnRemoverPessoa.TabIndex = 48;
+            this.btnRemoverPessoa.UseVisualStyleBackColor = false;
+            this.btnRemoverPessoa.Click += new System.EventHandler(this.btnRemoverPessoa_Click);
             // 
-            // groupBox1
+            // gbAreaPaga
             // 
-            this.groupBox1.Controls.Add(this.btnExcluirListaBloco);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.btnAddBloco);
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.ckbStatus);
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Font = new System.Drawing.Font("Century", 11.75F);
-            this.groupBox1.Location = new System.Drawing.Point(280, 66);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(548, 356);
-            this.groupBox1.TabIndex = 164;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Pessoas que Utilizaram (O morador responsável não deve ser excluido)";
+            this.gbAreaPaga.Controls.Add(this.cmbTipoPagamento);
+            this.gbAreaPaga.Controls.Add(this.label17);
+            this.gbAreaPaga.Font = new System.Drawing.Font("Century", 11.75F);
+            this.gbAreaPaga.Location = new System.Drawing.Point(195, 245);
+            this.gbAreaPaga.Name = "gbAreaPaga";
+            this.gbAreaPaga.Size = new System.Drawing.Size(237, 120);
+            this.gbAreaPaga.TabIndex = 161;
+            this.gbAreaPaga.TabStop = false;
+            this.gbAreaPaga.Text = "* Para áreas pagas:";
+            this.gbAreaPaga.Visible = false;
             // 
-            // btnExcluirListaBloco
+            // cmbTipoPagamento
             // 
-            this.btnExcluirListaBloco.BackColor = System.Drawing.Color.LightGray;
-            this.btnExcluirListaBloco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirListaBloco.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold);
-            this.btnExcluirListaBloco.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluirListaBloco.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_remove;
-            this.btnExcluirListaBloco.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExcluirListaBloco.Location = new System.Drawing.Point(53, 127);
-            this.btnExcluirListaBloco.Name = "btnExcluirListaBloco";
-            this.btnExcluirListaBloco.Size = new System.Drawing.Size(30, 28);
-            this.btnExcluirListaBloco.TabIndex = 48;
-            this.btnExcluirListaBloco.UseVisualStyleBackColor = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.comboBox6);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Font = new System.Drawing.Font("Century", 11.75F);
-            this.groupBox2.Location = new System.Drawing.Point(258, 208);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(282, 120);
-            this.groupBox2.TabIndex = 161;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Para áreas pagas:";
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox6.Font = new System.Drawing.Font("Century", 11F);
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(17, 73);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(200, 26);
-            this.comboBox6.TabIndex = 162;
+            this.cmbTipoPagamento.BackColor = System.Drawing.Color.LightGray;
+            this.cmbTipoPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTipoPagamento.Font = new System.Drawing.Font("Century", 11F);
+            this.cmbTipoPagamento.FormattingEnabled = true;
+            this.cmbTipoPagamento.Items.AddRange(new object[] {
+            "Selecione",
+            "Boleto Bancario",
+            "Carta de Crédito",
+            "Acumulo de Contas"});
+            this.cmbTipoPagamento.Location = new System.Drawing.Point(17, 73);
+            this.cmbTipoPagamento.Name = "cmbTipoPagamento";
+            this.cmbTipoPagamento.Size = new System.Drawing.Size(200, 26);
+            this.cmbTipoPagamento.TabIndex = 162;
             // 
             // label17
             // 
@@ -233,31 +542,33 @@
             this.label17.TabIndex = 43;
             this.label17.Text = "Tipo de pagamento:";
             // 
-            // btnAddBloco
+            // btnAddPessoa
             // 
-            this.btnAddBloco.BackColor = System.Drawing.Color.LightGray;
-            this.btnAddBloco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddBloco.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAddBloco.ForeColor = System.Drawing.Color.Black;
-            this.btnAddBloco.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_add;
-            this.btnAddBloco.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAddBloco.Location = new System.Drawing.Point(13, 127);
-            this.btnAddBloco.Name = "btnAddBloco";
-            this.btnAddBloco.Size = new System.Drawing.Size(30, 28);
-            this.btnAddBloco.TabIndex = 47;
-            this.btnAddBloco.UseVisualStyleBackColor = false;
+            this.btnAddPessoa.BackColor = System.Drawing.Color.LightGray;
+            this.btnAddPessoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPessoa.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAddPessoa.ForeColor = System.Drawing.Color.Black;
+            this.btnAddPessoa.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_add;
+            this.btnAddPessoa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnAddPessoa.Location = new System.Drawing.Point(14, 149);
+            this.btnAddPessoa.Name = "btnAddPessoa";
+            this.btnAddPessoa.Size = new System.Drawing.Size(30, 28);
+            this.btnAddPessoa.TabIndex = 47;
+            this.btnAddPessoa.UseVisualStyleBackColor = false;
+            this.btnAddPessoa.Click += new System.EventHandler(this.btnAddPessoa_Click);
             // 
-            // comboBox5
+            // cmbResponsavel
             // 
-            this.comboBox5.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox5.Font = new System.Drawing.Font("Century", 11F);
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(327, 135);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(200, 26);
-            this.comboBox5.TabIndex = 160;
+            this.cmbResponsavel.BackColor = System.Drawing.Color.LightGray;
+            this.cmbResponsavel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbResponsavel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbResponsavel.Font = new System.Drawing.Font("Century", 11F);
+            this.cmbResponsavel.FormattingEnabled = true;
+            this.cmbResponsavel.Location = new System.Drawing.Point(209, 201);
+            this.cmbResponsavel.Name = "cmbResponsavel";
+            this.cmbResponsavel.Size = new System.Drawing.Size(200, 26);
+            this.cmbResponsavel.TabIndex = 160;
+            this.cmbResponsavel.SelectionChangeCommitted += new System.EventHandler(this.cmbResponsavel_SelectionChangeCommitted);
             // 
             // label10
             // 
@@ -265,45 +576,46 @@
             this.label10.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(325, 104);
+            this.label10.Location = new System.Drawing.Point(206, 169);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(179, 18);
+            this.label10.Size = new System.Drawing.Size(191, 18);
             this.label10.TabIndex = 159;
-            this.label10.Text = "Selecione o Responsável";
+            this.label10.Text = "* Selecione o Responsável";
             // 
-            // label15
+            // lblInfo
             // 
-            this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label15.Image = global::ProjetoPimConstrutora.Properties.Resources.help;
-            this.label15.Location = new System.Drawing.Point(271, 101);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(33, 18);
-            this.label15.TabIndex = 156;
+            this.lblInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblInfo.Image = global::ProjetoPimConstrutora.Properties.Resources.help;
+            this.lblInfo.Location = new System.Drawing.Point(268, 125);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(33, 18);
+            this.lblInfo.TabIndex = 156;
             // 
-            // ckbStatus
+            // ckbPessoaMenorIdade
             // 
-            this.ckbStatus.AutoSize = true;
-            this.ckbStatus.Font = new System.Drawing.Font("Century", 11.25F);
-            this.ckbStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ckbStatus.Location = new System.Drawing.Point(21, 99);
-            this.ckbStatus.Name = "ckbStatus";
-            this.ckbStatus.Size = new System.Drawing.Size(250, 22);
-            this.ckbStatus.TabIndex = 155;
-            this.ckbStatus.Text = "Marca caso sejá menor de Idade";
-            this.ckbStatus.UseVisualStyleBackColor = true;
+            this.ckbPessoaMenorIdade.AutoSize = true;
+            this.ckbPessoaMenorIdade.Font = new System.Drawing.Font("Century", 11.25F);
+            this.ckbPessoaMenorIdade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ckbPessoaMenorIdade.Location = new System.Drawing.Point(18, 123);
+            this.ckbPessoaMenorIdade.Name = "ckbPessoaMenorIdade";
+            this.ckbPessoaMenorIdade.Size = new System.Drawing.Size(250, 22);
+            this.ckbPessoaMenorIdade.TabIndex = 155;
+            this.ckbPessoaMenorIdade.Text = "Marca caso sejá menor de Idade";
+            this.ckbPessoaMenorIdade.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lstPessoas
             // 
-            this.listBox1.BackColor = System.Drawing.Color.LightGray;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBox1.Cursor = System.Windows.Forms.Cursors.PanEast;
-            this.listBox1.Font = new System.Drawing.Font("Century", 9.75F);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(10, 159);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(222, 194);
-            this.listBox1.TabIndex = 154;
+            this.lstPessoas.BackColor = System.Drawing.Color.LightGray;
+            this.lstPessoas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstPessoas.Cursor = System.Windows.Forms.Cursors.PanEast;
+            this.lstPessoas.Font = new System.Drawing.Font("Century", 11F);
+            this.lstPessoas.FormattingEnabled = true;
+            this.lstPessoas.ItemHeight = 18;
+            this.lstPessoas.Location = new System.Drawing.Point(7, 183);
+            this.lstPessoas.Name = "lstPessoas";
+            this.lstPessoas.Size = new System.Drawing.Size(182, 182);
+            this.lstPessoas.TabIndex = 154;
+            this.lstPessoas.DoubleClick += new System.EventHandler(this.btnRemoverPessoa_Click);
             // 
             // label9
             // 
@@ -311,30 +623,31 @@
             this.label9.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(213, 69);
+            this.label9.Location = new System.Drawing.Point(210, 93);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 18);
             this.label9.TabIndex = 95;
             this.label9.Text = "Ou       RG:";
             // 
-            // textBox1
+            // txtPessoaRg
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(297, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 23);
-            this.textBox1.TabIndex = 94;
+            this.txtPessoaRg.BackColor = System.Drawing.Color.LightGray;
+            this.txtPessoaRg.Font = new System.Drawing.Font("Century", 9.75F);
+            this.txtPessoaRg.Location = new System.Drawing.Point(294, 90);
+            this.txtPessoaRg.Name = "txtPessoaRg";
+            this.txtPessoaRg.Size = new System.Drawing.Size(200, 23);
+            this.txtPessoaRg.TabIndex = 94;
+            this.txtPessoaRg.TextChanged += new System.EventHandler(this.txtPessoaRg_TextChanged);
             // 
-            // maskedTextBox1
+            // mtxtPessoaCpf
             // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.LightGray;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Century", 11F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(75, 63);
-            this.maskedTextBox1.Mask = "000.00.000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(117, 25);
-            this.maskedTextBox1.TabIndex = 93;
+            this.mtxtPessoaCpf.BackColor = System.Drawing.Color.LightGray;
+            this.mtxtPessoaCpf.Font = new System.Drawing.Font("Century", 11F);
+            this.mtxtPessoaCpf.Location = new System.Drawing.Point(72, 87);
+            this.mtxtPessoaCpf.Mask = "000.000.000-00";
+            this.mtxtPessoaCpf.Name = "mtxtPessoaCpf";
+            this.mtxtPessoaCpf.Size = new System.Drawing.Size(117, 25);
+            this.mtxtPessoaCpf.TabIndex = 93;
             // 
             // label8
             // 
@@ -342,7 +655,7 @@
             this.label8.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(15, 67);
+            this.label8.Location = new System.Drawing.Point(12, 91);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 18);
             this.label8.TabIndex = 45;
@@ -354,32 +667,93 @@
             this.label7.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(15, 37);
+            this.label7.Location = new System.Drawing.Point(12, 61);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 18);
+            this.label7.Size = new System.Drawing.Size(69, 18);
             this.label7.TabIndex = 43;
-            this.label7.Text = "Nome: ";
+            this.label7.Text = "* Nome: ";
             // 
-            // textBox3
+            // txtPessoaNome
             // 
-            this.textBox3.BackColor = System.Drawing.Color.LightGray;
-            this.textBox3.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox3.Location = new System.Drawing.Point(73, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(424, 23);
-            this.textBox3.TabIndex = 42;
+            this.txtPessoaNome.BackColor = System.Drawing.Color.LightGray;
+            this.txtPessoaNome.Font = new System.Drawing.Font("Century", 9.75F);
+            this.txtPessoaNome.Location = new System.Drawing.Point(87, 59);
+            this.txtPessoaNome.Name = "txtPessoaNome";
+            this.txtPessoaNome.Size = new System.Drawing.Size(407, 23);
+            this.txtPessoaNome.TabIndex = 42;
             // 
-            // comboBox1
+            // btnCancelar
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Century", 11F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(186, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 26);
-            this.comboBox1.TabIndex = 163;
+            this.btnCancelar.BackColor = System.Drawing.Color.LightGray;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Image = global::ProjetoPimConstrutora.Properties.Resources.icon_cancel;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCancelar.Location = new System.Drawing.Point(120, 387);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(121, 35);
+            this.btnCancelar.TabIndex = 168;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.LightGray;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvar.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSalvar.Location = new System.Drawing.Point(12, 387);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(97, 35);
+            this.btnSalvar.TabIndex = 167;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // cmbHorarios
+            // 
+            this.cmbHorarios.BackColor = System.Drawing.Color.LightGray;
+            this.cmbHorarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbHorarios.Font = new System.Drawing.Font("Century", 11F);
+            this.cmbHorarios.FormattingEnabled = true;
+            this.cmbHorarios.Location = new System.Drawing.Point(574, 11);
+            this.cmbHorarios.Name = "cmbHorarios";
+            this.cmbHorarios.Size = new System.Drawing.Size(200, 26);
+            this.cmbHorarios.TabIndex = 166;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(409, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(158, 18);
+            this.label5.TabIndex = 165;
+            this.label5.Text = "Horários Disponíveis";
+            // 
+            // cmbTipoArea
+            // 
+            this.cmbTipoArea.BackColor = System.Drawing.Color.LightGray;
+            this.cmbTipoArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTipoArea.Font = new System.Drawing.Font("Century", 11F);
+            this.cmbTipoArea.FormattingEnabled = true;
+            this.cmbTipoArea.Location = new System.Drawing.Point(12, 73);
+            this.cmbTipoArea.Name = "cmbTipoArea";
+            this.cmbTipoArea.Size = new System.Drawing.Size(200, 26);
+            this.cmbTipoArea.TabIndex = 163;
+            this.cmbTipoArea.SelectionChangeCommitted += new System.EventHandler(this.cmbTipoArea_SelectionChangeCommitted);
             // 
             // label2
             // 
@@ -387,7 +761,7 @@
             this.label2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(9, 13);
+            this.label2.Location = new System.Drawing.Point(9, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 18);
             this.label2.TabIndex = 162;
@@ -398,12 +772,12 @@
             this.lstAreasDisponiveis.BackColor = System.Drawing.Color.LightGray;
             this.lstAreasDisponiveis.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lstAreasDisponiveis.Cursor = System.Windows.Forms.Cursors.PanEast;
-            this.lstAreasDisponiveis.Font = new System.Drawing.Font("Century", 9.75F);
+            this.lstAreasDisponiveis.Font = new System.Drawing.Font("Century", 11F);
             this.lstAreasDisponiveis.FormattingEnabled = true;
-            this.lstAreasDisponiveis.ItemHeight = 16;
-            this.lstAreasDisponiveis.Location = new System.Drawing.Point(12, 76);
+            this.lstAreasDisponiveis.ItemHeight = 18;
+            this.lstAreasDisponiveis.Location = new System.Drawing.Point(12, 148);
             this.lstAreasDisponiveis.Name = "lstAreasDisponiveis";
-            this.lstAreasDisponiveis.Size = new System.Drawing.Size(222, 290);
+            this.lstAreasDisponiveis.Size = new System.Drawing.Size(222, 218);
             this.lstAreasDisponiveis.TabIndex = 161;
             // 
             // label1
@@ -412,169 +786,11 @@
             this.label1.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(9, 49);
+            this.label1.Location = new System.Drawing.Point(9, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 18);
             this.label1.TabIndex = 160;
             this.label1.Text = "Selecione a Área para reservar";
-            // 
-            // dgvCondominios
-            // 
-            this.dgvCondominios.AllowUserToAddRows = false;
-            this.dgvCondominios.AllowUserToOrderColumns = true;
-            this.dgvCondominios.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dgvCondominios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCondominios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCondominios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCondominios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NomeMorador,
-            this.Blocos,
-            this.EmailMorador,
-            this.QtdApt});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCondominios.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCondominios.GridColor = System.Drawing.Color.Black;
-            this.dgvCondominios.Location = new System.Drawing.Point(1, 140);
-            this.dgvCondominios.MultiSelect = false;
-            this.dgvCondominios.Name = "dgvCondominios";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCondominios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvCondominios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCondominios.Size = new System.Drawing.Size(836, 161);
-            this.dgvCondominios.TabIndex = 151;
-            // 
-            // NomeMorador
-            // 
-            this.NomeMorador.HeaderText = "Moradores";
-            this.NomeMorador.Name = "NomeMorador";
-            // 
-            // Blocos
-            // 
-            this.Blocos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Blocos.HeaderText = "CPF";
-            this.Blocos.Name = "Blocos";
-            // 
-            // EmailMorador
-            // 
-            this.EmailMorador.HeaderText = "E-mail";
-            this.EmailMorador.Name = "EmailMorador";
-            // 
-            // QtdApt
-            // 
-            this.QtdApt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.QtdApt.HeaderText = "Qtd Reservada";
-            this.QtdApt.Name = "QtdApt";
-            this.QtdApt.ToolTipText = "Quantidade de apartamentos.";
-            // 
-            // maskedTextBox5
-            // 
-            this.maskedTextBox5.BackColor = System.Drawing.Color.LightGray;
-            this.maskedTextBox5.Font = new System.Drawing.Font("Century", 11F);
-            this.maskedTextBox5.Location = new System.Drawing.Point(627, 91);
-            this.maskedTextBox5.Mask = "000.00.000-00";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(194, 25);
-            this.maskedTextBox5.TabIndex = 150;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(580, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 18);
-            this.label4.TabIndex = 149;
-            this.label4.Text = "CPF:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(15, 95);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 18);
-            this.label6.TabIndex = 148;
-            this.label6.Text = "Nome Completo: ";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.LightGray;
-            this.textBox4.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox4.Location = new System.Drawing.Point(144, 93);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(412, 23);
-            this.textBox4.TabIndex = 147;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Century", 11F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(625, 41);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 26);
-            this.comboBox2.TabIndex = 146;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(477, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 18);
-            this.label3.TabIndex = 145;
-            this.label3.Text = "Selecione o Bloco:";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Century", 11F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(207, 41);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(252, 26);
-            this.comboBox4.TabIndex = 104;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(9, 45);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(184, 18);
-            this.label13.TabIndex = 103;
-            this.label13.Text = "Selecione o Condomínio: ";
             // 
             // lblTitulo
             // 
@@ -592,66 +808,88 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 515);
-            this.Controls.Add(this.pnCenter);
+            this.ClientSize = new System.Drawing.Size(870, 518);
+            this.Controls.Add(this.pnSelecionaMorador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmReservarAreas";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservar Áreas";
-            this.pnCenter.ResumeLayout(false);
-            this.pnCenter.PerformLayout();
+            this.pnSelecionaMorador.ResumeLayout(false);
+            this.pnSelecionaMorador.PerformLayout();
+            this.tabControlReservar.ResumeLayout(false);
+            this.tbpMorador.ResumeLayout(false);
+            this.pnConsultaMorador.ResumeLayout(false);
+            this.pnConsultaMorador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMoradores)).EndInit();
+            this.tbpReservar.ResumeLayout(false);
+            this.pnReservar.ResumeLayout(false);
+            this.pnReservar.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCondominios)).EndInit();
+            this.gbPessoasArea.ResumeLayout(false);
+            this.gbPessoasArea.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbAreaPaga.ResumeLayout(false);
+            this.gbAreaPaga.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnCenter;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel pnSelecionaMorador;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dgvCondominios;
+        private System.Windows.Forms.TabControl tabControlReservar;
+        private System.Windows.Forms.TabPage tbpMorador;
+        private System.Windows.Forms.Panel pnConsultaMorador;
+        private System.Windows.Forms.ComboBox cmbCondominio;
+        private System.Windows.Forms.ComboBox cmbApartamento;
+        private System.Windows.Forms.DataGridView dgvMoradores;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MoradorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeMorador;
         private System.Windows.Forms.DataGridViewTextBoxColumn Blocos;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmailMorador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QtdApt;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewButtonColumn QtdApt;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbBloco;
+        private System.Windows.Forms.MaskedTextBox mtxtCpf;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbPredio;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabPage tbpReservar;
+        private System.Windows.Forms.Panel pnReservar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbHorarios;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnExcluirListaBloco;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.GroupBox gbPessoasArea;
+        private System.Windows.Forms.Button btnRemoverPessoa;
+        private System.Windows.Forms.GroupBox gbAreaPaga;
+        private System.Windows.Forms.ComboBox cmbTipoPagamento;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button btnAddBloco;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Button btnAddPessoa;
+        private System.Windows.Forms.ComboBox cmbResponsavel;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.CheckBox ckbStatus;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.CheckBox ckbPessoaMenorIdade;
+        private System.Windows.Forms.ListBox lstPessoas;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox txtPessoaRg;
+        private System.Windows.Forms.MaskedTextBox mtxtPessoaCpf;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtPessoaNome;
+        private System.Windows.Forms.ComboBox cmbTipoArea;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lstAreasDisponiveis;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker dtpDataReserva;
     }
 }

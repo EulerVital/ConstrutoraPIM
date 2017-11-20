@@ -10,13 +10,13 @@ namespace ENT
     {
         public eTelefone()
         {
-            TipoTelefone = new eTipo_Telefone();
+            TipoTelefone = new eTipoTelefone();
             Morador = new eMorador();
         }
 
         public string TelefoneID { get; set; }
         public string Contato { get; set; }
-        public eTipo_Telefone TipoTelefone { get; set; }
+        public eTipoTelefone TipoTelefone { get; set; }
         public bool Excluido { get; set; }
         public eMorador Morador { get; set; }
 

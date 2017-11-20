@@ -161,27 +161,23 @@ namespace ProjetoPimConstrutora.Forms
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmCadastrarAreas frm = new frmCadastrarAreas();
-            frm.MdiParent = this;
-            frm.Show();
+            new frmCadastrarAreas(this);
+            
         }
 
         private void msGcReservarAreas_Click(object sender, EventArgs e)
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmReservarAreas frm = new frmReservarAreas();
-            frm.MdiParent = this;
-            frm.Show();
+            new frmReservarAreas(this);
         }
 
         private void msAdmAreaCondCons_Click(object sender, EventArgs e)
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmConsultarAreas frm = new frmConsultarAreas();
-            frm.MdiParent = this;
-            frm.Show();
+            new frmConsultarAreas(this);
+
         }
 
         private void msAdmFuncionarioConsFunc_Click(object sender, EventArgs e)
@@ -280,11 +276,17 @@ namespace ProjetoPimConstrutora.Forms
             new frmConsultarMoradores(this);
         }
 
+        private void consultarReservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Visible = false;
+            pnPrincipal.Visible = false;
+            new frmConsultarReserva(this);
+        }
+
         #endregion
 
         #region Metodos
 
         #endregion
-
     }
 }

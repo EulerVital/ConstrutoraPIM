@@ -42,9 +42,11 @@ namespace DAO
 
             try
             {
+                MontarParametro(0, param, ParameterDirection.Input, "@AreaID", obj.AreaID, SqlDbType.Int);
+                MontarParametro(1, param, ParameterDirection.Input, "@IsAreaPaga", obj.IsAreaPaga, SqlDbType.Bit);
+                MontarParametro(2, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Int);
 
-              
-                dr = ExecReader("", cmd, param);
+                dr = ExecReader("USP_AREA_GET", cmd, param);
 
                 if (dr != null)
                 {
@@ -74,14 +76,27 @@ namespace DAO
             try
             {
                 obj.AreaID = GetInt32("AreaID", dr).ToString();
-                obj.NomeArea = GetString("NomeAea", dr);
+                obj.NomeArea = GetString("NomeArea", dr);
                 obj.TipoArea = GetString("TipoArea", dr);
-                obj.IsAreaPaga = GetBoolean("IsAreaPaga", dr);
-                obj.ValorArea = GetInt32("ValorArea", dr);
-                obj.ListaHorarios = GetString("ListaHorarios", dr);
-                obj.StatusAtivo = GetBoolean("StatusAtvio", dr);
+                obj.IsAreaPaga = GetBooleanNullable("IsAreaPaga", dr);
+                obj.ModoUso = GetString("ModoUso", dr);
+                obj.ValorArea = GetDecimal("ValorArea", dr);
+                obj.Status = GetBoolean("Status", dr);
                 obj.Condominio.CondominioID = GetInt32("CondominioID", dr).ToString();
-            
+                obj.Condominio.Nome = GetString("Nome", dr);
+                obj.Condominio.QtdBlocos = GetInt32("QtdBlocos", dr);
+                obj.Condominio.Endereco = GetString("Endereco", dr);
+                obj.Condominio.CEP = GetString("CEP", dr);
+                obj.Condominio.Bairro = GetString("Bairro", dr);
+                obj.Condominio.Cidade.CidadeID = GetInt32("CidadeID", dr).ToString();
+                obj.Condominio.Cidade.Nome = GetString("CidadeNome", dr);
+                obj.Condominio.Cidade.Estado.EstadoID = GetInt32("EstadoID", dr).ToString();
+                obj.Condominio.Cidade.Estado.Nome = GetString("EstadoNome", dr);
+                obj.Condominio.Cidade.Estado.UF = GetString("UF", dr);
+                obj.Condominio.Excluido = GetBoolean("Excluido", dr);
+                obj.Condominio.DataFundacao = GetDateTimeNullable("DataFundacao", dr);
+
+
                 return obj;
             }
             catch (Exception ex)
@@ -96,13 +111,21 @@ namespace DAO
             try
             {
                 cmd = new SqlCommand();
-                param = new SqlParameter[7];
+                param = new SqlParameter[8];
 
                 if (string.IsNullOrEmpty(obj.AreaID))
                     obj.AreaID = "0";
 
-                
-                retorno = Convert.ToString(ExecScalar("", cmd, param));
+                MontarParametro(0, param, ParameterDirection.Input, "@AreaID", obj.AreaID, SqlDbType.Int);
+                MontarParametro(1, param, ParameterDirection.Input, "@NomeArea", obj.NomeArea, SqlDbType.VarChar);
+                MontarParametro(2, param, ParameterDirection.Input, "@TipoArea", obj.TipoArea, SqlDbType.VarChar);
+                MontarParametro(3, param, ParameterDirection.Input, "@ModoUso", obj.ModoUso, SqlDbType.Char);
+                MontarParametro(4, param, ParameterDirection.Input, "@IsAreaPaga", obj.IsAreaPaga, SqlDbType.Bit);
+                MontarParametro(5, param, ParameterDirection.Input, "@ValorArea", obj.ValorArea, SqlDbType.Decimal);
+                MontarParametro(6, param, ParameterDirection.Input, "@Status", obj.Status, SqlDbType.Bit);
+                MontarParametro(7, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Int);
+
+                retorno = Convert.ToString(ExecScalar("USP_AREA_SET", cmd, param));
             }
             catch (SqlException sqlex)
             {

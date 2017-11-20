@@ -51,13 +51,15 @@
     <Compile Include="dEstado.cs" />
     <Compile Include="dFuncionalidade.cs" />
     <Compile Include="dFuncionario.cs" />
+    <Compile Include="dHorario.cs" />
     <Compile Include="dMorador.cs" />
+    <Compile Include="dPessoaReserva.cs" />
     <Compile Include="dPredio.cs" />
     <Compile Include="dProfissao.cs" />
-    <Compile Include="dReservar_Area.cs" />
+    <Compile Include="dReservarArea.cs" />
     <Compile Include="dTelefone.cs" />
     <Compile Include="dTipoEstadia.cs" />
-    <Compile Include="dTipo_Telefone.cs" />
+    <Compile Include="dTipoTelefone.cs" />
     <Compile Include="dUsuario.cs" />
     <Compile Include="dVagaEstacionamento.cs" />
     <Compile Include="dVisitante.cs" />

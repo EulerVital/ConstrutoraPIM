@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class dTipo_Telefone : DBase.DBase
+    public class dTipoTelefone : DBase.DBase
     {
         #region Assinaturas
         /// <summary>
@@ -37,9 +37,9 @@ namespace DAO
         SqlParameter[] param = null;
         #endregion
 
-        public List<eTipo_Telefone> TIPO_TELEFONE_GET(eTipo_Telefone obj)
+        public List<eTipoTelefone> TIPO_TELEFONE_GET(eTipoTelefone obj)
         {
-            List<eTipo_Telefone> retorno = new List<eTipo_Telefone>();
+            List<eTipoTelefone> retorno = new List<eTipoTelefone>();
             cmd = new SqlCommand();
             param = new SqlParameter[1];
 
@@ -71,9 +71,9 @@ namespace DAO
             finally { CloseConnection(); }
         }
 
-        private eTipo_Telefone Tipo_Telefone(IDataReader dr)
+        private eTipoTelefone Tipo_Telefone(IDataReader dr)
         {
-            eTipo_Telefone obj = new eTipo_Telefone();
+            eTipoTelefone obj = new eTipoTelefone();
 
             try
             {
@@ -89,7 +89,7 @@ namespace DAO
             }
         }
 
-        public string TIPO_TELEFONE_SET(eTipo_Telefone obj)
+        public string TIPO_TELEFONE_SET(eTipoTelefone obj)
         {
             string retorno = string.Empty;
             try

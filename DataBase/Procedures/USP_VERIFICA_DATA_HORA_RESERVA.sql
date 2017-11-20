@@ -1,0 +1,30 @@
+IF EXISTS(select * from sys.procedures where name = 'USP_VERIFICA_DATA_HORA_RESERVA')
+BEGIN
+	DROP PROC USP_VERIFICA_DATA_HORA_RESERVA
+END
+GO
+
+CREATE PROC USP_VERIFICA_DATA_HORA_RESERVA
+(
+	 @HorarioID INT = NULL
+	,@AreaID INT = NULL
+	,@DataReserva DATE = NULL
+)
+AS
+BEGIN
+	SELECT
+		HO.Reservado
+	FROM
+		UVW_RESERVAR_AREA RA
+	JOIN
+		UVW_HORARIO HO
+	ON
+		RA.AreaID = HO.AreaID
+	WHERE
+		RA.AreaID = @AreaID
+	AND
+		HO.HorarioID = @HorarioID
+	AND
+		RA.DataReserva = @DataReserva
+END
+GO

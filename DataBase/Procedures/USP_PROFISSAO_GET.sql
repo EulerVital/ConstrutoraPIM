@@ -48,4 +48,3 @@ BEGIN
 		 Descricao = COALESCE(@Descricao, Descricao)
 END
 GO
-tb_profissao

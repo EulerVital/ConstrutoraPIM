@@ -91,6 +91,8 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
+            this.reservarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenuPrincipal.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnPrincipal.SuspendLayout();
@@ -275,7 +277,7 @@
             // 
             this.msAdmCondEstaCad.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondEstaCad.Name = "msAdmCondEstaCad";
-            this.msAdmCondEstaCad.Size = new System.Drawing.Size(152, 22);
+            this.msAdmCondEstaCad.Size = new System.Drawing.Size(146, 22);
             this.msAdmCondEstaCad.Text = "Cadastar";
             this.msAdmCondEstaCad.Click += new System.EventHandler(this.msAdmCondEstaCad_Click);
             // 
@@ -283,7 +285,7 @@
             // 
             this.msAdmCondEstaCons.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondEstaCons.Name = "msAdmCondEstaCons";
-            this.msAdmCondEstaCons.Size = new System.Drawing.Size(152, 22);
+            this.msAdmCondEstaCons.Size = new System.Drawing.Size(146, 22);
             this.msAdmCondEstaCons.Text = "Consultar";
             this.msAdmCondEstaCons.Click += new System.EventHandler(this.msAdmCondEstaCons_Click);
             // 
@@ -465,10 +467,12 @@
             // msGcReservarAreas
             // 
             this.msGcReservarAreas.BackColor = System.Drawing.Color.Transparent;
+            this.msGcReservarAreas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reservarToolStripMenuItem,
+            this.consultarReservasToolStripMenuItem});
             this.msGcReservarAreas.Name = "msGcReservarAreas";
             this.msGcReservarAreas.Size = new System.Drawing.Size(203, 22);
             this.msGcReservarAreas.Text = "Reserva de Áreas";
-            this.msGcReservarAreas.Click += new System.EventHandler(this.msGcReservarAreas_Click);
             // 
             // correspondenciasToolStripMenuItem
             // 
@@ -701,6 +705,20 @@
             this.txtLogin.Size = new System.Drawing.Size(286, 26);
             this.txtLogin.TabIndex = 11;
             // 
+            // reservarToolStripMenuItem
+            // 
+            this.reservarToolStripMenuItem.Name = "reservarToolStripMenuItem";
+            this.reservarToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.reservarToolStripMenuItem.Text = "Reservar";
+            this.reservarToolStripMenuItem.Click += new System.EventHandler(this.msGcReservarAreas_Click);
+            // 
+            // consultarReservasToolStripMenuItem
+            // 
+            this.consultarReservasToolStripMenuItem.Name = "consultarReservasToolStripMenuItem";
+            this.consultarReservasToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.consultarReservasToolStripMenuItem.Text = "Consultar Reservas";
+            this.consultarReservasToolStripMenuItem.Click += new System.EventHandler(this.consultarReservasToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -793,5 +811,7 @@
         private System.Windows.Forms.ToolStripMenuItem UtiTipoTelefone;
         private System.Windows.Forms.ToolStripMenuItem UtilTipoTelCad;
         private System.Windows.Forms.ToolStripMenuItem UtilTipoTelCons;
+        private System.Windows.Forms.ToolStripMenuItem reservarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarReservasToolStripMenuItem;
     }
 }

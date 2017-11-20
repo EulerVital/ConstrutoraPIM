@@ -183,9 +183,29 @@ namespace ProjetoPimConstrutora.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_cancel {
+            get {
+                object obj = ResourceManager.GetObject("icon-cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgFundo {
             get {
                 object obj = ResourceManager.GetObject("imgFundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pessoas {
+            get {
+                object obj = ResourceManager.GetObject("pessoas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

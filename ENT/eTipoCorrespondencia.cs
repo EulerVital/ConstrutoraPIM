@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ENT
 {
-    public class eTipo_Telefone
+   public class eTipoCorrespondencia
     {
-        public string TipoTelefoneID { get; set; }
-        public string Descricao { get; set; }
+        public string TipoCorrespondenciaID { get; set; }
+        public string TipoNome { get; set; }
         public bool Excluido { get; set; }
     }
 }

@@ -15,10 +15,11 @@ namespace ENT
         public string AreaID { get; set; }
         public string NomeArea { get; set; }
         public string TipoArea { get; set; }
-        public bool IsAreaPaga { get; set; }
-        public int ValorArea { get; set; }
-        public string ListaHorarios { get; set; }
-        public bool StatusAtivo { get; set; }
+        public bool? IsAreaPaga { get; set; }
+        public decimal ValorArea { get; set; }
+        public string ModoUso { get; set; }
+        public bool Status { get; set; }
+        public string DescricaoStatus { get; set; }
         public eCondominio Condominio { get; set; }
     }
 }

@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace NEG
 {
-    public class nTipo_Telefone
+    public class nHorario
     {
         #region Assinaturas
         /// <summary>
         /// *********Criação*************
         /// Autor: Euler Vital
-        /// Motivo: Classe Negocio de Tipo_Telefone
-        /// Data Criação: 21/10/2017
+        /// Motivo: Classe Negocio de Horario
+        /// Data Criação: 11/11/2017
         /// ********Alteração************
         /// Autor: 
         /// Motivo:
@@ -31,16 +31,16 @@ namespace NEG
         /// </summary>
         #endregion
 
-        public nTipo_Telefone()
+        public nHorario()
         {
 
         }
-        public static List<eTipo_Telefone> TIPO_TELEFONE_GET(eTipo_Telefone obj)
+        public static List<eHorario> HORARIO_GET(eHorario obj)
         {
             try
             {
-                dTipo_Telefone db = new dTipo_Telefone();
-                return db.TIPO_TELEFONE_GET(obj);
+                dHorario db = new dHorario();
+                return db.Horario_GET(obj);
             }
             catch (Exception ex)
             {
@@ -48,12 +48,12 @@ namespace NEG
             }
         }
 
-        public static string TIPO_TELEFONE_SET(eTipo_Telefone obj)
+        public static string HORARIO_SET(eHorario obj)
         {
             try
             {
-                dTipo_Telefone db = new dTipo_Telefone();
-                return db.TIPO_TELEFONE_SET(obj);
+                dHorario db = new dHorario();
+                return db.Horario_SET(obj);
             }
             catch (Exception ex)
             {

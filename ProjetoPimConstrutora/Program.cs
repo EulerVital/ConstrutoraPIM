@@ -1,4 +1,5 @@
-﻿using ProjetoPimConstrutora.Forms;
+﻿using NEG;
+using ProjetoPimConstrutora.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace ProjetoPimConstrutora
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            nReservarArea.ReservarArea_DEL();
             Application.Run(new frmPrincipal());
         }
     }

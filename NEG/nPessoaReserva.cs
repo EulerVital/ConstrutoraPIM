@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace NEG
 {
-    public class nReservar_Area
+    public class nPessoaReserva
     {
         #region Assinaturas
         /// <summary>
         /// *********Criação*************
-        /// Autor: Rafael Marques
-        /// Motivo: Classe Negocio de Reserva de Area
-        /// Data Criação: 30/10/2017
+        /// Autor: Euler Vital
+        /// Motivo: Classe Negocio de Pessoa Reserva
+        /// Data Criação: 15/11/2017
         /// ********Alteração************
         /// Autor: 
         /// Motivo:
@@ -31,16 +31,12 @@ namespace NEG
         /// </summary>
         #endregion
 
-        public nReservar_Area()
-        {
-
-        }
-        public static List<eReservar_Area> Apartamento_GET(eReservar_Area obj)
+        public static List<ePessoaReserva> PessoaReserva_GET(ePessoaReserva obj)
         {
             try
             {
-                dReservar_Area db = new dReservar_Area();
-                return db.Reservar_Area_GET(obj);
+                dPessoaReserva db = new dPessoaReserva();
+                return db.PessoaReserva_GET(obj);
             }
             catch (Exception ex)
             {
@@ -48,12 +44,25 @@ namespace NEG
             }
         }
 
-        public static string Reservar_Area_SET(eReservar_Area obj)
+        public static string PessoaReserva_SET(ePessoaReserva obj)
         {
             try
             {
-                dReservar_Area db = new dReservar_Area();
-                return db.Reservar_Area_SET(obj);
+                dPessoaReserva db = new dPessoaReserva();
+                return db.PessoaReserva_SET(obj);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static bool PessoaReserva_DEL(string PessoaReservaID)
+        {
+            try
+            {
+                dPessoaReserva db = new dPessoaReserva();
+                return db.PessoaReserva_DEL(PessoaReservaID);
             }
             catch (Exception ex)
             {
@@ -62,5 +71,3 @@ namespace NEG
         }
     }
 }
-
-

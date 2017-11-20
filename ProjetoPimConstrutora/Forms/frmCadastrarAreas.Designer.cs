@@ -29,30 +29,32 @@
         private void InitializeComponent()
         {
             this.pnCenter = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.btnExcluirListaPredio = new System.Windows.Forms.Button();
-            this.btnAddPredio = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lstAreas = new System.Windows.Forms.ListBox();
+            this.ckbStaus = new System.Windows.Forms.CheckBox();
+            this.btnRemoverHora = new System.Windows.Forms.Button();
+            this.btnAddHora = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtFim = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtInicio = new System.Windows.Forms.MaskedTextBox();
             this.lstHorarios = new System.Windows.Forms.ListBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtValorArea = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.ckbStatus = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ckbAreaPaga = new System.Windows.Forms.CheckBox();
+            this.gbModoUso = new System.Windows.Forms.GroupBox();
+            this.rbdUsoPessoal = new System.Windows.Forms.RadioButton();
+            this.rbdUsoPublico = new System.Windows.Forms.RadioButton();
+            this.cmbTipoArea = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbCondominio = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtArea = new System.Windows.Forms.TextBox();
             this.pnCenter.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbModoUso.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnCenter
@@ -60,73 +62,102 @@
             this.pnCenter.AutoScroll = true;
             this.pnCenter.BackColor = System.Drawing.Color.LightGray;
             this.pnCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnCenter.Controls.Add(this.checkBox1);
-            this.pnCenter.Controls.Add(this.btnExcluirListaPredio);
-            this.pnCenter.Controls.Add(this.btnAddPredio);
+            this.pnCenter.Controls.Add(this.label3);
+            this.pnCenter.Controls.Add(this.lstAreas);
+            this.pnCenter.Controls.Add(this.ckbStaus);
+            this.pnCenter.Controls.Add(this.btnRemoverHora);
+            this.pnCenter.Controls.Add(this.btnAddHora);
             this.pnCenter.Controls.Add(this.label8);
-            this.pnCenter.Controls.Add(this.maskedTextBox8);
+            this.pnCenter.Controls.Add(this.mtxtFim);
             this.pnCenter.Controls.Add(this.label7);
-            this.pnCenter.Controls.Add(this.maskedTextBox7);
+            this.pnCenter.Controls.Add(this.mtxtInicio);
             this.pnCenter.Controls.Add(this.lstHorarios);
             this.pnCenter.Controls.Add(this.btnSalvar);
-            this.pnCenter.Controls.Add(this.textBox1);
+            this.pnCenter.Controls.Add(this.txtValorArea);
             this.pnCenter.Controls.Add(this.label2);
-            this.pnCenter.Controls.Add(this.ckbStatus);
-            this.pnCenter.Controls.Add(this.groupBox1);
-            this.pnCenter.Controls.Add(this.comboBox1);
+            this.pnCenter.Controls.Add(this.ckbAreaPaga);
+            this.pnCenter.Controls.Add(this.gbModoUso);
+            this.pnCenter.Controls.Add(this.cmbTipoArea);
             this.pnCenter.Controls.Add(this.label1);
-            this.pnCenter.Controls.Add(this.comboBox4);
+            this.pnCenter.Controls.Add(this.cmbCondominio);
             this.pnCenter.Controls.Add(this.label13);
             this.pnCenter.Controls.Add(this.lblTitulo);
             this.pnCenter.Controls.Add(this.label5);
-            this.pnCenter.Controls.Add(this.textBox3);
+            this.pnCenter.Controls.Add(this.txtArea);
             this.pnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCenter.Location = new System.Drawing.Point(0, 0);
             this.pnCenter.Name = "pnCenter";
-            this.pnCenter.Size = new System.Drawing.Size(482, 451);
+            this.pnCenter.Size = new System.Drawing.Size(633, 448);
             this.pnCenter.TabIndex = 45;
             // 
-            // checkBox1
+            // label3
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Century", 11.25F);
-            this.checkBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox1.Location = new System.Drawing.Point(158, 410);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(114, 22);
-            this.checkBox1.TabIndex = 151;
-            this.checkBox1.Text = "Status Ativo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label3.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(474, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 56);
+            this.label3.TabIndex = 153;
+            this.label3.Text = "Áreas do Condominio Selecionado";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnExcluirListaPredio
+            // lstAreas
             // 
-            this.btnExcluirListaPredio.BackColor = System.Drawing.Color.LightGray;
-            this.btnExcluirListaPredio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirListaPredio.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold);
-            this.btnExcluirListaPredio.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluirListaPredio.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_remove;
-            this.btnExcluirListaPredio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExcluirListaPredio.Location = new System.Drawing.Point(427, 302);
-            this.btnExcluirListaPredio.Name = "btnExcluirListaPredio";
-            this.btnExcluirListaPredio.Size = new System.Drawing.Size(30, 28);
-            this.btnExcluirListaPredio.TabIndex = 150;
-            this.btnExcluirListaPredio.UseVisualStyleBackColor = false;
+            this.lstAreas.BackColor = System.Drawing.Color.LightGray;
+            this.lstAreas.Cursor = System.Windows.Forms.Cursors.PanEast;
+            this.lstAreas.Enabled = false;
+            this.lstAreas.Font = new System.Drawing.Font("Century", 9.75F);
+            this.lstAreas.FormattingEnabled = true;
+            this.lstAreas.ItemHeight = 16;
+            this.lstAreas.Location = new System.Drawing.Point(476, 74);
+            this.lstAreas.Name = "lstAreas";
+            this.lstAreas.Size = new System.Drawing.Size(144, 340);
+            this.lstAreas.TabIndex = 152;
             // 
-            // btnAddPredio
+            // ckbStaus
             // 
-            this.btnAddPredio.BackColor = System.Drawing.Color.LightGray;
-            this.btnAddPredio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPredio.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAddPredio.ForeColor = System.Drawing.Color.Black;
-            this.btnAddPredio.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_add;
-            this.btnAddPredio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAddPredio.Location = new System.Drawing.Point(391, 302);
-            this.btnAddPredio.Name = "btnAddPredio";
-            this.btnAddPredio.Size = new System.Drawing.Size(30, 28);
-            this.btnAddPredio.TabIndex = 149;
-            this.btnAddPredio.UseVisualStyleBackColor = false;
+            this.ckbStaus.AutoSize = true;
+            this.ckbStaus.Checked = true;
+            this.ckbStaus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckbStaus.Font = new System.Drawing.Font("Century", 11.25F);
+            this.ckbStaus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ckbStaus.Location = new System.Drawing.Point(323, 270);
+            this.ckbStaus.Name = "ckbStaus";
+            this.ckbStaus.Size = new System.Drawing.Size(103, 22);
+            this.ckbStaus.TabIndex = 151;
+            this.ckbStaus.Text = "Área Ativa";
+            this.ckbStaus.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoverHora
+            // 
+            this.btnRemoverHora.BackColor = System.Drawing.Color.LightGray;
+            this.btnRemoverHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverHora.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold);
+            this.btnRemoverHora.ForeColor = System.Drawing.Color.Black;
+            this.btnRemoverHora.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_remove;
+            this.btnRemoverHora.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRemoverHora.Location = new System.Drawing.Point(188, 357);
+            this.btnRemoverHora.Name = "btnRemoverHora";
+            this.btnRemoverHora.Size = new System.Drawing.Size(30, 28);
+            this.btnRemoverHora.TabIndex = 150;
+            this.btnRemoverHora.UseVisualStyleBackColor = false;
+            this.btnRemoverHora.Click += new System.EventHandler(this.btnRemoverHora_Click);
+            // 
+            // btnAddHora
+            // 
+            this.btnAddHora.BackColor = System.Drawing.Color.LightGray;
+            this.btnAddHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddHora.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAddHora.ForeColor = System.Drawing.Color.Black;
+            this.btnAddHora.Image = global::ProjetoPimConstrutora.Properties.Resources.edit_add;
+            this.btnAddHora.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnAddHora.Location = new System.Drawing.Point(146, 357);
+            this.btnAddHora.Name = "btnAddHora";
+            this.btnAddHora.Size = new System.Drawing.Size(30, 28);
+            this.btnAddHora.TabIndex = 149;
+            this.btnAddHora.UseVisualStyleBackColor = false;
+            this.btnAddHora.Click += new System.EventHandler(this.btnAddHora_Click);
             // 
             // label8
             // 
@@ -134,22 +165,23 @@
             this.label8.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(290, 306);
+            this.label8.Location = new System.Drawing.Point(290, 321);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 18);
             this.label8.TabIndex = 148;
             this.label8.Text = "Ás";
             // 
-            // maskedTextBox8
+            // mtxtFim
             // 
-            this.maskedTextBox8.BackColor = System.Drawing.Color.LightGray;
-            this.maskedTextBox8.Font = new System.Drawing.Font("Century", 11F);
-            this.maskedTextBox8.Location = new System.Drawing.Point(323, 303);
-            this.maskedTextBox8.Mask = "00:00";
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(62, 25);
-            this.maskedTextBox8.TabIndex = 147;
-            this.maskedTextBox8.ValidatingType = typeof(System.DateTime);
+            this.mtxtFim.BackColor = System.Drawing.Color.LightGray;
+            this.mtxtFim.Font = new System.Drawing.Font("Century", 11F);
+            this.mtxtFim.Location = new System.Drawing.Point(323, 318);
+            this.mtxtFim.Mask = "00:00";
+            this.mtxtFim.Name = "mtxtFim";
+            this.mtxtFim.Size = new System.Drawing.Size(62, 25);
+            this.mtxtFim.TabIndex = 147;
+            this.mtxtFim.ValidatingType = typeof(System.DateTime);
+            this.mtxtFim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtHoraio_KeyPress);
             // 
             // label7
             // 
@@ -157,22 +189,23 @@
             this.label7.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(138, 305);
+            this.label7.Location = new System.Drawing.Point(138, 320);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 18);
             this.label7.TabIndex = 146;
             this.label7.Text = "*Horarío: ";
             // 
-            // maskedTextBox7
+            // mtxtInicio
             // 
-            this.maskedTextBox7.BackColor = System.Drawing.Color.LightGray;
-            this.maskedTextBox7.Font = new System.Drawing.Font("Century", 11F);
-            this.maskedTextBox7.Location = new System.Drawing.Point(222, 302);
-            this.maskedTextBox7.Mask = "00:00";
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(62, 25);
-            this.maskedTextBox7.TabIndex = 145;
-            this.maskedTextBox7.ValidatingType = typeof(System.DateTime);
+            this.mtxtInicio.BackColor = System.Drawing.Color.LightGray;
+            this.mtxtInicio.Font = new System.Drawing.Font("Century", 11F);
+            this.mtxtInicio.Location = new System.Drawing.Point(222, 317);
+            this.mtxtInicio.Mask = "00:00";
+            this.mtxtInicio.Name = "mtxtInicio";
+            this.mtxtInicio.Size = new System.Drawing.Size(62, 25);
+            this.mtxtInicio.TabIndex = 145;
+            this.mtxtInicio.ValidatingType = typeof(System.DateTime);
+            this.mtxtInicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtHoraio_KeyPress);
             // 
             // lstHorarios
             // 
@@ -182,10 +215,11 @@
             this.lstHorarios.Font = new System.Drawing.Font("Century", 9.75F);
             this.lstHorarios.FormattingEnabled = true;
             this.lstHorarios.ItemHeight = 16;
-            this.lstHorarios.Location = new System.Drawing.Point(9, 293);
+            this.lstHorarios.Location = new System.Drawing.Point(9, 308);
             this.lstHorarios.Name = "lstHorarios";
-            this.lstHorarios.Size = new System.Drawing.Size(120, 146);
+            this.lstHorarios.Size = new System.Drawing.Size(120, 130);
             this.lstHorarios.TabIndex = 46;
+            this.lstHorarios.SelectedIndexChanged += new System.EventHandler(this.lstHorarios_SelectedIndexChanged);
             // 
             // btnSalvar
             // 
@@ -196,22 +230,25 @@
             this.btnSalvar.Image = global::ProjetoPimConstrutora.Properties.Resources.Save;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSalvar.Location = new System.Drawing.Point(359, 403);
+            this.btnSalvar.Location = new System.Drawing.Point(144, 400);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(99, 35);
             this.btnSalvar.TabIndex = 46;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // textBox1
+            // txtValorArea
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(228, 252);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 23);
-            this.textBox1.TabIndex = 144;
+            this.txtValorArea.BackColor = System.Drawing.Color.LightGray;
+            this.txtValorArea.Enabled = false;
+            this.txtValorArea.Font = new System.Drawing.Font("Century", 9.75F);
+            this.txtValorArea.Location = new System.Drawing.Point(81, 271);
+            this.txtValorArea.Name = "txtValorArea";
+            this.txtValorArea.Size = new System.Drawing.Size(142, 23);
+            this.txtValorArea.TabIndex = 144;
+            this.txtValorArea.TextChanged += new System.EventHandler(this.txtValorArea_TextChanged);
             // 
             // label2
             // 
@@ -219,71 +256,79 @@
             this.label2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(187, 254);
+            this.label2.Location = new System.Drawing.Point(23, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 18);
             this.label2.TabIndex = 143;
             this.label2.Text = "R$: ";
             // 
-            // ckbStatus
+            // ckbAreaPaga
             // 
-            this.ckbStatus.AutoSize = true;
-            this.ckbStatus.Font = new System.Drawing.Font("Century", 11.25F);
-            this.ckbStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ckbStatus.Location = new System.Drawing.Point(17, 252);
-            this.ckbStatus.Name = "ckbStatus";
-            this.ckbStatus.Size = new System.Drawing.Size(99, 22);
-            this.ckbStatus.TabIndex = 141;
-            this.ckbStatus.Text = "Área Paga";
-            this.ckbStatus.UseVisualStyleBackColor = true;
+            this.ckbAreaPaga.AutoSize = true;
+            this.ckbAreaPaga.Font = new System.Drawing.Font("Century", 11.25F);
+            this.ckbAreaPaga.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ckbAreaPaga.Location = new System.Drawing.Point(17, 242);
+            this.ckbAreaPaga.Name = "ckbAreaPaga";
+            this.ckbAreaPaga.Size = new System.Drawing.Size(99, 22);
+            this.ckbAreaPaga.TabIndex = 141;
+            this.ckbAreaPaga.Text = "Área Paga";
+            this.ckbAreaPaga.UseVisualStyleBackColor = true;
+            this.ckbAreaPaga.CheckedChanged += new System.EventHandler(this.ckbAreaPaga_CheckedChanged);
             // 
-            // groupBox1
+            // gbModoUso
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Font = new System.Drawing.Font("Century", 11F);
-            this.groupBox1.Location = new System.Drawing.Point(14, 175);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(330, 61);
-            this.groupBox1.TabIndex = 107;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "* Esolha o modo de uso:";
+            this.gbModoUso.Controls.Add(this.rbdUsoPessoal);
+            this.gbModoUso.Controls.Add(this.rbdUsoPublico);
+            this.gbModoUso.Font = new System.Drawing.Font("Century", 11F);
+            this.gbModoUso.Location = new System.Drawing.Point(14, 175);
+            this.gbModoUso.Name = "gbModoUso";
+            this.gbModoUso.Size = new System.Drawing.Size(330, 61);
+            this.gbModoUso.TabIndex = 107;
+            this.gbModoUso.TabStop = false;
+            this.gbModoUso.Text = "* Esolha o modo de uso:";
             // 
-            // radioButton2
+            // rbdUsoPessoal
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(127, 26);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(110, 22);
-            this.radioButton2.TabIndex = 47;
-            this.radioButton2.Text = "Uso Pessoal";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbdUsoPessoal.AutoSize = true;
+            this.rbdUsoPessoal.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbdUsoPessoal.Location = new System.Drawing.Point(127, 26);
+            this.rbdUsoPessoal.Name = "rbdUsoPessoal";
+            this.rbdUsoPessoal.Size = new System.Drawing.Size(110, 22);
+            this.rbdUsoPessoal.TabIndex = 47;
+            this.rbdUsoPessoal.Text = "Uso Pessoal";
+            this.rbdUsoPessoal.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbdUsoPublico
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(14, 26);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(109, 22);
-            this.radioButton1.TabIndex = 46;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Uso Publico";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbdUsoPublico.AutoSize = true;
+            this.rbdUsoPublico.Checked = true;
+            this.rbdUsoPublico.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbdUsoPublico.Location = new System.Drawing.Point(14, 26);
+            this.rbdUsoPublico.Name = "rbdUsoPublico";
+            this.rbdUsoPublico.Size = new System.Drawing.Size(109, 22);
+            this.rbdUsoPublico.TabIndex = 46;
+            this.rbdUsoPublico.TabStop = true;
+            this.rbdUsoPublico.Text = "Uso Publico";
+            this.rbdUsoPublico.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmbTipoArea
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Century", 11F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(136, 130);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 26);
-            this.comboBox1.TabIndex = 106;
+            this.cmbTipoArea.BackColor = System.Drawing.Color.LightGray;
+            this.cmbTipoArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTipoArea.Font = new System.Drawing.Font("Century", 11F);
+            this.cmbTipoArea.FormattingEnabled = true;
+            this.cmbTipoArea.Items.AddRange(new object[] {
+            "Selecione",
+            "Lazer",
+            "Entretenimento",
+            "Esporte",
+            "Cultural",
+            "Ambiental"});
+            this.cmbTipoArea.Location = new System.Drawing.Point(136, 130);
+            this.cmbTipoArea.Name = "cmbTipoArea";
+            this.cmbTipoArea.Size = new System.Drawing.Size(232, 26);
+            this.cmbTipoArea.TabIndex = 106;
             // 
             // label1
             // 
@@ -297,17 +342,18 @@
             this.label1.TabIndex = 105;
             this.label1.Text = "* Tipo de Área:";
             // 
-            // comboBox4
+            // cmbCondominio
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Century", 11F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(206, 40);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(252, 26);
-            this.comboBox4.TabIndex = 104;
+            this.cmbCondominio.BackColor = System.Drawing.Color.LightGray;
+            this.cmbCondominio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCondominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCondominio.Font = new System.Drawing.Font("Century", 11F);
+            this.cmbCondominio.FormattingEnabled = true;
+            this.cmbCondominio.Location = new System.Drawing.Point(206, 40);
+            this.cmbCondominio.Name = "cmbCondominio";
+            this.cmbCondominio.Size = new System.Drawing.Size(252, 26);
+            this.cmbCondominio.TabIndex = 104;
+            this.cmbCondominio.SelectionChangeCommitted += new System.EventHandler(this.cmbCondominio_SelectionChangeCommitted);
             // 
             // label13
             // 
@@ -345,20 +391,20 @@
             this.label5.TabIndex = 41;
             this.label5.Text = "* Nome da Area: ";
             // 
-            // textBox3
+            // txtArea
             // 
-            this.textBox3.BackColor = System.Drawing.Color.LightGray;
-            this.textBox3.Font = new System.Drawing.Font("Century", 9.75F);
-            this.textBox3.Location = new System.Drawing.Point(146, 86);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 23);
-            this.textBox3.TabIndex = 40;
+            this.txtArea.BackColor = System.Drawing.Color.LightGray;
+            this.txtArea.Font = new System.Drawing.Font("Century", 9.75F);
+            this.txtArea.Location = new System.Drawing.Point(146, 86);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(262, 23);
+            this.txtArea.TabIndex = 40;
             // 
             // frmCadastrarAreas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 451);
+            this.ClientSize = new System.Drawing.Size(633, 448);
             this.Controls.Add(this.pnCenter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCadastrarAreas";
@@ -366,8 +412,8 @@
             this.Text = "Cadastro de Áreas";
             this.pnCenter.ResumeLayout(false);
             this.pnCenter.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbModoUso.ResumeLayout(false);
+            this.gbModoUso.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -376,26 +422,28 @@
 
         private System.Windows.Forms.Panel pnCenter;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtArea;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCondominio;
+        private System.Windows.Forms.ComboBox cmbTipoArea;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox gbModoUso;
+        private System.Windows.Forms.RadioButton rbdUsoPessoal;
+        private System.Windows.Forms.RadioButton rbdUsoPublico;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox ckbStatus;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox ckbAreaPaga;
+        private System.Windows.Forms.TextBox txtValorArea;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.ListBox lstHorarios;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox8;
+        private System.Windows.Forms.MaskedTextBox mtxtFim;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox7;
-        private System.Windows.Forms.Button btnExcluirListaPredio;
-        private System.Windows.Forms.Button btnAddPredio;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.MaskedTextBox mtxtInicio;
+        private System.Windows.Forms.Button btnRemoverHora;
+        private System.Windows.Forms.Button btnAddHora;
+        private System.Windows.Forms.CheckBox ckbStaus;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox lstAreas;
     }
 }
