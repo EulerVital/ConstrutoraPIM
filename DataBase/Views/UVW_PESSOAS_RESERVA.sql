@@ -12,8 +12,7 @@ AS
 		,PA.CPF
 		,PA.RG
 		,PA.IsMenorIdade
-		,PAR.ResponsavelID
-		,PAR.Nome NomeResponsavel
+		,PA.ResponsavelID
 		,PA.TipoPagamento
 		,RA.ReservaAreaID
 		,RA.DataReserva
@@ -41,8 +40,4 @@ AS
 		UVW_RESERVAR_AREA RA
 	ON
 		RA.ReservaAreaID = PA.ReservaAreaID
-	LEFT JOIN
-		TB_PESSOAS_RESERVA PAR
-	ON
-		PA.PessoaReservaID = PAR.ResponsavelID
 	

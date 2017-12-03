@@ -124,7 +124,6 @@ namespace DAO
                 obj.IsMenorIdade = GetBoolean("IsMenorIdade", dr);
                 obj.TipoPagamento = GetString("TipoPagamento", dr);
                 obj.ResponsavelID = GetInt32("ResponsavelID", dr).ToString();
-                obj.NomeResponsavel = GetString("NomeResponsavel", dr);
                 obj.ReservaArea.ReservaAreaID = GetInt32("ReservaAreaID", dr).ToString();
                 obj.ReservaArea.DataReserva = (DateTime)GetDateTimeNullable("DAtaReserva", dr);
                 obj.ReservaArea.Area.AreaID = GetInt32("AreaID", dr).ToString();

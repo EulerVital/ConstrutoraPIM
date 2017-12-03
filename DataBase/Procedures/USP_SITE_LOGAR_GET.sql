@@ -1,14 +1,14 @@
-IF EXISTS(select * from sys.procedures where name = 'USP_MORADOR_GET')
+IF EXISTS(select * from sys.procedures where name = 'USP_SITE_LOGAR_GET')
 BEGIN
-	DROP PROC USP_MORADOR_GET
+	DROP PROC USP_SITE_LOGAR_GET
 END
 GO
 
 /*
 --- CONSTRUTORA PIM ----
 **CRIAÇÃO
-* Motivo: Retorna dados de moradores com filtros base de dados
-* Data Criação: 21/10/2017
+* Motivo: Logora no site
+* Data Criação: 02/12/2017
 * Autor: Euler Vital
 *********************
 **Alterações
@@ -22,13 +22,10 @@ GO
 * Autor:
 */
 
-CREATE PROC USP_MORADOR_GET
+CREATE PROC USP_SITE_LOGAR_GET
 (
-	 @MoradorID INT = NULL
-	,@Nome VARCHAR(100) = NULL
-	,@ApartamentoID INT = NULL
-	,@VagaEstacionamentoID INT = NULL
-	,@CondominioID INT = NULL
+	 @Login VARCHAR(200)
+	,@Senha VARCHAR(200)
 )
 AS
 BEGIN
@@ -40,6 +37,7 @@ BEGIN
 		,Email
 		,CaminhoImagem
 		,UltimoNome
+		,LoginSite
 		,DataNascimento
 		,IsResponsavel
 		,Senha
@@ -83,14 +81,8 @@ BEGIN
 	FROM
 		UVW_MORADOR
 	WHERE
-		 MoradorID = COALESCE(@MoradorID, MoradorID)
+		 UPPER(LoginSite) = UPPER(@Login)
 	AND
-		 Nome = COALESCE(@Nome, Nome)
-	AND
-		ApartamentoID = COALESCE(@ApartamentoID, ApartamentoID)
-	AND
-		VagaEstacionamentoID = COALESCE(@VagaEstacionamentoID, VagaEstacionamentoID)
-	AND
-		CondominioID = COALESCE(@CondominioID,CondominioID)
+		Senha = REPLACE(REPLACE(@Senha, '.',''), '-','')
 END
 GO

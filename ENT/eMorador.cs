@@ -26,6 +26,7 @@ namespace ENT
         public string CaminhoImagem { get; set; }
         public bool IsResponsavel { get; set; }
         public bool Excluido { get; set; }
+        public string Senha { get; set; }
         public DateTime DataNascimento { get; set; }
         public List<eTelefone> ListaTelefone { get; set; }
         public eVisitante Visitante { get; set; }

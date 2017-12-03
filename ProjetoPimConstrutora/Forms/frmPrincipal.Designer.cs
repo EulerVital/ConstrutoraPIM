@@ -70,6 +70,8 @@
             this.estacionamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeVagasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msGcReservarAreas = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.correspondenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.segurançaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,21 +84,10 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnPrincipal = new System.Windows.Forms.Panel();
-            this.pnLogin = new System.Windows.Forms.Panel();
-            this.lblMensagem = new System.Windows.Forms.Label();
-            this.btnEntrar = new System.Windows.Forms.Button();
-            this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.reservarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.msMenuPrincipal.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnPrincipal.SuspendLayout();
-            this.pnLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // msMenuPrincipal
@@ -474,6 +465,20 @@
             this.msGcReservarAreas.Size = new System.Drawing.Size(203, 22);
             this.msGcReservarAreas.Text = "Reserva de Áreas";
             // 
+            // reservarToolStripMenuItem
+            // 
+            this.reservarToolStripMenuItem.Name = "reservarToolStripMenuItem";
+            this.reservarToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.reservarToolStripMenuItem.Text = "Reservar";
+            this.reservarToolStripMenuItem.Click += new System.EventHandler(this.msGcReservarAreas_Click);
+            // 
+            // consultarReservasToolStripMenuItem
+            // 
+            this.consultarReservasToolStripMenuItem.Name = "consultarReservasToolStripMenuItem";
+            this.consultarReservasToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.consultarReservasToolStripMenuItem.Text = "Consultar Reservas";
+            this.consultarReservasToolStripMenuItem.Click += new System.EventHandler(this.consultarReservasToolStripMenuItem_Click);
+            // 
             // correspondenciasToolStripMenuItem
             // 
             this.correspondenciasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
@@ -544,7 +549,7 @@
             this.pnTop.Controls.Add(this.lblTitulo);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.ForeColor = System.Drawing.Color.Black;
-            this.pnTop.Location = new System.Drawing.Point(0, 24);
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1174, 43);
             this.pnTop.TabIndex = 1;
@@ -580,144 +585,26 @@
             // 
             this.pnPrincipal.BackgroundImage = global::ProjetoPimConstrutora.Properties.Resources.imgFundo;
             this.pnPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnPrincipal.Controls.Add(this.pnLogin);
+            this.pnPrincipal.Controls.Add(this.lblUsuario);
             this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPrincipal.Location = new System.Drawing.Point(0, 67);
+            this.pnPrincipal.Enabled = false;
+            this.pnPrincipal.Location = new System.Drawing.Point(0, 43);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(1174, 436);
+            this.pnPrincipal.Size = new System.Drawing.Size(1174, 460);
             this.pnPrincipal.TabIndex = 2;
             // 
-            // pnLogin
+            // lblUsuario
             // 
-            this.pnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.pnLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnLogin.Controls.Add(this.lblMensagem);
-            this.pnLogin.Controls.Add(this.btnEntrar);
-            this.pnLogin.Controls.Add(this.cmbTipoUsuario);
-            this.pnLogin.Controls.Add(this.label3);
-            this.pnLogin.Controls.Add(this.label2);
-            this.pnLogin.Controls.Add(this.txtSenha);
-            this.pnLogin.Controls.Add(this.label1);
-            this.pnLogin.Controls.Add(this.txtLogin);
-            this.pnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnLogin.Location = new System.Drawing.Point(479, 63);
-            this.pnLogin.Name = "pnLogin";
-            this.pnLogin.Size = new System.Drawing.Size(319, 305);
-            this.pnLogin.TabIndex = 0;
-            // 
-            // lblMensagem
-            // 
-            this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensagem.ForeColor = System.Drawing.Color.Black;
-            this.lblMensagem.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblMensagem.Location = new System.Drawing.Point(18, 278);
-            this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(97, 20);
-            this.lblMensagem.TabIndex = 20;
-            this.lblMensagem.Text = "Mensagem";
-            this.lblMensagem.Visible = false;
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrar.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEntrar.ForeColor = System.Drawing.Color.Black;
-            this.btnEntrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEntrar.Location = new System.Drawing.Point(16, 238);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(102, 35);
-            this.btnEntrar.TabIndex = 19;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = false;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
-            // 
-            // cmbTipoUsuario
-            // 
-            this.cmbTipoUsuario.BackColor = System.Drawing.Color.White;
-            this.cmbTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTipoUsuario.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTipoUsuario.FormattingEnabled = true;
-            this.cmbTipoUsuario.Items.AddRange(new object[] {
-            "Selecione",
-            "Administrador",
-            "Sindico",
-            "Funcionário"});
-            this.cmbTipoUsuario.Location = new System.Drawing.Point(18, 72);
-            this.cmbTipoUsuario.Name = "cmbTipoUsuario";
-            this.cmbTipoUsuario.Size = new System.Drawing.Size(284, 26);
-            this.cmbTipoUsuario.TabIndex = 18;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(14, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 20);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Escolha o tipo de Usuário";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(14, 175);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Senha:";
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.BackColor = System.Drawing.Color.White;
-            this.txtSenha.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(16, 205);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(286, 26);
-            this.txtSenha.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(14, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Login:";
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.BackColor = System.Drawing.Color.White;
-            this.txtLogin.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Location = new System.Drawing.Point(16, 139);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(286, 26);
-            this.txtLogin.TabIndex = 11;
-            // 
-            // reservarToolStripMenuItem
-            // 
-            this.reservarToolStripMenuItem.Name = "reservarToolStripMenuItem";
-            this.reservarToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.reservarToolStripMenuItem.Text = "Reservar";
-            this.reservarToolStripMenuItem.Click += new System.EventHandler(this.msGcReservarAreas_Click);
-            // 
-            // consultarReservasToolStripMenuItem
-            // 
-            this.consultarReservasToolStripMenuItem.Name = "consultarReservasToolStripMenuItem";
-            this.consultarReservasToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.consultarReservasToolStripMenuItem.Text = "Consultar Reservas";
-            this.consultarReservasToolStripMenuItem.Click += new System.EventHandler(this.consultarReservasToolStripMenuItem_Click);
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblUsuario.Font = new System.Drawing.Font("Century", 11.75F, System.Drawing.FontStyle.Bold);
+            this.lblUsuario.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblUsuario.Location = new System.Drawing.Point(1087, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(85, 20);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "Usuário: ";
+            this.lblUsuario.Visible = false;
             // 
             // frmPrincipal
             // 
@@ -741,15 +628,12 @@
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.pnPrincipal.ResumeLayout(false);
-            this.pnLogin.ResumeLayout(false);
-            this.pnLogin.PerformLayout();
+            this.pnPrincipal.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip msMenuPrincipal;
         private System.Windows.Forms.ToolStripMenuItem msAdm;
         private System.Windows.Forms.ToolStripMenuItem msAdmCondominio;
         private System.Windows.Forms.ToolStripMenuItem msAdmUserSys;
@@ -790,17 +674,7 @@
         private System.Windows.Forms.ToolStripMenuItem controleDeVagasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem segurançaToolStripMenuItem;
         private System.Windows.Forms.Panel pnTop;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Panel pnLogin;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.ComboBox cmbTipoUsuario;
-        private System.Windows.Forms.Label lblMensagem;
-        private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.ToolStripMenuItem controleDeVigilânciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioDeVigilânciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarProfissãoToolStripMenuItem;
@@ -813,5 +687,8 @@
         private System.Windows.Forms.ToolStripMenuItem UtilTipoTelCons;
         private System.Windows.Forms.ToolStripMenuItem reservarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarReservasToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip msMenuPrincipal;
+        public System.Windows.Forms.Label lblTitulo;
+        public System.Windows.Forms.Label lblUsuario;
     }
 }

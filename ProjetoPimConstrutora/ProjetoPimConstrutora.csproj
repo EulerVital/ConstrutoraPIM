@@ -70,6 +70,12 @@
     <Compile Include="Forms\frmAluguelEstacionamento.Designer.cs">
       <DependentUpon>frmAluguelEstacionamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarUsuario.Designer.cs">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastrarVagaEstacionamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,12 @@
     <Compile Include="Forms\frmIncluirVisitanteRapido.Designer.cs">
       <DependentUpon>frmIncluirVisitanteRapido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmPrestadorSevico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -362,6 +374,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmAluguelEstacionamento.resx">
       <DependentUpon>frmAluguelEstacionamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastrarUsuario.resx">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarVagaEstacionamento.resx">
       <DependentUpon>frmCadastrarVagaEstacionamento.cs</DependentUpon>
@@ -474,6 +489,9 @@
     <EmbeddedResource Include="Forms\frmIncluirVisitanteRapido.resx">
       <DependentUpon>frmIncluirVisitanteRapido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrestadorSevico.resx">
       <DependentUpon>frmPrestadorSevico.cs</DependentUpon>
     </EmbeddedResource>
@@ -583,6 +601,8 @@
     <None Include="Resources\expExcel.png" />
     <None Include="Resources\expPdf.png" />
     <None Include="Resources\icon-cancel.png" />
+    <None Include="Resources\icon-login.png" />
+    <None Include="Resources\entrar.png" />
     <Content Include="Resources\IconeSistemaDesktop.ico" />
     <None Include="Resources\user_accounts_15362.png" />
     <None Include="Resources\tipo_contato.png" />
@@ -590,6 +610,8 @@
     <None Include="Resources\telefone_frm.png" />
     <None Include="Resources\vagaEstacionamento.png" />
     <None Include="Resources\pessoas.png" />
+    <None Include="Resources\icon_adduser.png" />
+    <None Include="Resources\icon_adduser1.png" />
     <Content Include="Resources\View_icon-icons.com_71837.png" />
     <None Include="Resources\View_icon-icons.com_718371.png" />
   </ItemGroup>

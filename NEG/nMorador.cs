@@ -60,5 +60,18 @@ namespace NEG
                 throw ex;
             }
         }
+
+        public static List<eMorador> SITE_LOGAR(eMorador obj)
+        {
+            try
+            {
+                dMorador db = new dMorador();
+                return db.SiteLogor_GET(obj);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

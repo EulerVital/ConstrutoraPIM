@@ -154,9 +154,11 @@ namespace ProjetoPimConstrutora.Forms
             if(listaMorador != null)
             {
                 dgvMoradores.Rows.Clear();
+                string EnderecoCond = string.Empty;
                 foreach(var item in listaMorador)
                 {
-                    dgvMoradores.Rows.Add(item.MoradorID, item.Nome, item.CPF , item.Email, "Reservar");
+                    EnderecoCond = item.Apartamento.Predio.Bloco.Condominio.Nome + " / " + item.Apartamento.Predio.Bloco.Nome + " / " + item.Apartamento.Predio.Nome + " / " + item.Apartamento.AptAndar;
+                    dgvMoradores.Rows.Add(item.MoradorID, item.Nome, item.CPF, EnderecoCond, "Reservar");
                 }
             }
         }
@@ -294,13 +296,31 @@ namespace ProjetoPimConstrutora.Forms
 
                 obj.Nome = objMorador.Nome + " " + objMorador.UltimoNome;
 
-            }else
+                if (!obj.IsMenorIdade)
+                {
+                    ListaPessoasResponsavel = new List<ePessoaReserva>();
+                    ListaPessoasResponsavel.Add(obj);
+                    CarregarResponsavel(obj);
+                }
+
+            }
+            else
             {
                 obj = ValidandoCamposPessoa();
             }
 
             if (obj != null)
             {
+                if (cmbResponsavel.Enabled)
+                {
+                    if (!obj.IsMenorIdade)
+                    {
+                        ListaPessoasResponsavel.Add(obj);
+                    }
+
+                    CarregarResponsavel(null);
+                }
+
                 if(ListaPessoas == null)
                 {
                     ListaPessoas = new List<ePessoaReserva>();
@@ -309,7 +329,6 @@ namespace ProjetoPimConstrutora.Forms
                 ListaPessoas.Add(obj);
                 CarregarListaPessoas();
 
-                CarregarResponsavel(obj);
                 LimparCamposPessoa();
             }
         }
@@ -338,7 +357,7 @@ namespace ProjetoPimConstrutora.Forms
                 ListaPessoas = new List<ePessoaReserva>();
             }
 
-            if (string.IsNullOrEmpty(txtPessoaNome.Text) || (string.IsNullOrEmpty(mtxtCpf.Text.Replace(",", "").Replace(".", "").Replace("-", "").Trim()) && string.IsNullOrEmpty(txtPessoaRg.Text.Trim()) && ckbPessoaMenorIdade.Checked))
+            if (string.IsNullOrEmpty(txtPessoaNome.Text) || (string.IsNullOrEmpty(mtxtPessoaCpf.Text.Replace(",", "").Replace(".", "").Replace("-", "").Trim()) && string.IsNullOrEmpty(txtPessoaRg.Text.Trim()) && ckbPessoaMenorIdade.Checked))
             {
                 if (string.IsNullOrEmpty(txtNome.Text))
                 {
@@ -351,7 +370,7 @@ namespace ProjetoPimConstrutora.Forms
                 }
             }else
             {
-                if (ListaPessoas.Exists(c => c.CPF == mtxtCpf.Text.Replace(",", "").Replace(".", "").Replace("-", "").Trim() || c.RG == txtPessoaRg.Text.Trim()))
+                if (ListaPessoas.Exists(c => c.CPF == mtxtPessoaCpf.Text.Replace(",", "").Replace(".", "").Replace("-", "").Trim() || c.RG == txtPessoaRg.Text.Trim()) && !ckbPessoaMenorIdade.Checked)
                 {
                     Util.MensagemInformacao("Pessoa já existe na lista");
                 }
@@ -361,10 +380,10 @@ namespace ProjetoPimConstrutora.Forms
 
                     obj.Nome = txtPessoaNome.Text;
                     obj.IsMenorIdade = ckbPessoaMenorIdade.Checked;
-                    var objResponsavel = (ePessoaReserva)cmbResponsavel.SelectedItem;
 
-                    if (obj.IsMenorIdade)
+                    if (obj.IsMenorIdade && cmbResponsavel.Enabled)
                     {
+                        var objResponsavel = (ePessoaReserva)cmbResponsavel.SelectedItem;
                         cmbResponsavel.SelectedItem = objResponsavel;
                     }
 
@@ -433,27 +452,31 @@ namespace ProjetoPimConstrutora.Forms
 
         private void CarregarResponsavel(ePessoaReserva obj)
         {
-            if (ListaPessoas.Count > 0)
+            if (ListaPessoasResponsavel != null)
             {
-                if(ListaPessoasResponsavel == null)
+                if (ListaPessoasResponsavel.Count > 0)
                 {
-                    ListaPessoasResponsavel = new List<ePessoaReserva>();
-                    ListaPessoasResponsavel.AddRange(ListaPessoas);
-                }
-
-                ListaPessoasResponsavel.Insert(0, new ePessoaReserva() { Nome = "Selecione", CPF = "0" });
-
-                cmbResponsavel.DataSource = null;
-                cmbResponsavel.DataSource = ListaPessoas;
-                cmbResponsavel.DisplayMember = "Nome";
-                cmbResponsavel.ValueMember = "CPF";
-
-                if (obj != null)
-                {
-                    if (!obj.IsMenorIdade)
+                    if (!ListaPessoasResponsavel.Exists(c => c.CPF == "0"))
                     {
-                        cmbResponsavel.SelectedValue = obj.CPF;
-                        cmbResponsavel.Enabled = false;
+                        if (obj == null)
+                        {
+                            ListaPessoasResponsavel.Insert(0, new ePessoaReserva() { Nome = "Selecione", CPF = "0" });
+                        }
+                    }
+
+                    cmbResponsavel.DataSource = null;
+                    cmbResponsavel.DataSource = ListaPessoasResponsavel;
+                    cmbResponsavel.DisplayMember = "Nome";
+                    cmbResponsavel.ValueMember = "CPF";
+
+                    if (obj != null)
+                    {
+                        if (!obj.IsMenorIdade)
+                        {
+                            cmbResponsavel.SelectedValue = obj.CPF;
+                            cmbResponsavel.Enabled = false;
+                            cmbResponsavel.SelectedIndex = 0;
+                        }
                     }
                 }
             }
@@ -516,9 +539,9 @@ namespace ProjetoPimConstrutora.Forms
                         {
                             string ResponsavelID = string.Empty;
 
-                            foreach(var item in ListaPessoas)
+                            foreach(var item in ListaPessoasResponsavel)
                             {
-                                if (item == ((ePessoaReserva)cmbResponsavel.SelectedItem))
+                                if (item.CPF == ((ePessoaReserva)cmbResponsavel.SelectedItem).CPF)
                                 {
                                     item.ReservaArea.ReservaAreaID = objReserva.ReservaAreaID;
                                     item.TipoPagamento = cmbTipoPagamento.SelectedItem.ToString();
@@ -562,6 +585,8 @@ namespace ProjetoPimConstrutora.Forms
                     Util.MensagemSucesso("Reserva cadastrada com sucesso");
                     LimparCamposReserva();
                     tabControlReservar.SelectedTab = tbpMorador;
+                    //pnSelecionaMorador.Enabled = true;
+                    pnConsultaMorador.Enabled = true;
                 }
                 else
                 {
@@ -758,7 +783,7 @@ namespace ProjetoPimConstrutora.Forms
         private void txtPessoaRg_TextChanged(object sender, EventArgs e)
         {
             txtPessoaRg.Text = Util.RemoveLetras(txtPessoaRg.Text).Trim();
-            txtPessoaRg.Select(txtNome.TextLength, 0);
+            txtPessoaRg.Select(txtPessoaRg.TextLength, 0);
         }
 
         private void dtpDataReserva_ValueChanged(object sender, EventArgs e)

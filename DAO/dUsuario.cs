@@ -37,15 +37,18 @@ namespace DAO
         public List<eUsuario> Usuario_GET(eUsuario obj)
         {
             List<eUsuario> retorno = new List<eUsuario>();
-            //cmd = new SqlCommand();
-            //param = new SqlParameter[3];
+            cmd = new SqlCommand();
+            param = new SqlParameter[4];
 
             try
             {
 
-               // MontarParametro(0, param, ParameterDirection.Input, "@ApartamentoID", obj.ApartamentoID, SqlDbType.Int);
+                MontarParametro(0, param, ParameterDirection.Input, "@UsuarioID", obj.UsuarioID, SqlDbType.Int);
+                MontarParametro(1, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Int);
+                MontarParametro(2, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
+                MontarParametro(3, param, ParameterDirection.Input, "@PredioID", obj.Predio.PredioID, SqlDbType.Int);
 
-                dr = ExecReader("", cmd, param);
+                dr = ExecReader("USP_USUARIO_GET", cmd, param);
 
                 if (dr != null)
                 {
@@ -76,9 +79,32 @@ namespace DAO
             {
                 obj.UsuarioID = GetInt32("UsuarioId", dr).ToString();
                 obj.NomeUser = GetString("NomeUser", dr);
-                obj.Senha = GetInt32("Senha", dr).ToString();
-                obj.Sexo = GetString("Sexo", dr);
+                obj.Senha = GetString("Senha", dr);
+                obj.TipoUsuario = GetString("TipoUsuario", dr);
+                obj.Excluido = GetBoolean("Excluido", dr);
+                obj.Email = GetString("Email", dr);
                 obj.Condominio.CondominioID = GetInt32("CondominioID", dr).ToString();
+                obj.Condominio.Nome = GetString("NomeCondominio", dr);
+                obj.Condominio.QtdBlocos = GetInt32("QtdBlocos", dr);
+                obj.Condominio.Endereco = GetString("Endereco", dr);
+                obj.Condominio.CEP = GetString("CEP", dr);
+                obj.Condominio.Bairro = GetString("Bairro", dr);
+                obj.Condominio.Cidade.CidadeID = GetInt32("CidadeID", dr).ToString();
+                obj.Condominio.Cidade.Nome = GetString("CidadeNome", dr);
+                obj.Condominio.Cidade.Estado.EstadoID = GetInt32("EstadoID", dr).ToString();
+                obj.Condominio.Cidade.Estado.Nome = GetString("EstadoNome", dr);
+                obj.Condominio.Cidade.Estado.UF = GetString("UF", dr);
+                obj.Condominio.Excluido = GetBoolean("Excluido", dr);
+                obj.Condominio.DataFundacao = GetDateTimeNullable("DataFundacao", dr);
+                obj.Bloco.BlocoID = GetInt32("BlocoID", dr).ToString();
+                obj.Bloco.Nome = GetString("NomeBloco", dr);
+                obj.Bloco.QtdPredios = GetInt32("QtdPredios", dr);
+                obj.Bloco.TipoBloco = GetString("TipoBloco", dr);
+                obj.Bloco.StatusAtivo = GetBoolean("StatusAtivo", dr);
+                obj.Predio.PredioID = GetInt32("PredioID", dr).ToString();
+                obj.Predio.Nome = GetString("NomePredio", dr);
+                obj.Predio.QtdApartamentos = GetInt32("QtdApartamentos", dr);
+
                 return obj;
             }
             catch (Exception ex)
@@ -93,14 +119,22 @@ namespace DAO
             try
             {
                 cmd = new SqlCommand();
-                param = new SqlParameter[7];
+                param = new SqlParameter[9];
 
                 if (string.IsNullOrEmpty(obj.UsuarioID))
                     obj.UsuarioID = "0";
 
-               // MontarParametro(0, param, ParameterDirection.Input, "@ApartamentoID", obj.ApartamentoID, SqlDbType.Int);
-                
-                retorno = Convert.ToString(ExecScalar("", cmd, param));
+                MontarParametro(0, param, ParameterDirection.Input, "@UsuarioID", obj.UsuarioID, SqlDbType.Int);
+                MontarParametro(1, param, ParameterDirection.Input, "@NomeUser", obj.NomeUser, SqlDbType.VarChar);
+                MontarParametro(2, param, ParameterDirection.Input, "@Senha", obj.Senha, SqlDbType.VarChar);
+                MontarParametro(3, param, ParameterDirection.Input, "@CondominioID", obj.Condominio.CondominioID, SqlDbType.Int);
+                MontarParametro(4, param, ParameterDirection.Input, "@TipoUsuario", obj.TipoUsuario, SqlDbType.Char);
+                MontarParametro(5, param, ParameterDirection.Input, "@Email", obj.Email, SqlDbType.VarChar);
+                MontarParametro(6, param, ParameterDirection.Input, "@BlocoID", obj.Bloco.BlocoID, SqlDbType.Int);
+                MontarParametro(7, param, ParameterDirection.Input, "@PredioID", obj.Predio.PredioID, SqlDbType.Int);
+                MontarParametro(8, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
+
+                retorno = Convert.ToString(ExecScalar("USP_USUARIO_SET", cmd, param));
             }
             catch (SqlException sqlex)
             {
@@ -113,6 +147,41 @@ namespace DAO
             finally { CloseConnection(); }
 
             return retorno;
+        }
+
+        public string Usuario_Logar(string nomeUser, string senha)
+        {
+            cmd = new SqlCommand();
+            param = new SqlParameter[2];
+            string retorno = string.Empty;
+
+            try
+            {
+
+                MontarParametro(0, param, ParameterDirection.Input, "@NomeUser", nomeUser, SqlDbType.VarChar);
+                MontarParametro(1, param, ParameterDirection.Input, "@Senha", senha, SqlDbType.VarChar);
+
+                dr = ExecReader("USP_LOGAR_GET", cmd, param);
+
+                if (dr != null)
+                {
+                    while (dr.Read())
+                    {
+                        retorno = dr["UsuarioID"].ToString();
+                    }
+                }
+
+                return retorno;
+            }
+            catch (SqlException sqlex)
+            {
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { CloseConnection(); }
         }
     }
 }

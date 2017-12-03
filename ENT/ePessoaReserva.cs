@@ -19,7 +19,6 @@ namespace ENT
         public string RG { get; set; }
         public bool IsMenorIdade { get; set; }
         public string ResponsavelID { get; set; }
-        public string NomeResponsavel { get; set; }
         public string TipoPagamento { get; set; }
         public eReservarArea ReservaArea { get; set; }
         

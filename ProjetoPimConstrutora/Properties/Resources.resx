@@ -121,38 +121,77 @@
   <data name="familia_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\familia_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user_accounts_15362" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_accounts_15362.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tipo_contato" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tipo_contato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="expExcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\expExcel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="consultar_frm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\consultar_frm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="telefone_frm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\telefone_frm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="enviar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enviar.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edittrash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edittrash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sem-usuario-masculino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sem-usuario-masculino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="familia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\familia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="View_icon-icons.com_71837" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\View_icon-icons.com_718371.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="telefone_frm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telefone_frm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expExcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expExcel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vagaEstacionamento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vagaEstacionamento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_adduser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_adduser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tipo_contato_odl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tipo_contato_odl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon-cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="consultar_frm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consultar_frm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_accounts_15362" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_accounts_15362.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expPdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expPdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4927_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4927_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tipo_contato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tipo_contato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pessoas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pessoas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="familia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\familia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_adduser1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_adduser1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edittrash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edittrash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgFundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgFundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,34 +199,7 @@
   <data name="178" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\178.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sem-usuario-masculino" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sem-usuario-masculino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vagaEstacionamento" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vagaEstacionamento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tipo_contato_odl" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tipo_contato_odl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="expPdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\expPdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4927_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4927_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pessoas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pessoas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="entrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\entrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

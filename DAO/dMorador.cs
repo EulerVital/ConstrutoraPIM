@@ -91,6 +91,7 @@ namespace DAO
                 obj.DataNascimento = (DateTime)GetDateTimeNullable("DataNascimento", dr);
                 obj.LoginSite = GetString("LoginSite", dr);
                 obj.IsResponsavel = GetBoolean("IsResponsavel", dr);
+                obj.Senha = GetString("Senha", dr);
                 obj.VagaEstacionamento.Estacionamento.EstacionamentoID = GetInt32("EstacionamentoID", dr).ToString();
                 obj.VagaEstacionamento.Estacionamento.Nome = GetString("NomeEstacionamento", dr);
                 obj.VagaEstacionamento.Estacionamento.QtdVagas = GetInt32("QtdVagas", dr);
@@ -104,7 +105,7 @@ namespace DAO
                 obj.Apartamento.TipoEstadia.ValorFixo = GetDecimalNullable("ValorFixo", dr);
                 obj.Apartamento.TipoEstadia.Excluido = GetBooleanNullable("TipoEstadiaExcluido", dr);
                 obj.Apartamento.Predio.PredioID = GetInt32("PredioID", dr).ToString();
-                obj.Apartamento.Predio.Nome = GetString("NomPredio", dr);
+                obj.Apartamento.Predio.Nome = GetString("NomePredio", dr);
                 obj.Apartamento.Predio.QtdApartamentos = GetInt32("QtdApartamentos", dr);
                 obj.Apartamento.Predio.Bloco.BlocoID = GetInt32("BlocoID", dr).ToString();
                 obj.Apartamento.Predio.Bloco.Nome = GetString("NomeBloco", dr);
@@ -174,6 +175,41 @@ namespace DAO
             finally { CloseConnection(); }
 
             return retorno;
+        }
+
+        public List<eMorador> SiteLogor_GET(eMorador obj)
+        {
+            List<eMorador> retorno = new List<eMorador>();
+            cmd = new SqlCommand();
+            param = new SqlParameter[2];
+
+            try
+            {
+
+                MontarParametro(0, param, ParameterDirection.Input, "@Login", obj.LoginSite, SqlDbType.VarChar);
+                MontarParametro(1, param, ParameterDirection.Input, "@Senha", obj.Senha, SqlDbType.VarChar);
+
+                dr = ExecReader("USP_SITE_LOGAR_GET", cmd, param);
+
+                if (dr != null)
+                {
+                    while (dr.Read())
+                    {
+                        retorno.Add(Morador(dr));
+                    }
+                }
+
+                return retorno;
+            }
+            catch (SqlException sqlex)
+            {
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { CloseConnection(); }
         }
 
     }

@@ -18,6 +18,7 @@ AS
 		,DataNascimento
 		,M.Excluido 
 		,IsResponsavel
+		,Senha
 		,A.ApartamentoID
 		,A.NumeroApartamento
 		,A.ValorApartamento

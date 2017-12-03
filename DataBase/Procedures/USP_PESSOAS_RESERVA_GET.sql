@@ -38,7 +38,6 @@ BEGIN
 		,RG
 		,IsMenorIdade
 		,ResponsavelID
-		,NomeResponsavel
 		,TipoPagamento
 		,ReservaAreaID
 		,DataReserva

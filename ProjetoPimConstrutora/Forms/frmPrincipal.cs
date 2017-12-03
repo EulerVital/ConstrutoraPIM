@@ -14,7 +14,7 @@ namespace ProjetoPimConstrutora.Forms
             this.Visible = false;
             Thread.Sleep(2000);
             this.Show();
-            cmbTipoUsuario.SelectedIndex = 0;
+            new frmLogin(this);
         }
 
         #region Eventos
@@ -38,7 +38,6 @@ namespace ProjetoPimConstrutora.Forms
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             msMenuPrincipal.Visible = true;
-            pnLogin.Visible = false;
             lblTitulo.Text = "Bem vindo ao sistema.....";
             lblTitulo.Visible = true;
         }
@@ -134,9 +133,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmEscolherTipoUsuario frm = new frmEscolherTipoUsuario(this);
-            frm.MdiParent = this;
-            frm.Show();
+            new frmCadastrarUsuario(this);
         }
 
         private void msAdmFuncionarioCadFunc_Click(object sender, EventArgs e)
@@ -193,9 +190,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             lblTitulo.Visible = false;
             pnPrincipal.Visible = false;
-            frmConsultarUsuario frm = new frmConsultarUsuario();
-            frm.MdiParent = this;
-            frm.Show();
+            frmConsultarUsuario frm = new frmConsultarUsuario(this);
             
         }
 

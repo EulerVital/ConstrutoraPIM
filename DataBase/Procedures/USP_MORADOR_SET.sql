@@ -36,6 +36,7 @@ CREATE PROC USP_MORADOR_SET
 	,@VagaEstacionamentoID INT = NULL
 	,@IsResponsavel BIT = 0
 	,@Excluido BIT = 0
+	,@Senha VARCHAR(20) = NULL
 )
 AS
 BEGIN
@@ -56,6 +57,7 @@ BEGIN
 				,VagaEstacionamentoID
 				,IsResponsavel
 				,Excluido
+				,Senha
 			)SELECT
 				 @Nome
 				,@RG
@@ -68,6 +70,7 @@ BEGIN
 				,@VagaEstacionamentoID
 				,@IsResponsavel
 				,@Excluido
+				,@CPF --Regra ao inserir um novo Morador ele terá como senha seu CPF
 
 			SET @MoradorID = @@IDENTITY
 		END
@@ -86,6 +89,7 @@ BEGIN
 			,VagaEstacionamentoID = @VagaEstacionamentoID
 			,IsResponsavel = @IsResponsavel
 			,Excluido = @Excluido
+			,Senha = @Senha
 		WHERE
 			MoradorID = @MoradorID
 	END
