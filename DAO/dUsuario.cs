@@ -94,7 +94,7 @@ namespace DAO
                 obj.Condominio.Cidade.Estado.EstadoID = GetInt32("EstadoID", dr).ToString();
                 obj.Condominio.Cidade.Estado.Nome = GetString("EstadoNome", dr);
                 obj.Condominio.Cidade.Estado.UF = GetString("UF", dr);
-                obj.Condominio.Excluido = GetBoolean("Excluido", dr);
+                obj.Condominio.Excluido = GetBoolean("ExcluidoCondominio", dr);
                 obj.Condominio.DataFundacao = GetDateTimeNullable("DataFundacao", dr);
                 obj.Bloco.BlocoID = GetInt32("BlocoID", dr).ToString();
                 obj.Bloco.Nome = GetString("NomeBloco", dr);

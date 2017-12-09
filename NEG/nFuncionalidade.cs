@@ -48,18 +48,18 @@ namespace NEG
             }
         }
 
-        public static string Funcionalidade_SET(eFuncionalidade obj)
-        {
-            try
-            {
-                dFuncionalidade db = new dFuncionalidade();
-                return db.Funcionalidade_SET(obj);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //public static string Funcionalidade_SET(eFuncionalidade obj)
+        //{
+        //    try
+        //    {
+        //        dFuncionalidade db = new dFuncionalidade();
+        //        return db.Funcionalidade_SET(obj);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
     }
 }
 

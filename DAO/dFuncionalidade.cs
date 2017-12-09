@@ -43,8 +43,11 @@ namespace DAO
 
             try
             {
-                
-                dr = ExecReader("", cmd, param);
+                MontarParametro(0, param, ParameterDirection.Input, "@FuncionalidadeID", obj.FuncionalidadeID, SqlDbType.Int);
+                MontarParametro(1, param, ParameterDirection.Input, "@AreaFuncionalidade", obj.AreaFuncionalidade, SqlDbType.VarChar);
+                MontarParametro(2, param, ParameterDirection.Input, "@Codigo", obj.Codigo_, SqlDbType.Int);
+
+                dr = ExecReader("USP_FUNCIONALIDADE_GET", cmd, param);
 
                 if (dr != null)
                 {
@@ -73,11 +76,11 @@ namespace DAO
 
             try
             {
-                obj.FuncionalidadeID = GetInt32("FuncinalidadeID", dr).ToString();
+                obj.FuncionalidadeID = GetInt32("FuncionalidadeID", dr).ToString();
                 obj.Descricao = GetString("Descricao", dr);
                 obj.AreaFuncionalidade = GetString("AreaFuncionalidade", dr);
+                obj.Codigo_ = GetInt32("Codigo", dr).ToString();
                 obj.Excluido = GetBoolean("Excluido", dr);
-                obj.Usuario.UsuarioID = GetInt32("UsuarioID", dr).ToString();
                    
                 return obj;
             }
@@ -85,40 +88,6 @@ namespace DAO
             {
                 throw ex;
             }
-        }
-
-        public string Funcionalidade_SET(eFuncionalidade obj)
-        {
-            string retorno = string.Empty;
-            try
-            {
-                cmd = new SqlCommand();
-                //param = new SqlParameter[7];
-
-                if (string.IsNullOrEmpty(obj.FuncionalidadeID))
-                    obj.FuncionalidadeID = "0";
-
-                /* MontarParametro(0, param, ParameterDirection.Input, "@ApartamentoID", obj.ApartamentoID, SqlDbType.Int);
-                MontarParametro(1, param, ParameterDirection.Input, "@NumeroApartamento", obj.NumeroApartamento, SqlDbType.Int);
-                MontarParametro(2, param, ParameterDirection.Input, "@TipoEstadiaID", obj.TipoEstadia.TipoEstadiaID, SqlDbType.Int);
-                MontarParametro(3, param, ParameterDirection.Input, "@AndarPredio", obj.AndarPredio, SqlDbType.Int);
-                MontarParametro(4, param, ParameterDirection.Input, "@ValorApartamento", obj.ValorApartamento, SqlDbType.Decimal);
-                MontarParametro(5, param, ParameterDirection.Input, "@PredioID", obj.Predio.PredioID, SqlDbType.Int);
-                MontarParametro(6, param, ParameterDirection.Input, "@IsCadAutomatico", obj.IsCadAutomatico, SqlDbType.Bit); */
-
-                retorno = Convert.ToString(ExecScalar("", cmd, param));
-            }
-            catch (SqlException sqlex)
-            {
-                throw sqlex;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally { CloseConnection(); }
-
-            return retorno;
         }
     }
 }

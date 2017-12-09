@@ -49,6 +49,7 @@
     <Compile Include="eEstacionamento.cs" />
     <Compile Include="eEstado.cs" />
     <Compile Include="eFuncionalidade.cs" />
+    <Compile Include="eFuncionalidadeUsuario.cs" />
     <Compile Include="eFuncionario.cs" />
     <Compile Include="eHorario.cs" />
     <Compile Include="eMorador.cs" />

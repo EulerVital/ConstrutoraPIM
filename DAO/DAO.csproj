@@ -50,6 +50,7 @@
     <Compile Include="dEstacionamento.cs" />
     <Compile Include="dEstado.cs" />
     <Compile Include="dFuncionalidade.cs" />
+    <Compile Include="dFuncionalidadeUsuario.cs" />
     <Compile Include="dFuncionario.cs" />
     <Compile Include="dHorario.cs" />
     <Compile Include="dMorador.cs" />

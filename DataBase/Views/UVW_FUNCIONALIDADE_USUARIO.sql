@@ -25,12 +25,13 @@ GO
 CREATE VIEW UVW_FUNCIONALIDADE_USUARIO
 AS
 	SELECT
-		 FU.FuncionarioUser
+		 FU.FuncionalidadeUserID
 		,FU.Excluido
 		,F.FuncionalidadeID
 		,F.Descricao
 		,F.AreaFuncionalidade
-		,F.Excluido ExcluidoFuncionario
+		,F.Excluido ExcluidoFuncionalidade
+		,F.Codigo
 		,U.UsuarioID
 		,U.NomeUser
 		,U.Senha
@@ -50,6 +51,11 @@ AS
 		,U.EstadoNome
 		,U.UF
 		,U.ExcluidoCondominio
+		,U.BlocoID
+		,U.NomeBloco
+		,U.QtdPredios
+		,U.TipoBloco
+		,U.StatusAtivo
 	FROM
 		TB_FUNCIONALIDADE_USUARIO FU
 	JOIN

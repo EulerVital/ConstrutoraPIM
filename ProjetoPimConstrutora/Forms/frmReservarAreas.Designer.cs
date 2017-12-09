@@ -780,6 +780,7 @@
             this.lstAreasDisponiveis.Name = "lstAreasDisponiveis";
             this.lstAreasDisponiveis.Size = new System.Drawing.Size(222, 218);
             this.lstAreasDisponiveis.TabIndex = 161;
+            this.lstAreasDisponiveis.SelectedIndexChanged += new System.EventHandler(this.lstAreasDisponiveis_SelectedIndexChanged);
             // 
             // label1
             // 

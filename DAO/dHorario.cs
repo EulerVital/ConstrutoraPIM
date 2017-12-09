@@ -111,12 +111,17 @@ namespace DAO
                 if (string.IsNullOrEmpty(obj.HorarioID))
                     obj.HorarioID = "0";
 
+                if (obj.Reservado == null)
+                {
+                    obj.Reservado = false;
+                }
+
                 MontarParametro(0, param, ParameterDirection.Input, "@HorarioID", obj.HorarioID, SqlDbType.Int);
                 MontarParametro(1, param, ParameterDirection.Input, "@HoraInicio", obj.HoraInicio, SqlDbType.VarChar);
                 MontarParametro(2, param, ParameterDirection.Input, "@HoraFim", obj.HoraFim, SqlDbType.VarChar);
                 MontarParametro(3, param, ParameterDirection.Input, "@Excluido", obj.Excluido, SqlDbType.Bit);
                 MontarParametro(4, param, ParameterDirection.Input, "@AreaID", obj.Area.AreaID, SqlDbType.Int);
-                MontarParametro(5, param, ParameterDirection.Input, "@REservado", obj.Reservado, SqlDbType.Bit);
+                MontarParametro(5, param, ParameterDirection.Input, "@Reservado", obj.Reservado, SqlDbType.Bit);
 
 
                 retorno = Convert.ToString(ExecScalar("USP_HORARIO_SET", cmd, param));

@@ -35,6 +35,7 @@ AS
 BEGIN
 
 	IF @HORARIOID = 0
+	IF (select count(1) from tb_horario where HoraInicio = @HoraInicio and HoraFim = @HoraFim and AreaID = @AreaID) = 0
 	BEGIN
 		INSERT INTO TB_HORARIO
 		(

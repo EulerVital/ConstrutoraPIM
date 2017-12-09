@@ -44,5 +44,7 @@ BEGIN
 		F.AreaFuncionalidade = COALESCE(@AreaFuncionalidade, F.AreaFuncionalidade)
 	AND
 		Codigo = COALESCE(@Codigo, Codigo)
+	AND
+		Excluido = 0
 END
 GO

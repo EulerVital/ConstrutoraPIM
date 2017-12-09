@@ -70,6 +70,12 @@
     <Compile Include="Forms\frmAluguelEstacionamento.Designer.cs">
       <DependentUpon>frmAluguelEstacionamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmAtribuirFuncionalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAtribuirFuncionalidade.Designer.cs">
+      <DependentUpon>frmAtribuirFuncionalidade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmAluguelEstacionamento.resx">
       <DependentUpon>frmAluguelEstacionamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAtribuirFuncionalidade.resx">
+      <DependentUpon>frmAtribuirFuncionalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastrarUsuario.resx">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
