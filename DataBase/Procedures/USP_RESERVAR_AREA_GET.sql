@@ -27,6 +27,7 @@ CREATE PROC USP_RESERVAR_AREA_GET
 	 @ReservaAreaID INT = NULL
 	,@MoradorID INT = NULL
 	,@AreaID INT = NULL
+	,@CondominioID INT = NULL
 )
 AS
 BEGIN
@@ -95,5 +96,7 @@ BEGIN
 		 MoradorID = COALESCE(@MoradorID, MoradorID)
 	AND
 		 AreaID = COALESCE(@AreaID, AreaID)
+	AND
+		 CondominioID = COALESCE(@CondominioID, CondominioID)
 END
 GO

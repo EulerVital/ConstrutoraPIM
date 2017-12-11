@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ICondominioUser.cs" />
     <Compile Include="nFuncionalidadeUsuario.cs" />
     <Compile Include="nApartamento.cs" />
     <Compile Include="nArea.cs" />

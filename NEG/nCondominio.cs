@@ -28,12 +28,25 @@ namespace NEG
         /// </summary>
         #endregion
 
-        public static List<eCondominio> Condominio_GET(eCondominio obj)
+        public static List<eCondominio> Condominio_GET(eCondominio obj, eUsuario objUser)
         {
             try
             {
                 dCondominio db = new dCondominio();
-                return db.Condominio_GET(obj);
+                if (objUser.Condominio.CondominioID == null)
+                {
+                    objUser.Condominio.CondominioID = "0";
+                }
+
+
+                if (objUser.Condominio.CondominioID.Equals("0"))
+                {
+                    return db.Condominio_GET(obj);
+                }else
+                {
+                    obj = objUser.Condominio;
+                    return db.Condominio_GET(obj);
+                }
             }
             catch (Exception ex)
             {

@@ -41,7 +41,7 @@ namespace DAO
         {
             List<eApartamento> retorno = new List<eApartamento>();
             cmd = new SqlCommand();
-            param = new SqlParameter[4];
+            param = new SqlParameter[5];
 
             try
             {
@@ -50,6 +50,7 @@ namespace DAO
                 MontarParametro(1, param, ParameterDirection.Input, "@PredioID", obj.Predio.PredioID, SqlDbType.Int);
                 MontarParametro(2, param, ParameterDirection.Input, "@NomePredio", obj.Predio.Nome, SqlDbType.VarChar);
                 MontarParametro(3, param, ParameterDirection.Input, "@IsApartamentoSemMorador", IsApartamentoSemMorador, SqlDbType.Bit);
+                MontarParametro(4, param, ParameterDirection.Input, "@CondominioID", obj.Predio.Bloco.Condominio.CondominioID, SqlDbType.Int);
 
                 dr = ExecReader("USP_APARTAMENTO_GET", cmd, param);
 

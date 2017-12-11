@@ -35,12 +35,26 @@ namespace NEG
         {
 
         }
-        public static List<ePredio> Predio_GET(ePredio obj)
+        public static List<ePredio> Predio_GET(ePredio obj, eUsuario objUser)
         {
             try
             {
                 dPredio db = new dPredio();
-                return db.Predio_GET(obj);
+
+                if (objUser.Condominio.CondominioID == null)
+                {
+                    objUser.Condominio.CondominioID = "0";
+                }
+
+                if (objUser.Condominio.Equals("0"))
+                {
+                    return db.Predio_GET(obj);
+                }
+                else
+                {
+                    obj.Bloco.Condominio = objUser.Condominio;
+                    return db.Predio_GET(obj);
+                }
             }
             catch (Exception ex)
             {

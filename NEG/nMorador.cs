@@ -35,12 +35,24 @@ namespace NEG
         {
 
         }
-        public static List<eMorador> MORADOR_GET(eMorador obj)
+        public static List<eMorador> MORADOR_GET(eMorador obj, eUsuario objUser)
         {
             try
             {
                 dMorador db = new dMorador();
-                return db.MORADOR_GET(obj);
+                if (objUser.Condominio.CondominioID == null)
+                {
+                    objUser.Condominio.CondominioID = "0";
+                }
+
+                if (objUser.Condominio.CondominioID.Equals("0"))
+                {
+                    return db.MORADOR_GET(obj);
+                }else
+                {
+                    obj.Apartamento.Predio.Bloco.Condominio = objUser.Condominio;
+                    return db.MORADOR_GET(obj);
+                }
             }
             catch (Exception ex)
             {

@@ -33,34 +33,34 @@
             this.msAdm = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondominio = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondCond = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondCondCad = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondCondCons = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondCondCad_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondCondCons_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondBloco = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondBlocoCad = new System.Windows.Forms.ToolStripMenuItem();
-            this.msCondBlocoCons = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondBlocoCad_3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondBlocoCons_4 = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondPredio = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondPredioCad = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondPredioCons = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondPredioCad_5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondPredioCons_6 = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondApart = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondApartCad = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondApartCons = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondApartCadTipoEstadia = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondApartConsTipoEstadia = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondApartCad_7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondApartCons_8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondApartCadTipoEstadia_9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondApartConsTipoEstadia_10 = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmCondEstacionamento = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondEstaCad = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmCondEstaCons = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondEstaCad_11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmCondEstaCons_12 = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmUserSys = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmUserSysCad = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmUserSysCons = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmUserSysCad_13 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmUserSysCons_14 = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmAreaCondominio = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmAreaCondCad = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmAreaCondCons = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmAreaCondCad_15 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmAreaCondCons_16 = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmMoradores = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmMoradoresCad = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmMoradoresCons = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmMoradoresCad_17 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmMoradoresCons_18 = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmFuncionario = new System.Windows.Forms.ToolStripMenuItem();
-            this.msAdmFuncionarioCadProf = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarProfissãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAdmFuncionarioCadProf_19 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarProfissãoToolStripMenuItem_20 = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmFuncionarioCadFunc = new System.Windows.Forms.ToolStripMenuItem();
             this.msAdmFuncionarioConsFunc = new System.Windows.Forms.ToolStripMenuItem();
             this.reservaDeVagasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,24 +70,24 @@
             this.estacionamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeVagasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msGcReservarAreas = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msGcReservarAreas_21 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msGcReservarAreasCons_22 = new System.Windows.Forms.ToolStripMenuItem();
             this.correspondenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.segurançaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeVigilânciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUtilitario = new System.Windows.Forms.ToolStripMenuItem();
             this.UtiTipoTelefone = new System.Windows.Forms.ToolStripMenuItem();
-            this.UtilTipoTelCad = new System.Windows.Forms.ToolStripMenuItem();
-            this.UtilTipoTelCons = new System.Windows.Forms.ToolStripMenuItem();
+            this.UtilTipoTelCad_23 = new System.Windows.Forms.ToolStripMenuItem();
+            this.UtilTipoTelCons_24 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnPrincipal = new System.Windows.Forms.Panel();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.msMenuPrincipal.SuspendLayout();
             this.pnTop.SuspendLayout();
-            this.pnPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // msMenuPrincipal
@@ -138,252 +138,252 @@
             // 
             this.msAdmCondCond.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondCond.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msAdmCondCondCad,
-            this.msAdmCondCondCons});
+            this.msAdmCondCondCad_1,
+            this.msAdmCondCondCons_2});
             this.msAdmCondCond.Name = "msAdmCondCond";
             this.msAdmCondCond.Size = new System.Drawing.Size(196, 22);
             this.msAdmCondCond.Text = "Condominios";
             // 
-            // msAdmCondCondCad
+            // msAdmCondCondCad_1
             // 
-            this.msAdmCondCondCad.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmCondCondCad.Name = "msAdmCondCondCad";
-            this.msAdmCondCondCad.Size = new System.Drawing.Size(250, 22);
-            this.msAdmCondCondCad.Text = "Casdastrar Condominios";
-            this.msAdmCondCondCad.Click += new System.EventHandler(this.msAdmCondCondCad_Click);
+            this.msAdmCondCondCad_1.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmCondCondCad_1.Name = "msAdmCondCondCad_1";
+            this.msAdmCondCondCad_1.Size = new System.Drawing.Size(250, 22);
+            this.msAdmCondCondCad_1.Text = "Casdastrar Condominios";
+            this.msAdmCondCondCad_1.Click += new System.EventHandler(this.msAdmCondCondCad_Click);
             // 
-            // msAdmCondCondCons
+            // msAdmCondCondCons_2
             // 
-            this.msAdmCondCondCons.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmCondCondCons.Name = "msAdmCondCondCons";
-            this.msAdmCondCondCons.Size = new System.Drawing.Size(250, 22);
-            this.msAdmCondCondCons.Text = "Consultar Condomínios";
-            this.msAdmCondCondCons.Click += new System.EventHandler(this.msAdmCondCondCons_Click);
+            this.msAdmCondCondCons_2.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmCondCondCons_2.Name = "msAdmCondCondCons_2";
+            this.msAdmCondCondCons_2.Size = new System.Drawing.Size(250, 22);
+            this.msAdmCondCondCons_2.Text = "Consultar Condomínios";
+            this.msAdmCondCondCons_2.Click += new System.EventHandler(this.msAdmCondCondCons_Click);
             // 
             // msAdmCondBloco
             // 
             this.msAdmCondBloco.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondBloco.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msAdmCondBlocoCad,
-            this.msCondBlocoCons});
+            this.msAdmCondBlocoCad_3,
+            this.msAdmCondBlocoCons_4});
             this.msAdmCondBloco.Name = "msAdmCondBloco";
             this.msAdmCondBloco.Size = new System.Drawing.Size(196, 22);
             this.msAdmCondBloco.Text = "Blocos";
             // 
-            // msAdmCondBlocoCad
+            // msAdmCondBlocoCad_3
             // 
-            this.msAdmCondBlocoCad.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmCondBlocoCad.Name = "msAdmCondBlocoCad";
-            this.msAdmCondBlocoCad.Size = new System.Drawing.Size(147, 22);
-            this.msAdmCondBlocoCad.Text = "Cadastrar";
-            this.msAdmCondBlocoCad.Click += new System.EventHandler(this.msAdmCondBlocoCad_Click);
+            this.msAdmCondBlocoCad_3.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmCondBlocoCad_3.Name = "msAdmCondBlocoCad_3";
+            this.msAdmCondBlocoCad_3.Size = new System.Drawing.Size(147, 22);
+            this.msAdmCondBlocoCad_3.Text = "Cadastrar";
+            this.msAdmCondBlocoCad_3.Click += new System.EventHandler(this.msAdmCondBlocoCad_Click);
             // 
-            // msCondBlocoCons
+            // msAdmCondBlocoCons_4
             // 
-            this.msCondBlocoCons.BackColor = System.Drawing.Color.Transparent;
-            this.msCondBlocoCons.Name = "msCondBlocoCons";
-            this.msCondBlocoCons.Size = new System.Drawing.Size(147, 22);
-            this.msCondBlocoCons.Text = "Consultar";
-            this.msCondBlocoCons.Click += new System.EventHandler(this.msCondBlocoCons_Click);
+            this.msAdmCondBlocoCons_4.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmCondBlocoCons_4.Name = "msAdmCondBlocoCons_4";
+            this.msAdmCondBlocoCons_4.Size = new System.Drawing.Size(147, 22);
+            this.msAdmCondBlocoCons_4.Text = "Consultar";
+            this.msAdmCondBlocoCons_4.Click += new System.EventHandler(this.msCondBlocoCons_Click);
             // 
             // msAdmCondPredio
             // 
             this.msAdmCondPredio.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondPredio.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msAdmCondPredioCad,
-            this.msAdmCondPredioCons});
+            this.msAdmCondPredioCad_5,
+            this.msAdmCondPredioCons_6});
             this.msAdmCondPredio.Name = "msAdmCondPredio";
             this.msAdmCondPredio.Size = new System.Drawing.Size(196, 22);
             this.msAdmCondPredio.Text = "Prédios";
             // 
-            // msAdmCondPredioCad
+            // msAdmCondPredioCad_5
             // 
-            this.msAdmCondPredioCad.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmCondPredioCad.Name = "msAdmCondPredioCad";
-            this.msAdmCondPredioCad.Size = new System.Drawing.Size(147, 22);
-            this.msAdmCondPredioCad.Text = "Cadastrar";
-            this.msAdmCondPredioCad.Click += new System.EventHandler(this.msAdmCondPredioCad_Click);
+            this.msAdmCondPredioCad_5.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmCondPredioCad_5.Name = "msAdmCondPredioCad_5";
+            this.msAdmCondPredioCad_5.Size = new System.Drawing.Size(147, 22);
+            this.msAdmCondPredioCad_5.Text = "Cadastrar";
+            this.msAdmCondPredioCad_5.Click += new System.EventHandler(this.msAdmCondPredioCad_Click);
             // 
-            // msAdmCondPredioCons
+            // msAdmCondPredioCons_6
             // 
-            this.msAdmCondPredioCons.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmCondPredioCons.Name = "msAdmCondPredioCons";
-            this.msAdmCondPredioCons.Size = new System.Drawing.Size(147, 22);
-            this.msAdmCondPredioCons.Text = "Consultar";
-            this.msAdmCondPredioCons.Click += new System.EventHandler(this.msAdmCondPredioCons_Click);
+            this.msAdmCondPredioCons_6.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmCondPredioCons_6.Name = "msAdmCondPredioCons_6";
+            this.msAdmCondPredioCons_6.Size = new System.Drawing.Size(147, 22);
+            this.msAdmCondPredioCons_6.Text = "Consultar";
+            this.msAdmCondPredioCons_6.Click += new System.EventHandler(this.msAdmCondPredioCons_Click);
             // 
             // msAdmCondApart
             // 
             this.msAdmCondApart.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondApart.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msAdmCondApartCad,
-            this.msAdmCondApartCons,
-            this.msAdmCondApartCadTipoEstadia,
-            this.msAdmCondApartConsTipoEstadia});
+            this.msAdmCondApartCad_7,
+            this.msAdmCondApartCons_8,
+            this.msAdmCondApartCadTipoEstadia_9,
+            this.msAdmCondApartConsTipoEstadia_10});
             this.msAdmCondApart.Name = "msAdmCondApart";
             this.msAdmCondApart.Size = new System.Drawing.Size(196, 22);
             this.msAdmCondApart.Text = "Apartamentos";
             // 
-            // msAdmCondApartCad
+            // msAdmCondApartCad_7
             // 
-            this.msAdmCondApartCad.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmCondApartCad.Name = "msAdmCondApartCad";
-            this.msAdmCondApartCad.Size = new System.Drawing.Size(241, 22);
-            this.msAdmCondApartCad.Text = "Cadastrar";
-            this.msAdmCondApartCad.Click += new System.EventHandler(this.msAdmCondApartCad_Click);
+            this.msAdmCondApartCad_7.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmCondApartCad_7.Name = "msAdmCondApartCad_7";
+            this.msAdmCondApartCad_7.Size = new System.Drawing.Size(241, 22);
+            this.msAdmCondApartCad_7.Text = "Cadastrar";
+            this.msAdmCondApartCad_7.Click += new System.EventHandler(this.msAdmCondApartCad_Click);
             // 
-            // msAdmCondApartCons
+            // msAdmCondApartCons_8
             // 
-            this.msAdmCondApartCons.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmCondApartCons.Name = "msAdmCondApartCons";
-            this.msAdmCondApartCons.Size = new System.Drawing.Size(241, 22);
-            this.msAdmCondApartCons.Text = "Consultar";
-            this.msAdmCondApartCons.Click += new System.EventHandler(this.msAdmCondApartCons_Click);
+            this.msAdmCondApartCons_8.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmCondApartCons_8.Name = "msAdmCondApartCons_8";
+            this.msAdmCondApartCons_8.Size = new System.Drawing.Size(241, 22);
+            this.msAdmCondApartCons_8.Text = "Consultar";
+            this.msAdmCondApartCons_8.Click += new System.EventHandler(this.msAdmCondApartCons_Click);
             // 
-            // msAdmCondApartCadTipoEstadia
+            // msAdmCondApartCadTipoEstadia_9
             // 
-            this.msAdmCondApartCadTipoEstadia.Name = "msAdmCondApartCadTipoEstadia";
-            this.msAdmCondApartCadTipoEstadia.Size = new System.Drawing.Size(241, 22);
-            this.msAdmCondApartCadTipoEstadia.Text = "Cadastrar Tipo Estadia";
-            this.msAdmCondApartCadTipoEstadia.Click += new System.EventHandler(this.msAdmCondApartCadTipoEstadia_Click);
+            this.msAdmCondApartCadTipoEstadia_9.Name = "msAdmCondApartCadTipoEstadia_9";
+            this.msAdmCondApartCadTipoEstadia_9.Size = new System.Drawing.Size(241, 22);
+            this.msAdmCondApartCadTipoEstadia_9.Text = "Cadastrar Tipo Estadia";
+            this.msAdmCondApartCadTipoEstadia_9.Click += new System.EventHandler(this.msAdmCondApartCadTipoEstadia_Click);
             // 
-            // msAdmCondApartConsTipoEstadia
+            // msAdmCondApartConsTipoEstadia_10
             // 
-            this.msAdmCondApartConsTipoEstadia.Name = "msAdmCondApartConsTipoEstadia";
-            this.msAdmCondApartConsTipoEstadia.Size = new System.Drawing.Size(241, 22);
-            this.msAdmCondApartConsTipoEstadia.Text = "Consultar Tipo Estadia";
-            this.msAdmCondApartConsTipoEstadia.Click += new System.EventHandler(this.msAdmCondApartConsTipoEstadia_Click);
+            this.msAdmCondApartConsTipoEstadia_10.Name = "msAdmCondApartConsTipoEstadia_10";
+            this.msAdmCondApartConsTipoEstadia_10.Size = new System.Drawing.Size(241, 22);
+            this.msAdmCondApartConsTipoEstadia_10.Text = "Consultar Tipo Estadia";
+            this.msAdmCondApartConsTipoEstadia_10.Click += new System.EventHandler(this.msAdmCondApartConsTipoEstadia_Click);
             // 
             // msAdmCondEstacionamento
             // 
             this.msAdmCondEstacionamento.BackColor = System.Drawing.Color.Transparent;
             this.msAdmCondEstacionamento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msAdmCondEstaCad,
-            this.msAdmCondEstaCons});
+            this.msAdmCondEstaCad_11,
+            this.msAdmCondEstaCons_12});
             this.msAdmCondEstacionamento.Name = "msAdmCondEstacionamento";
             this.msAdmCondEstacionamento.Size = new System.Drawing.Size(196, 22);
             this.msAdmCondEstacionamento.Text = "Estacionamentos";
             // 
-            // msAdmCondEstaCad
+            // msAdmCondEstaCad_11
             // 
-            this.msAdmCondEstaCad.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmCondEstaCad.Name = "msAdmCondEstaCad";
-            this.msAdmCondEstaCad.Size = new System.Drawing.Size(146, 22);
-            this.msAdmCondEstaCad.Text = "Cadastar";
-            this.msAdmCondEstaCad.Click += new System.EventHandler(this.msAdmCondEstaCad_Click);
+            this.msAdmCondEstaCad_11.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmCondEstaCad_11.Name = "msAdmCondEstaCad_11";
+            this.msAdmCondEstaCad_11.Size = new System.Drawing.Size(146, 22);
+            this.msAdmCondEstaCad_11.Text = "Cadastar";
+            this.msAdmCondEstaCad_11.Click += new System.EventHandler(this.msAdmCondEstaCad_Click);
             // 
-            // msAdmCondEstaCons
+            // msAdmCondEstaCons_12
             // 
-            this.msAdmCondEstaCons.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmCondEstaCons.Name = "msAdmCondEstaCons";
-            this.msAdmCondEstaCons.Size = new System.Drawing.Size(146, 22);
-            this.msAdmCondEstaCons.Text = "Consultar";
-            this.msAdmCondEstaCons.Click += new System.EventHandler(this.msAdmCondEstaCons_Click);
+            this.msAdmCondEstaCons_12.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmCondEstaCons_12.Name = "msAdmCondEstaCons_12";
+            this.msAdmCondEstaCons_12.Size = new System.Drawing.Size(146, 22);
+            this.msAdmCondEstaCons_12.Text = "Consultar";
+            this.msAdmCondEstaCons_12.Click += new System.EventHandler(this.msAdmCondEstaCons_Click);
             // 
             // msAdmUserSys
             // 
             this.msAdmUserSys.BackColor = System.Drawing.Color.Transparent;
             this.msAdmUserSys.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msAdmUserSysCad,
-            this.msAdmUserSysCons});
+            this.msAdmUserSysCad_13,
+            this.msAdmUserSysCons_14});
             this.msAdmUserSys.Name = "msAdmUserSys";
             this.msAdmUserSys.Size = new System.Drawing.Size(238, 22);
             this.msAdmUserSys.Text = "Usuarios do Sistema";
             // 
-            // msAdmUserSysCad
+            // msAdmUserSysCad_13
             // 
-            this.msAdmUserSysCad.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmUserSysCad.Name = "msAdmUserSysCad";
-            this.msAdmUserSysCad.Size = new System.Drawing.Size(146, 22);
-            this.msAdmUserSysCad.Text = "Cadastar";
-            this.msAdmUserSysCad.Click += new System.EventHandler(this.msAdmUserSysCad_Click);
+            this.msAdmUserSysCad_13.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmUserSysCad_13.Name = "msAdmUserSysCad_13";
+            this.msAdmUserSysCad_13.Size = new System.Drawing.Size(146, 22);
+            this.msAdmUserSysCad_13.Text = "Cadastar";
+            this.msAdmUserSysCad_13.Click += new System.EventHandler(this.msAdmUserSysCad_Click);
             // 
-            // msAdmUserSysCons
+            // msAdmUserSysCons_14
             // 
-            this.msAdmUserSysCons.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmUserSysCons.Name = "msAdmUserSysCons";
-            this.msAdmUserSysCons.Size = new System.Drawing.Size(146, 22);
-            this.msAdmUserSysCons.Text = "Consultar";
-            this.msAdmUserSysCons.Click += new System.EventHandler(this.msAdmUserSysCons_Click);
+            this.msAdmUserSysCons_14.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmUserSysCons_14.Name = "msAdmUserSysCons_14";
+            this.msAdmUserSysCons_14.Size = new System.Drawing.Size(146, 22);
+            this.msAdmUserSysCons_14.Text = "Consultar";
+            this.msAdmUserSysCons_14.Click += new System.EventHandler(this.msAdmUserSysCons_Click);
             // 
             // msAdmAreaCondominio
             // 
             this.msAdmAreaCondominio.BackColor = System.Drawing.Color.Transparent;
             this.msAdmAreaCondominio.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msAdmAreaCondCad,
-            this.msAdmAreaCondCons});
+            this.msAdmAreaCondCad_15,
+            this.msAdmAreaCondCons_16});
             this.msAdmAreaCondominio.Name = "msAdmAreaCondominio";
             this.msAdmAreaCondominio.Size = new System.Drawing.Size(238, 22);
             this.msAdmAreaCondominio.Text = "Áreas do Condomínios ";
             // 
-            // msAdmAreaCondCad
+            // msAdmAreaCondCad_15
             // 
-            this.msAdmAreaCondCad.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmAreaCondCad.Name = "msAdmAreaCondCad";
-            this.msAdmAreaCondCad.Size = new System.Drawing.Size(146, 22);
-            this.msAdmAreaCondCad.Text = "Cadastar";
-            this.msAdmAreaCondCad.Click += new System.EventHandler(this.msAdmAreaCondCad_Click);
+            this.msAdmAreaCondCad_15.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmAreaCondCad_15.Name = "msAdmAreaCondCad_15";
+            this.msAdmAreaCondCad_15.Size = new System.Drawing.Size(146, 22);
+            this.msAdmAreaCondCad_15.Text = "Cadastar";
+            this.msAdmAreaCondCad_15.Click += new System.EventHandler(this.msAdmAreaCondCad_Click);
             // 
-            // msAdmAreaCondCons
+            // msAdmAreaCondCons_16
             // 
-            this.msAdmAreaCondCons.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmAreaCondCons.Name = "msAdmAreaCondCons";
-            this.msAdmAreaCondCons.Size = new System.Drawing.Size(146, 22);
-            this.msAdmAreaCondCons.Text = "Consultar";
-            this.msAdmAreaCondCons.Click += new System.EventHandler(this.msAdmAreaCondCons_Click);
+            this.msAdmAreaCondCons_16.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmAreaCondCons_16.Name = "msAdmAreaCondCons_16";
+            this.msAdmAreaCondCons_16.Size = new System.Drawing.Size(146, 22);
+            this.msAdmAreaCondCons_16.Text = "Consultar";
+            this.msAdmAreaCondCons_16.Click += new System.EventHandler(this.msAdmAreaCondCons_Click);
             // 
             // msAdmMoradores
             // 
             this.msAdmMoradores.BackColor = System.Drawing.Color.Transparent;
             this.msAdmMoradores.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msAdmMoradoresCad,
-            this.msAdmMoradoresCons});
+            this.msAdmMoradoresCad_17,
+            this.msAdmMoradoresCons_18});
             this.msAdmMoradores.Name = "msAdmMoradores";
             this.msAdmMoradores.Size = new System.Drawing.Size(238, 22);
             this.msAdmMoradores.Text = "Moradores";
             // 
-            // msAdmMoradoresCad
+            // msAdmMoradoresCad_17
             // 
-            this.msAdmMoradoresCad.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmMoradoresCad.Name = "msAdmMoradoresCad";
-            this.msAdmMoradoresCad.Size = new System.Drawing.Size(146, 22);
-            this.msAdmMoradoresCad.Text = "Cadastar";
-            this.msAdmMoradoresCad.Click += new System.EventHandler(this.msAdmMoradoresCad_Click);
+            this.msAdmMoradoresCad_17.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmMoradoresCad_17.Name = "msAdmMoradoresCad_17";
+            this.msAdmMoradoresCad_17.Size = new System.Drawing.Size(146, 22);
+            this.msAdmMoradoresCad_17.Text = "Cadastar";
+            this.msAdmMoradoresCad_17.Click += new System.EventHandler(this.msAdmMoradoresCad_Click);
             // 
-            // msAdmMoradoresCons
+            // msAdmMoradoresCons_18
             // 
-            this.msAdmMoradoresCons.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmMoradoresCons.Name = "msAdmMoradoresCons";
-            this.msAdmMoradoresCons.Size = new System.Drawing.Size(146, 22);
-            this.msAdmMoradoresCons.Text = "Consultar";
-            this.msAdmMoradoresCons.Click += new System.EventHandler(this.msAdmMoradoresCons_Click);
+            this.msAdmMoradoresCons_18.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmMoradoresCons_18.Name = "msAdmMoradoresCons_18";
+            this.msAdmMoradoresCons_18.Size = new System.Drawing.Size(146, 22);
+            this.msAdmMoradoresCons_18.Text = "Consultar";
+            this.msAdmMoradoresCons_18.Click += new System.EventHandler(this.msAdmMoradoresCons_Click);
             // 
             // msAdmFuncionario
             // 
             this.msAdmFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.msAdmFuncionario.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msAdmFuncionarioCadProf,
-            this.consultarProfissãoToolStripMenuItem,
+            this.msAdmFuncionarioCadProf_19,
+            this.consultarProfissãoToolStripMenuItem_20,
             this.msAdmFuncionarioCadFunc,
             this.msAdmFuncionarioConsFunc});
             this.msAdmFuncionario.Name = "msAdmFuncionario";
             this.msAdmFuncionario.Size = new System.Drawing.Size(238, 22);
             this.msAdmFuncionario.Text = "Funcinários";
             // 
-            // msAdmFuncionarioCadProf
+            // msAdmFuncionarioCadProf_19
             // 
-            this.msAdmFuncionarioCadProf.BackColor = System.Drawing.Color.Transparent;
-            this.msAdmFuncionarioCadProf.Name = "msAdmFuncionarioCadProf";
-            this.msAdmFuncionarioCadProf.Size = new System.Drawing.Size(242, 22);
-            this.msAdmFuncionarioCadProf.Text = "Cadastrar Profissão";
-            this.msAdmFuncionarioCadProf.Click += new System.EventHandler(this.msAdmFuncionarioCadProf_Click);
+            this.msAdmFuncionarioCadProf_19.BackColor = System.Drawing.Color.Transparent;
+            this.msAdmFuncionarioCadProf_19.Name = "msAdmFuncionarioCadProf_19";
+            this.msAdmFuncionarioCadProf_19.Size = new System.Drawing.Size(242, 22);
+            this.msAdmFuncionarioCadProf_19.Text = "Cadastrar Profissão";
+            this.msAdmFuncionarioCadProf_19.Click += new System.EventHandler(this.msAdmFuncionarioCadProf_Click);
             // 
-            // consultarProfissãoToolStripMenuItem
+            // consultarProfissãoToolStripMenuItem_20
             // 
-            this.consultarProfissãoToolStripMenuItem.Name = "consultarProfissãoToolStripMenuItem";
-            this.consultarProfissãoToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.consultarProfissãoToolStripMenuItem.Text = "Consultar Profissão";
-            this.consultarProfissãoToolStripMenuItem.Click += new System.EventHandler(this.consultarProfissãoToolStripMenuItem_Click);
+            this.consultarProfissãoToolStripMenuItem_20.Name = "consultarProfissãoToolStripMenuItem_20";
+            this.consultarProfissãoToolStripMenuItem_20.Size = new System.Drawing.Size(242, 22);
+            this.consultarProfissãoToolStripMenuItem_20.Text = "Consultar Profissão";
+            this.consultarProfissãoToolStripMenuItem_20.Click += new System.EventHandler(this.consultarProfissãoToolStripMenuItem_Click);
             // 
             // msAdmFuncionarioCadFunc
             // 
@@ -459,25 +459,25 @@
             // 
             this.msGcReservarAreas.BackColor = System.Drawing.Color.Transparent;
             this.msGcReservarAreas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reservarToolStripMenuItem,
-            this.consultarReservasToolStripMenuItem});
+            this.msGcReservarAreas_21,
+            this.msGcReservarAreasCons_22});
             this.msGcReservarAreas.Name = "msGcReservarAreas";
             this.msGcReservarAreas.Size = new System.Drawing.Size(203, 22);
             this.msGcReservarAreas.Text = "Reserva de Áreas";
             // 
-            // reservarToolStripMenuItem
+            // msGcReservarAreas_21
             // 
-            this.reservarToolStripMenuItem.Name = "reservarToolStripMenuItem";
-            this.reservarToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.reservarToolStripMenuItem.Text = "Reservar";
-            this.reservarToolStripMenuItem.Click += new System.EventHandler(this.msGcReservarAreas_Click);
+            this.msGcReservarAreas_21.Name = "msGcReservarAreas_21";
+            this.msGcReservarAreas_21.Size = new System.Drawing.Size(214, 22);
+            this.msGcReservarAreas_21.Text = "Reservar";
+            this.msGcReservarAreas_21.Click += new System.EventHandler(this.msGcReservarAreas_21_Click);
             // 
-            // consultarReservasToolStripMenuItem
+            // msGcReservarAreasCons_22
             // 
-            this.consultarReservasToolStripMenuItem.Name = "consultarReservasToolStripMenuItem";
-            this.consultarReservasToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.consultarReservasToolStripMenuItem.Text = "Consultar Reservas";
-            this.consultarReservasToolStripMenuItem.Click += new System.EventHandler(this.consultarReservasToolStripMenuItem_Click);
+            this.msGcReservarAreasCons_22.Name = "msGcReservarAreasCons_22";
+            this.msGcReservarAreasCons_22.Size = new System.Drawing.Size(214, 22);
+            this.msGcReservarAreasCons_22.Text = "Consultar Reservas";
+            this.msGcReservarAreasCons_22.Click += new System.EventHandler(this.consultarReservasToolStripMenuItem_Click);
             // 
             // correspondenciasToolStripMenuItem
             // 
@@ -521,38 +521,62 @@
             // UtiTipoTelefone
             // 
             this.UtiTipoTelefone.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.UtilTipoTelCad,
-            this.UtilTipoTelCons});
+            this.UtilTipoTelCad_23,
+            this.UtilTipoTelCons_24});
             this.UtiTipoTelefone.Name = "UtiTipoTelefone";
             this.UtiTipoTelefone.Size = new System.Drawing.Size(194, 22);
             this.UtiTipoTelefone.Text = "Tipo de Telefone";
             // 
-            // UtilTipoTelCad
+            // UtilTipoTelCad_23
             // 
-            this.UtilTipoTelCad.Name = "UtilTipoTelCad";
-            this.UtilTipoTelCad.Size = new System.Drawing.Size(147, 22);
-            this.UtilTipoTelCad.Text = "Cadastrar";
-            this.UtilTipoTelCad.Click += new System.EventHandler(this.UtilTipoTelCad_Click);
+            this.UtilTipoTelCad_23.Name = "UtilTipoTelCad_23";
+            this.UtilTipoTelCad_23.Size = new System.Drawing.Size(152, 22);
+            this.UtilTipoTelCad_23.Text = "Cadastrar";
+            this.UtilTipoTelCad_23.Click += new System.EventHandler(this.UtilTipoTelCad_Click);
             // 
-            // UtilTipoTelCons
+            // UtilTipoTelCons_24
             // 
-            this.UtilTipoTelCons.Name = "UtilTipoTelCons";
-            this.UtilTipoTelCons.Size = new System.Drawing.Size(147, 22);
-            this.UtilTipoTelCons.Text = "Consultar";
-            this.UtilTipoTelCons.Click += new System.EventHandler(this.UtilTipoTelCons_Click);
+            this.UtilTipoTelCons_24.Name = "UtilTipoTelCons_24";
+            this.UtilTipoTelCons_24.Size = new System.Drawing.Size(152, 22);
+            this.UtilTipoTelCons_24.Text = "Consultar";
+            this.UtilTipoTelCons_24.Click += new System.EventHandler(this.UtilTipoTelCons_Click);
             // 
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.LightGray;
             this.pnTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnTop.Controls.Add(this.label1);
+            this.pnTop.Controls.Add(this.lblUsuario);
             this.pnTop.Controls.Add(this.btnSair);
             this.pnTop.Controls.Add(this.lblTitulo);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.ForeColor = System.Drawing.Color.Black;
-            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Location = new System.Drawing.Point(0, 24);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1174, 43);
             this.pnTop.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century", 11.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(798, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Usuário: ";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Snow;
+            this.lblUsuario.Font = new System.Drawing.Font("Century", 11.75F, System.Drawing.FontStyle.Bold);
+            this.lblUsuario.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblUsuario.Location = new System.Drawing.Point(889, 11);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 20);
+            this.lblUsuario.TabIndex = 1;
             // 
             // btnSair
             // 
@@ -585,26 +609,12 @@
             // 
             this.pnPrincipal.BackgroundImage = global::ProjetoPimConstrutora.Properties.Resources.imgFundo;
             this.pnPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnPrincipal.Controls.Add(this.lblUsuario);
             this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnPrincipal.Enabled = false;
-            this.pnPrincipal.Location = new System.Drawing.Point(0, 43);
+            this.pnPrincipal.Location = new System.Drawing.Point(0, 67);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(1174, 460);
+            this.pnPrincipal.Size = new System.Drawing.Size(1174, 436);
             this.pnPrincipal.TabIndex = 2;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblUsuario.Font = new System.Drawing.Font("Century", 11.75F, System.Drawing.FontStyle.Bold);
-            this.lblUsuario.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblUsuario.Location = new System.Drawing.Point(1087, 0);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(85, 20);
-            this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "Usuário: ";
-            this.lblUsuario.Visible = false;
             // 
             // frmPrincipal
             // 
@@ -627,8 +637,6 @@
             this.msMenuPrincipal.PerformLayout();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
-            this.pnPrincipal.ResumeLayout(false);
-            this.pnPrincipal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -642,11 +650,11 @@
         private System.Windows.Forms.ToolStripMenuItem msAdmCondPredio;
         private System.Windows.Forms.ToolStripMenuItem msAdmCondApart;
         private System.Windows.Forms.ToolStripMenuItem msAdmAreaCondominio;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondCondCad;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondCondCons;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondCondCad_1;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondCondCons_2;
         private System.Windows.Forms.ToolStripMenuItem msAdmMoradores;
         private System.Windows.Forms.ToolStripMenuItem msAdmFuncionario;
-        private System.Windows.Forms.ToolStripMenuItem msAdmFuncionarioCadProf;
+        private System.Windows.Forms.ToolStripMenuItem msAdmFuncionarioCadProf_19;
         private System.Windows.Forms.ToolStripMenuItem msAdmFuncionarioCadFunc;
         private System.Windows.Forms.ToolStripMenuItem msAdmFuncionarioConsFunc;
         private System.Windows.Forms.ToolStripMenuItem reservaDeVagasToolStripMenuItem;
@@ -656,39 +664,40 @@
         private System.Windows.Forms.ToolStripMenuItem estacionamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem msGcReservarAreas;
         private System.Windows.Forms.ToolStripMenuItem correspondenciasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondBlocoCad;
-        private System.Windows.Forms.ToolStripMenuItem msCondBlocoCons;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondPredioCad;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondPredioCons;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondApartCad;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondApartCons;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondBlocoCad_3;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondBlocoCons_4;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondPredioCad_5;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondPredioCons_6;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondApartCad_7;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondApartCons_8;
         private System.Windows.Forms.ToolStripMenuItem msAdmCondEstacionamento;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondEstaCad;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondEstaCons;
-        private System.Windows.Forms.ToolStripMenuItem msAdmUserSysCad;
-        private System.Windows.Forms.ToolStripMenuItem msAdmUserSysCons;
-        private System.Windows.Forms.ToolStripMenuItem msAdmAreaCondCad;
-        private System.Windows.Forms.ToolStripMenuItem msAdmAreaCondCons;
-        private System.Windows.Forms.ToolStripMenuItem msAdmMoradoresCad;
-        private System.Windows.Forms.ToolStripMenuItem msAdmMoradoresCons;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondEstaCad_11;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondEstaCons_12;
+        private System.Windows.Forms.ToolStripMenuItem msAdmUserSysCad_13;
+        private System.Windows.Forms.ToolStripMenuItem msAdmUserSysCons_14;
+        private System.Windows.Forms.ToolStripMenuItem msAdmAreaCondCad_15;
+        private System.Windows.Forms.ToolStripMenuItem msAdmAreaCondCons_16;
+        private System.Windows.Forms.ToolStripMenuItem msAdmMoradoresCad_17;
+        private System.Windows.Forms.ToolStripMenuItem msAdmMoradoresCons_18;
         private System.Windows.Forms.ToolStripMenuItem controleDeVagasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem segurançaToolStripMenuItem;
         private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.ToolStripMenuItem controleDeVigilânciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioDeVigilânciaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarProfissãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarProfissãoToolStripMenuItem_20;
         public System.Windows.Forms.Panel pnPrincipal;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondApartCadTipoEstadia;
-        private System.Windows.Forms.ToolStripMenuItem msAdmCondApartConsTipoEstadia;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondApartCadTipoEstadia_9;
+        private System.Windows.Forms.ToolStripMenuItem msAdmCondApartConsTipoEstadia_10;
         private System.Windows.Forms.ToolStripMenuItem menuUtilitario;
         private System.Windows.Forms.ToolStripMenuItem UtiTipoTelefone;
-        private System.Windows.Forms.ToolStripMenuItem UtilTipoTelCad;
-        private System.Windows.Forms.ToolStripMenuItem UtilTipoTelCons;
-        private System.Windows.Forms.ToolStripMenuItem reservarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarReservasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem UtilTipoTelCad_23;
+        private System.Windows.Forms.ToolStripMenuItem UtilTipoTelCons_24;
+        private System.Windows.Forms.ToolStripMenuItem msGcReservarAreas_21;
+        private System.Windows.Forms.ToolStripMenuItem msGcReservarAreasCons_22;
         public System.Windows.Forms.MenuStrip msMenuPrincipal;
         public System.Windows.Forms.Label lblTitulo;
         public System.Windows.Forms.Label lblUsuario;
+        public System.Windows.Forms.Label label1;
     }
 }

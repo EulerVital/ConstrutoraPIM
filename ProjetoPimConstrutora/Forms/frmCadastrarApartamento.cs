@@ -177,7 +177,7 @@ namespace ProjetoPimConstrutora.Forms
                             }
                             else
                             {
-                                ListaApartamento = nApartamento.Apartamento_GET(new eApartamento() { Predio = objApartamento.Predio });
+                                ListaApartamento = nApartamento.Apartamento_GET(new eApartamento() { Predio = objApartamento.Predio }, frmPrincipal.objUserLogado);
                                 Util.MensagemSucesso("Apartamento " + objApartamento.NumeroApartamento + "-" + objApartamento.AndarPredio + " cadastrado com sucesso");
                                 CarregarApartamentos(ListaApartamento);
                                 IsBloquearControles(true);
@@ -292,7 +292,7 @@ namespace ProjetoPimConstrutora.Forms
                 andar++;
             }
 
-            ListaApartamentosSalvos = nApartamento.Apartamento_GET(new eApartamento() { Predio = objApartamento.Predio });
+            ListaApartamentosSalvos = nApartamento.Apartamento_GET(new eApartamento() { Predio = objApartamento.Predio }, frmPrincipal.objUserLogado);
 
             if ((numApt-1) == int.Parse(txtNumeroAndar.Text))
             {
@@ -348,8 +348,8 @@ namespace ProjetoPimConstrutora.Forms
         {
             if (isCarregarBase)
             {
-                ListaApartamento = nApartamento.Apartamento_GET(new eApartamento());
-                ListaPredio = nPredio.Predio_GET(new ePredio()).Where(c => c.Bloco.BlocoID != "0").ToList();
+                ListaApartamento = nApartamento.Apartamento_GET(new eApartamento(), frmPrincipal.objUserLogado);
+                ListaPredio = nPredio.Predio_GET(new ePredio(), frmPrincipal.objUserLogado).Where(c => c.Bloco.BlocoID != "0").ToList();
                 var listaAux = new List<ePredio>();
 
                 foreach (var item in ListaPredio)

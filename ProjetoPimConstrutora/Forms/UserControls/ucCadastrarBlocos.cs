@@ -52,7 +52,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 objBloco.TipoBloco = "PN";
             }
 
-            lstBlocos.DataSource = nBloco.Bloco_GET(objBloco);
+            lstBlocos.DataSource = nBloco.Bloco_GET(objBloco, frmPrincipal.objUserLogado);
             lstBlocos.DisplayMember = "Nome";
             lstBlocos.ValueMember = "BlocoID";
         }

@@ -82,7 +82,7 @@ namespace DAO
             {
                 obj.FuncionalidadeUserID = GetInt32("FuncionalidadeUserID", dr).ToString();
                 obj.Excluido = GetBoolean("Excluido", dr);
-                obj.Funcionalidade.FuncionalidadeID = GetInt32("FuncinalidadeID", dr).ToString();
+                obj.Funcionalidade.FuncionalidadeID = GetInt32("FuncionalidadeID", dr).ToString();
                 obj.Funcionalidade.Descricao = GetString("Descricao", dr);
                 obj.Funcionalidade.AreaFuncionalidade = GetString("AreaFuncionalidade", dr);
                 obj.Funcionalidade.Excluido = GetBoolean("ExcluidoFuncionalidade", dr);

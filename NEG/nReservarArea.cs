@@ -32,12 +32,24 @@ namespace NEG
         {
 
         }
-        public static List<eReservarArea> ReservaArea_GET(eReservarArea obj)
+        public static List<eReservarArea> ReservaArea_GET(eReservarArea obj, eUsuario objUser)
         {
             try
             {
                 dReservarArea db = new dReservarArea();
-                return db.ReservarArea_GET(obj);
+                if (objUser.Condominio.CondominioID == null)
+                {
+                    objUser.Condominio.CondominioID = "0";
+                }
+
+                if (objUser.Condominio.Equals("0"))
+                {
+                    return db.ReservarArea_GET(obj);
+                }else
+                {
+                    obj.Morador.Apartamento.Predio.Bloco.Condominio = objUser.Condominio;
+                    return db.ReservarArea_GET(obj);
+                }
             }
             catch (Exception ex)
             {

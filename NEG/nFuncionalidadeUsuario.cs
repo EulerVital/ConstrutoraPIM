@@ -35,12 +35,12 @@ namespace NEG
         {
 
         }
-        public static List<eFuncionalidadeUsuario> FuncionalidadeUsuario_GET(eFuncionalidadeUsuario obj, bool? IsFuncionalidadeUsuarioSemMorador = null)
+        public static List<eFuncionalidadeUsuario> FuncionalidadeUsuario_GET(eFuncionalidadeUsuario obj)
         {
             try
             {
                 dFuncionalidadeUsuario db = new dFuncionalidadeUsuario();
-                return db.FuncionalidadeUsuario_GET(obj, IsFuncionalidadeUsuarioSemMorador);
+                return db.FuncionalidadeUsuario_GET(obj);
             }
             catch (Exception ex)
             {

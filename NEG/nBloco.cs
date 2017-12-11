@@ -38,12 +38,24 @@ namespace NEG
             caracteresEspecias += aspasDuplas.ToString();
         }
 
-        public static List<eBloco> Bloco_GET(eBloco obj)
+        public static List<eBloco> Bloco_GET(eBloco obj, eUsuario objUser)
         {
             try
             {
                 dBloco db = new dBloco();
-                return db.Bloco_GET(obj);
+                if (objUser.Condominio.CondominioID == null)
+                {
+                    objUser.Condominio.CondominioID = "0";
+                }
+
+                if (objUser.Condominio.CondominioID.Equals("0"))
+                {
+                    return db.Bloco_GET(obj);
+                }else
+                {
+                    obj.Condominio = objUser.Condominio;
+                    return db.Bloco_GET(obj);
+                }
             }
             catch (Exception ex)
             {

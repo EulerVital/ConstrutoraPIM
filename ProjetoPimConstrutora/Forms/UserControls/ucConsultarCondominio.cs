@@ -37,7 +37,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 {
                     var objCond = ListaCondominio.Where(c => c.Nome == dgvCondominios.Rows[e.RowIndex].Cells[0].Value.ToString() && c.CEP == dgvCondominios.Rows[e.RowIndex].Cells[5].Value.ToString()).FirstOrDefault();
 
-                    var valor = nBloco.Bloco_GET(new eBloco() { Condominio = objCond });
+                    var valor = nBloco.Bloco_GET(new eBloco() { Condominio = objCond }, frmPrincipal.objUserLogado);
 
                     if (valor.Count > 0)
                     {
@@ -118,7 +118,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 
             if (isCarregarBase)
             {
-                ListaCondominio = nCondominio.Condominio_GET(new eCondominio());
+                ListaCondominio = nCondominio.Condominio_GET(new eCondominio(), frmPrincipal.objUserLogado);
             }
 
             var lista = ValidandoFiltros();

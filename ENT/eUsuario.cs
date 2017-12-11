@@ -20,7 +20,7 @@ namespace ENT
         public string Senha { get; set; }
         public string TipoUsuario { get; set; }
         public bool Excluido { get; set; }
-        public String Email { get; set; }
+        public string Email { get; set; }
         public eCondominio Condominio { get; set; }
         public eBloco Bloco { get; set; }
         public ePredio Predio { get; set; }

@@ -25,7 +25,7 @@ namespace ProjetoPimConstrutora.Forms
         public frmConsultarBlocos(frmPrincipal frm, eCondominio objCond)
         {
             InitializeComponent();
-            ListaBlocos = nBloco.Bloco_GET(new eBloco() { Condominio = objCond });
+            ListaBlocos = nBloco.Bloco_GET(new eBloco() { Condominio = objCond }, frmPrincipal.objUserLogado);
 
             frm.pnPrincipal.Visible = false;
             CarregarBlocos(false, true);
@@ -48,7 +48,7 @@ namespace ProjetoPimConstrutora.Forms
                 {
                     var obj = ListaBlocos.FirstOrDefault(c => c.BlocoID == dgvBlocos.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-                    if (nPredio.Predio_GET(new ePredio() { Bloco = obj }).Count > 0)
+                    if (nPredio.Predio_GET(new ePredio() { Bloco = obj }, frmPrincipal.objUserLogado).Count > 0)
                     {
                         frmConsultarPredios frm = new frmConsultarPredios(frmPrinc, obj);
                         frm.Show();
@@ -122,7 +122,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             if (isCarregarBase)
             {
-                ListaBlocos = nBloco.Bloco_GET(new eBloco());
+                ListaBlocos = nBloco.Bloco_GET(new eBloco(), frmPrincipal.objUserLogado);
                 CarregarComboCondominio();
             }
 

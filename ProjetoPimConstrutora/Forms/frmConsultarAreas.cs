@@ -34,7 +34,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             if (isCarregaBase)
             {
-                ListaArea = nArea.Area_GET(new eArea());
+                ListaArea = nArea.Area_GET(new eArea(), frmPrincipal.objUserLogado);
                 ListaCondominio = new List<eCondominio>();
 
                 foreach (var item in ListaArea)

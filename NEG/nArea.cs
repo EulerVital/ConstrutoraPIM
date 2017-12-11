@@ -1,5 +1,6 @@
 ﻿using DAO;
 using ENT;
+using NEG.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NEG
 {
-    public class nArea
+    public class nArea 
     {
         #region Assinaturas
         /// <summary>
@@ -35,12 +36,25 @@ namespace NEG
         {
 
         }
-        public static List<eArea> Area_GET(eArea obj)
+        public static List<eArea> Area_GET(eArea obj, eUsuario objUser)
         {
             try
             {
                 dArea db = new dArea();
-                return db.Area_GET(obj);
+
+                if (objUser.Condominio.CondominioID == null)
+                {
+                    objUser.Condominio.CondominioID = "0";
+                }
+
+                if (objUser.Condominio.CondominioID.Equals("0"))
+                {
+                    return db.Area_GET(obj);
+                }else
+                {
+                    obj.Condominio = objUser.Condominio;
+                    return db.Area_GET(obj);
+                }
             }
             catch (Exception ex)
             {
@@ -84,7 +98,7 @@ namespace NEG
             sbEnviar.Replace("[Mensagem]", obj.DescricaoStatus);
             sbEnviar.Replace("[DATA]", DateTime.Now.Date.ToString("dd/MM/yyyy"));
 
-            var lista = nMorador.MORADOR_GET(new eMorador() { Apartamento = new eApartamento() { Predio = new ePredio() { Bloco = new eBloco() { Condominio = obj.Condominio } } } });
+            var lista = nMorador.MORADOR_GET(new eMorador() { Apartamento = new eApartamento() { Predio = new ePredio() { Bloco = new eBloco() { Condominio = obj.Condominio } } } }, new eUsuario());
 
             nEmail objEmail = new nEmail();
             List<string> ListaDestinatariosNaoenviados = new List<string>();

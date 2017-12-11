@@ -83,7 +83,7 @@ namespace NEG
                         sb.AppendFormat("<br/><p {0}>Seu usuário terá acesso a todas as funcionalidades do sistema, mais está restrito apenas para o condomínio: " + obj.Condominio.Nome + "</p>", styleDados);
                     }else if(obj.Bloco != null)
                     {
-                        var objBloco = nBloco.Bloco_GET(obj.Bloco).FirstOrDefault(c=>c.StatusAtivo == true);
+                        var objBloco = nBloco.Bloco_GET(obj.Bloco, new eUsuario()).FirstOrDefault(c=>c.StatusAtivo == true);
 
                         if (objBloco != null)
                         {
@@ -98,7 +98,7 @@ namespace NEG
                     }
                     else if (obj.Bloco != null)
                     {
-                        var objBloco = nBloco.Bloco_GET(obj.Bloco).FirstOrDefault(c => c.StatusAtivo == true);
+                        var objBloco = nBloco.Bloco_GET(obj.Bloco, new eUsuario()).FirstOrDefault(c => c.StatusAtivo == true);
 
                         if (objBloco != null)
                         {
@@ -107,7 +107,7 @@ namespace NEG
 
                     }else if(obj.Predio != null)
                     {
-                        var objPredio = nPredio.Predio_GET(obj.Predio).FirstOrDefault(c => c.Excluido == false);
+                        var objPredio = nPredio.Predio_GET(obj.Predio, new eUsuario()).FirstOrDefault(c => c.Excluido == false);
 
                         if (objPredio != null)
                         {

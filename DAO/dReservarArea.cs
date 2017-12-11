@@ -41,7 +41,7 @@ namespace DAO
         {
             List<eReservarArea> retorno = new List<eReservarArea>();
             cmd = new SqlCommand();
-            param = new SqlParameter[3];
+            param = new SqlParameter[4];
 
             try
             {
@@ -49,6 +49,7 @@ namespace DAO
                 MontarParametro(0, param, ParameterDirection.Input, "@ReservaAreaID", obj.ReservaAreaID, SqlDbType.Int);
                 MontarParametro(1, param, ParameterDirection.Input, "@MoradorID", obj.Morador.MoradorID, SqlDbType.Int);
                 MontarParametro(2, param, ParameterDirection.Input, "@AreaID", obj.Area.AreaID, SqlDbType.Int);
+                MontarParametro(3, param, ParameterDirection.Input, "@CondominioID", obj.Morador.Apartamento.Predio.Bloco.Condominio.CondominioID, SqlDbType.Int);
 
                 dr = ExecReader("USP_RESERVAR_AREA_GET", cmd, param);
 

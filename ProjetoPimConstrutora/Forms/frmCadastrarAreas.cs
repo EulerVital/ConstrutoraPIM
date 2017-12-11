@@ -76,7 +76,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             lstAreas.DataSource = null;
 
-            var lista = nArea.Area_GET(new eArea() { Condominio = obj });
+            var lista = nArea.Area_GET(new eArea() { Condominio = obj }, frmPrincipal.objUserLogado);
 
             if(lista.Count > 0)
             {
@@ -89,7 +89,7 @@ namespace ProjetoPimConstrutora.Forms
 
         private void CarregarCondominio()
         {
-            var listaCondominio = nCondominio.Condominio_GET(new eCondominio()).Where(c => c.Excluido == false).ToList();
+            var listaCondominio = nCondominio.Condominio_GET(new eCondominio(), frmPrincipal.objUserLogado).Where(c => c.Excluido == false).ToList();
             listaCondominio.Insert(0, new eCondominio() { Nome = "Selecione", CondominioID = "0" });
 
             cmbCondominio.DataSource = null;

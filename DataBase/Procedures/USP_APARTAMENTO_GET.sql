@@ -28,6 +28,7 @@ CREATE PROC USP_APARTAMENTO_GET
 	,@PredioID INT = NULL
 	,@NomePredio VARCHAR(100) = NULL
 	,@IsApartamentoSemMorador BIT = NULL
+	,@CondominioID INT = NULL
 )
 AS
 BEGIN
@@ -71,6 +72,8 @@ BEGIN
 			 A.PredioID = COALESCE(@PredioID, A.PredioID)
 		AND
 			 A.Nome = COALESCE(@NomePredio, A.Nome)
+		AND
+			A.CondominioID = COALESCE(@CondominioID, A.CondominioID)
 	END
 	ELSE IF @IsApartamentoSemMorador = 1
 	BEGIN
@@ -118,6 +121,8 @@ BEGIN
 			 A.Nome = COALESCE(@NomePredio, A.Nome)
 		AND
 			M.MoradorID IS NULL
+		AND
+			A.CondominioID = COALESCE(@CondominioID, A.CondominioID)
 	END
 	ELSE
 	BEGIN
@@ -163,6 +168,8 @@ BEGIN
 			 A.PredioID = COALESCE(@PredioID, A.PredioID)
 		AND
 			 A.Nome = COALESCE(@NomePredio, A.Nome)
+		AND
+			A.CondominioID = COALESCE(@CondominioID, A.CondominioID)
 	END
 END
 GO

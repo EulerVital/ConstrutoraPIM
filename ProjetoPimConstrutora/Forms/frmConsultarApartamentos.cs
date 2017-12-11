@@ -75,7 +75,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             if (isCarregarBase)
             {
-                ListaApartamento = nApartamento.Apartamento_GET(new eApartamento());
+                ListaApartamento = nApartamento.Apartamento_GET(new eApartamento(), frmPrincipal.objUserLogado);
             }
 
             if (ListaCondominio == null)

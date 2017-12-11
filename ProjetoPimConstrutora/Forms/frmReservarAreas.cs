@@ -44,7 +44,7 @@ namespace ProjetoPimConstrutora.Forms
         {
             if (isCarregarBase)
             {
-                ListaMorador = nMorador.MORADOR_GET(new eMorador()).Where(c=>c.Excluido == false).ToList();
+                ListaMorador = nMorador.MORADOR_GET(new eMorador(), frmPrincipal.objUserLogado).Where(c=>c.Excluido == false).ToList();
                 ListaCondominio = new List<eCondominio>();
                 ListaBloco = new List<eBloco>();
                 ListaPredio = new List<ePredio>();
@@ -707,7 +707,7 @@ namespace ProjetoPimConstrutora.Forms
 
                 if(e.ColumnIndex == 4)
                 {
-                    ListaArea = nArea.Area_GET(new eArea() { Condominio = obj.Apartamento.Predio.Bloco.Condominio }).Where(c=>c.Status == true).ToList();
+                    ListaArea = nArea.Area_GET(new eArea() { Condominio = obj.Apartamento.Predio.Bloco.Condominio }, frmPrincipal.objUserLogado).Where(c=>c.Status == true).ToList();
 
                     if (ListaArea.Count > 0)
                     {

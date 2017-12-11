@@ -738,7 +738,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
             if (objCondominio != null)
             {
 
-                var lista_ = nBloco.Bloco_GET(new eBloco() { Condominio = objCondominio });
+                var lista_ = nBloco.Bloco_GET(new eBloco() { Condominio = objCondominio }, frmPrincipal.objUserLogado);
 
                 if(lista_.Count > 0)
                 {
@@ -774,7 +774,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 {
                     eBloco obj = new eBloco();
                     obj.Condominio.CondominioID = "0";
-                    ListaBlocos = nBloco.Bloco_GET(obj).Where(c=>c.StatusAtivo == true).ToList();
+                    ListaBlocos = nBloco.Bloco_GET(obj, frmPrincipal.objUserLogado).Where(c=>c.StatusAtivo == true).ToList();
                     lista = ListaBlocos;
                 }
 
@@ -870,7 +870,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
 
                 if (ListaPrediosIncluidos.Count <= 0)
                 {
-                    ListaPrediosIncluidos = nPredio.Predio_GET(new ePredio() { Bloco = Bloco_ });
+                    ListaPrediosIncluidos = nPredio.Predio_GET(new ePredio() { Bloco = Bloco_ }, frmPrincipal.objUserLogado);
 
                     if (ListaPrediosIncluidos.Count > 0)
                     {
@@ -885,7 +885,7 @@ namespace ProjetoPimConstrutora.Forms.UserControls
                 {
                     ePredio obj = new ePredio();
                     obj.Bloco.BlocoID = "0";
-                    ListaPredios = nPredio.Predio_GET(obj).Where(c => c.Excluido == false).ToList();
+                    ListaPredios = nPredio.Predio_GET(obj, frmPrincipal.objUserLogado).Where(c => c.Excluido == false).ToList();
                     lista = ListaPredios;
                 }
 
